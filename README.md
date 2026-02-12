@@ -1,4 +1,4 @@
-# Addiction Engine (News Recommender)
+# Rec Engine (News Recommender)
 
 End-to-end news recommendation system with:
 - a two-tower neural model (`model.py`)
