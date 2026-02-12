@@ -1,0 +1,115 @@
+🚀 Loading Fuel... (data/scraped_articles_backup.csv)
+🔎 Preflight sarah positive_rate=0.916 (sample=500)
+♻️ Warm-start loaded from: outputs/final_mega.pt
+
+🧠 Training on 16347 items | topics=4501 vibes=7 clusters=64 entities=19 events=14 | steps=100 | bot=sarah
+
+[Step 001] user:sarah loss: 4.881 grad: 7.590 pred: 2.091 reward: -5.31 eps:0.25 exploit regret:    - hn:0.705 hc:0.89 | source_archdaily | Hype Beast | This Public Transit Series Celebrates Moscow's
+[Step 002] user:sarah loss: 4.374 grad: 6.553 pred: 1.956 reward: -5.05 eps:0.25 exploit regret:    - hn:0.682 hc:0.88 | source_36_kr | Hype Beast | Tsinghua Team's DeepDive: A New Breakthrough i
+[Step 003] user:sarah loss: 2.858 grad: 4.650 pred: 1.954 reward:  7.90 eps:0.25 exploit regret:    - hn:0.681 hc:0.88 | source_vice | Analytical Deep Dive | OpenAI’s New Sora 2 AI Video Generator Still U
+[Step 004] user:sarah loss: 2.703 grad: 4.824 pred: 1.813 reward:  7.33 eps:0.24 exploit regret:    - hn:0.654 hc:0.86 | source_send2press | Analytical Deep Dive | Fineshare Launches Vora AI – Now Instantly Upg
+[Step 005] user:sarah loss: 4.941 grad: 7.257 pred: 1.825 reward: 10.00 eps:0.24 explore regret:    - hn:0.657 hc:0.86 | source_minnesota_women_s_press | Analytical Deep Dive | Major Public Safety and Gun Legislation Bills 
+[Step 006] user:sarah loss: 2.747 grad: 5.288 pred: 1.670 reward:  7.87 eps:0.24 exploit regret:    - hn:0.626 hc:0.84 | source_mashable | Analytical Deep Dive | Sora update: OpenAI expects copyright holders 
+[Step 007] user:sarah loss: 4.806 grad: 8.282 pred: 1.678 reward: 10.00 eps:0.24 explore regret:    - hn:0.628 hc:0.84 | source_techcrunch | Analytical Deep Dive | Sora update to bring AI videos of your pets, n
+[Step 008] user:sarah loss: 2.409 grad: 5.384 pred: 1.690 reward:  7.16 eps:0.24 exploit regret:    - hn:0.630 hc:0.84 | techcrunch.com | Analytical Deep Dive | Apple’s Siri revamp reportedly delayed… again
+[Step 009] user:sarah loss: 2.340 grad: 6.306 pred: 1.640 reward:  7.71 eps:0.24 exploit regret:    - hn:0.619 hc:0.84 | source_times_of_india | Analytical Deep Dive | OpenAI CEO Sam Altman gives ‘Sora update #1’ a
+[Step 010] user:sarah loss: 2.493 grad: 5.253 pred: 1.737 reward:  7.90 eps:0.23 exploit regret: 2.10 hn:0.639 hc:0.85 | dailymail.co.uk | Analytical Deep Dive | Ed Sheeran's plan to knock two Suffolk cottage
+[Step 011] user:sarah loss: 1.944 grad: 6.009 pred: 1.697 reward:  7.33 eps:0.23 exploit regret:    - hn:0.000 hc:0.00 | source_venturebeat | Analytical Deep Dive | OpenAI launches a Codex desktop app for macOS 
+[Step 012] user:sarah loss: 1.924 grad: 5.644 pred: 1.790 reward:  7.71 eps:0.23 explore regret:    - hn:0.000 hc:0.00 | source_in_these_times | Analytical Deep Dive | In the Shadow of the Obama Center, Chicago Res
+[Step 013] user:sarah loss: 1.764 grad: 5.468 pred: 1.839 reward:  7.27 eps:0.23 exploit regret:    - hn:0.000 hc:0.00 | source_tech_xplore | Analytical Deep Dive | Have you given away secrets on ChatGPT? Be car
+[Step 014] user:sarah loss: 1.850 grad: 7.726 pred: 1.833 reward:  7.19 eps:0.23 exploit regret:    - hn:0.659 hc:0.86 | source_analytics_india_magazine | Analytical Deep Dive | Is Sora falling behind in the AI video generat
+[Step 015] user:sarah loss:10.072 grad:24.959 pred: 1.917 reward: 10.00 eps:0.23 exploit regret:    - hn:0.000 hc:0.00 | source_marktechpost | Analytical Deep Dive | 4 Open-Source Alternatives to OpenAI’s $200/Mo
+[Step 016] user:sarah loss:13.178 grad:34.786 pred: 1.958 reward: 10.00 eps:0.23 exploit regret:    - hn:0.683 hc:0.88 | source_etv_bharat | Analytical Deep Dive | OpenAI Launches Frontier, A New Platform To Bu
+[Step 017] user:sarah loss: 1.764 grad: 6.152 pred: 1.965 reward:  7.69 eps:0.22 exploit regret:    - hn:0.684 hc:0.88 | source_mashable | Analytical Deep Dive | Sora 2 app: 7 weird AI videos people have alre
+[Step 018] user:sarah loss: 1.647 grad: 7.334 pred: 2.011 reward:  7.25 eps:0.22 explore regret:    - hn:0.692 hc:0.88 | zdnet.com | Analytical Deep Dive | Stop using ChatGPT on factory settings: 7 twea
+[Step 019] user:sarah loss: 6.081 grad:17.242 pred: 2.056 reward: 10.00 eps:0.22 exploit regret:    - hn:0.700 hc:0.89 | source_send2press | Analytical Deep Dive | LumeFlow AI Launches New Features to Enhance A
+[Step 020] user:sarah loss: 5.765 grad:16.156 pred: 2.088 reward: 10.00 eps:0.22 exploit regret: 0.00 hn:0.705 hc:0.89 | source_cined | Analytical Deep Dive | OpenAI’s Sora 2 Brings Realistic Physics, Audi
+[Step 021] user:sarah loss: 1.652 grad: 5.290 pred: 2.106 reward:  7.54 eps:0.22 exploit regret:    - hn:0.708 hc:0.89 | source_times_of_india | Analytical Deep Dive | OpenAI to take on TikTok with its new short-vi
+[Step 022] user:sarah loss: 1.646 grad: 5.320 pred: 2.138 reward:  7.90 eps:0.22 exploit regret:    - hn:0.713 hc:0.89 | source_phoneworld | Analytical Deep Dive | OpenAI Launches Codex Desktop App as AI Coding
+[Step 023] user:sarah loss: 1.418 grad: 6.567 pred: 2.219 reward:  7.32 eps:0.22 exploit regret:    - hn:0.725 hc:0.90 | source_mint | Analytical Deep Dive | OpenAI announces major Sora update: Editing, t
+[Step 024] user:sarah loss: 6.473 grad:16.632 pred: 2.232 reward: 10.00 eps:0.21 explore regret:    - hn:0.727 hc:0.90 | source_cbc | Analytical Deep Dive | OpenAI launches Sora social media app for AI-g
+[Step 025] user:sarah loss: 6.639 grad:18.539 pred: 2.291 reward: -4.93 eps:0.21 exploit regret:    - hn:0.736 hc:0.91 | source_opentools | Analytical Deep Dive | Elon Musk's xAI Sues Former Engineer Over Trad
+[Step 026] user:sarah loss: 1.419 grad: 5.153 pred: 2.289 reward:  7.69 eps:0.21 exploit regret:    - hn:0.736 hc:0.91 | source_cnbc | Analytical Deep Dive | How to start a successful side hustle while ke
+[Step 027] user:sarah loss: 5.051 grad:14.362 pred: 2.327 reward: 10.00 eps:0.21 exploit regret:    - hn:0.741 hc:0.91 | source_it_pro | Analytical Deep Dive | Rackspace just launched a new private cloud se
+[Step 028] user:sarah loss: 1.496 grad: 4.777 pred: 2.310 reward:  7.91 eps:0.21 exploit regret:    - hn:0.739 hc:0.91 | source_how_to_geek | Analytical Deep Dive | Bring Back the Weird: The 10 Best Strange PC C
+[Step 029] user:sarah loss: 6.336 grad:17.199 pred: 2.397 reward: 10.00 eps:0.21 explore regret:    - hn:0.751 hc:0.92 | engadget.com | Analytical Deep Dive | Uber Eats’ new Cart Assistant feature is an AI
+[Step 030] user:sarah loss: 1.340 grad: 4.675 pred: 2.398 reward:  7.68 eps:0.21 exploit regret: 2.32 hn:0.750 hc:0.92 | 9to5mac.com | Analytical Deep Dive | Jony Ive’s AI hardware is delayed to 2027 and 
+[Step 031] user:sarah loss: 4.794 grad:12.306 pred: 2.409 reward: 10.00 eps:0.20 exploit regret:    - hn:0.752 hc:0.92 | source_tucson_sentinel | Analytical Deep Dive | Tiny home trend slow to grow in Arizona, but d
+[Step 032] user:sarah loss: 1.725 grad: 6.081 pred: 2.449 reward:  7.43 eps:0.20 exploit regret:    - hn:0.757 hc:0.92 | theverge.com | Analytical Deep Dive | Samsung’s offering up to $900 of trade-in cred
+[Step 033] user:sarah loss: 2.738 grad: 8.395 pred: 2.467 reward:  7.17 eps:0.20 explore regret:    - hn:0.760 hc:0.92 | source_columbia_journalism_review | Analytical Deep Dive | Behind the success of the LA Times’s hit true-
+[Step 034] user:sarah loss: 2.346 grad: 8.504 pred: 2.514 reward:  7.02 eps:0.20 exploit regret:    - hn:0.765 hc:0.92 | technologyreview.com | Dystopian Warning | Making AI Work, MIT Technology Review’s new AI
+[Step 035] user:sarah loss: 6.854 grad:14.838 pred: 2.476 reward: -5.41 eps:0.20 exploit regret:    - hn:0.761 hc:0.92 | source_techradar | Analytical Deep Dive | RISC averse: Here's why Intel, AMD and Arm may
+[Step 036] user:sarah loss: 1.337 grad: 4.345 pred: 2.475 reward:  7.23 eps:0.20 exploit regret:    - hn:0.760 hc:0.92 | zdnet.com | Analytical Deep Dive | Is your Roku TV tracking you? Short answer: Ye
+[Step 037] user:sarah loss: 5.183 grad:12.595 pred: 2.469 reward: 10.00 eps:0.19 explore regret:    - hn:0.760 hc:0.92 | fiercebiotech.com | Analytical Deep Dive | <a href="https://www.fiercebiotech.com/biotech
+[Step 038] user:sarah loss: 1.421 grad: 4.423 pred: 2.466 reward:  7.62 eps:0.19 exploit regret:    - hn:0.759 hc:0.92 | source_gamesradar | Analytical Deep Dive | How to stop a teenage girl from playing Warham
+[Step 039] user:sarah loss: 6.666 grad:13.950 pred: 2.466 reward: -5.41 eps:0.19 exploit regret:    - hn:0.760 hc:0.92 | source_discovery_alert | Analytical Deep Dive | Flin Flon Exploration Partnership: 3-Way Deal 
+[Step 040] user:sarah loss: 2.357 grad: 6.927 pred: 2.464 reward:  7.13 eps:0.19 exploit regret: 2.87 hn:0.759 hc:0.92 | convergence-now.com | Analytical Deep Dive | Top 10 Best Startup Business Ideas for 2026: W
+[Step 041] user:sarah loss: 1.872 grad: 5.558 pred: 2.476 reward:  7.61 eps:0.19 exploit regret:    - hn:0.761 hc:0.92 | androidauthority.com | Analytical Deep Dive | New leak reveals specs and pricing for Sony’s 
+[Step 042] user:sarah loss: 5.016 grad:12.048 pred: 2.494 reward: 10.00 eps:0.19 exploit regret:    - hn:0.763 hc:0.92 | source_the_new_indian_express | Analytical Deep Dive | Architecture trend: Good things in small packa
+[Step 043] user:sarah loss: 2.347 grad: 7.200 pred: 2.493 reward:  7.15 eps:0.19 exploit regret:    - hn:0.763 hc:0.92 | autogpt.net | Analytical Deep Dive | 7 Best AI for Interior Design in 2025 - autogp
+[Step 044] user:sarah loss: 1.802 grad: 5.815 pred: 2.499 reward:  7.30 eps:0.18 exploit regret:    - hn:0.763 hc:0.92 | 9to5mac.com | Somber Reflection | Why an M5 MacBook Pro launch in March keeps th
+[Step 045] user:sarah loss: 4.630 grad:11.722 pred: 2.474 reward: 10.00 eps:0.18 exploit regret:    - hn:0.761 hc:0.92 | engadget.com | Somber Reflection | US judicial body removes climate research pape
+[Step 046] user:sarah loss: 1.811 grad: 5.652 pred: 2.489 reward:  7.32 eps:0.18 exploit regret:    - hn:0.762 hc:0.92 | source_eurasia_review | Analytical Deep Dive | Europe At The Crossroads: Strategic Autonomy I
+[Step 047] user:sarah loss: 2.368 grad: 6.635 pred: 2.473 reward:  7.17 eps:0.18 exploit regret:    - hn:0.760 hc:0.92 | source_france_24 | Analytical Deep Dive | Failed rocket launch may damage India's space 
+[Step 048] user:sarah loss: 1.546 grad: 4.643 pred: 2.442 reward:  7.71 eps:0.18 explore regret:    - hn:0.757 hc:0.92 | source_farmonaut | Analytical Deep Dive | Vertical Farming Automation: 7 Game-Changing T
+[Step 049] user:sarah loss: 1.863 grad: 5.479 pred: 2.463 reward:  7.95 eps:0.18 explore regret:    - hn:0.759 hc:0.92 | source_vogue | Analytical Deep Dive | The Best Running Shoes for Every Runner, From 
+[Step 050] user:sarah loss: 1.493 grad: 4.495 pred: 2.453 reward:  7.53 eps:0.17 exploit regret: 2.47 hn:0.758 hc:0.92 | source_financial_times | Analytical Deep Dive | The Watcher, Netflix review — true-crime thril
+  └─ checkpoint step=50 rolling_reward_50=6.87 mean_regret_so_far=1.95
+[Step 051] user:sarah loss: 1.385 grad: 4.555 pred: 2.491 reward:  7.97 eps:0.17 exploit regret:    - hn:0.762 hc:0.92 | dazeddigital.com | Analytical Deep Dive | Maison Margiela is opening up its archive to t
+[Step 052] user:sarah loss: 5.108 grad:13.377 pred: 2.526 reward: 10.00 eps:0.17 explore regret:    - hn:0.767 hc:0.93 | source_techtarget | Dystopian Warning | 9 common risk management failures and how to a
+[Step 053] user:sarah loss: 5.009 grad:14.225 pred: 2.565 reward: 10.00 eps:0.17 exploit regret:    - hn:0.770 hc:0.93 | androidauthority.com | Analytical Deep Dive | Galaxy S26 shows off its dark side in latest l
+[Step 054] user:sarah loss: 5.051 grad:14.624 pred: 2.581 reward: 10.00 eps:0.17 exploit regret:    - hn:0.773 hc:0.93 | source_cnbc | Analytical Deep Dive | Use the 10% rule to figure out how much money 
+[Step 055] user:sarah loss: 2.456 grad: 9.093 pred: 2.591 reward:  7.16 eps:0.17 exploit regret:    - hn:0.773 hc:0.93 | 9to5mac.com | Analytical Deep Dive | DOJ faces investigation over removal of ICE-tr
+[Step 056] user:sarah loss: 1.237 grad: 4.477 pred: 2.559 reward:  7.60 eps:0.17 exploit regret:    - hn:0.771 hc:0.93 | source_creative_review | Analytical Deep Dive | How should brands tap into the Indie Sleaze re
+[Step 057] user:sarah loss: 1.156 grad: 4.262 pred: 2.612 reward:  7.29 eps:0.16 exploit regret:    - hn:0.777 hc:0.93 | source_global_times | Analytical Deep Dive | Company apologizes, pledges full investigation
+[Step 058] user:sarah loss: 1.187 grad: 4.296 pred: 2.608 reward:  7.84 eps:0.16 exploit regret:    - hn:0.776 hc:0.93 | wired.com | Analytical Deep Dive | Best Presidents’ Day Mattress Sales of 2026
+[Step 059] user:sarah loss: 7.552 grad:23.133 pred: 2.710 reward: 10.00 eps:0.16 exploit regret:    - hn:0.785 hc:0.94 | source_architectural_digest | Analytical Deep Dive | The Best Bedside Lamps and Table Lamps Will Li
+[Step 060] user:sarah loss: 4.679 grad:14.321 pred: 2.673 reward: 10.00 eps:0.16 explore regret: 0.00 hn:0.784 hc:0.94 | source_cio_africa | Analytical Deep Dive | Airtel Africa Plans Direct-To-Cell Satellite L
+[Step 061] user:sarah loss: 1.569 grad: 7.392 pred: 2.726 reward:  7.76 eps:0.16 exploit regret:    - hn:0.787 hc:0.94 | source_variety | Analytical Deep Dive | ‘Red Rooms’ Review: A True Crime Gawker Slips 
+[Step 062] user:sarah loss: 4.573 grad:13.952 pred: 2.685 reward: 10.00 eps:0.16 exploit regret:    - hn:0.785 hc:0.94 | source_cidrap | Analytical Deep Dive | Review: Human H5N1 avian flu cases can be asym
+[Step 063] user:sarah loss: 3.026 grad:10.523 pred: 2.680 reward:  7.20 eps:0.16 exploit regret:    - hn:0.784 hc:0.94 | dazeddigital.com | Analytical Deep Dive | What to do (and not do) if you get caught chea
+[Step 064] user:sarah loss: 1.102 grad: 4.126 pred: 2.686 reward:  7.71 eps:0.15 exploit regret:    - hn:0.785 hc:0.94 | zdnet.com | Analytical Deep Dive | Get a free iPhone 17, Galaxy S25, or Pixel 10 
+[Step 065] user:sarah loss: 1.119 grad: 4.023 pred: 2.680 reward:  7.38 eps:0.15 exploit regret:    - hn:0.783 hc:0.93 | source_china_daily | Analytical Deep Dive | PepsiCo unveils 10 startup finalists for the t
+[Step 066] user:sarah loss: 4.235 grad:12.226 pred: 2.672 reward: 10.00 eps:0.15 exploit regret:    - hn:0.783 hc:0.93 | 9to5mac.com | Analytical Deep Dive | DuckDuckGo adds free, encrypted real-time AI v
+[Step 067] user:sarah loss: 5.238 grad:14.866 pred: 2.708 reward: 10.00 eps:0.15 exploit regret:    - hn:0.787 hc:0.94 | source_book_riot | Analytical Deep Dive | 19 of the Best Award-Winning Mystery Novels + 
+[Step 068] user:sarah loss: 5.217 grad:14.734 pred: 2.708 reward: 10.00 eps:0.15 explore regret:    - hn:0.787 hc:0.94 | source_petapixel | Analytical Deep Dive | Capture One Unveils Two Film-Inspired ‘Style P
+[Step 069] user:sarah loss: 1.148 grad: 4.071 pred: 2.697 reward:  7.78 eps:0.15 exploit regret:    - hn:0.784 hc:0.94 | zdnet.com | Analytical Deep Dive | The best early Presidents' Day Apple sales you
+[Step 070] user:sarah loss: 1.185 grad: 4.051 pred: 2.698 reward:  7.66 eps:0.15 exploit regret: 2.34 hn:0.786 hc:0.94 | source_forbes | Analytical Deep Dive | Reed Jobs Lost His Father Steve To Cancer. Now
+[Step 071] user:sarah loss: 4.008 grad:11.300 pred: 2.712 reward: 10.00 eps:0.14 exploit regret:    - hn:0.787 hc:0.94 | source_the_express_tribune | Analytical Deep Dive | ‘Squid Game’ actress targeted in ‘New Nth Room
+[Step 072] user:sarah loss: 1.098 grad: 4.236 pred: 2.752 reward:  7.68 eps:0.14 exploit regret:    - hn:0.791 hc:0.94 | macrumors.com | Analytical Deep Dive | Never Miss Your Doorbell While Wearing Headpho
+[Step 073] user:sarah loss: 8.375 grad:18.464 pred: 2.762 reward: -5.33 eps:0.14 exploit regret:    - hn:0.792 hc:0.94 | source_gamesradar | Analytical Deep Dive | Best gaming handheld 2026: I'd hit these porta
+[Step 074] user:sarah loss: 1.861 grad: 6.165 pred: 2.756 reward:  7.92 eps:0.14 exploit regret:    - hn:0.792 hc:0.94 | source_radii | Analytical Deep Dive | Safdie Architects Unveils Striking Habitat Qin
+[Step 075] user:sarah loss: 4.853 grad:13.777 pred: 2.786 reward: 10.00 eps:0.14 explore regret:    - hn:0.795 hc:0.94 | source_the_new_voice_of_ukraine | Analytical Deep Dive | Winter near Pokrovsk: How the enemy is stormin
+[Step 076] user:sarah loss: 1.205 grad: 4.063 pred: 2.748 reward:  7.82 eps:0.14 exploit regret:    - hn:0.790 hc:0.94 | theverge.com | Analytical Deep Dive | Highguard’s developer reportedly lays off ‘mos
+[Step 077] user:sarah loss: 1.119 grad: 3.846 pred: 2.781 reward:  7.33 eps:0.13 exploit regret:    - hn:0.793 hc:0.94 | rollingstone.com | Analytical Deep Dive | Blake Lively and Justin Baldoni Fail to Reach 
+[Step 078] user:sarah loss: 3.765 grad: 9.954 pred: 2.756 reward: 10.00 eps:0.13 exploit regret:    - hn:0.792 hc:0.94 | source_harvard_law_review | Analytical Deep Dive | The Supreme Court’s Legitimacy Dilemma - Harva
+[Step 079] user:sarah loss: 1.026 grad: 3.748 pred: 2.836 reward:  7.79 eps:0.13 exploit regret:    - hn:0.800 hc:0.94 | pcgamer.com | Analytical Deep Dive | 16 days after Highguard's launch, the studio h
+[Step 080] user:sarah loss: 8.657 grad:23.450 pred: 2.852 reward: 10.00 eps:0.13 exploit regret: 0.00 hn:0.801 hc:0.94 | source_eurogamer | Analytical Deep Dive | Civilization 6 Culture Victory explained - how
+[Step 081] user:sarah loss: 1.012 grad: 3.628 pred: 2.859 reward:  7.52 eps:0.13 exploit regret:    - hn:0.801 hc:0.94 | wired.com | Analytical Deep Dive | Need a Splashy Last Minute Valentine’s Day Gif
+[Step 082] user:sarah loss: 2.616 grad: 8.587 pred: 2.848 reward:  7.08 eps:0.13 exploit regret:    - hn:0.798 hc:0.94 | zdnet.com | Analytical Deep Dive | How to write Linux bash scripts on your Androi
+[Step 083] user:sarah loss: 5.005 grad:15.560 pred: 2.922 reward: 10.00 eps:0.13 exploit regret:    - hn:0.806 hc:0.95 | zdnet.com | Analytical Deep Dive | The best Android tablets of 2026: Lab tested, 
+[Step 084] user:sarah loss: 1.037 grad: 3.632 pred: 2.874 reward:  7.58 eps:0.12 exploit regret:    - hn:0.803 hc:0.95 | cointelegraph.com | Analytical Deep Dive | Deel taps MoonPay to roll out stablecoin salar
+[Step 085] user:sarah loss: 0.765 grad: 3.920 pred: 2.835 reward:  7.28 eps:0.12 explore regret:    - hn:0.000 hc:0.00 | engadget.com | Analytical Deep Dive | Elevation Lab's 10-year extended battery case 
+[Step 086] user:sarah loss: 3.979 grad:13.088 pred: 2.936 reward: 10.00 eps:0.12 exploit regret:    - hn:0.808 hc:0.95 | source_the_forward | Analytical Deep Dive | ‘Quiz Show’ Whistleblower Herb Stempel was a s
+[Step 087] user:sarah loss: 1.015 grad: 3.567 pred: 2.906 reward:  7.62 eps:0.12 explore regret:    - hn:0.807 hc:0.95 | source_digital_camera_world | Analytical Deep Dive | Do airport x-ray scanners REALLY ruin camera f
+[Step 088] user:sarah loss: 0.875 grad: 3.166 pred: 2.975 reward:  7.47 eps:0.12 exploit regret:    - hn:0.812 hc:0.95 | source_trend_hunter | Analytical Deep Dive | Super-Sized Public Transit - Trend Hunter
+[Step 089] user:sarah loss: 4.063 grad:14.224 pred: 2.997 reward: 10.00 eps:0.12 explore regret:    - hn:0.814 hc:0.95 | source_india_today | Analytical Deep Dive | Isro to launch PSLV on January 12. We still do
+[Step 090] user:sarah loss: 2.509 grad:11.924 pred: 3.036 reward:  7.17 eps:0.11 exploit regret: 2.83 hn:0.000 hc:0.00 | 9to5mac.com | Analytical Deep Dive | Apple Arcade is adding Oceanhorn 3 and three m
+[Step 091] user:sarah loss: 0.780 grad: 2.742 pred: 3.046 reward:  7.41 eps:0.11 exploit regret:    - hn:0.818 hc:0.95 | source_centers_for_disease_control_and_prevention_cdc_gov | Analytical Deep Dive | 2020-2024 Highlights in the History of Avian I
+[Step 092] user:sarah loss: 5.463 grad:18.861 pred: 3.087 reward: 10.00 eps:0.11 exploit regret:    - hn:0.819 hc:0.95 | source_vanity_fair | Analytical Deep Dive | Investigation: Mitt Romney’s Offshore Accounts
+[Step 093] user:sarah loss: 0.306 grad: 2.564 pred: 3.089 reward:  7.76 eps:0.11 exploit regret:    - hn:0.000 hc:0.00 | forbes.com | Analytical Deep Dive | ‘Highguard’ Isn’t Dead Yet, Despite ‘Most Of T
+[Step 094] user:sarah loss: 2.356 grad:10.297 pred: 3.098 reward:  7.63 eps:0.11 exploit regret:    - hn:0.821 hc:0.96 | wired.com | Analytical Deep Dive | Save $100 On Our Favorite Home Printer
+[Step 095] user:sarah loss: 0.789 grad: 2.706 pred: 3.068 reward:  7.21 eps:0.11 exploit regret:    - hn:0.820 hc:0.96 | zdnet.com | Analytical Deep Dive | After years of use, here's why I still wear my
+[Step 096] user:sarah loss: 2.408 grad:10.732 pred: 3.117 reward:  7.75 eps:0.11 exploit regret:    - hn:0.821 hc:0.96 | statnews.com | Analytical Deep Dive | WHO director-general calls plans for U.S.-fund
+[Step 097] user:sarah loss: 0.701 grad: 2.315 pred: 3.113 reward:  7.30 eps:0.10 exploit regret:    - hn:0.822 hc:0.96 | source_electronic_frontier_foundation | Analytical Deep Dive | Surveillance Technology at the U.S.-Mexico Bor
+[Step 098] user:sarah loss: 2.959 grad:11.901 pred: 3.077 reward:  7.09 eps:0.10 explore regret:    - hn:0.820 hc:0.96 | bbc.com | Analytical Deep Dive | Trump tells Netanyahu Iran nuclear talks must 
+[Step 099] user:sarah loss: 4.077 grad:15.512 pred: 3.087 reward: 10.00 eps:0.10 exploit regret:    - hn:0.820 hc:0.96 | engadget.com | Analytical Deep Dive | Get up to 81 percent off ExpressVPN two-year p
+[Step 100] user:sarah loss: 5.430 grad:19.435 pred: 3.127 reward: 10.00 eps:0.10 exploit regret: 0.00 hn:0.824 hc:0.96 | source_united_by_pop | Analytical Deep Dive | Margot Harrison on true crime and her new YA t
+  └─ checkpoint step=100 rolling_reward_50=8.21 mean_regret_so_far=1.49
+
+🏁 Final Reward(10): 8.22 | Mean Regret: 1.49
+🔬 User-state cluster by session phase:
+  cluster_0: {'early': 10, 'mid': 33, 'late': 34}
+  cluster_1: {'early': 11}
+  cluster_2: {'early': 12}
+⏭️ Skipped warm-start save (final_reward=8.22 < 999.00).

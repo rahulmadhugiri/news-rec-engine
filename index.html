@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vibe Feed v2</title>
+    <style>
+        body {
+            background: #121212;
+            color: white;
+            font-family: sans-serif;
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        #app {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
+        #card-container {
+            width: 350px;
+            height: 500px;
+            position: relative;
+        }
+        .card {
+            width: 100%;
+            height: 100%;
+            background: #1e1e1e;
+            border-radius: 20px;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid #333;
+            transition: transform 0.25s ease, opacity 0.25s ease;
+        }
+        .headline {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .domain {
+            color: #888;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        .meta {
+            margin-top: 12px;
+            font-size: 12px;
+            color: #9a9a9a;
+        }
+        #controls {
+            width: 350px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+        #timer {
+            font-size: 14px;
+            color: #bdbdbd;
+        }
+        #skip-btn {
+            border: 1px solid #555;
+            background: #242424;
+            color: white;
+            border-radius: 12px;
+            padding: 10px 16px;
+            cursor: pointer;
+        }
+        #skip-btn:hover {
+            background: #2f2f2f;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div id="card-container"></div>
+        <div id="controls">
+            <div id="timer">Time left: 10.0s</div>
+            <button id="skip-btn" type="button">Skip</button>
+        </div>
+    </div>
+
+    <script>
+        const MAX_DWELL_SECONDS = 10;
+        const FEED_REFILL_THRESHOLD = 4;
+        const FEED_BATCH_REQUEST = 1;
+
+        const container = document.getElementById('card-container');
+        const timerEl = document.getElementById('timer');
+        const skipBtn = document.getElementById('skip-btn');
+        let queue = [];
+        let currentItem = null;
+        let currentCard = null;
+        let currentStart = 0;
+        let autoTimer = null;
+        let tickTimer = null;
+        let transitioning = false;
+
+        async function loadFeed() {
+            for (let i = 0; i < FEED_BATCH_REQUEST; i += 1) {
+                const res = await fetch('/feed');
+                const data = await res.json();
+                queue.push(...(data.items || []));
+            }
+        }
+
+        function renderCard(item) {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <div class="domain">${item.domain || 'unknown'}</div>
+                <div class="headline">${item.title || 'Untitled'}</div>
+                <div class="meta">Auto-advance at 10s. Skip anytime.</div>
+            `;
+            return card;
+        }
+
+        function clearTimers() {
+            if (autoTimer) {
+                clearTimeout(autoTimer);
+                autoTimer = null;
+            }
+            if (tickTimer) {
+                clearInterval(tickTimer);
+                tickTimer = null;
+            }
+        }
+
+        function updateCountdown() {
+            if (!currentStart) return;
+            const elapsed = (Date.now() - currentStart) / 1000;
+            const left = Math.max(0, MAX_DWELL_SECONDS - elapsed);
+            timerEl.textContent = `Time left: ${left.toFixed(1)}s`;
+        }
+
+        async function ensureQueue() {
+            if (queue.length < FEED_REFILL_THRESHOLD) {
+                await loadFeed();
+            }
+        }
+
+        async function showNextCard() {
+            await ensureQueue();
+            if (queue.length === 0) {
+                timerEl.textContent = 'No content available';
+                return;
+            }
+
+            currentItem = queue.shift();
+            currentCard = renderCard(currentItem);
+            container.innerHTML = '';
+            container.appendChild(currentCard);
+
+            currentStart = Date.now();
+            updateCountdown();
+            tickTimer = setInterval(updateCountdown, 100);
+            autoTimer = setTimeout(() => {
+                submitInteraction('auto');
+            }, MAX_DWELL_SECONDS * 1000);
+        }
+
+        async function submitInteraction(reason) {
+            if (!currentItem || transitioning) return;
+            transitioning = true;
+            clearTimers();
+
+            const dwellTime = Math.min(
+                MAX_DWELL_SECONDS,
+                (Date.now() - currentStart) / 1000
+            );
+
+            await fetch('/interact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    item_id: currentItem.id,
+                    dwell_time: dwellTime,
+                    reason: reason
+                })
+            });
+
+            const outgoingCard = currentCard;
+            if (outgoingCard) {
+                outgoingCard.style.transform = `translateX(${reason === 'skip' ? -520 : 520}px)`;
+                outgoingCard.style.opacity = '0';
+            }
+
+            currentItem = null;
+            currentCard = null;
+            currentStart = 0;
+            timerEl.textContent = 'Time left: 10.0s';
+            setTimeout(async () => {
+                if (outgoingCard) {
+                    outgoingCard.remove();
+                }
+                transitioning = false;
+                await showNextCard();
+            }, 260);
+        }
+
+        skipBtn.addEventListener('click', () => submitInteraction('skip'));
+        document.addEventListener('keydown', (event) => {
+            if (event.code === 'Space' || event.code === 'ArrowDown') {
+                event.preventDefault();
+                submitInteraction('skip');
+            }
+        });
+
+        loadFeed().then(showNextCard);
+    </script>
+</body>
+</html>

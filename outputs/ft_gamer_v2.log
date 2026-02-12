@@ -1,0 +1,370 @@
+🚀 Loading Fuel... (data/scraped_articles_backup.csv)
+🔎 Preflight gamer positive_rate=0.206 (sample=500)
+♻️ Warm-start loaded from: outputs/base_multi_16k_anchor.pt
+
+🧠 Training on 16347 items | topics=4501 vibes=7 clusters=64 entities=19 events=14 | steps=350 | bot=gamer
+
+[Step 001] user:gamer loss: 5.280 grad:14.354 pred: 1.759 reward: 10.00 eps:0.25 exploit regret:    - hn:0.644 hc:0.85 | source_minnesota_women_s_press | Analytical Deep Dive | Major Public Safety and Gun Legislation Bills 
+[Step 002] user:gamer loss: 4.276 grad:14.552 pred: 1.725 reward: -5.13 eps:0.25 exploit regret:    - hn:0.638 hc:0.85 | source_daily_monitor | Analytical Deep Dive | How fintechs are caught up in a grantpreneur t
+[Step 003] user:gamer loss: 4.047 grad:12.232 pred: 1.714 reward: -4.85 eps:0.25 exploit regret:    - hn:0.636 hc:0.85 | source_webpronews | Analytical Deep Dive | Claude Code: Anthropic’s AI Revolutionizes Dev
+[Step 004] user:gamer loss: 4.381 grad: 8.137 pred: 1.925 reward: -4.99 eps:0.25 exploit regret:    - hn:0.677 hc:0.87 | source_world_bank | Analytical Deep Dive | Managing solid waste during COVID-19, and in a
+[Step 005] user:gamer loss: 3.652 grad:12.556 pred: 1.598 reward: -4.58 eps:0.25 explore regret:    - hn:0.611 hc:0.83 | source_university_of_waikato | Analytical Deep Dive | The origin story of the Anzac biscuit is large
+[Step 006] user:gamer loss: 3.869 grad: 7.697 pred: 1.695 reward: -5.27 eps:0.25 exploit regret:    - hn:0.632 hc:0.84 | source_mit_news | Analytical Deep Dive | Study: Automation drives income inequality - M
+[Step 007] user:gamer loss: 4.037 grad: 6.609 pred: 1.794 reward: -5.30 eps:0.35 explore regret:    - hn:0.652 hc:0.86 | source_popular_mechanics | Analytical Deep Dive | Scientists Discovered a Complex Maya City Buri
+[Step 008] user:gamer loss: 2.890 grad: 5.207 pred: 1.673 reward:  7.37 eps:0.35 exploit regret:    - hn:0.627 hc:0.84 | source_north_carolina_health_news | Analytical Deep Dive | North Carolina watches for signs of bird flu a
+[Step 009] user:gamer loss: 3.622 grad: 7.183 pred: 1.597 reward: -5.38 eps:0.35 exploit regret:    - hn:0.611 hc:0.83 | source_economic_research_service_gov | Analytical Deep Dive | Poultry Expected To Continue Leading Global Me
+[Step 010] user:gamer loss: 3.177 grad: 9.132 pred: 1.400 reward: -5.07 eps:0.35 exploit regret:15.07 hn:0.565 hc:0.80 | source_cnn | Analytical Deep Dive | Why Democrats are borrowing a 4-word slogan fr
+[Step 011] user:gamer loss: 2.495 grad: 5.407 pred: 1.576 reward:  3.14 eps:0.35 exploit regret:    - hn:0.606 hc:0.83 | source_fox_business | Dystopian Warning | China threatens retaliation after Trump announ
+[Step 012] user:gamer loss: 2.656 grad: 9.966 pred: 1.192 reward: -4.60 eps:0.35 explore regret:    - hn:0.514 hc:0.77 | androidauthority.com | Analytical Deep Dive | Sony is revealing more than just the WF-1000XM
+[Step 013] user:gamer loss: 2.440 grad:10.600 pred: 1.057 reward: -4.72 eps:0.35 explore regret:    - hn:0.479 hc:0.74 | source_vietnam_vietnamplus | Hype Beast | 14th National Party Congress: Lang Son harness
+[Step 014] user:gamer loss: 2.210 grad: 7.437 pred: 1.055 reward:  4.67 eps:0.35 exploit regret:    - hn:0.478 hc:0.74 | source_times_of_india | Angry Rant | MP Diwali tragedy: How viral social media reel
+[Step 015] user:gamer loss: 1.637 grad:11.983 pred: 0.616 reward: -4.48 eps:0.35 exploit regret:    - hn:0.359 hc:0.65 | source_abdul_latif_jameel | Analytical Deep Dive | Abdul Latif Jameel Motors announces conclusion
+[Step 016] user:gamer loss: 1.682 grad:11.258 pred: 0.592 reward: -4.95 eps:0.35 exploit regret:    - hn:0.352 hc:0.64 | engadget.com | Analytical Deep Dive | The best VPN service for 2026
+[Step 017] user:gamer loss: 0.990 grad: 9.933 pred: 0.239 reward: -4.84 eps:0.35 exploit regret:    - hn:0.000 hc:0.00 | source_homes_and_gardens | Analytical Deep Dive | Why cocooning furniture is a trend that's gain
+[Step 018] user:gamer loss: 1.775 grad:17.657 pred: 0.012 reward:  3.36 eps:0.35 explore regret:    - hn:0.000 hc:0.00 | dailymail.co.uk | Angry Rant | Starmer accused of 'stuffing Government with h
+[Step 019] user:gamer loss: 0.573 grad: 7.813 pred:-0.161 reward: -5.37 eps:0.35 exploit regret:    - hn:0.000 hc:0.00 | source_financial_times | Somber Reflection | EU readies retaliatory tariffs to secure bette
+[Step 020] user:gamer loss: 0.413 grad: 6.288 pred:-0.299 reward: -5.12 eps:0.35 exploit regret:15.12 hn:0.000 hc:0.00 | 9to5mac.com | Analytical Deep Dive | Apple’s new ‘MacBook’ is coming: Here’s every 
+[Step 021] user:gamer loss:19.530 grad:71.614 pred:-0.534 reward: 10.00 eps:0.35 exploit regret:    - hn:0.000 hc:0.00 | theguardian.com | Hype Beast | Hong Kong’s once-vibrant press stays silent or
+[Step 022] user:gamer loss:12.595 grad:60.991 pred:-0.653 reward:  7.81 eps:0.35 exploit regret:    - hn:0.000 hc:0.00 | source_international_atomic_energy_agency | Hype Beast | The IAEA’s Successful Field Trial: A Promising
+[Step 023] user:gamer loss: 4.266 grad:32.487 pred:-0.630 reward:  6.57 eps:0.24 exploit regret:    - hn:0.000 hc:0.00 | hypebeast.com | Hype Beast | Britney Spears Sells Ownership Stake in Music 
+[Step 024] user:gamer loss: 0.154 grad: 2.863 pred:-0.629 reward: -4.70 eps:0.24 explore regret:    - hn:0.000 hc:0.00 | source_devdiscourse | Hype Beast | Market Movements: Bonds Surge Amid Retail Sale
+[Step 025] user:gamer loss: 9.273 grad:46.409 pred:-0.635 reward:  7.93 eps:0.24 exploit regret:    - hn:0.000 hc:0.00 | source_minnesota_women_s_press | Hype Beast | Minnesota Women’s Press Wins Five State Media 
+[Step 026] user:gamer loss:28.336 grad:84.952 pred:-0.676 reward: 10.00 eps:0.24 exploit regret:    - hn:0.000 hc:0.00 | source_xinhua | Hype Beast | China's breeding breakthroughs fortify food se
+[Step 027] user:gamer loss:21.329 grad:64.895 pred:-0.594 reward: 10.00 eps:0.24 explore regret:    - hn:0.000 hc:0.00 | source_cambridge_network | Hype Beast | China’s Neurotechnology breakthrough: A new er
+[Step 028] user:gamer loss:24.115 grad:74.057 pred:-0.658 reward: 10.00 eps:0.24 exploit regret:    - hn:0.000 hc:0.00 | source_36_kr | Hype Beast | Tsinghua Team's DeepDive: A New Breakthrough i
+[Step 029] user:gamer loss:10.028 grad:43.676 pred:-0.527 reward:  7.81 eps:0.24 exploit regret:    - hn:0.000 hc:0.00 | source_reliefweb | Hype Beast | Sudan - Key Message Update: Famine remains pos
+[Step 030] user:gamer loss:15.029 grad:51.469 pred:-0.391 reward: 10.00 eps:0.24 exploit regret: 0.00 hn:0.000 hc:0.00 | source_south_china_morning_post | Hype Beast | Chinese breakthrough challenges Elon Musk’s ve
+[Step 031] user:gamer loss:10.391 grad:37.390 pred:-0.242 reward: 10.00 eps:0.24 explore regret:    - hn:0.000 hc:0.00 | source_scitechdaily | Hype Beast | Quantum Breakthrough: New Study Uncovers Hidde
+[Step 032] user:gamer loss: 9.503 grad:27.785 pred: 0.217 reward: 10.00 eps:0.24 exploit regret:    - hn:0.000 hc:0.00 | source_archdaily | Hype Beast | This Public Transit Series Celebrates Moscow's
+[Step 033] user:gamer loss: 5.040 grad:17.053 pred: 0.349 reward:  7.94 eps:0.24 exploit regret:    - hn:0.000 hc:0.00 | source_yicai_global | Hype Beast | China Hails Breakthrough in Mind Control of Sm
+[Step 034] user:gamer loss: 6.414 grad:14.083 pred: 0.859 reward: 10.00 eps:0.24 exploit regret:    - hn:0.421 hc:0.70 | source_thekanal | Hype Beast | Workplace Harassment Allegations Surface After
+[Step 035] user:gamer loss: 6.604 grad:16.249 pred: 0.772 reward: 10.00 eps:0.23 exploit regret:    - hn:0.400 hc:0.68 | zerohedge.blogspot.com | Hype Beast | Daily Highlights: 7.27.09
+[Step 036] user:gamer loss: 3.142 grad: 5.521 pred: 1.199 reward:  7.00 eps:0.23 exploit regret:    - hn:0.515 hc:0.77 | source_bnn_bloomberg | Hype Beast | Investor Outlook: Ottawa boosts quantum comput
+[Step 037] user:gamer loss: 3.675 grad: 4.554 pred: 1.489 reward:  7.34 eps:0.23 explore regret:    - hn:0.587 hc:0.82 | source_tribune_india | Hype Beast | GIBC signs strategic MoU with Maharashtra to b
+[Step 038] user:gamer loss: 4.354 grad: 4.381 pred: 1.700 reward: 10.00 eps:0.23 exploit regret:    - hn:0.632 hc:0.85 | source_the_news_international | Hype Beast | The Majorana 1 Chip: a breakthrough in quantum
+[Step 039] user:gamer loss: 3.722 grad: 3.384 pred: 1.816 reward:  7.76 eps:0.23 exploit regret:    - hn:0.655 hc:0.86 | source_construction_property_news | Hype Beast | China Unveils Breakthrough Salt-Tolerant Rice 
+[Step 040] user:gamer loss: 4.723 grad: 4.547 pred: 1.841 reward: 10.00 eps:0.23 exploit regret: 0.00 hn:0.660 hc:0.86 | source_quantum_zeitgeist | Hype Beast | Three-Site Kitaev Chain Boosts Majorana Zero M
+[Step 041] user:gamer loss: 4.143 grad: 2.826 pred: 2.009 reward: 10.00 eps:0.23 exploit regret:    - hn:0.691 hc:0.88 | source_engineering_news_record | Hype Beast | Gannett Fleming Buys TranSystems in $1.3B Tran
+[Step 042] user:gamer loss: 4.170 grad: 2.435 pred: 2.111 reward: 10.00 eps:0.23 exploit regret:    - hn:0.708 hc:0.89 | fiercebiotech.com | Hype Beast | <a href="https://www.fiercebiotech.com/biotech
+[Step 043] user:gamer loss: 3.376 grad: 3.074 pred: 2.162 reward:  6.82 eps:0.23 exploit regret:    - hn:0.715 hc:0.90 | source_ee_times_asia | Hype Beast | Microsoft Unveils Quantum Computing Breakthrou
+[Step 044] user:gamer loss: 3.568 grad: 3.552 pred: 2.202 reward:  7.69 eps:0.23 exploit regret:    - hn:0.722 hc:0.90 | gamespot.com | Hype Beast | StarCraft Shooter Reportedly In Works At Arc R
+[Step 045] user:gamer loss: 4.313 grad: 2.997 pred: 2.175 reward: 10.00 eps:0.23 exploit regret:    - hn:0.718 hc:0.90 | source_new_era_namibia | Hype Beast | King Shuumbwa on agricultural breakthrough …ur
+[Step 046] user:gamer loss: 3.637 grad: 3.674 pred: 2.241 reward:  7.77 eps:0.23 exploit regret:    - hn:0.728 hc:0.90 | source_nasa_applied_sciences_gov | Hype Beast | NASA Harvest Collaboration Expands Breakthroug
+[Step 047] user:gamer loss: 4.002 grad: 4.192 pred: 2.180 reward: 10.00 eps:0.23 exploit regret:    - hn:0.000 hc:0.00 | source_ani_news | Hype Beast | GIBC signs strategic MoU with Maharashtra to b
+[Step 048] user:gamer loss: 3.041 grad: 3.564 pred: 2.192 reward:  7.46 eps:0.23 exploit regret:    - hn:0.721 hc:0.90 | source_yahoo_finance | Hype Beast | Super Bowl Ads Hit Record High: $10 Million fo
+[Step 049] user:gamer loss: 2.787 grad: 4.004 pred: 2.173 reward:  6.67 eps:0.23 explore regret:    - hn:0.718 hc:0.90 | source_nzbusiness_magazine | Hype Beast | A small shift in spending could deliver an $11
+[Step 050] user:gamer loss: 4.536 grad: 5.785 pred: 2.165 reward: 10.00 eps:0.23 explore regret: 0.00 hn:0.718 hc:0.90 | source_discoverairdrie | Hype Beast | Tariff breakthrough restores optimism for puls
+  └─ checkpoint step=50 rolling_reward_50=4.12 mean_regret_so_far=6.04
+[Step 051] user:gamer loss: 2.467 grad: 4.688 pred: 2.176 reward:  7.67 eps:0.23 exploit regret:    - hn:0.719 hc:0.90 | source_gamesradar | Clickbait Shocker | Abxylute just revealed a $70 Android handheld 
+[Step 052] user:gamer loss: 2.229 grad: 5.198 pred: 2.199 reward:  6.79 eps:0.23 explore regret:    - hn:0.722 hc:0.90 | source_national_institute_of_standards_and_technology_gov | Hype Beast | NIST and Stanford Launch Long-Term Measurement
+[Step 053] user:gamer loss: 1.638 grad: 5.363 pred: 2.251 reward:  7.48 eps:0.23 exploit regret:    - hn:0.723 hc:0.90 | phys.org | Hype Beast | Byzantine solar eclipse records illuminate obs
+[Step 054] user:gamer loss: 5.488 grad:16.645 pred: 2.361 reward: 10.00 eps:0.23 exploit regret:    - hn:0.744 hc:0.91 | source_carnegie_mellon_university | Hype Beast | Breakthrough Approach Enables Bidirectional BC
+[Step 055] user:gamer loss: 1.213 grad: 6.001 pred: 2.468 reward:  7.91 eps:0.23 exploit regret:    - hn:0.744 hc:0.91 | source_quantum_zeitgeist | Hype Beast | Quantum Computing’s Dual Approach Boosts Stabi
+[Step 056] user:gamer loss: 7.964 grad:27.400 pred: 2.603 reward: 10.00 eps:0.23 exploit regret:    - hn:0.773 hc:0.93 | destructoid.com | Hype Beast | All romanceable characters in Starsand Island
+[Step 057] user:gamer loss: 0.903 grad: 6.011 pred: 2.750 reward:  7.40 eps:0.23 exploit regret:    - hn:0.772 hc:0.93 | source_bloomsbury_intelligence_and_security_institute_bisi | Hype Beast | Quantum Computing Breakthroughs: A Widening Ge
+[Step 058] user:gamer loss: 2.194 grad:15.590 pred: 2.840 reward:  7.53 eps:0.23 explore regret:    - hn:0.795 hc:0.94 | source_tech_funding_news | Hype Beast | German startup Everphone dials €270M funding t
+[Step 059] user:gamer loss: 0.787 grad: 4.996 pred: 2.868 reward:  7.88 eps:0.22 exploit regret:    - hn:0.785 hc:0.94 | source_tradingview | Hype Beast | Oracle Unveils AI Agents for Fusion Apps: Will
+[Step 060] user:gamer loss: 2.543 grad:23.564 pred: 3.043 reward:  7.11 eps:0.22 exploit regret: 2.89 hn:0.815 hc:0.95 | source_harvard_gazette | Hype Beast | Why new qubit may give ultrafast quantum compu
+[Step 061] user:gamer loss: 2.422 grad:18.748 pred: 3.024 reward:  7.39 eps:0.22 explore regret:    - hn:0.804 hc:0.95 | source_popular_mechanics | Hype Beast | This Chip Could Be the Massive Breakthrough We
+[Step 062] user:gamer loss: 2.353 grad:18.359 pred: 3.029 reward:  7.99 eps:0.22 explore regret:    - hn:0.818 hc:0.95 | source_stanford_report | Hype Beast | Stanford-NIST collaboration aims to give the b
+[Step 063] user:gamer loss: 0.618 grad: 3.372 pred: 3.067 reward:  7.57 eps:0.22 exploit regret:    - hn:0.810 hc:0.95 | source_usa_today | Hype Beast | Is longevity the new gut health? Discover mito
+[Step 064] user:gamer loss: 9.809 grad:39.854 pred: 3.094 reward: 10.00 eps:0.22 explore regret:    - hn:0.812 hc:0.95 | source_the_news_international | Hype Beast | China brain implant breakthrough: Paralysed ma
+[Step 065] user:gamer loss: 0.615 grad: 3.189 pred: 3.089 reward:  7.30 eps:0.22 exploit regret:    - hn:0.815 hc:0.95 | source_tehran_times | Hype Beast | SATBA advances construction of 1,000 solar pow
+[Step 066] user:gamer loss: 3.447 grad:27.395 pred: 3.115 reward:  6.83 eps:0.22 exploit regret:    - hn:0.818 hc:0.95 | hypebeast.com | Hype Beast | Jack Harlow Officially Announces New Album 'Mo
+[Step 067] user:gamer loss: 0.617 grad: 3.259 pred: 3.074 reward:  7.61 eps:0.22 exploit regret:    - hn:0.816 hc:0.95 | source_yahoo | Hype Beast | Researchers make major breakthrough that could
+[Step 068] user:gamer loss: 0.572 grad: 2.835 pred: 3.117 reward:  7.76 eps:0.22 exploit regret:    - hn:0.812 hc:0.95 | da.gov.ph | Hype Beast | Biotech breakthroughs in agri deemed vital for
+[Step 069] user:gamer loss: 8.967 grad:38.512 pred: 3.152 reward: 10.00 eps:0.22 exploit regret:    - hn:0.823 hc:0.96 | etenergyworld.com | Hype Beast | Mumbai's 1000MW renewable energy boost: Kudus-
+[Step 070] user:gamer loss:10.136 grad:43.814 pred: 3.116 reward: 10.00 eps:0.22 explore regret: 0.00 hn:0.820 hc:0.96 | source_construction_news | Hype Beast | Breakthrough in HS2 mass transit procurement p
+[Step 071] user:gamer loss: 0.571 grad: 2.395 pred: 3.138 reward:  7.61 eps:0.22 exploit regret:    - hn:0.821 hc:0.96 | source_adda247 | Hype Beast | Microsoft’s Majorana 1: Quantum Computing Brea
+[Step 072] user:gamer loss: 0.599 grad: 2.550 pred: 3.116 reward:  7.88 eps:0.22 exploit regret:    - hn:0.818 hc:0.95 | source_live_science | Clickbait Shocker | Images: 'Lost' New England Archaeology Sites R
+[Step 073] user:gamer loss: 0.597 grad: 2.398 pred: 3.133 reward:  7.78 eps:0.22 exploit regret:    - hn:0.822 hc:0.96 | source_abc_news | Hype Beast | Groundbreaking robotic surgery, Alzheimer's bl
+[Step 074] user:gamer loss: 3.229 grad:20.335 pred: 3.147 reward:  6.59 eps:0.22 exploit regret:    - hn:0.823 hc:0.96 | source_coindesk | Hype Beast | ProShares Bitcoin Futures ETF Wins ‘First Move
+[Step 075] user:gamer loss: 0.680 grad: 2.788 pred: 3.109 reward:  7.90 eps:0.22 explore regret:    - hn:0.820 hc:0.96 | atlasobscura.com | Hype Beast | Inside America’s First Destination Ski Town
+[Step 076] user:gamer loss: 2.844 grad:17.874 pred: 3.191 reward:  7.92 eps:0.22 exploit regret:    - hn:0.824 hc:0.96 | source_quantum_zeitgeist | Hype Beast | Microsoft Quantum Computing Breakthrough Faces
+[Step 077] user:gamer loss: 3.126 grad:19.073 pred: 3.168 reward:  6.58 eps:0.22 exploit regret:    - hn:0.827 hc:0.96 | source_outside_magazine | Hype Beast | How Do Freedivers Train to Break World Records
+[Step 078] user:gamer loss: 7.048 grad:27.647 pred: 3.116 reward: 10.00 eps:0.22 explore regret:    - hn:0.823 hc:0.96 | source_dallas_express | Hype Beast | Neuralink Breakthrough: ALS Patient Controls R
+[Step 079] user:gamer loss:12.182 grad:31.761 pred: 3.118 reward: -5.53 eps:0.22 explore regret:    - hn:0.821 hc:0.96 | fiercebiotech.com | Analytical Deep Dive | <a href="https://www.fiercebiotech.com/biotech
+[Step 080] user:gamer loss: 2.475 grad:12.258 pred: 3.058 reward:  6.91 eps:0.22 exploit regret: 3.09 hn:0.819 hc:0.96 | commondreams.org | Sarcastic Takedown | New Report Exposes MAHA’s Corrupting Influence
+[Step 081] user:gamer loss: 6.947 grad:22.722 pred: 3.018 reward: 10.00 eps:0.22 exploit regret:    - hn:0.812 hc:0.95 | macrumors.com | Hype Beast | Samsung Smart Monitor M9 Hits Record Low Price
+[Step 082] user:gamer loss: 4.440 grad:12.993 pred: 2.968 reward:  2.46 eps:0.21 exploit regret:    - hn:0.807 hc:0.95 | source_carnegie_endowment_for_international_peace | Dystopian Warning | Mitigating Risks from Gene Editing and Synthet
+[Step 083] user:gamer loss: 3.382 grad: 9.930 pred: 2.856 reward: 10.00 eps:0.21 exploit regret:    - hn:0.799 hc:0.94 | source_nhan_dan_online | Hype Beast | Viet Nam unveils breakthroughs in post‑quantum
+[Step 084] user:gamer loss: 2.339 grad: 6.098 pred: 2.790 reward:  6.66 eps:0.21 exploit regret:    - hn:0.793 hc:0.94 | source_hindustan_times | Sarcastic Takedown | Pregnant public sector banker alleges toxic wo
+[Step 085] user:gamer loss: 2.614 grad: 5.792 pred: 2.752 reward:  7.46 eps:0.21 exploit regret:    - hn:0.788 hc:0.94 | dailymail.co.uk | Clickbait Shocker | US skater's incredible backwards somersault st
+[Step 086] user:gamer loss: 3.918 grad: 7.037 pred: 2.689 reward: 10.00 eps:0.21 exploit regret:    - hn:0.782 hc:0.93 | source_geekwire | Hype Beast | Qualterra raises $4.5M to turn organic waste i
+[Step 087] user:gamer loss: 2.148 grad: 5.186 pred: 2.667 reward:  7.69 eps:0.21 exploit regret:    - hn:0.779 hc:0.93 | gamespot.com | Clickbait Shocker | Fallout Season 2's Cameo Performer May Have Bi
+[Step 088] user:gamer loss: 3.727 grad: 6.183 pred: 2.620 reward: 10.00 eps:0.21 exploit regret:    - hn:0.777 hc:0.93 | source_azoquantum | Hype Beast | Exotic Quantum Material Using Magnetism to Boo
+[Step 089] user:gamer loss: 2.265 grad: 5.087 pred: 2.616 reward:  7.80 eps:0.21 explore regret:    - hn:0.775 hc:0.93 | arstechnica.com | Hype Beast | SpaceX's next-gen Super Heavy booster aces fou
+[Step 090] user:gamer loss: 2.121 grad: 5.330 pred: 2.647 reward:  7.92 eps:0.21 exploit regret: 2.08 hn:0.775 hc:0.93 | rockpapershotgun.com | Clickbait Shocker | “You gotta let some of the chaos in”: Diablo 2
+[Step 091] user:gamer loss: 2.655 grad: 5.591 pred: 2.633 reward:  7.85 eps:0.21 explore regret:    - hn:0.778 hc:0.93 | source_travel_and_tour_world | Hype Beast | Americans Set to Shatter Records, Spending a J
+[Step 092] user:gamer loss: 2.061 grad: 5.546 pred: 2.637 reward:  6.56 eps:0.21 explore regret:    - hn:0.778 hc:0.93 | source_china_daily_global_edition | Hype Beast | Correcting the record on China's 'social credi
+[Step 093] user:gamer loss: 1.660 grad: 5.205 pred: 2.643 reward:  7.97 eps:0.21 exploit regret:    - hn:0.779 hc:0.93 | 9to5mac.com | Clickbait Shocker | iPhone 18 Pro: These rumored camera upgrades c
+[Step 094] user:gamer loss: 7.424 grad:15.032 pred: 2.642 reward: -4.76 eps:0.21 exploit regret:    - hn:0.778 hc:0.93 | source_the_guardian | Hype Beast | Bean breakthrough bodes well for climate chang
+[Step 095] user:gamer loss: 1.299 grad: 5.521 pred: 2.656 reward:  7.66 eps:0.21 exploit regret:    - hn:0.780 hc:0.93 | source_nus_national_university_of_singapore | Hype Beast | New NUS Research Centre on Sustainable Urban F
+[Step 096] user:gamer loss: 1.231 grad: 5.611 pred: 2.663 reward:  7.81 eps:0.21 exploit regret:    - hn:0.778 hc:0.93 | eurogamer.net | Clickbait Shocker | Black Myth: Zhong Kui gets a new in-engine vid
+[Step 097] user:gamer loss: 1.141 grad: 5.648 pred: 2.687 reward:  7.80 eps:0.21 exploit regret:    - hn:0.782 hc:0.93 | dailymail.co.uk | Clickbait Shocker | James Van Der Beek's disease is the silent kil
+[Step 098] user:gamer loss: 1.637 grad:10.406 pred: 2.738 reward:  6.74 eps:0.21 exploit regret:    - hn:0.788 hc:0.94 | source_innovation_tech_today | Clickbait Shocker | National Geographic Lost Cities Revealed With 
+[Step 099] user:gamer loss: 1.620 grad:10.529 pred: 2.744 reward:  7.09 eps:0.21 explore regret:    - hn:0.790 hc:0.94 | source_sammyguru | Hype Beast | Samsung’s Wearable Breakthroughs in Heart and 
+[Step 100] user:gamer loss:12.246 grad:39.227 pred: 2.773 reward: 10.00 eps:0.21 explore regret: 0.00 hn:0.792 hc:0.94 | source_european_central_bank | Hype Beast | Empowering Europe: boosting strategic autonomy
+  └─ checkpoint step=100 rolling_reward_50=7.41 mean_regret_so_far=3.82
+[Step 101] user:gamer loss: 0.950 grad: 6.104 pred: 2.781 reward:  7.48 eps:0.21 exploit regret:    - hn:0.790 hc:0.94 | source_bbc | Clickbait Shocker | Alleged bullying, harassment and toxic culture
+[Step 102] user:gamer loss: 3.447 grad:18.149 pred: 2.790 reward:  6.63 eps:0.21 exploit regret:    - hn:0.792 hc:0.94 | gamespot.com | Dystopian Warning | Even Analysts Are Having A Hard Time Predictin
+[Step 103] user:gamer loss: 0.928 grad: 6.168 pred: 2.793 reward:  7.63 eps:0.21 exploit regret:    - hn:0.792 hc:0.94 | venturebeat.com | Clickbait Shocker | The creator of Claude Code just revealed his w
+[Step 104] user:gamer loss: 1.602 grad:11.832 pred: 2.790 reward:  7.18 eps:0.21 exploit regret:    - hn:0.794 hc:0.94 | source_financialcontent | Clickbait Shocker | Retail Stagnation Shocker: Flat December Sales
+[Step 105] user:gamer loss: 2.992 grad:17.435 pred: 2.845 reward:  7.79 eps:0.21 exploit regret:    - hn:0.800 hc:0.94 | source_psychology_today | Hype Beast | Breakthrough AI predicts brain age, cancer, de
+[Step 106] user:gamer loss: 9.266 grad:36.066 pred: 2.878 reward: 10.00 eps:0.20 exploit regret:    - hn:0.801 hc:0.95 | source_cbs_news | Sarcastic Takedown | 97% Of Americans Have Toxic 'Forever Chemicals
+[Step 107] user:gamer loss: 0.859 grad: 6.607 pred: 2.861 reward:  7.25 eps:0.20 exploit regret:    - hn:0.798 hc:0.94 | eurogamer.net | Clickbait Shocker | Is a Baldur's Gate 3 TV show a good idea and d
+[Step 108] user:gamer loss: 0.894 grad: 6.212 pred: 2.822 reward:  7.39 eps:0.20 exploit regret:    - hn:0.794 hc:0.94 | rockpapershotgun.com | Dystopian Warning | Scratch that, the Steam Machine is delayed aft
+[Step 109] user:gamer loss: 6.809 grad:25.993 pred: 2.841 reward: 10.00 eps:0.20 exploit regret:    - hn:0.795 hc:0.94 | 9to5mac.com | Hype Beast | Apple @ Work: Platform SSO is the single most 
+[Step 110] user:gamer loss: 7.719 grad:29.014 pred: 2.842 reward: 10.00 eps:0.20 exploit regret: 0.00 hn:0.795 hc:0.94 | pcgamer.com | Clickbait Shocker | Dwarf Fortress forensic specialists blame myst
+[Step 111] user:gamer loss: 1.732 grad:12.376 pred: 2.830 reward:  7.03 eps:0.20 exploit regret:    - hn:0.793 hc:0.94 | source_international_consortium_of_investigative_journalists_icij | Clickbait Shocker | Apple’s Secret Offshore Island Hop Revealed By
+[Step 112] user:gamer loss: 6.201 grad:23.719 pred: 2.845 reward: 10.00 eps:0.20 explore regret:    - hn:0.799 hc:0.94 | cnet.com | Clickbait Shocker | Samsung Galaxy Unpacked 2026: Launch Date Reve
+[Step 113] user:gamer loss: 0.889 grad: 5.245 pred: 2.841 reward:  7.43 eps:0.20 explore regret:    - hn:0.798 hc:0.94 | source_tv_brics | Hype Beast | China unveils breakthrough in brain-computer i
+[Step 114] user:gamer loss: 5.827 grad:22.593 pred: 2.855 reward: 10.00 eps:0.20 explore regret:    - hn:0.799 hc:0.94 | dailymail.co.uk | Clickbait Shocker | Sleep expert explains the benefits of being in
+[Step 115] user:gamer loss: 0.932 grad: 4.833 pred: 2.832 reward:  7.53 eps:0.20 exploit regret:    - hn:0.796 hc:0.94 | source_honda_newsroom | Clickbait Shocker | All-New 11th Generation Civic Sedan Fully Reve
+[Step 116] user:gamer loss: 2.528 grad: 9.972 pred: 2.812 reward:  3.18 eps:0.20 exploit regret:    - hn:0.794 hc:0.94 | source_the_well_news | Dystopian Warning | Dangerous Social Media Trends Leading to Injur
+[Step 117] user:gamer loss: 4.700 grad:17.260 pred: 2.825 reward: 10.00 eps:0.20 exploit regret:    - hn:0.795 hc:0.94 | source_notebookcheck | Clickbait Shocker | New Anbernic RG477V gaming handheld launch det
+[Step 118] user:gamer loss: 4.267 grad:14.653 pred: 2.795 reward: 10.00 eps:0.20 exploit regret:    - hn:0.794 hc:0.94 | eurogamer.net | Clickbait Shocker | You can expect to see more of Ron Perlman in F
+[Step 119] user:gamer loss: 1.907 grad: 7.086 pred: 2.764 reward:  7.14 eps:0.20 exploit regret:    - hn:0.792 hc:0.94 | source_propublica | Hype Beast | The Secret IRS Files: Trove of Never-Before-Se
+[Step 120] user:gamer loss: 1.909 grad: 7.707 pred: 2.804 reward:  6.61 eps:0.20 exploit regret: 3.39 hn:0.794 hc:0.94 | nylon.com | Clickbait Shocker | Suddenly, Everyone In Fashion Needs Prescripti
+[Step 121] user:gamer loss: 2.501 grad: 7.395 pred: 2.771 reward:  7.49 eps:0.20 explore regret:    - hn:0.792 hc:0.94 | source_bitget | Hype Beast | Pantera Partner: Record Fund Deployment in 202
+[Step 122] user:gamer loss: 1.357 grad: 4.659 pred: 2.775 reward:  7.27 eps:0.20 exploit regret:    - hn:0.792 hc:0.94 | theguardian.com | Clickbait Shocker | Mysterious bags of ‘hazardous’ materials appea
+[Step 123] user:gamer loss: 1.340 grad: 4.683 pred: 2.783 reward:  7.46 eps:0.20 exploit regret:    - hn:0.793 hc:0.94 | source_cbc | Clickbait Shocker | Tax avoidance: Canada-Barbados tax deal loopho
+[Step 124] user:gamer loss: 4.143 grad:12.642 pred: 2.847 reward:  2.77 eps:0.20 exploit regret:    - hn:0.800 hc:0.94 | source_copyleaks | Dystopian Warning | Copyleaks Research: 83% Fear AI Video Manipula
+[Step 125] user:gamer loss: 1.171 grad: 4.644 pred: 2.830 reward:  7.76 eps:0.20 explore regret:    - hn:0.797 hc:0.94 | source_national_geographic | Clickbait Shocker | "Lost" New England Revealed by High-Tech Archa
+[Step 126] user:gamer loss: 3.565 grad:10.788 pred: 2.786 reward: 10.00 eps:0.20 exploit regret:    - hn:0.793 hc:0.94 | source_arab_news | Hype Beast | Saudi Arabia strengthens food security with tr
+[Step 127] user:gamer loss: 1.220 grad: 4.555 pred: 2.818 reward:  7.68 eps:0.20 exploit regret:    - hn:0.796 hc:0.94 | source_technetbook | Clickbait Shocker | Punkt MC03 Privacy Smartphone with AphyOS Reve
+[Step 128] user:gamer loss: 4.228 grad:13.232 pred: 2.812 reward: 10.00 eps:0.20 exploit regret:    - hn:0.796 hc:0.94 | source_yahoo_finance | Hype Beast | PanBrain Tech Unveils Breakthrough Brain-Compu
+[Step 129] user:gamer loss: 3.473 grad:12.854 pred: 2.877 reward:  6.65 eps:0.19 explore regret:    - hn:0.803 hc:0.95 | source_pr_newswire | Hype Beast | Breakthrough Vaccine Technology Addresses Crit
+[Step 130] user:gamer loss: 1.084 grad: 4.474 pred: 2.873 reward:  7.80 eps:0.19 exploit regret: 2.20 hn:0.800 hc:0.94 | eurogamer.net | Clickbait Shocker | Indie dev claims the sudden takedown of its ga
+[Step 131] user:gamer loss: 2.596 grad:10.072 pred: 2.892 reward:  7.73 eps:0.19 exploit regret:    - hn:0.804 hc:0.95 | source_liverpool_city_region_combined_authority | Clickbait Shocker | Designs for new £32m St Helens Transport Inter
+[Step 132] user:gamer loss: 1.967 grad: 8.209 pred: 2.854 reward:  7.13 eps:0.19 exploit regret:    - hn:0.799 hc:0.94 | dailymail.co.uk | Clickbait Shocker | Jamie Redknapp reveals he's been sober for 18 
+[Step 133] user:gamer loss: 1.994 grad: 9.746 pred: 2.902 reward:  6.69 eps:0.19 exploit regret:    - hn:0.798 hc:0.94 | rockpapershotgun.com | Clickbait Shocker | Square Enix's baffling murder mystery social g
+[Step 134] user:gamer loss: 4.713 grad:18.384 pred: 2.892 reward: 10.00 eps:0.19 exploit regret:    - hn:0.801 hc:0.95 | source_business_insider | Clickbait Shocker | Home Depot salaries revealed: How much tech jo
+[Step 135] user:gamer loss: 7.933 grad:24.522 pred: 2.885 reward: 10.00 eps:0.19 exploit regret:    - hn:0.801 hc:0.95 | source_ign_nordic | Clickbait Shocker | Nintendo Switch-Style Atari 2600 Retro Handhel
+[Step 136] user:gamer loss: 1.135 grad: 4.556 pred: 2.832 reward:  7.69 eps:0.19 exploit regret:    - hn:0.797 hc:0.94 | source_sabc_news | Hype Beast | New tech to boost border security: SAPU - SABC
+[Step 137] user:gamer loss: 3.375 grad:12.916 pred: 2.852 reward:  6.72 eps:0.19 exploit regret:    - hn:0.800 hc:0.94 | source_rnz | Clickbait Shocker | GridAKL's contribution to Auckland economy rev
+[Step 138] user:gamer loss: 3.116 grad:10.287 pred: 2.782 reward:  6.94 eps:0.19 exploit regret:    - hn:0.793 hc:0.94 | source_global_times | Hype Beast | Chinese scientists make breakthrough in BCI-as
+[Step 139] user:gamer loss: 3.275 grad: 9.252 pred: 2.731 reward:  4.28 eps:0.19 exploit regret:    - hn:0.788 hc:0.94 | globalelr.com | Angry Rant | China’s Environmental Social Credit System Enc
+[Step 140] user:gamer loss: 4.621 grad:12.367 pred: 2.707 reward: 10.00 eps:0.19 exploit regret: 0.00 hn:0.786 hc:0.94 | source_the_guardian | Clickbait Shocker | Secret EU plan ‘to sabotage Hungarian economy’
+[Step 141] user:gamer loss: 2.959 grad:10.123 pred: 2.726 reward:  6.63 eps:0.19 exploit regret:    - hn:0.784 hc:0.94 | eurogamer.net | Clickbait Shocker | "She can be even better" - Blizzard agrees to 
+[Step 142] user:gamer loss: 1.983 grad: 5.925 pred: 2.634 reward:  7.14 eps:0.19 exploit regret:    - hn:0.776 hc:0.93 | androidauthority.com | Clickbait Shocker | Massive Galaxy S26 series spec leak leaves not
+[Step 143] user:gamer loss: 2.035 grad: 5.479 pred: 2.587 reward:  6.68 eps:0.19 exploit regret:    - hn:0.774 hc:0.93 | source_crypto_adventure | Hype Beast | KeepKey Wallet Review 2026: The Minimalist Har
+[Step 144] user:gamer loss: 2.679 grad: 6.831 pred: 2.576 reward:  6.95 eps:0.19 exploit regret:    - hn:0.770 hc:0.93 | source_the_economic_times | Sarcastic Takedown | What is 'revenge quitting'? Is this rising tre
+[Step 145] user:gamer loss: 4.335 grad: 9.925 pred: 2.549 reward: 10.00 eps:0.19 exploit regret:    - hn:0.768 hc:0.93 | dailymail.co.uk | Clickbait Shocker | Newly-single Olivia Attwood stuns in a cream f
+[Step 146] user:gamer loss: 4.530 grad:11.357 pred: 2.540 reward: 10.00 eps:0.19 exploit regret:    - hn:0.766 hc:0.93 | source_dualshockers | Clickbait Shocker | 9 Highly Reviewed Cozy Games That Are Overrate
+[Step 147] user:gamer loss: 1.675 grad: 5.182 pred: 2.520 reward:  7.96 eps:0.19 exploit regret:    - hn:0.765 hc:0.92 | theguardian.com | Hype Beast | Cees Nooteboom, Dutch novelist and travel writ
+[Step 148] user:gamer loss: 7.295 grad:14.182 pred: 2.509 reward: -5.32 eps:0.19 exploit regret:    - hn:0.765 hc:0.92 | source_forbes | Dystopian Warning | 3 Risks That Every Meta Stock Investor Should 
+[Step 149] user:gamer loss: 2.652 grad: 5.495 pred: 2.470 reward:  4.91 eps:0.19 exploit regret:    - hn:0.760 hc:0.92 | source_iol | Angry Rant | Renewable energy surge highlights urgent need 
+[Step 150] user:gamer loss: 3.715 grad: 8.364 pred: 2.460 reward: 10.00 eps:0.19 exploit regret: 0.00 hn:0.758 hc:0.92 | source_yahoo_finance_canada | Hype Beast | Space sector eyes further investment growth in
+  └─ checkpoint step=150 rolling_reward_50=7.55 mean_regret_so_far=2.92
+[Step 151] user:gamer loss: 4.154 grad: 8.751 pred: 2.445 reward: 10.00 eps:0.19 exploit regret:    - hn:0.757 hc:0.92 | source_travel_and_tour_world | Hype Beast | Sri Lanka Introduces New Digital Nomad Visa to
+[Step 152] user:gamer loss: 2.078 grad: 5.078 pred: 2.437 reward:  7.09 eps:0.18 exploit regret:    - hn:0.756 hc:0.92 | source_daily_record | Hype Beast | Microplastics from takeaway boxes may be fuell
+[Step 153] user:gamer loss: 4.029 grad: 8.018 pred: 2.440 reward: 10.00 eps:0.18 exploit regret:    - hn:0.756 hc:0.92 | samsung.com | Hype Beast | Samsung’s Breakthrough Wearable Technologies D
+[Step 154] user:gamer loss: 2.135 grad: 4.733 pred: 2.430 reward:  7.37 eps:0.18 explore regret:    - hn:0.755 hc:0.92 | source_tom_s_hardware | Hype Beast | China targets brain computer interface race wi
+[Step 155] user:gamer loss: 2.212 grad: 4.763 pred: 2.434 reward:  6.92 eps:0.18 exploit regret:    - hn:0.755 hc:0.92 | source_european_medical_journal | Hype Beast | Potential breakthrough in brain-computer inter
+[Step 156] user:gamer loss: 2.652 grad: 4.790 pred: 2.435 reward:  7.12 eps:0.18 exploit regret:    - hn:0.756 hc:0.92 | bbc.com | Hype Beast | Wrapped helps Spotify add users despite artist
+[Step 157] user:gamer loss: 3.851 grad: 7.953 pred: 2.439 reward: 10.00 eps:0.18 exploit regret:    - hn:0.756 hc:0.92 | androidauthority.com | Hype Beast | Upgrade your content creation with the DJI Mic
+[Step 158] user:gamer loss: 2.061 grad: 4.896 pred: 2.441 reward:  6.80 eps:0.18 exploit regret:    - hn:0.756 hc:0.92 | source_pandaily | Hype Beast | Mandarin Chinese Decoded from Brain Signals: N
+[Step 159] user:gamer loss: 2.031 grad: 4.994 pred: 2.435 reward:  7.15 eps:0.18 explore regret:    - hn:0.756 hc:0.92 | source_news_medical | Hype Beast | Breakthrough miniaturized brain-machine interf
+[Step 160] user:gamer loss: 4.070 grad: 9.309 pred: 2.437 reward: 10.00 eps:0.18 exploit regret: 0.00 hn:0.756 hc:0.92 | source_manchester_evening_news | Hype Beast | Archaeology breakthrough as ancient Mexican ci
+[Step 161] user:gamer loss: 1.836 grad: 5.214 pred: 2.437 reward:  7.53 eps:0.18 exploit regret:    - hn:0.756 hc:0.92 | source_technology_networks | Hype Beast | How Could a “Breakthrough” Brain-Computer Inte
+[Step 162] user:gamer loss: 4.276 grad:11.614 pred: 2.442 reward: 10.00 eps:0.18 explore regret:    - hn:0.756 hc:0.92 | source_the_debrief | Hype Beast | FDA Grants Breakthrough Status to Neuralink’s 
+[Step 163] user:gamer loss: 1.543 grad: 5.556 pred: 2.451 reward:  6.82 eps:0.18 exploit regret:    - hn:0.757 hc:0.92 | source_zero_waste_europe | Hype Beast | Reformed EPR can boost EU competitiveness and 
+[Step 164] user:gamer loss: 4.344 grad:13.472 pred: 2.457 reward: 10.00 eps:0.18 exploit regret:    - hn:0.758 hc:0.92 | source_frontex | Hype Beast | Frontex Launches Tactical Drone Pilot with Bul
+[Step 165] user:gamer loss: 4.278 grad:12.968 pred: 2.462 reward: 10.00 eps:0.18 explore regret:    - hn:0.759 hc:0.92 | source_the_express_tribune | Hype Beast | Meta’s Brain Typing Breakthrough: A $2 Million
+[Step 166] user:gamer loss: 4.343 grad:14.115 pred: 2.470 reward: 10.00 eps:0.18 exploit regret:    - hn:0.760 hc:0.92 | source_golf_digest | Hype Beast | Masters 2025: Diving deep into Augusta Nationa
+[Step 167] user:gamer loss: 1.634 grad: 6.665 pred: 2.473 reward:  7.48 eps:0.18 explore regret:    - hn:0.761 hc:0.92 | source_psypost | Hype Beast | Breakthrough brain-computer interface allows m
+[Step 168] user:gamer loss: 1.346 grad: 5.638 pred: 2.483 reward:  7.10 eps:0.18 explore regret:    - hn:0.762 hc:0.92 | source_itweb | Hype Beast | Meta unleashes AI power to boost SA’s creator 
+[Step 169] user:gamer loss: 1.329 grad: 5.595 pred: 2.486 reward:  6.69 eps:0.18 exploit regret:    - hn:0.762 hc:0.92 | source_natural_history_museum | Hype Beast | Revolutionary AirSeq Technology Promises Break
+[Step 170] user:gamer loss: 4.593 grad:14.508 pred: 2.486 reward: 10.00 eps:0.18 exploit regret: 0.00 hn:0.762 hc:0.92 | source_creative_bloq | Clickbait Shocker | This Kith x Capcom collaboration is the most u
+[Step 171] user:gamer loss: 2.534 grad: 8.827 pred: 2.492 reward:  6.58 eps:0.18 explore regret:    - hn:0.763 hc:0.92 | source_daily_mail | Clickbait Shocker | Richard Branson's history of failed rocket lau
+[Step 172] user:gamer loss: 2.942 grad: 9.113 pred: 2.486 reward:  3.92 eps:0.18 exploit regret:    - hn:0.762 hc:0.92 | source_innovation_news_network | Angry Rant | Battery energy storage and decentralised resil
+[Step 173] user:gamer loss: 1.755 grad: 6.793 pred: 2.481 reward:  7.76 eps:0.18 exploit regret:    - hn:0.762 hc:0.92 | source_the_times | Clickbait Shocker | Revealed: Russia’s secret war in UK waters - T
+[Step 174] user:gamer loss: 5.748 grad:17.031 pred: 2.475 reward: 10.00 eps:0.18 exploit regret:    - hn:0.761 hc:0.92 | source_mashable | Sarcastic Takedown | 'Alpha males' and the Manosphere: Stop listeni
+[Step 175] user:gamer loss: 1.939 grad: 5.436 pred: 2.477 reward:  3.09 eps:0.17 explore regret:    - hn:0.761 hc:0.92 | source_nature | Dystopian Warning | Will bird flu spark a human pandemic? Scientis
+[Step 176] user:gamer loss: 8.781 grad:19.324 pred: 2.458 reward: -4.87 eps:0.17 exploit regret:    - hn:0.759 hc:0.92 | source_npr | Analytical Deep Dive | Meet The Spleen, The Strange Little Organ That
+[Step 177] user:gamer loss: 4.467 grad:13.451 pred: 2.457 reward: 10.00 eps:0.17 explore regret:    - hn:0.759 hc:0.92 | source_techcrunch | Sarcastic Takedown | Don’t fall into the toxic workplace trap - Tec
+[Step 178] user:gamer loss: 3.160 grad: 9.289 pred: 2.442 reward:  2.87 eps:0.17 exploit regret:    - hn:0.757 hc:0.92 | source_whalesbook | Dystopian Warning | RBI Ethics Push: Core Banking Risk or Complian
+[Step 179] user:gamer loss: 3.019 grad: 8.237 pred: 2.440 reward:  3.01 eps:0.17 exploit regret:    - hn:0.757 hc:0.92 | source_philenews | Dystopian Warning | Water scarcity flagged as top risk to Cyprus e
+[Step 180] user:gamer loss: 1.924 grad: 6.213 pred: 2.426 reward:  7.78 eps:0.17 explore regret: 2.22 hn:0.755 hc:0.92 | source_homes_to_love | Clickbait Shocker | The Unexpected DIY & Craft Trends Taking Us Of
+[Step 181] user:gamer loss: 3.686 grad: 9.518 pred: 2.421 reward: 10.00 eps:0.17 exploit regret:    - hn:0.754 hc:0.92 | source_forbes | Sarcastic Takedown | Toxic Work Culture: When Is It Time To Cut Bai
+[Step 182] user:gamer loss: 2.008 grad: 5.817 pred: 2.409 reward:  7.77 eps:0.17 explore regret:    - hn:0.753 hc:0.92 | source_airbnb_newsroom | Clickbait Shocker | 2026 travel predictions revealed - Airbnb News
+[Step 183] user:gamer loss: 1.985 grad: 5.937 pred: 2.397 reward:  7.77 eps:0.17 exploit regret:    - hn:0.751 hc:0.92 | source_the_shift_news | Sarcastic Takedown | Malta-licensed gambling company founded on tak
+[Step 184] user:gamer loss: 2.116 grad: 5.239 pred: 2.399 reward:  2.76 eps:0.17 exploit regret:    - hn:0.751 hc:0.92 | source_homeland_security_today | Angry Rant | How Can DHS Leverage Border Security Technolog
+[Step 185] user:gamer loss: 7.224 grad:14.206 pred: 2.379 reward: -5.05 eps:0.17 exploit regret:    - hn:0.748 hc:0.92 | arabnews.jp | Analytical Deep Dive | How young chefs and creators are transforming 
+[Step 186] user:gamer loss: 2.454 grad: 5.924 pred: 2.376 reward:  4.89 eps:0.17 explore regret:    - hn:0.748 hc:0.91 | source_kalinga_tv | Angry Rant | Power Grid Issues 20 MW/80 MWh Battery Storage
+[Step 187] user:gamer loss: 1.693 grad: 4.878 pred: 2.347 reward:  4.75 eps:0.17 exploit regret:    - hn:0.744 hc:0.91 | dailymail.co.uk | Angry Rant | King Charles expresses 'shock and sadness' at 
+[Step 188] user:gamer loss: 1.894 grad: 6.212 pred: 2.315 reward:  7.23 eps:0.17 exploit regret:    - hn:0.740 hc:0.91 | source_autoevolution | Clickbait Shocker | This Architectural Tiny House Embraces the Out
+[Step 189] user:gamer loss: 1.371 grad: 4.950 pred: 2.299 reward:  7.09 eps:0.17 exploit regret:    - hn:0.737 hc:0.91 | source_sciencealert | Clickbait Shocker | Mysterious 'Dark Oxygen' Discovered at Bottom 
+[Step 190] user:gamer loss: 6.235 grad:18.301 pred: 2.271 reward: 10.00 eps:0.17 explore regret:-2.34 hn:0.733 hc:0.91 | source_manufacturing_today_india | Hype Beast | Circular economy and India’s startups: Boostin
+[Step 191] user:gamer loss: 4.272 grad:14.167 pred: 2.259 reward: 10.00 eps:0.17 exploit regret:    - hn:0.732 hc:0.91 | source_yicai_global | Hype Beast | Chinese BCI Firm BrainXBot Hails Breakthrough 
+[Step 192] user:gamer loss: 1.832 grad: 7.697 pred: 2.251 reward:  7.67 eps:0.17 explore regret:    - hn:0.730 hc:0.90 | source_howstuffworks | Hype Beast | 15 Of The Craziest Guinness World Records - Ho
+[Step 193] user:gamer loss: 1.872 grad: 6.760 pred: 2.249 reward:  7.75 eps:0.17 explore regret:    - hn:0.730 hc:0.90 | source_business_post_nigeria | Hype Beast | Customs to Boost Border Security, Combat Smugg
+[Step 194] user:gamer loss: 1.864 grad: 6.778 pred: 2.248 reward:  7.86 eps:0.17 explore regret:    - hn:0.730 hc:0.90 | source_devdiscourse | Hype Beast | Security Forces Achieve Major Breakthrough: To
+[Step 195] user:gamer loss: 1.822 grad: 7.147 pred: 2.254 reward:  7.98 eps:0.17 exploit regret:    - hn:0.730 hc:0.90 | source_punch_newspapers | Hype Beast | NDIC pledges closer ties with CBN to boost ban
+[Step 196] user:gamer loss: 6.231 grad:18.954 pred: 2.263 reward: 10.00 eps:0.17 exploit regret:    - hn:0.732 hc:0.91 | source_globenewswire | Hype Beast | More crop per drop: NADEC and EF Polymer deplo
+[Step 197] user:gamer loss: 1.176 grad: 5.206 pred: 2.276 reward:  7.09 eps:0.17 exploit regret:    - hn:0.732 hc:0.91 | source_university_of_helsinki | Hype Beast | Urban gardening may improve human health – Res
+[Step 198] user:gamer loss: 2.810 grad:10.478 pred: 2.287 reward:  7.97 eps:0.17 exploit regret:    - hn:0.733 hc:0.91 | source_physics_world | Hype Beast | Brain–computer interface that allowed a paraly
+[Step 199] user:gamer loss: 1.661 grad: 6.859 pred: 2.292 reward:  7.36 eps:0.16 exploit regret:    - hn:0.735 hc:0.91 | source_nus_national_university_of_singapore | Hype Beast | Boosting the global bioeconomy - NUS - Nationa
+[Step 200] user:gamer loss: 1.244 grad: 5.374 pred: 2.302 reward:  6.58 eps:0.16 exploit regret: 3.42 hn:0.736 hc:0.91 | source_university_college_london | Hype Beast | UCL celebrates 200 years: A landmark year begi
+  └─ checkpoint step=200 rolling_reward_50=7.11 mean_regret_so_far=2.36
+[Step 201] user:gamer loss: 8.972 grad:20.545 pred: 2.315 reward: -5.52 eps:0.16 exploit regret:    - hn:0.737 hc:0.91 | cimmyt.org | Hype Beast | Breakthroughs in agriculture for action on cli
+[Step 202] user:gamer loss: 5.453 grad:16.153 pred: 2.316 reward: 10.00 eps:0.16 exploit regret:    - hn:0.736 hc:0.91 | source_chapman_newsroom | Hype Beast | Food Security Breakthrough - Chapman Newsroom
+[Step 203] user:gamer loss: 1.585 grad: 6.558 pred: 2.319 reward:  7.56 eps:0.16 exploit regret:    - hn:0.738 hc:0.91 | source_engineering_news_record | Hype Beast | Using Bus Rapid Transit to Maximize Miami Mobi
+[Step 204] user:gamer loss: 8.007 grad:21.322 pred: 2.323 reward: 10.00 eps:0.16 exploit regret:    - hn:0.739 hc:0.91 | source_farmonaut | Hype Beast | Lithium Mine Tesla: 2026 Breakthroughs In Sust
+[Step 205] user:gamer loss: 4.728 grad:14.348 pred: 2.335 reward: 10.00 eps:0.16 exploit regret:    - hn:0.741 hc:0.91 | source_the_quantum_insider | Hype Beast | IQM and Scientek Corporation Sign Reseller Agr
+[Step 206] user:gamer loss: 1.624 grad: 5.604 pred: 2.342 reward:  7.44 eps:0.16 exploit regret:    - hn:0.741 hc:0.91 | source_fox_2_detroit | Hype Beast | Brain computer chips tested at U-M Health prov
+[Step 207] user:gamer loss: 7.261 grad:18.317 pred: 2.357 reward: 10.00 eps:0.16 exploit regret:    - hn:0.742 hc:0.91 | source_adobe_newsroom | Hype Beast | Adobe: Holiday Shopping Season Drove a Record 
+[Step 208] user:gamer loss: 1.726 grad: 5.116 pred: 2.365 reward:  7.54 eps:0.16 explore regret:    - hn:0.744 hc:0.91 | source_architectural_record | Hype Beast | Zaha Hadid Architects’ King Abdullah Financial
+[Step 209] user:gamer loss: 4.431 grad:10.848 pred: 2.395 reward: 10.00 eps:0.16 exploit regret:    - hn:0.747 hc:0.91 | source_port_technology | Hype Beast | Valenciaport launches AI initiative to boost c
+[Step 210] user:gamer loss: 1.885 grad: 4.914 pred: 2.407 reward:  7.92 eps:0.16 exploit regret: 2.08 hn:0.752 hc:0.92 | source_labor_notes | Hype Beast | In Major Breakthrough, Volkswagen Auto Workers
+[Step 211] user:gamer loss: 2.528 grad: 6.493 pred: 2.433 reward:  6.95 eps:0.16 explore regret:    - hn:0.752 hc:0.92 | source_money_saving_expert | Hype Beast | How to boost your Nectar points - Money Saving
+[Step 212] user:gamer loss: 1.771 grad: 5.199 pred: 2.448 reward:  6.90 eps:0.16 exploit regret:    - hn:0.756 hc:0.92 | source_interesting_engineering | Hype Beast | Mind over machine: Neuralink’s breakthrough le
+[Step 213] user:gamer loss: 3.783 grad: 7.586 pred: 2.452 reward: 10.00 eps:0.16 exploit regret:    - hn:0.756 hc:0.92 | source_digitimes | Hype Beast | China eyes 2027 BCI breakthrough as it races t
+[Step 214] user:gamer loss: 2.582 grad: 6.573 pred: 2.475 reward:  6.91 eps:0.16 exploit regret:    - hn:0.758 hc:0.92 | source_nairametrics | Hype Beast | Dangote Boosts Abuja Trade Fair - Nairametrics
+[Step 215] user:gamer loss: 7.222 grad:13.642 pred: 2.486 reward: -5.22 eps:0.16 exploit regret:    - hn:0.759 hc:0.92 | source_the_business_journals | Hype Beast | Dayton sees $4.2M record-breaking estate sale 
+[Step 216] user:gamer loss: 1.786 grad: 4.933 pred: 2.486 reward:  7.99 eps:0.16 exploit regret:    - hn:0.759 hc:0.92 | theguardian.com | Hype Beast | Gray wolf appears in Los Angeles county for fi
+[Step 217] user:gamer loss: 1.856 grad: 5.057 pred: 2.484 reward:  6.76 eps:0.16 explore regret:    - hn:0.758 hc:0.92 | source_the_bridge_chronicle | Hype Beast | Elon Musk Claims "Full Body Functionality" Pos
+[Step 218] user:gamer loss: 2.595 grad: 6.317 pred: 2.485 reward:  6.82 eps:0.16 exploit regret:    - hn:0.760 hc:0.92 | source_impakter | Hype Beast | ESG News Recap: COP30 Food Waste Breakthrough 
+[Step 219] user:gamer loss: 6.435 grad:14.787 pred: 2.482 reward: 10.00 eps:0.16 exploit regret:    - hn:0.758 hc:0.92 | transitcenter.org | Hype Beast | All Transportation is Local: Rewrite the Rules
+[Step 220] user:gamer loss: 1.682 grad: 4.814 pred: 2.479 reward:  7.39 eps:0.16 explore regret: 2.61 hn:0.758 hc:0.92 | source_the_debrecen_sun | Hype Beast | ECB’s Cipollone: Digital Euro to Cut Payment C
+[Step 221] user:gamer loss: 2.581 grad: 6.297 pred: 2.483 reward:  6.93 eps:0.16 exploit regret:    - hn:0.758 hc:0.92 | source_the_tech_buzz | Hype Beast | Google.org Deploys $20M AI Fund Across 12 Scie
+[Step 222] user:gamer loss: 3.950 grad: 9.296 pred: 2.490 reward: 10.00 eps:0.15 explore regret:    - hn:0.758 hc:0.92 | source_engineering_news_record | Hype Beast | Atlanta Readies for Next Bus Rapid Transit Pro
+[Step 223] user:gamer loss: 4.004 grad: 9.680 pred: 2.481 reward: 10.00 eps:0.15 exploit regret:    - hn:0.759 hc:0.92 | source_the_debrief | Clickbait Shocker | Secrets of a Lost Empire’s Mysterious 200-Mile
+[Step 224] user:gamer loss: 3.993 grad:10.912 pred: 2.496 reward: 10.00 eps:0.15 exploit regret:    - hn:0.762 hc:0.92 | source_abc7_los_angeles | Hype Beast | What is NAD? The supplement may help boost lon
+[Step 225] user:gamer loss: 2.494 grad: 6.440 pred: 2.489 reward:  7.64 eps:0.15 exploit regret:    - hn:0.760 hc:0.92 | source_frontiers | Hype Beast | The fight to end hunger: Research Topics explo
+[Step 226] user:gamer loss: 2.536 grad: 6.811 pred: 2.493 reward:  6.97 eps:0.15 exploit regret:    - hn:0.760 hc:0.92 | source_xinhua | Hype Beast | Brain-computer interface makes breakthrough by
+[Step 227] user:gamer loss: 2.467 grad: 6.946 pred: 2.502 reward:  7.81 eps:0.15 exploit regret:    - hn:0.759 hc:0.92 | theguardian.com | Clickbait Shocker | Mexico factory that imports US toxic waste to 
+[Step 228] user:gamer loss: 1.744 grad: 4.816 pred: 2.477 reward:  7.40 eps:0.15 exploit regret:    - hn:0.757 hc:0.92 | source_wisconsin_state_farmer | Hype Beast | New report identifies five breakthroughs to ad
+[Step 229] user:gamer loss: 4.561 grad:10.688 pred: 2.480 reward: 10.00 eps:0.15 exploit regret:    - hn:0.757 hc:0.92 | source_food_safety_news | Hype Beast | Australian breakthrough is the new alternative
+[Step 230] user:gamer loss: 1.676 grad: 5.082 pred: 2.470 reward:  7.99 eps:0.15 exploit regret: 2.01 hn:0.758 hc:0.92 | source_technology_org | Hype Beast | FDA Grants “Breakthrough” Status to Neuralink’
+[Step 231] user:gamer loss: 2.438 grad: 6.899 pred: 2.472 reward:  6.88 eps:0.15 explore regret:    - hn:0.758 hc:0.92 | source_the_daily_galaxy | Clickbait Shocker | Archaeologist Claims to Have Found Atlantis Ju
+[Step 232] user:gamer loss: 3.861 grad: 9.660 pred: 2.469 reward: 10.00 eps:0.15 exploit regret:    - hn:0.757 hc:0.92 | source_empower | Hype Beast | Valentine’s Day spending set to reach record $
+[Step 233] user:gamer loss: 1.712 grad: 6.002 pred: 2.482 reward:  6.92 eps:0.15 exploit regret:    - hn:0.758 hc:0.92 | dailymail.co.uk | Clickbait Shocker | EDEN CONFIDENTIAL: Anita Rani says Heathcliff 
+[Step 234] user:gamer loss: 1.788 grad: 5.585 pred: 2.462 reward:  6.78 eps:0.15 explore regret:    - hn:0.757 hc:0.92 | source_the_kyiv_independent | Hype Beast | Analysis: Ukraine learns hard lessons from Rus
+[Step 235] user:gamer loss: 7.809 grad:16.464 pred: 2.479 reward: -4.96 eps:0.15 exploit regret:    - hn:0.759 hc:0.92 | source_arab_news_pk | Hype Beast | GCC debt markets poised for major growth in 20
+[Step 236] user:gamer loss: 3.924 grad:10.699 pred: 2.463 reward: 10.00 eps:0.15 explore regret:    - hn:0.756 hc:0.92 | source_forefront_ng | Hype Beast | Bank Failure: NDIC, EFCC Boost Partnership On 
+[Step 237] user:gamer loss: 1.617 grad: 5.060 pred: 2.458 reward:  7.46 eps:0.15 exploit regret:    - hn:0.758 hc:0.92 | source_the_breakthrough_institute | Hype Beast | Commercializing Genetically Modified Crops in 
+[Step 238] user:gamer loss: 3.797 grad: 9.836 pred: 2.454 reward: 10.00 eps:0.15 exploit regret:    - hn:0.756 hc:0.92 | source_south_china_morning_post | Hype Beast | China sows seeds of agricultural self-reliance
+[Step 239] user:gamer loss: 4.463 grad:11.165 pred: 2.463 reward: 10.00 eps:0.15 exploit regret:    - hn:0.756 hc:0.92 | source_travel_and_tour_world | Hype Beast | Valencian Community Tourism Hits Record 11.7 M
+[Step 240] user:gamer loss: 2.283 grad: 6.132 pred: 2.459 reward:  7.49 eps:0.15 exploit regret: 2.51 hn:0.757 hc:0.92 | goodnewsnetwork.org | Hype Beast | Nebraska Woman Learns to Row, Then Becomes Fir
+[Step 241] user:gamer loss: 4.897 grad:12.047 pred: 2.468 reward: 10.00 eps:0.15 exploit regret:    - hn:0.758 hc:0.92 | source_manila_bulletin | Hype Beast | AboitizPower moves to boost grid stability wit
+[Step 242] user:gamer loss: 2.247 grad: 6.252 pred: 2.466 reward:  7.44 eps:0.15 exploit regret:    - hn:0.757 hc:0.92 | fiercebiotech.com | Hype Beast | <a href="https://www.fiercebiotech.com/biotech
+[Step 243] user:gamer loss: 1.934 grad: 5.299 pred: 2.457 reward:  6.95 eps:0.15 explore regret:    - hn:0.757 hc:0.92 | source_hothardware | Hype Beast | Synchron's Brain Implant Breakthrough Lets Use
+[Step 244] user:gamer loss: 4.634 grad: 9.636 pred: 2.455 reward: 10.00 eps:0.15 explore regret:    - hn:0.757 hc:0.92 | source_mirage_news | Hype Beast | Spatial Imaging Breakthroughs Boost Wheat Yiel
+[Step 245] user:gamer loss: 1.983 grad: 5.171 pred: 2.463 reward:  6.59 eps:0.15 exploit regret:    - hn:0.758 hc:0.92 | source_alwihda_info | Hype Beast | China makes breakthrough in brain-computer int
+[Step 246] user:gamer loss: 1.865 grad: 5.697 pred: 2.469 reward:  7.06 eps:0.14 exploit regret:    - hn:0.758 hc:0.92 | source_unilad_tech | Hype Beast | Elon Musk’s company achieves major breakthroug
+[Step 247] user:gamer loss: 3.837 grad:10.513 pred: 2.476 reward: 10.00 eps:0.14 exploit regret:    - hn:0.757 hc:0.92 | theguardian.com | Clickbait Shocker | Mexico moves to combat pollution following Gua
+[Step 248] user:gamer loss: 1.718 grad: 5.058 pred: 2.469 reward:  7.82 eps:0.14 exploit regret:    - hn:0.757 hc:0.92 | source_telus | Hype Beast | Food Compliance Innovation: TELUS & Welch's Br
+[Step 249] user:gamer loss: 1.641 grad: 5.237 pred: 2.482 reward:  7.86 eps:0.14 exploit regret:    - hn:0.759 hc:0.92 | source_pandaily | Hype Beast | China's Breakthrough in Implantable Brain-Comp
+[Step 250] user:gamer loss: 1.618 grad: 5.168 pred: 2.490 reward:  7.50 eps:0.14 exploit regret: 2.50 hn:0.759 hc:0.92 | source_disney_parks_blog | Hype Beast | Hauntingly Historic Mansion Celebrates 55 Year
+  └─ checkpoint step=250 rolling_reward_50=7.52 mean_regret_so_far=2.35
+[Step 251] user:gamer loss: 1.626 grad: 5.142 pred: 2.496 reward:  7.71 eps:0.14 exploit regret:    - hn:0.760 hc:0.92 | businessinsider.com | Hype Beast | Every song that's won record of the year at th
+[Step 252] user:gamer loss: 3.775 grad:10.290 pred: 2.502 reward: 10.00 eps:0.14 exploit regret:    - hn:0.761 hc:0.92 | source_webpronews | Hype Beast | SpaceX Partners with EchoStar to Bring Starlin
+[Step 253] user:gamer loss: 4.167 grad:14.377 pred: 2.550 reward: 10.00 eps:0.14 exploit regret:    - hn:0.767 hc:0.93 | arstechnica.com | Hype Beast | Did seabird poop fuel rise of Chincha in Peru?
+[Step 254] user:gamer loss: 2.300 grad: 8.431 pred: 2.557 reward:  7.63 eps:0.14 exploit regret:    - hn:0.768 hc:0.93 | bbc.com | Hype Beast | 'Year of octopus' declared after warmer seas l
+[Step 255] user:gamer loss: 2.311 grad: 8.203 pred: 2.563 reward:  7.38 eps:0.14 exploit regret:    - hn:0.771 hc:0.93 | source_ffoods_spectrum | Hype Beast | How Technological Breakthroughs are Redefining
+[Step 256] user:gamer loss: 2.546 grad: 9.705 pred: 2.580 reward:  6.70 eps:0.14 exploit regret:    - hn:0.770 hc:0.93 | source_farmonaut | Hype Beast | Carbon Farming: 7 Carbon Capture & Sequestrati
+[Step 257] user:gamer loss: 1.590 grad: 7.679 pred: 2.592 reward:  6.75 eps:0.14 exploit regret:    - hn:0.772 hc:0.93 | source_the_cool_down | Hype Beast | Scientists achieve major breakthrough that cou
+[Step 258] user:gamer loss: 1.648 grad: 6.633 pred: 2.557 reward:  7.13 eps:0.14 explore regret:    - hn:0.770 hc:0.93 | source_thecable | Hype Beast | Genesis Energy, NNPC Ltd announce strategic co
+[Step 259] user:gamer loss: 6.043 grad:18.091 pred: 2.584 reward: 10.00 eps:0.14 exploit regret:    - hn:0.773 hc:0.93 | source_usda_gov | Hype Beast | Wheat Genome Sequenced in Breakthrough for Glo
+[Step 260] user:gamer loss: 3.841 grad:12.731 pred: 2.560 reward: 10.00 eps:0.14 exploit regret:-0.28 hn:0.767 hc:0.93 | source_the_sun_nigeria | Hype Beast | NDIC moves to boost confidence after bank lice
+[Step 261] user:gamer loss: 8.661 grad:28.534 pred: 2.571 reward: 10.00 eps:0.14 exploit regret:    - hn:0.769 hc:0.93 | dailymail.co.uk | Hype Beast | I'm a 24-year-old fashion expert and my mum is
+[Step 262] user:gamer loss: 1.499 grad: 5.364 pred: 2.550 reward:  7.41 eps:0.14 explore regret:    - hn:0.767 hc:0.93 | source_reuters | Hype Beast | OpenAI to boost content owners' control for So
+[Step 263] user:gamer loss: 7.793 grad:21.011 pred: 2.564 reward: 10.00 eps:0.14 exploit regret:    - hn:0.768 hc:0.93 | source_engineering_news_record | Hype Beast | ENR 2025 Top 500 Sourcebook: Trend-Setter Tamp
+[Step 264] user:gamer loss: 1.431 grad: 5.667 pred: 2.580 reward:  7.25 eps:0.14 exploit regret:    - hn:0.771 hc:0.93 | source_fortune_india | Hype Beast | DishTV launches Content India to give boost to
+[Step 265] user:gamer loss: 7.799 grad:19.396 pred: 2.568 reward: 10.00 eps:0.14 exploit regret:    - hn:0.772 hc:0.93 | source_iol | Hype Beast | Local hair and skincare brand wins legal battl
+[Step 266] user:gamer loss: 2.371 grad: 7.561 pred: 2.583 reward:  7.48 eps:0.14 exploit regret:    - hn:0.773 hc:0.93 | source_south_china_morning_post | Hype Beast | Salty soil, no problem. China hails record rap
+[Step 267] user:gamer loss: 3.609 grad:10.098 pred: 2.583 reward: 10.00 eps:0.14 exploit regret:    - hn:0.770 hc:0.93 | source_eunews | Hype Beast | EIB and STMicroelectronics sign 1‑billion‑euro
+[Step 268] user:gamer loss: 2.367 grad: 7.768 pred: 2.604 reward:  7.47 eps:0.14 exploit regret:    - hn:0.776 hc:0.93 | source_biotecnika | Hype Beast | World’s First Two-Way Brain-Computer Interface
+[Step 269] user:gamer loss: 1.826 grad: 5.806 pred: 2.585 reward:  6.62 eps:0.13 explore regret:    - hn:0.772 hc:0.93 | ddnews.gov.in | Hype Beast | AIM–NITI Aayog, HUL Join Hands to Boost Circul
+[Step 270] user:gamer loss: 2.383 grad: 6.641 pred: 2.591 reward:  7.64 eps:0.13 exploit regret: 2.36 hn:0.772 hc:0.93 | source_times_of_india | Hype Beast | Elon Musk announces Starlink breakthrough: Pho
+[Step 271] user:gamer loss: 1.841 grad: 5.864 pred: 2.593 reward:  6.84 eps:0.13 exploit regret:    - hn:0.773 hc:0.93 | source_gb_news | Hype Beast | Archaeology breakthrough as student discovers 
+[Step 272] user:gamer loss: 1.728 grad: 5.051 pred: 2.589 reward:  7.61 eps:0.13 exploit regret:    - hn:0.771 hc:0.93 | dailymail.co.uk | Clickbait Shocker | Zayn Malik reveals he gave his five-year-old d
+[Step 273] user:gamer loss: 3.458 grad: 9.983 pred: 2.595 reward: 10.00 eps:0.13 exploit regret:    - hn:0.773 hc:0.93 | source_yahoo_finance | Hype Beast | Userful’s Infinity Platform Achieves Breakthro
+[Step 274] user:gamer loss: 4.702 grad:11.252 pred: 2.583 reward: 10.00 eps:0.13 explore regret:    - hn:0.771 hc:0.93 | source_telecoms_tech_news | Hype Beast | O2 uses Starlink to boost enterprise connectiv
+[Step 275] user:gamer loss: 1.705 grad: 4.983 pred: 2.596 reward:  7.31 eps:0.13 exploit regret:    - hn:0.772 hc:0.93 | destructoid.com | Hype Beast | Best players for FC 26 Shove Off Evolution
+[Step 276] user:gamer loss: 7.004 grad:16.924 pred: 2.594 reward: 10.00 eps:0.13 explore regret:    - hn:0.775 hc:0.93 | source_carnegie_mellon_university | Hype Beast | Breakthrough approach enables bidirectional BC
+[Step 277] user:gamer loss: 1.830 grad: 4.862 pred: 2.594 reward:  7.78 eps:0.13 explore regret:    - hn:0.772 hc:0.93 | goodnewsnetwork.org | Clickbait Shocker | Bird Droppings Powered the Rise of this Little
+[Step 278] user:gamer loss: 1.690 grad: 5.143 pred: 2.609 reward:  7.95 eps:0.13 explore regret:    - hn:0.775 hc:0.93 | grist.org | Hype Beast | Food safety breakthrough: USDA declares 'Big S
+[Step 279] user:gamer loss: 1.561 grad: 5.263 pred: 2.639 reward:  7.99 eps:0.13 exploit regret:    - hn:0.777 hc:0.93 | source_ewtn_news | Hype Beast | Vatican envoy celebrates Mass at Canterbury fo
+[Step 280] user:gamer loss: 3.457 grad:10.326 pred: 2.656 reward: 10.00 eps:0.13 exploit regret: 0.00 hn:0.779 hc:0.93 | source_fotmob | Clickbait Shocker | How The Super Bowl Will Have Unexpected Impact
+[Step 281] user:gamer loss: 7.325 grad:26.545 pred: 2.661 reward: 10.00 eps:0.13 explore regret:    - hn:0.781 hc:0.93 | source_the_debrief | Hype Beast | Paralyzed Man Controls Robotic Arm With His Th
+[Step 282] user:gamer loss: 6.497 grad:17.108 pred: 2.688 reward: 10.00 eps:0.13 exploit regret:    - hn:0.784 hc:0.94 | source_pandaily | Hype Beast | China's Tsinghua University Made Breakthrough 
+[Step 283] user:gamer loss: 1.629 grad: 4.870 pred: 2.687 reward:  7.56 eps:0.13 exploit regret:    - hn:0.785 hc:0.94 | dailymail.co.uk | Clickbait Shocker | My toenails have suddenly gone hard, crusty an
+[Step 284] user:gamer loss: 1.410 grad: 5.107 pred: 2.738 reward:  7.44 eps:0.13 exploit regret:    - hn:0.787 hc:0.94 | androidauthority.com | Hype Beast | The JBL Flip 7 is still at a record-low price,
+[Step 285] user:gamer loss: 2.322 grad: 7.015 pred: 2.736 reward:  7.35 eps:0.13 exploit regret:    - hn:0.788 hc:0.94 | source_farmonaut | Hype Beast | Lettuce Grow Farmstand: Top 7 Vertical Farm Br
+[Step 286] user:gamer loss: 4.679 grad:13.775 pred: 2.772 reward: 10.00 eps:0.13 exploit regret:    - hn:0.793 hc:0.94 | theguardian.com | Clickbait Shocker | ‘Hope and relief’ as seaside town’s last youth
+[Step 287] user:gamer loss: 3.968 grad:12.821 pred: 2.781 reward: 10.00 eps:0.13 exploit regret:    - hn:0.793 hc:0.94 | source_traverse_city_record_eagle | Hype Beast | MUTUAL AID TASK FORCE: Dive team practices for
+[Step 288] user:gamer loss: 1.287 grad: 4.962 pred: 2.813 reward:  7.73 eps:0.13 exploit regret:    - hn:0.795 hc:0.94 | rockpapershotgun.com | Sarcastic Takedown | Reanimal review – the dollhouse horror of Litt
+[Step 289] user:gamer loss: 4.456 grad:13.072 pred: 2.821 reward: 10.00 eps:0.13 exploit regret:    - hn:0.795 hc:0.94 | businessinsider.com | Hype Beast | Ford CEO says 'the customer has spoken' after 
+[Step 290] user:gamer loss: 4.448 grad:13.580 pred: 2.848 reward: 10.00 eps:0.13 exploit regret:-2.44 hn:0.797 hc:0.94 | forbes.com | Hype Beast | Netflix’s Best New Movie Has A Record 97% Rott
+[Step 291] user:gamer loss: 1.260 grad: 4.839 pred: 2.873 reward:  7.75 eps:0.13 exploit regret:    - hn:0.801 hc:0.94 | source_devdiscourse | Hype Beast | Indian Farmers Secure New Global Paths: A Dipl
+[Step 292] user:gamer loss: 2.330 grad: 6.576 pred: 2.844 reward:  7.57 eps:0.12 exploit regret:    - hn:0.801 hc:0.94 | source_ewg | Sarcastic Takedown | New baby textile product tests show concerning
+[Step 293] user:gamer loss: 2.185 grad: 7.401 pred: 2.893 reward:  7.08 eps:0.12 exploit regret:    - hn:0.804 hc:0.95 | cointelegraph.com | Clickbait Shocker | X Money ‘external beta’ will go live in 1-2 mo
+[Step 294] user:gamer loss: 5.918 grad:16.915 pred: 2.918 reward: 10.00 eps:0.12 exploit regret:    - hn:0.802 hc:0.95 | dailymail.co.uk | Clickbait Shocker | What Jennifer Aniston eats in a day to maintai
+[Step 295] user:gamer loss: 1.358 grad: 4.744 pred: 2.918 reward:  7.29 eps:0.12 exploit regret:    - hn:0.806 hc:0.95 | ecowatch.com | Clickbait Shocker | Deepest-Known Animal Communities Found Almost 
+[Step 296] user:gamer loss: 1.526 grad: 4.639 pred: 2.881 reward:  7.23 eps:0.12 exploit regret:    - hn:0.802 hc:0.95 | source_arise_news | Hype Beast | NIS Aims For Border Security Boost Through Tec
+[Step 297] user:gamer loss: 4.377 grad:16.376 pred: 2.936 reward: 10.00 eps:0.12 exploit regret:    - hn:0.807 hc:0.95 | source_artshub_australia | Clickbait Shocker | New urban garden, Laak Boorndap, revealed for 
+[Step 298] user:gamer loss: 2.268 grad: 7.316 pred: 2.921 reward:  6.93 eps:0.12 exploit regret:    - hn:0.806 hc:0.95 | theguardian.com | Sarcastic Takedown | French biathlete guilty of fraud wins Olympic 
+[Step 299] user:gamer loss: 1.500 grad: 4.624 pred: 2.894 reward:  7.23 eps:0.12 exploit regret:    - hn:0.801 hc:0.94 | source_sustainability_times | Hype Beast | CRISPR Wheat Breakthrough: How Self-Fertilizin
+[Step 300] user:gamer loss: 1.157 grad: 4.552 pred: 2.955 reward:  7.82 eps:0.12 explore regret: 2.18 hn:0.811 hc:0.95 | source_designboom | Clickbait Shocker | laser carrying airplanes have revealed ancient
+  └─ checkpoint step=300 rolling_reward_50=8.43 mean_regret_so_far=2.02
+[Step 301] user:gamer loss: 5.972 grad:19.356 pred: 2.973 reward: 10.00 eps:0.12 exploit regret:    - hn:0.810 hc:0.95 | eskom.co.za | Hype Beast | Power system remains stable as Eskom continues
+[Step 302] user:gamer loss: 5.383 grad:17.655 pred: 2.977 reward: 10.00 eps:0.12 exploit regret:    - hn:0.809 hc:0.95 | source_record_courier | Hype Beast | Biohackers World Los Angeles Explores the Grow
+[Step 303] user:gamer loss: 3.467 grad:12.533 pred: 2.978 reward:  6.96 eps:0.12 exploit regret:    - hn:0.809 hc:0.95 | news.cgtn.com | Hype Beast | Chinese scientists make breakthrough in invasi
+[Step 304] user:gamer loss: 1.110 grad: 4.288 pred: 2.968 reward:  7.72 eps:0.12 exploit regret:    - hn:0.809 hc:0.95 | source_cosmetics_design_europe | Hype Beast | TikTok Shop LIVE set for record Christmas sale
+[Step 305] user:gamer loss: 2.249 grad: 9.582 pred: 2.977 reward:  7.17 eps:0.12 exploit regret:    - hn:0.809 hc:0.95 | dailymail.co.uk | Hype Beast | How Sean Dyche turned the Nottingham Forest dr
+[Step 306] user:gamer loss: 1.064 grad: 4.190 pred: 2.975 reward:  7.69 eps:0.12 exploit regret:    - hn:0.812 hc:0.95 | source_sahm | Hype Beast | More crop per drop: NADEC and EF Polymer deplo
+[Step 307] user:gamer loss: 3.798 grad:14.741 pred: 2.985 reward: 10.00 eps:0.12 exploit regret:    - hn:0.810 hc:0.95 | news.com.au | Clickbait Shocker | Woolies’ shocking tactics revealed - News.com.
+[Step 308] user:gamer loss: 6.347 grad:20.880 pred: 2.988 reward: 10.00 eps:0.12 exploit regret:    - hn:0.809 hc:0.95 | commondreams.org | Clickbait Shocker | Trump’s ‘Jaw-dropping’ Conflict of Interest wi
+[Step 309] user:gamer loss: 4.308 grad:15.844 pred: 2.982 reward: 10.00 eps:0.12 exploit regret:    - hn:0.810 hc:0.95 | source_devdiscourse | Hype Beast | Health Headlines: Breakthroughs, Setbacks, and
+[Step 310] user:gamer loss: 1.117 grad: 4.250 pred: 2.964 reward:  7.93 eps:0.12 exploit regret: 2.07 hn:0.810 hc:0.95 | atlasobscura.com | Hype Beast | The Quest to Visit 1,000 Places
+[Step 311] user:gamer loss: 3.412 grad:11.501 pred: 2.969 reward:  6.80 eps:0.12 exploit regret:    - hn:0.810 hc:0.95 | source_yicai_global | Hype Beast | Chinese BCI Startup NeuroXess Hails Breakthrou
+[Step 312] user:gamer loss: 2.304 grad: 8.379 pred: 2.970 reward:  7.91 eps:0.12 exploit regret:    - hn:0.808 hc:0.95 | source_morgan_stanley | Hype Beast | AI Brain Implant Shows Breakthrough Potential 
+[Step 313] user:gamer loss: 3.758 grad:14.365 pred: 2.984 reward: 10.00 eps:0.12 exploit regret:    - hn:0.810 hc:0.95 | source_defenceweb | Hype Beast | Drone technology boosts border security over f
+[Step 314] user:gamer loss: 5.217 grad:17.288 pred: 2.968 reward: 10.00 eps:0.12 exploit regret:    - hn:0.811 hc:0.95 | goodnewsnetwork.org | Hype Beast | Numbers of Rare Butterfly Eggs are Best on Rec
+[Step 315] user:gamer loss: 2.301 grad:10.136 pred: 2.994 reward:  6.79 eps:0.11 exploit regret:    - hn:0.808 hc:0.95 | lifehacker.com | Hype Beast | This Substack Data Breach May Have Compromised
+[Step 316] user:gamer loss: 1.161 grad: 4.394 pred: 2.957 reward:  7.95 eps:0.11 exploit regret:    - hn:0.807 hc:0.95 | eurogamer.net | Clickbait Shocker | Hollow Knight Switch 2 version announced, owne
+[Step 317] user:gamer loss: 1.082 grad: 4.273 pred: 2.975 reward:  7.47 eps:0.11 exploit regret:    - hn:0.811 hc:0.95 | dailymail.co.uk | Sarcastic Takedown | Controversial French duo snatch gold from Team
+[Step 318] user:gamer loss: 4.830 grad:16.750 pred: 2.967 reward: 10.00 eps:0.11 exploit regret:    - hn:0.810 hc:0.95 | source_homes_and_gardens | Hype Beast | Front door trends – 7 stylish ideas to boost c
+[Step 319] user:gamer loss: 2.285 grad: 9.040 pred: 2.980 reward:  7.93 eps:0.11 explore regret:    - hn:0.810 hc:0.95 | source_daily_maverick | Hype Beast | Easter security boost: South Africa deploys dr
+[Step 320] user:gamer loss: 1.171 grad: 4.398 pred: 2.947 reward:  7.61 eps:0.11 exploit regret: 2.39 hn:0.807 hc:0.95 | source_csp_daily_news | Hype Beast | Private-label sales hit record $282.8B in 2025
+[Step 321] user:gamer loss: 5.246 grad:17.440 pred: 2.966 reward: 10.00 eps:0.11 exploit regret:    - hn:0.808 hc:0.95 | source_new_atlas | Hype Beast | Brain implant breakthrough helps ALS man talk 
+[Step 322] user:gamer loss: 0.930 grad: 4.045 pred: 3.021 reward:  7.64 eps:0.11 exploit regret:    - hn:0.813 hc:0.95 | rockpapershotgun.com | Clickbait Shocker | Generative AI plays "zero part" in GTA 6, Take
+[Step 323] user:gamer loss: 4.909 grad:17.143 pred: 2.964 reward: 10.00 eps:0.11 explore regret:    - hn:0.811 hc:0.95 | source_baltimore_sun | Hype Beast | Maryland power grid faces strain amid record c
+[Step 324] user:gamer loss: 2.282 grad: 9.709 pred: 2.967 reward:  6.93 eps:0.11 exploit regret:    - hn:0.810 hc:0.95 | theguardian.com | Clickbait Shocker | Alleged drones in El Paso airspace cast spotli
+[Step 325] user:gamer loss: 2.245 grad: 9.219 pred: 2.973 reward:  7.33 eps:0.11 exploit regret:    - hn:0.811 hc:0.95 | source_express_computer | Sarcastic Takedown | Airtel launches AI-powered protection against 
+[Step 326] user:gamer loss: 2.298 grad:10.678 pred: 2.983 reward:  6.96 eps:0.11 exploit regret:    - hn:0.811 hc:0.95 | nytimes.com | Clickbait Shocker | Elon Musk Wants to Build an A.I. Satellite Fac
+[Step 327] user:gamer loss: 2.254 grad: 9.954 pred: 2.955 reward:  7.01 eps:0.11 exploit regret:    - hn:0.809 hc:0.95 | source_premium_times_nigeria | Hype Beast | Africa Food Prize: IITA celebrates Nigerian sc
+[Step 328] user:gamer loss: 6.319 grad:21.334 pred: 2.960 reward: 10.00 eps:0.11 exploit regret:    - hn:0.810 hc:0.95 | businessinsider.com | Clickbait Shocker | Bill Ackman's hedge fund reveals big stake in 
+[Step 329] user:gamer loss: 9.339 grad:28.661 pred: 2.944 reward: 10.00 eps:0.11 exploit regret:    - hn:0.807 hc:0.95 | dailymail.co.uk | Clickbait Shocker | Simon Jordan reveals what he was saying to 'fo
+[Step 330] user:gamer loss: 2.246 grad: 9.333 pred: 2.954 reward:  7.45 eps:0.11 exploit regret: 2.55 hn:0.802 hc:0.95 | eurogamer.net | Clickbait Shocker | After the blinding success of Split Fiction, J
+[Step 331] user:gamer loss: 1.365 grad: 4.633 pred: 2.861 reward:  7.24 eps:0.11 explore regret:    - hn:0.801 hc:0.95 | source_eco_business | Hype Beast | Food Waste Breakthrough launches to help citie
+[Step 332] user:gamer loss: 2.205 grad: 7.387 pred: 2.875 reward:  7.80 eps:0.11 exploit regret:    - hn:0.800 hc:0.94 | source_global_times | Hype Beast | China’s Space seed breeding makes breakthrough
+[Step 333] user:gamer loss: 2.186 grad: 7.703 pred: 2.851 reward:  6.71 eps:0.11 explore regret:    - hn:0.800 hc:0.94 | rockpapershotgun.com | Sarcastic Takedown | Team Ninja fix a terrifying "very rare" Nioh 3
+[Step 334] user:gamer loss: 4.550 grad:12.613 pred: 2.821 reward: 10.00 eps:0.11 explore regret:    - hn:0.797 hc:0.94 | source_business_insider | Clickbait Shocker | MrBeast revealed how much of his $5 billion co
+[Step 335] user:gamer loss: 1.537 grad: 4.756 pred: 2.802 reward:  8.00 eps:0.11 exploit regret:    - hn:0.794 hc:0.94 | source_ispi_istituto_per_gli_studi_di_politica_internazionale | Hype Beast | North Korea’s ‘Head-On Breakthrough’ Agenda am
+[Step 336] user:gamer loss: 1.293 grad: 4.758 pred: 2.839 reward:  7.62 eps:0.11 exploit regret:    - hn:0.795 hc:0.94 | atlasobscura.com | Clickbait Shocker | Visiting every museum in New York City
+[Step 337] user:gamer loss: 4.519 grad:12.167 pred: 2.801 reward: 10.00 eps:0.11 exploit regret:    - hn:0.794 hc:0.94 | source_winston_strawn | Hype Beast | Banks Operating in Florida Should Be Aware of 
+[Step 338] user:gamer loss: 4.318 grad:12.376 pred: 2.801 reward: 10.00 eps:0.11 exploit regret:    - hn:0.794 hc:0.94 | source_page_six | Clickbait Shocker | Alix Earle’s whopping 6-figure payday for a si
+[Step 339] user:gamer loss: 1.414 grad: 4.800 pred: 2.794 reward:  7.78 eps:0.10 explore regret:    - hn:0.796 hc:0.94 | bloomberg.com | Hype Beast | Alphabet Embarks on Global Bond Spree to Fund 
+[Step 340] user:gamer loss: 2.895 grad: 8.954 pred: 2.806 reward:  7.18 eps:0.10 exploit regret: 2.82 hn:0.796 hc:0.94 | source_techgenyz | Hype Beast | Brain-Computer Interfaces 2026: Medical Breakt
+[Step 341] user:gamer loss: 4.342 grad:12.077 pred: 2.794 reward: 10.00 eps:0.10 exploit regret:    - hn:0.795 hc:0.94 | source_comfy_cozy_gaming | Hype Beast | Press Release: QubicGames Celebrates 20th Anni
+[Step 342] user:gamer loss: 2.128 grad: 6.762 pred: 2.790 reward:  7.69 eps:0.10 exploit regret:    - hn:0.794 hc:0.94 | source_pv_magazine_international | Hype Beast | Grid-forming inverters boost grid stability, s
+[Step 343] user:gamer loss: 2.169 grad: 6.983 pred: 2.778 reward:  7.01 eps:0.10 exploit regret:    - hn:0.791 hc:0.94 | source_benzinga | Hype Beast | Elon Musk Says Neuralink Will 'Ultimately' Be 
+[Step 344] user:gamer loss: 3.669 grad:10.871 pred: 2.771 reward: 10.00 eps:0.10 explore regret:    - hn:0.794 hc:0.94 | source_protectionweb | Hype Beast | Drone technology boosts border security over f
+[Step 345] user:gamer loss: 3.608 grad:10.012 pred: 2.777 reward:  2.78 eps:0.10 exploit regret:    - hn:0.790 hc:0.94 | rockpapershotgun.com | Angry Rant | Discord roll out global age verification syste
+[Step 346] user:gamer loss: 2.143 grad: 7.741 pred: 2.776 reward:  7.09 eps:0.10 exploit regret:    - hn:0.789 hc:0.94 | dailymail.co.uk | Clickbait Shocker | Katie Price and Lee Andrews enjoy a honeymoon 
+[Step 347] user:gamer loss: 2.124 grad: 7.323 pred: 2.746 reward:  7.17 eps:0.10 exploit regret:    - hn:0.790 hc:0.94 | source_the_guardian | Sarcastic Takedown | I tested my tap water, household products and 
+[Step 348] user:gamer loss: 2.078 grad: 6.545 pred: 2.724 reward:  7.68 eps:0.10 exploit regret:    - hn:0.787 hc:0.94 | source_newsx | Hype Beast | BMC Election Results 2026: BJP Celebrates As M
+[Step 349] user:gamer loss: 1.393 grad: 4.910 pred: 2.722 reward:  7.36 eps:0.10 exploit regret:    - hn:0.785 hc:0.94 | source_rnz | Hype Beast | US-China trade war surges, overshadowing Trump
+[Step 350] user:gamer loss: 2.094 grad: 7.001 pred: 2.703 reward:  6.87 eps:0.10 exploit regret: 3.13 hn:0.783 hc:0.93 | source_artnet_news | Hype Beast | New Institute of Sexology Celebrates History o
+  └─ checkpoint step=350 rolling_reward_50=8.18 mean_regret_so_far=2.10
+
+🏁 Final Reward(10): 7.37 | Mean Regret: 2.10
+🔬 User-state cluster by session phase:
+  cluster_0: {'early': 79, 'mid': 117, 'late': 117}
+  cluster_1: {'early': 16}
+  cluster_2: {'early': 21}
+💾 Warm-start checkpoint saved to: outputs/ft_gamer_v2.pt

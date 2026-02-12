@@ -1,0 +1,115 @@
+🚀 Loading Fuel... (data/scraped_articles_backup.csv)
+🔎 Preflight contrarian_chaos phase2_positive_rate=0.694 (sample=500)
+♻️ Warm-start loaded from: outputs/final_mega.pt
+
+🧠 Training on 16347 items | topics=4501 vibes=7 clusters=64 entities=19 events=14 | steps=100 | bot=contrarian_chaos
+
+[Step 001] user:contrarian_chaos loss: 1.985 grad: 5.091 pred: 2.091 reward:  7.70 eps:0.25 exploit regret:    - hn:0.000 hc:0.00 | source_archdaily | Hype Beast | This Public Transit Series Celebrates Moscow's
+[Step 002] user:contrarian_chaos loss: 4.459 grad: 9.010 pred: 2.170 reward: 10.00 eps:0.25 exploit regret:    - hn:0.000 hc:0.00 | source_yicai_global | Hype Beast | China Hails Breakthrough in Mind Control of Sm
+[Step 003] user:contrarian_chaos loss: 2.185 grad: 5.129 pred: 2.137 reward:  7.08 eps:0.25 exploit regret:    - hn:0.000 hc:0.00 | gamespot.com | Hype Beast | StarCraft Shooter Reportedly In Works At Arc R
+[Step 004] user:contrarian_chaos loss: 1.472 grad: 4.829 pred: 2.261 reward:  7.40 eps:0.24 exploit regret:    - hn:0.000 hc:0.00 | source_cambridge_network | Hype Beast | China’s Neurotechnology breakthrough: A new er
+[Step 005] user:contrarian_chaos loss: 1.238 grad: 4.991 pred: 2.312 reward:  7.64 eps:0.24 explore regret:    - hn:0.000 hc:0.00 | zerohedge.blogspot.com | Hype Beast | Daily Highlights: 7.27.09
+[Step 006] user:contrarian_chaos loss: 1.788 grad: 7.081 pred: 2.379 reward:  7.15 eps:0.24 exploit regret:    - hn:0.000 hc:0.00 | source_scitechdaily | Hype Beast | Quantum Breakthrough: New Study Uncovers Hidde
+[Step 007] user:contrarian_chaos loss: 4.319 grad:13.383 pred: 2.418 reward: 10.00 eps:0.24 explore regret:    - hn:0.000 hc:0.00 | hypebeast.com | Hype Beast | Britney Spears Sells Ownership Stake in Music 
+[Step 008] user:contrarian_chaos loss: 1.725 grad: 7.753 pred: 2.477 reward:  6.81 eps:0.24 exploit regret:    - hn:0.000 hc:0.00 | source_adda247 | Hype Beast | Microsoft’s Majorana 1: Quantum Computing Brea
+[Step 009] user:contrarian_chaos loss: 0.843 grad: 4.705 pred: 2.534 reward:  7.75 eps:0.24 exploit regret:    - hn:0.000 hc:0.00 | source_zero_waste_europe | Hype Beast | Reformed EPR can boost EU competitiveness and 
+[Step 010] user:contrarian_chaos loss: 2.400 grad:11.650 pred: 2.603 reward:  6.68 eps:0.23 exploit regret: 3.32 hn:0.000 hc:0.00 | source_bloomsbury_intelligence_and_security_institute_bisi | Hype Beast | Quantum Computing Breakthroughs: A Widening Ge
+[Step 011] user:contrarian_chaos loss:10.735 grad:30.615 pred: 2.615 reward: 10.00 eps:0.23 exploit regret:    - hn:0.000 hc:0.00 | source_thekanal | Hype Beast | Workplace Harassment Allegations Surface After
+[Step 012] user:contrarian_chaos loss: 4.361 grad:15.065 pred: 2.644 reward: 10.00 eps:0.23 explore regret:    - hn:0.000 hc:0.00 | source_techradar | Hype Beast | OpenAI’s next ‘giant breakthrough’ tipped to l
+[Step 013] user:contrarian_chaos loss: 0.716 grad: 5.090 pred: 2.594 reward:  7.73 eps:0.23 exploit regret:    - hn:0.000 hc:0.00 | source_ee_times_asia | Hype Beast | Microsoft Unveils Quantum Computing Breakthrou
+[Step 014] user:contrarian_chaos loss: 0.672 grad: 4.528 pred: 2.679 reward:  7.91 eps:0.23 exploit regret:    - hn:0.000 hc:0.00 | arstechnica.com | Hype Beast | Did seabird poop fuel rise of Chincha in Peru?
+[Step 015] user:contrarian_chaos loss: 1.600 grad: 9.246 pred: 2.715 reward:  6.69 eps:0.23 exploit regret:    - hn:0.000 hc:0.00 | source_fox_2_detroit | Hype Beast | Brain computer chips tested at U-M Health prov
+[Step 016] user:contrarian_chaos loss: 6.719 grad:21.931 pred: 2.723 reward: 10.00 eps:0.23 exploit regret:    - hn:0.000 hc:0.00 | source_the_hindu | Hype Beast | OpenAI to boost content owners’ control for So
+[Step 017] user:contrarian_chaos loss: 1.565 grad: 9.674 pred: 2.770 reward:  6.92 eps:0.22 exploit regret:    - hn:0.000 hc:0.00 | source_farmonaut | Hype Beast | Carbon Farming: 7 Carbon Capture & Sequestrati
+[Step 018] user:contrarian_chaos loss: 1.498 grad: 8.867 pred: 2.741 reward:  7.01 eps:0.22 explore regret:    - hn:0.000 hc:0.00 | source_engineering_news_record | Hype Beast | Atlanta Readies for Next Bus Rapid Transit Pro
+[Step 019] user:contrarian_chaos loss: 2.955 grad:12.536 pred: 2.709 reward:  4.51 eps:0.22 exploit regret:    - hn:0.000 hc:0.00 | androidauthority.com | Clickbait Shocker | Massive Galaxy S26 series spec leak leaves not
+[Step 020] user:contrarian_chaos loss: 1.303 grad: 7.746 pred: 2.652 reward:  6.98 eps:0.22 exploit regret: 3.02 hn:0.000 hc:0.00 | source_tv_brics | Hype Beast | China unveils breakthrough in brain-computer i
+[Step 021] user:contrarian_chaos loss: 4.122 grad:14.533 pred: 2.653 reward: 10.00 eps:0.22 exploit regret:    - hn:0.000 hc:0.00 | source_csp_daily_news | Hype Beast | Private-label sales hit record $282.8B in 2025
+[Step 022] user:contrarian_chaos loss: 1.297 grad: 7.162 pred: 2.665 reward:  7.12 eps:0.22 exploit regret:    - hn:0.000 hc:0.00 | source_minnesota_women_s_press | Hype Beast | Minnesota Women’s Press Wins Five State Media 
+[Step 023] user:contrarian_chaos loss: 1.232 grad: 6.796 pred: 2.632 reward:  6.96 eps:0.22 exploit regret:    - hn:0.000 hc:0.00 | source_south_china_morning_post | Hype Beast | Chinese breakthrough challenges Elon Musk’s ve
+[Step 024] user:contrarian_chaos loss: 0.943 grad: 5.253 pred: 2.567 reward:  7.52 eps:0.21 explore regret:    - hn:0.000 hc:0.00 | source_nus_national_university_of_singapore | Hype Beast | New NUS Research Centre on Sustainable Urban F
+[Step 025] user:contrarian_chaos loss: 1.053 grad: 5.444 pred: 2.496 reward:  7.70 eps:0.21 exploit regret:    - hn:0.000 hc:0.00 | etenergyworld.com | Hype Beast | Mumbai's 1000MW renewable energy boost: Kudus-
+[Step 026] user:contrarian_chaos loss: 0.964 grad: 5.245 pred: 2.574 reward:  7.43 eps:0.21 exploit regret:    - hn:0.000 hc:0.00 | source_xinhua | Hype Beast | China's breeding breakthroughs fortify food se
+[Step 027] user:contrarian_chaos loss: 1.097 grad: 6.368 pred: 2.620 reward:  7.01 eps:0.21 exploit regret:    - hn:0.000 hc:0.00 | source_36_kr | Hype Beast | Tsinghua Team's DeepDive: A New Breakthrough i
+[Step 028] user:contrarian_chaos loss: 0.907 grad: 5.897 pred: 2.580 reward:  7.72 eps:0.21 exploit regret:    - hn:0.000 hc:0.00 | source_neuralink | Hype Beast | Breakthrough technology for the brain - Neural
+[Step 029] user:contrarian_chaos loss:11.064 grad:32.270 pred: 2.627 reward: 10.00 eps:0.21 explore regret:    - hn:0.000 hc:0.00 | source_hothardware | Hype Beast | Synchron's Brain Implant Breakthrough Lets Use
+[Step 030] user:contrarian_chaos loss: 2.991 grad:11.391 pred: 2.629 reward:  7.61 eps:0.21 exploit regret: 2.39 hn:0.779 hc:0.93 | ddnews.gov.in | Hype Beast | CMFRI breakthrough revives hope for mangrove c
+[Step 031] user:contrarian_chaos loss: 5.914 grad:17.994 pred: 2.622 reward: 10.00 eps:0.20 exploit regret:    - hn:0.778 hc:0.93 | theguardian.com | Hype Beast | Hong Kong’s once-vibrant press stays silent or
+[Step 032] user:contrarian_chaos loss: 2.936 grad:11.048 pred: 2.573 reward:  6.81 eps:0.20 exploit regret:    - hn:0.772 hc:0.93 | source_iol | Hype Beast | Local hair and skincare brand wins legal battl
+[Step 033] user:contrarian_chaos loss: 2.891 grad:10.238 pred: 2.628 reward:  7.88 eps:0.20 explore regret:    - hn:0.779 hc:0.93 | source_tiktok_newsroom | Hype Beast | TikTok forecasts record-breaking Christmas sal
+[Step 034] user:contrarian_chaos loss: 1.306 grad: 5.631 pred: 2.587 reward:  7.40 eps:0.20 exploit regret:    - hn:0.774 hc:0.93 | source_abc7_los_angeles | Hype Beast | What is NAD? The supplement may help boost lon
+[Step 035] user:contrarian_chaos loss: 2.732 grad: 8.720 pred: 2.609 reward:  7.91 eps:0.20 exploit regret:    - hn:0.776 hc:0.93 | source_international_atomic_energy_agency | Hype Beast | The IAEA’s Successful Field Trial: A Promising
+[Step 036] user:contrarian_chaos loss: 1.348 grad: 5.243 pred: 2.586 reward:  7.96 eps:0.20 exploit regret:    - hn:0.774 hc:0.93 | tsukuba.ac.jp | Hype Beast | Byzantine Solar Eclipse Records Illuminate Obs
+[Step 037] user:contrarian_chaos loss: 2.916 grad:10.038 pred: 2.638 reward:  6.74 eps:0.19 explore regret:    - hn:0.780 hc:0.93 | source_itweb | Hype Beast | Meta unleashes AI power to boost SA’s creator 
+[Step 038] user:contrarian_chaos loss: 1.093 grad: 6.118 pred: 2.574 reward:  6.75 eps:0.19 exploit regret:    - hn:0.000 hc:0.00 | samsung.com | Hype Beast | Samsung’s Breakthrough Wearable Technologies D
+[Step 039] user:contrarian_chaos loss: 4.378 grad:13.531 pred: 2.617 reward: 10.00 eps:0.19 exploit regret:    - hn:0.777 hc:0.93 | source_enlit_world | Hype Beast | Transnet BW develops new hybrid grid booster t
+[Step 040] user:contrarian_chaos loss: 1.162 grad: 6.170 pred: 2.599 reward:  6.97 eps:0.19 exploit regret: 3.03 hn:0.000 hc:0.00 | source_south_china_morning_post | Hype Beast | China’s mind-control robot tech breakthrough b
+[Step 041] user:contrarian_chaos loss: 4.642 grad:14.085 pred: 2.581 reward: 10.00 eps:0.19 exploit regret:    - hn:0.000 hc:0.00 | source_sabc_news | Hype Beast | New tech to boost border security: SAPU - SABC
+[Step 042] user:contrarian_chaos loss: 4.486 grad:13.185 pred: 2.557 reward: 10.00 eps:0.19 exploit regret:    - hn:0.000 hc:0.00 | source_china_daily_global_edition | Hype Beast | Correcting the record on China's 'social credi
+[Step 043] user:contrarian_chaos loss: 2.036 grad: 6.739 pred: 2.534 reward:  7.44 eps:0.19 exploit regret:    - hn:0.000 hc:0.00 | source_vice | Analytical Deep Dive | OpenAI’s New Sora 2 AI Video Generator Still U
+[Step 044] user:contrarian_chaos loss: 2.049 grad: 6.265 pred: 2.572 reward:  7.90 eps:0.18 exploit regret:    - hn:0.000 hc:0.00 | source_siliconindia | Hype Beast | Kerala Launches EV Incubation Program to Boost
+[Step 045] user:contrarian_chaos loss: 2.138 grad: 6.937 pred: 2.506 reward:  6.74 eps:0.18 exploit regret:    - hn:0.000 hc:0.00 | source_comfy_cozy_gaming | Hype Beast | Press Release: QubicGames Celebrates 20th Anni
+[Step 046] user:contrarian_chaos loss: 1.187 grad: 4.882 pred: 2.568 reward:  7.96 eps:0.18 exploit regret:    - hn:0.000 hc:0.00 | source_australian_broadcasting_corporation | Hype Beast | Restoring and recording the cameras of yestery
+[Step 047] user:contrarian_chaos loss: 1.181 grad: 4.809 pred: 2.547 reward:  7.28 eps:0.18 exploit regret:    - hn:0.000 hc:0.00 | source_howstuffworks | Hype Beast | 15 Of The Craziest Guinness World Records - Ho
+[Step 048] user:contrarian_chaos loss: 1.468 grad: 5.271 pred: 2.561 reward:  6.94 eps:0.18 explore regret:    - hn:0.000 hc:0.00 | source_myjoyonline | Hype Beast | Ghana records 4.7 tonnes per hectare in wheat 
+[Step 049] user:contrarian_chaos loss: 1.099 grad: 4.843 pred: 2.581 reward:  7.94 eps:0.18 explore regret:    - hn:0.000 hc:0.00 | transitcenter.org | Hype Beast | All Transportation is Local: Rewrite the Rules
+[Step 050] user:contrarian_chaos loss: 2.205 grad: 7.702 pred: 2.582 reward:  6.80 eps:0.17 exploit regret: 3.20 hn:0.000 hc:0.00 | source_medical_device_network | Hype Beast | Neuralink wins FDA breakthrough tag for speech
+  └─ checkpoint step=50 rolling_reward_50=7.85 mean_regret_so_far=2.99
+[Step 051] user:contrarian_chaos loss: 4.387 grad:12.530 pred: 2.556 reward: 10.00 eps:0.17 exploit regret:    - hn:0.000 hc:0.00 | source_food_industry_executive | Hype Beast | Food Exec Brief: Margin Preservation’s Urgent 
+[Step 052] user:contrarian_chaos loss: 1.073 grad: 4.855 pred: 2.564 reward:  7.82 eps:0.17 explore regret:    - hn:0.000 hc:0.00 | source_uc_davis | Hype Beast | Breakthroughs for Preventing Pistachio Hull Sp
+[Step 053] user:contrarian_chaos loss: 0.931 grad: 4.824 pred: 2.603 reward:  7.20 eps:0.17 exploit regret:    - hn:0.000 hc:0.00 | source_technology_networks | Hype Beast | How Could a “Breakthrough” Brain-Computer Inte
+[Step 054] user:contrarian_chaos loss: 5.199 grad:15.995 pred: 2.579 reward: 10.00 eps:0.17 exploit regret:    - hn:0.000 hc:0.00 | source_university_of_helsinki | Hype Beast | Urban gardening may improve human health – Res
+[Step 055] user:contrarian_chaos loss: 0.886 grad: 4.959 pred: 2.615 reward:  7.99 eps:0.17 exploit regret:    - hn:0.000 hc:0.00 | bbc.com | Hype Beast | Wrapped helps Spotify add users despite artist
+[Step 056] user:contrarian_chaos loss: 1.733 grad: 7.444 pred: 2.642 reward:  7.83 eps:0.17 exploit regret:    - hn:0.000 hc:0.00 | source_unilad_tech | Hype Beast | Elon Musk’s company achieves major breakthroug
+[Step 057] user:contrarian_chaos loss: 1.380 grad: 7.315 pred: 2.630 reward:  6.90 eps:0.16 exploit regret:    - hn:0.000 hc:0.00 | source_gktoday | Hype Beast | India-Australia RISE Accelerator Aims to Boost
+[Step 058] user:contrarian_chaos loss: 0.740 grad: 4.744 pred: 2.693 reward:  7.81 eps:0.16 exploit regret:    - hn:0.000 hc:0.00 | source_popular_mechanics | Hype Beast | This Chip Could Be the Massive Breakthrough We
+[Step 059] user:contrarian_chaos loss: 0.986 grad: 4.638 pred: 2.764 reward:  7.92 eps:0.16 exploit regret:    - hn:0.792 hc:0.94 | source_benzinga | Hype Beast | Elon Musk Says Neuralink Will 'Ultimately' Be 
+[Step 060] user:contrarian_chaos loss: 5.369 grad:17.483 pred: 2.740 reward: 10.00 eps:0.16 explore regret: 0.00 hn:0.790 hc:0.94 | source_yicai_global | Hype Beast | Chinese BCI Startup NeuroXess Hails Breakthrou
+[Step 061] user:contrarian_chaos loss: 2.520 grad: 9.819 pred: 2.764 reward:  3.58 eps:0.16 exploit regret:    - hn:0.793 hc:0.94 | source_international_business_times_uk | Sarcastic Takedown | 'Killer Fungus' That Attacks Toxic Algae Could
+[Step 062] user:contrarian_chaos loss: 2.136 grad:10.309 pred: 2.815 reward:  7.61 eps:0.16 exploit regret:    - hn:0.796 hc:0.94 | source_ffoods_spectrum | Hype Beast | How Technological Breakthroughs are Redefining
+[Step 063] user:contrarian_chaos loss: 6.287 grad:20.410 pred: 2.738 reward: 10.00 eps:0.16 exploit regret:    - hn:0.790 hc:0.94 | source_yahoo | Hype Beast | Researchers make major breakthrough that could
+[Step 064] user:contrarian_chaos loss:10.508 grad:26.204 pred: 2.787 reward: -4.81 eps:0.15 exploit regret:    - hn:0.000 hc:0.00 | source_scitechdaily | Dystopian Warning | Global Experts Sound Alarm: Bird Flu Poses Ris
+[Step 065] user:contrarian_chaos loss: 4.595 grad:15.409 pred: 2.700 reward: 10.00 eps:0.15 exploit regret:    - hn:0.000 hc:0.00 | source_south_china_morning_post | Hype Beast | China sows seeds of agricultural self-reliance
+[Step 066] user:contrarian_chaos loss: 4.308 grad:13.392 pred: 2.611 reward: 10.00 eps:0.15 exploit regret:    - hn:0.000 hc:0.00 | source_new_era_namibia | Hype Beast | King Shuumbwa on agricultural breakthrough …ur
+[Step 067] user:contrarian_chaos loss: 1.092 grad: 4.204 pred: 2.750 reward:  7.57 eps:0.15 exploit regret:    - hn:0.791 hc:0.94 | source_times_of_india | Hype Beast | Elon Musk announces Starlink breakthrough: Pho
+[Step 068] user:contrarian_chaos loss: 1.035 grad: 4.973 pred: 2.552 reward:  7.83 eps:0.15 explore regret:    - hn:0.000 hc:0.00 | source_devdiscourse | Hype Beast | Security Forces Achieve Breakthrough in Bijapu
+[Step 069] user:contrarian_chaos loss: 6.041 grad:19.768 pred: 2.813 reward: 10.00 eps:0.15 exploit regret:    - hn:0.798 hc:0.94 | source_manufacturing_today_india | Hype Beast | Circular economy and India’s startups: Boostin
+[Step 070] user:contrarian_chaos loss: 0.642 grad: 4.278 pred: 2.796 reward:  7.83 eps:0.15 exploit regret: 2.17 hn:0.000 hc:0.00 | source_carnegie_mellon_university | Hype Beast | Breakthrough Approach Enables Bidirectional BC
+[Step 071] user:contrarian_chaos loss: 2.108 grad: 8.940 pred: 2.815 reward:  6.78 eps:0.14 exploit regret:    - hn:0.798 hc:0.94 | source_fortune_india | Hype Beast | DishTV launches Content India to give boost to
+[Step 072] user:contrarian_chaos loss: 4.919 grad:13.514 pred: 2.695 reward: 10.00 eps:0.14 exploit regret:    - hn:0.786 hc:0.94 | source_university_college_london | Hype Beast | UCL celebrates 200 years: A landmark year begi
+[Step 073] user:contrarian_chaos loss: 7.956 grad:20.243 pred: 2.687 reward: 10.00 eps:0.14 exploit regret:    - hn:0.785 hc:0.94 | source_nzbusiness_magazine | Hype Beast | A small shift in spending could deliver an $11
+[Step 074] user:contrarian_chaos loss: 4.719 grad:11.732 pred: 2.711 reward: 10.00 eps:0.14 exploit regret:    - hn:0.788 hc:0.94 | source_labor_notes | Hype Beast | In Major Breakthrough, Volkswagen Auto Workers
+[Step 075] user:contrarian_chaos loss: 1.686 grad: 4.897 pred: 2.636 reward:  7.41 eps:0.14 explore regret:    - hn:0.780 hc:0.93 | source_new_york_magazine | Analytical Deep Dive | Get Yourself a Smartphone Without the Distract
+[Step 076] user:contrarian_chaos loss: 8.122 grad:20.503 pred: 2.763 reward: 10.00 eps:0.14 exploit regret:    - hn:0.793 hc:0.94 | source_construction_news | Hype Beast | Breakthrough in HS2 mass transit procurement p
+[Step 077] user:contrarian_chaos loss: 3.726 grad: 8.286 pred: 2.631 reward: 10.00 eps:0.13 exploit regret:    - hn:0.000 hc:0.00 | source_bitget | Hype Beast | Pantera Partner: Record Fund Deployment in 202
+[Step 078] user:contrarian_chaos loss: 1.539 grad: 4.975 pred: 2.656 reward:  7.20 eps:0.13 exploit regret:    - hn:0.000 hc:0.00 | source_medical_news_today | Hype Beast | How to slow aging, boost longevity: 4 takeaway
+[Step 079] user:contrarian_chaos loss: 3.200 grad: 6.146 pred: 2.660 reward: 10.00 eps:0.13 exploit regret:    - hn:0.000 hc:0.00 | source_devdiscourse | Hype Beast | Security Forces Achieve Major Breakthrough: To
+[Step 080] user:contrarian_chaos loss: 3.226 grad: 7.208 pred: 2.731 reward: 10.00 eps:0.13 exploit regret: 0.00 hn:0.000 hc:0.00 | source_eu_startups | Analytical Deep Dive | German VC Ananda Impact Ventures completes €73
+[Step 081] user:contrarian_chaos loss: 3.085 grad: 6.288 pred: 2.721 reward: 10.00 eps:0.13 exploit regret:    - hn:0.000 hc:0.00 | dw.com | Analytical Deep Dive | Iran economy hits rock bottom amid protests - 
+[Step 082] user:contrarian_chaos loss: 4.197 grad: 8.824 pred: 2.778 reward: 10.00 eps:0.13 exploit regret:    - hn:0.795 hc:0.94 | source_international_institute_for_sustainable_development | Analytical Deep Dive | Sustainable Food Systems in Canada - Internati
+[Step 083] user:contrarian_chaos loss: 3.655 grad: 7.535 pred: 2.769 reward: 10.00 eps:0.13 exploit regret:    - hn:0.000 hc:0.00 | source_testingcatalog | Hype Beast | ICYMI: Arena launches Max router to boost AI p
+[Step 084] user:contrarian_chaos loss: 2.064 grad: 4.593 pred: 2.752 reward:  6.74 eps:0.12 exploit regret:    - hn:0.000 hc:0.00 | source_financial_times | Hype Beast | How Donald Trump’s spending bill will boost Si
+[Step 085] user:contrarian_chaos loss: 2.959 grad: 5.482 pred: 2.768 reward: 10.00 eps:0.12 explore regret:    - hn:0.000 hc:0.00 | nucamp.co | Analytical Deep Dive | Top 10 Must-Attend Tech Meetups and Conference
+[Step 086] user:contrarian_chaos loss: 2.524 grad: 4.661 pred: 2.769 reward:  7.16 eps:0.12 exploit regret:    - hn:0.793 hc:0.94 | source_archinect | Analytical Deep Dive | MIT researchers develop rapid 3D printing proc
+[Step 087] user:contrarian_chaos loss: 2.160 grad: 5.092 pred: 2.765 reward:  7.59 eps:0.12 explore regret:    - hn:0.793 hc:0.94 | source_xinhua | Analytical Deep Dive | Global agribusinesses deepen roots in China's 
+[Step 088] user:contrarian_chaos loss: 4.205 grad: 7.939 pred: 2.857 reward: 10.00 eps:0.12 exploit regret:    - hn:0.802 hc:0.95 | source_govtech | Analytical Deep Dive | GovTech 100: Our Second Take on an Emerging Ma
+[Step 089] user:contrarian_chaos loss: 2.680 grad: 4.831 pred: 2.820 reward:  7.10 eps:0.12 explore regret:    - hn:0.000 hc:0.00 | source_fedscoop | Analytical Deep Dive | Senate border technology bill would empower CB
+[Step 090] user:contrarian_chaos loss: 3.735 grad: 6.645 pred: 2.842 reward: 10.00 eps:0.11 exploit regret: 0.00 hn:0.801 hc:0.94 | source_creative_boom | Analytical Deep Dive | How being weird can save branding in 2026 - Cr
+[Step 091] user:contrarian_chaos loss: 2.811 grad: 5.722 pred: 2.852 reward: 10.00 eps:0.11 exploit regret:    - hn:0.000 hc:0.00 | grist.org | Hype Beast | Food safety breakthrough: USDA declares 'Big S
+[Step 092] user:contrarian_chaos loss: 3.027 grad: 6.351 pred: 2.877 reward: 10.00 eps:0.11 exploit regret:    - hn:0.000 hc:0.00 | source_the_new_york_times | Analytical Deep Dive | Inside the Collapse of Silicon Valley Bank (Pu
+[Step 093] user:contrarian_chaos loss: 1.564 grad: 5.082 pred: 2.875 reward:  7.97 eps:0.11 exploit regret:    - hn:0.000 hc:0.00 | source_carbuzz | Analytical Deep Dive | Ford Sues Restoration Company For Making New B
+[Step 094] user:contrarian_chaos loss: 3.040 grad: 6.603 pred: 2.910 reward: 10.00 eps:0.11 exploit regret:    - hn:0.000 hc:0.00 | thewire.in | Analytical Deep Dive | Watch | ISRO’s Rocket Failure a Major Setback 
+[Step 095] user:contrarian_chaos loss: 1.464 grad: 4.843 pred: 2.915 reward:  7.32 eps:0.11 exploit regret:    - hn:0.000 hc:0.00 | source_business_post_nigeria | Hype Beast | Customs to Boost Border Security, Combat Smugg
+[Step 096] user:contrarian_chaos loss: 1.886 grad: 5.545 pred: 2.962 reward:  7.16 eps:0.11 exploit regret:    - hn:0.000 hc:0.00 | source_anthropic | Analytical Deep Dive | Introducing computer use, a new Claude 3.5 Son
+[Step 097] user:contrarian_chaos loss: 1.586 grad: 4.810 pred: 2.983 reward:  7.22 eps:0.10 exploit regret:    - hn:0.813 hc:0.95 | source_disney_parks_blog | Hype Beast | Hauntingly Historic Mansion Celebrates 55 Year
+[Step 098] user:contrarian_chaos loss: 5.362 grad:14.203 pred: 3.007 reward: 10.00 eps:0.10 explore regret:    - hn:0.815 hc:0.95 | source_charlotte_observer | Analytical Deep Dive | Charlotte committee goes underground with $89 
+[Step 099] user:contrarian_chaos loss: 1.500 grad: 4.781 pred: 3.008 reward:  7.53 eps:0.10 exploit regret:    - hn:0.815 hc:0.95 | source_business_standard | Analytical Deep Dive | Funding in climate-tech startups cools but VCs
+[Step 100] user:contrarian_chaos loss: 4.594 grad:11.404 pred: 3.025 reward: 10.00 eps:0.10 exploit regret: 0.00 hn:0.817 hc:0.95 | source_niq | Analytical Deep Dive | Navigating the shifts in consumer behavior in 
+  └─ checkpoint step=100 rolling_reward_50=8.41 mean_regret_so_far=1.71
+
+🏁 Final Reward(10): 8.72 | Mean Regret: 1.71
+🔬 User-state cluster by session phase:
+  cluster_0: {'early': 1, 'late': 27}
+  cluster_1: {'early': 15, 'mid': 20, 'late': 5}
+  cluster_2: {'early': 17, 'mid': 13, 'late': 2}
+⏭️ Skipped warm-start save (final_reward=8.72 < 999.00).

@@ -1,0 +1,217 @@
+🚀 Loading Fuel... (data/scraped_articles_backup.csv)
+🔎 Preflight dave positive_rate=0.860 (sample=500)
+♻️ Warm-start loaded from: outputs/base_multi_16k.pt
+
+🧠 Training on 16347 items | topics=4501 vibes=7 clusters=64 entities=19 events=14 | steps=200 | bot=dave
+
+[Step 001] user:dave  loss:10.381 grad:43.018 pred: 3.210 reward: 10.00 eps:0.25 exploit regret:    - hn:0.823 hc:0.96 | androidauthority.com | Analytical Deep Dive | Google Home’s daily recap may soon become easi
+[Step 002] user:dave  loss: 9.406 grad:41.962 pred: 3.236 reward: 10.00 eps:0.25 exploit regret:    - hn:0.817 hc:0.95 | technologyreview.com | Analytical Deep Dive | The Download: inside the QuitGPT movement, and
+[Step 003] user:dave  loss: 2.190 grad:10.945 pred: 3.142 reward:  7.23 eps:0.25 exploit regret:    - hn:0.815 hc:0.95 | source_forbes | Analytical Deep Dive | Samsung Bans ChatGPT Among Employees After Sen
+[Step 004] user:dave  loss: 4.820 grad:17.515 pred: 3.119 reward:  4.61 eps:0.25 exploit regret:    - hn:0.807 hc:0.95 | source_times_of_india | Analytical Deep Dive | OpenAI launches Codex desktop app to power nex
+[Step 005] user:dave  loss: 6.850 grad:24.257 pred: 3.055 reward: 10.00 eps:0.25 explore regret:    - hn:0.000 hc:0.00 | source_forbes | Analytical Deep Dive | 7 ChatGPT Prompts To Build A $5,000 A Month Si
+[Step 006] user:dave  loss: 3.987 grad:13.680 pred: 3.051 reward:  6.13 eps:0.25 exploit regret:    - hn:0.799 hc:0.94 | source_forbes | Analytical Deep Dive | How Jeffrey Epstein Helped His Publicist Becom
+[Step 007] user:dave  loss: 3.355 grad: 7.242 pred: 2.895 reward:  5.33 eps:0.24 explore regret:    - hn:0.793 hc:0.94 | source_venturebeat | Analytical Deep Dive | Microsoft launches 'Hey Copilot' voice assista
+[Step 008] user:dave  loss: 1.574 grad: 5.182 pred: 2.875 reward:  7.75 eps:0.24 exploit regret:    - hn:0.801 hc:0.94 | source_venturebeat | Analytical Deep Dive | Inside Meta's AI strategy: Zuckerberg stresses
+[Step 009] user:dave  loss: 2.705 grad: 6.940 pred: 2.876 reward:  5.48 eps:0.24 exploit regret:    - hn:0.781 hc:0.93 | source_esri | Analytical Deep Dive | Lidar Images Show Mayan Civilization in a New 
+[Step 010] user:dave  loss: 3.248 grad: 5.849 pred: 2.778 reward:  4.29 eps:0.24 exploit regret: 5.71 hn:0.783 hc:0.93 | source_archdaily | Analytical Deep Dive | 5 Things Architecture Can Learn from the Tiny 
+[Step 011] user:dave  loss: 3.029 grad: 4.850 pred: 2.700 reward:  6.72 eps:0.24 exploit regret:    - hn:0.776 hc:0.93 | source_venturebeat | Analytical Deep Dive | Anthropic launches enterprise ‘Agent Skills’ a
+[Step 012] user:dave  loss: 3.941 grad: 6.048 pred: 2.531 reward: 10.00 eps:0.24 explore regret:    - hn:0.767 hc:0.93 | source_nvidia_developer | Analytical Deep Dive | Inside the NVIDIA Rubin Platform: Six New Chip
+[Step 013] user:dave  loss: 2.997 grad: 4.989 pred: 2.664 reward:  4.62 eps:0.24 exploit regret:    - hn:0.769 hc:0.93 | source_nature | Analytical Deep Dive | Restoration Ecology | Learn Science at Scitabl
+[Step 014] user:dave  loss: 2.568 grad: 4.055 pred: 2.568 reward:  5.61 eps:0.24 exploit regret:    - hn:0.765 hc:0.92 | source_send2press | Analytical Deep Dive | LumeFlow AI Launches New Features to Enhance A
+[Step 015] user:dave  loss: 6.092 grad: 9.395 pred: 2.561 reward: -4.80 eps:0.24 exploit regret:    - hn:0.760 hc:0.92 | source_addleshaw_goddard_llp | Dystopian Warning | FCA paper published on market risk capital req
+[Step 016] user:dave  loss: 2.743 grad: 4.664 pred: 2.555 reward:  6.68 eps:0.24 exploit regret:    - hn:0.755 hc:0.92 | source_electronic_frontier_foundation | Analytical Deep Dive | Hundreds of Tech Companies Want to Cash In on 
+[Step 017] user:dave  loss: 2.756 grad: 4.104 pred: 2.494 reward:  5.37 eps:0.24 exploit regret:    - hn:0.749 hc:0.92 | source_interesting_engineering | Analytical Deep Dive | Starlink achieves peak download speed of 17Mb/
+[Step 018] user:dave  loss: 2.777 grad: 4.056 pred: 2.446 reward:  4.53 eps:0.24 explore regret:    - hn:0.745 hc:0.91 | source_nexford_university | Analytical Deep Dive | Top 10 Highest Paying Artificial Intelligence 
+[Step 019] user:dave  loss: 2.674 grad: 4.248 pred: 2.411 reward:  4.53 eps:0.24 exploit regret:    - hn:0.738 hc:0.91 | source_times_of_india | Analytical Deep Dive | OpenAI launches new open-source AI models gpt-
+[Step 020] user:dave  loss: 2.454 grad: 4.543 pred: 2.367 reward:  5.22 eps:0.23 exploit regret: 4.78 hn:0.733 hc:0.91 | source_investment_monitor | Analytical Deep Dive | Anduril unveils new Ghost Shark factory in Syd
+[Step 021] user:dave  loss: 2.515 grad: 4.258 pred: 2.292 reward:  4.23 eps:0.23 exploit regret:    - hn:0.729 hc:0.90 | 9to5mac.com | Analytical Deep Dive | ChatGPT will start rolling out ads today, per 
+[Step 022] user:dave  loss: 2.261 grad: 4.529 pred: 2.220 reward:  4.83 eps:0.23 exploit regret:    - hn:0.721 hc:0.90 | source_venturebeat | Analytical Deep Dive | OpenAI's new Codex app hits 1M+ downloads in f
+[Step 023] user:dave  loss: 2.135 grad: 4.556 pred: 2.135 reward:  4.96 eps:0.23 exploit regret:    - hn:0.712 hc:0.89 | dailymail.co.uk | Analytical Deep Dive | Polish butcher who murdered girlfriend with a 
+[Step 024] user:dave  loss: 2.032 grad: 4.552 pred: 2.050 reward:  4.94 eps:0.23 explore regret:    - hn:0.699 hc:0.89 | source_the_manila_times | Analytical Deep Dive | Update on management changes - The Manila Time
+[Step 025] user:dave  loss: 4.070 grad: 7.554 pred: 1.935 reward: 10.00 eps:0.23 exploit regret:    - hn:0.678 hc:0.87 | source_nature | Analytical Deep Dive | EasyHypergraph: an open-source software for fa
+[Step 026] user:dave  loss: 1.688 grad: 4.422 pred: 1.845 reward:  5.56 eps:0.23 exploit regret:    - hn:0.661 hc:0.86 | source_sound_transit | Analytical Deep Dive | Stride bus rapid transit - Sound Transit
+[Step 027] user:dave  loss: 1.478 grad: 4.720 pred: 1.758 reward:  7.12 eps:0.23 explore regret:    - hn:0.645 hc:0.85 | source_the_hindu | Analytical Deep Dive | Mattel partners with OpenAI on Sora 2 AI video
+[Step 028] user:dave  loss: 5.473 grad:14.552 pred: 1.662 reward: -5.55 eps:0.23 exploit regret:    - hn:0.625 hc:0.84 | source_cfpb_gov | Dystopian Warning | CFPB Report Identifies Financial and Privacy R
+[Step 029] user:dave  loss: 6.000 grad:15.910 pred: 1.564 reward: 10.00 eps:0.23 exploit regret:    - hn:0.603 hc:0.83 | x.com | Analytical Deep Dive | 🚨🇷🇺 BREAKING - PUTIN: IF NATO BLOCKADES KALINI
+[Step 030] user:dave  loss: 1.091 grad: 4.590 pred: 1.499 reward:  4.71 eps:0.23 exploit regret: 5.29 hn:0.589 hc:0.82 | source_business_insider | Analytical Deep Dive | Why Startups Fail, According to Company Founde
+[Step 031] user:dave  loss: 0.939 grad: 4.493 pred: 1.389 reward:  4.57 eps:0.23 explore regret:    - hn:0.562 hc:0.80 | source_the_verge | Analytical Deep Dive | The Ploopy Knob is an open-source control dial
+[Step 032] user:dave  loss: 5.515 grad:15.834 pred: 1.306 reward: 10.00 eps:0.23 exploit regret:    - hn:0.543 hc:0.79 | source_the_courier_mail | Sarcastic Takedown | Toxic: whistleblower complained about former c
+[Step 033] user:dave  loss: 1.274 grad: 5.899 pred: 1.239 reward:  2.10 eps:0.23 exploit regret:    - hn:0.525 hc:0.77 | source_mashable | Sarcastic Takedown | 'Alpha males' and the Manosphere: Stop listeni
+[Step 034] user:dave  loss: 1.536 grad: 6.103 pred: 1.137 reward:  4.55 eps:0.22 exploit regret:    - hn:0.500 hc:0.76 | source_times_of_india | Sarcastic Takedown | Tom Brady's ex-wife Gisele Bündchen deepfake s
+[Step 035] user:dave  loss: 1.576 grad: 6.631 pred: 1.057 reward:  4.16 eps:0.22 exploit regret:    - hn:0.479 hc:0.74 | source_wsmv | Sarcastic Takedown | Nashville Department of Emergency Communicatio
+[Step 036] user:dave  loss: 4.961 grad:18.097 pred: 0.978 reward: -5.52 eps:0.22 exploit regret:    - hn:0.455 hc:0.72 | source_global_news | Dystopian Warning | Whistleblower warned B.C. casino in 2000 of al
+[Step 037] user:dave  loss: 5.268 grad:16.426 pred: 0.929 reward: 10.00 eps:0.22 explore regret:    - hn:0.447 hc:0.72 | source_daily_mail | Sarcastic Takedown | Battle of the beige influencers! Inside the 'm
+[Step 038] user:dave  loss: 3.954 grad:13.364 pred: 0.966 reward: -5.28 eps:0.22 exploit regret:    - hn:0.450 hc:0.72 | source_uk_constitutional_law_association | Dystopian Warning | Alex Benn: In Crisis: the ‘Constitutional’ Rig
+[Step 039] user:dave  loss: 0.794 grad: 3.855 pred: 0.916 reward:  4.90 eps:0.22 exploit regret:    - hn:0.439 hc:0.71 | source_fox_business | Sarcastic Takedown | Elizabeth Holmes' $4.5B fortune, luxury lifest
+[Step 040] user:dave  loss: 0.725 grad: 3.724 pred: 0.860 reward:  3.80 eps:0.22 exploit regret: 6.20 hn:0.425 hc:0.70 | 9news.com.au | Sarcastic Takedown | Aussies lose $8 million to deepfake celebrity 
+[Step 041] user:dave  loss: 0.718 grad: 3.756 pred: 0.777 reward:  4.04 eps:0.22 exploit regret:    - hn:0.403 hc:0.68 | wired.com | Sarcastic Takedown | I Loved My OpenClaw AI Agent—Until It Turned o
+[Step 042] user:dave  loss: 8.358 grad:24.157 pred: 0.678 reward: 10.00 eps:0.22 exploit regret:    - hn:0.376 hc:0.66 | theguardian.com | Clickbait Shocker | Mysterious bags of ‘hazardous’ materials appea
+[Step 043] user:dave  loss: 3.363 grad:14.053 pred: 0.631 reward: -5.45 eps:0.22 exploit regret:    - hn:0.363 hc:0.65 | source_gulf_news | Dystopian Warning | Viral choking, ‘skull breaker’ game: Dubai Pol
+[Step 044] user:dave  loss: 3.251 grad:15.253 pred: 0.523 reward: -5.23 eps:0.22 exploit regret:    - hn:0.333 hc:0.63 | source_khaleej_times | Dystopian Warning | Dubai Police issue strong warning against vira
+[Step 045] user:dave  loss: 2.900 grad:13.301 pred: 0.520 reward: -5.31 eps:0.22 exploit regret:    - hn:0.333 hc:0.63 | source_business_insider | Dystopian Warning | Milk Crate Challenge: Viral TikTok Trend Is 'D
+[Step 046] user:dave  loss: 2.314 grad:10.641 pred: 0.515 reward: -4.80 eps:0.35 exploit regret:    - hn:0.331 hc:0.62 | source_times_of_india | Dystopian Warning | 95% of teens at risk: 5 viral TikTok challenge
+[Step 047] user:dave  loss: 0.677 grad: 4.509 pred: 0.362 reward:  4.90 eps:0.35 exploit regret:    - hn:0.000 hc:0.00 | nssmag.com | Analytical Deep Dive | Piratecore: the SS26 trend bringing pirates ba
+[Step 048] user:dave  loss: 2.118 grad:13.086 pred: 0.319 reward: -4.68 eps:0.35 exploit regret:    - hn:0.000 hc:0.00 | source_the_globe_and_mail | Analytical Deep Dive | Without Question, These Are the 2 Safest Quant
+[Step 049] user:dave  loss: 1.054 grad: 5.632 pred: 0.336 reward:  5.95 eps:0.35 explore regret:    - hn:0.000 hc:0.00 | source_morning_brew | Analytical Deep Dive | Anti-consumerist ‘deinfluencing’ trend takes h
+[Step 050] user:dave  loss: 1.477 grad: 7.639 pred: 0.355 reward: -5.54 eps:0.35 explore regret:15.54 hn:0.000 hc:0.00 | source_newsx | Dystopian Warning | What is Skull Breaker Challenge? How This Crue
+  └─ checkpoint step=50 rolling_reward_50=3.95 mean_regret_so_far=7.51
+[Step 051] user:dave  loss: 0.603 grad: 4.573 pred: 0.251 reward:  4.78 eps:0.35 exploit regret:    - hn:0.000 hc:0.00 | source_digitimes | Analytical Deep Dive | China's 'Neuralink rival' raises US$286 millio
+[Step 052] user:dave  loss: 2.808 grad:13.786 pred: 0.218 reward:  4.24 eps:0.21 explore regret:    - hn:0.000 hc:0.00 | source_harvard_business_school | Analytical Deep Dive | Jeffrey J. Bussgang - Harvard Business School
+[Step 053] user:dave  loss: 1.160 grad: 7.518 pred: 0.267 reward:  7.09 eps:0.21 exploit regret:    - hn:0.000 hc:0.00 | source_venturebeat | Analytical Deep Dive | Microsoft just launched powerful AI 'agents' t
+[Step 054] user:dave  loss: 0.368 grad: 4.062 pred: 0.324 reward:  4.51 eps:0.21 exploit regret:    - hn:0.000 hc:0.00 | source_nature | Analytical Deep Dive | A universal molecular control for DNA, mRNA an
+[Step 055] user:dave  loss: 2.294 grad:10.695 pred: 0.406 reward:  4.33 eps:0.21 exploit regret:    - hn:0.000 hc:0.00 | source_cepr | Analytical Deep Dive | Addressing Europe’s services dependencies - CE
+[Step 056] user:dave  loss: 0.355 grad: 2.453 pred: 0.467 reward:  4.27 eps:0.21 exploit regret:    - hn:0.313 hc:0.61 | source_kuwait_times | Analytical Deep Dive | Desert ruins of Al-Ula: Saudis revive forgotte
+[Step 057] user:dave  loss: 2.847 grad:13.708 pred: 0.529 reward:  6.44 eps:0.21 exploit regret:    - hn:0.329 hc:0.62 | source_the_verge | Analytical Deep Dive | Microsoft is turning Windows into an ‘agentic 
+[Step 058] user:dave  loss: 2.545 grad:11.804 pred: 0.626 reward:  6.58 eps:0.21 explore regret:    - hn:0.360 hc:0.65 | source_bbc | Analytical Deep Dive | Pride at 50: Rare photos of early marches - BB
+[Step 059] user:dave  loss: 5.520 grad:19.328 pred: 0.702 reward: 10.00 eps:0.21 exploit regret:    - hn:0.000 hc:0.00 | source_towards_data_science | Analytical Deep Dive | TDS Newsletter: Vibe Coding Is Great. Until It
+[Step 060] user:dave  loss: 1.975 grad: 8.411 pred: 0.790 reward:  4.86 eps:0.21 exploit regret: 5.14 hn:0.407 hc:0.69 | wired.com | Analytical Deep Dive | Best Presidents’ Day Mattress Sales of 2026
+[Step 061] user:dave  loss: 5.933 grad:17.602 pred: 0.874 reward: 10.00 eps:0.20 explore regret:    - hn:0.428 hc:0.70 | aol.com | Analytical Deep Dive | Svedka's Super Bowl Ad Debut Descends Into An 
+[Step 062] user:dave  loss: 5.179 grad:13.810 pred: 0.983 reward: 10.00 eps:0.20 explore regret:    - hn:0.460 hc:0.73 | source_forbes | Analytical Deep Dive | VC Math Explained To Founders: The High-Stakes
+[Step 063] user:dave  loss: 1.681 grad: 4.710 pred: 1.100 reward:  5.80 eps:0.20 exploit regret:    - hn:0.487 hc:0.75 | source_al_jazeera | Analytical Deep Dive | China’s 84 percent retaliatory tariff on US go
+[Step 064] user:dave  loss: 1.655 grad: 4.280 pred: 1.165 reward:  4.54 eps:0.20 explore regret:    - hn:0.505 hc:0.76 | source_gamesradar | Analytical Deep Dive | Best retro handheld 2025: my portable picks fo
+[Step 065] user:dave  loss: 1.139 grad: 4.668 pred: 1.237 reward:  6.64 eps:0.20 exploit regret:    - hn:0.521 hc:0.77 | source_bitget | Analytical Deep Dive | Fed Payment Network Access Sparks Intense Clas
+[Step 066] user:dave  loss: 1.138 grad: 4.766 pred: 1.271 reward:  6.84 eps:0.20 exploit regret:    - hn:0.533 hc:0.78 | source_the_new_indian_express | Analytical Deep Dive | From discipline to digital: How parenting has 
+[Step 067] user:dave  loss: 0.905 grad: 4.282 pred: 1.330 reward:  6.17 eps:0.20 exploit regret:    - hn:0.000 hc:0.00 | source_coin_bureau | Analytical Deep Dive | Top 10 Anonymous Crypto Wallets for Ultimate P
+[Step 068] user:dave  loss: 1.567 grad: 4.427 pred: 1.355 reward:  7.17 eps:0.20 exploit regret:    - hn:0.552 hc:0.79 | source_nature | Analytical Deep Dive | Multiple historical processes obscure phylogen
+[Step 069] user:dave  loss: 1.130 grad: 4.323 pred: 1.367 reward:  5.66 eps:0.20 exploit regret:    - hn:0.555 hc:0.79 | source_the_atlantic | Analytical Deep Dive | The Russian Red Line Washington Won’t Cross—Ye
+[Step 070] user:dave  loss: 1.179 grad: 4.424 pred: 1.413 reward:  5.91 eps:0.20 explore regret: 4.09 hn:0.566 hc:0.80 | source_times_of_india | Analytical Deep Dive | Move over, Elon Musk! THIS billionaire has a b
+[Step 071] user:dave  loss: 1.184 grad: 4.343 pred: 1.423 reward:  4.82 eps:0.20 exploit regret:    - hn:0.569 hc:0.80 | source_the_wall_street_journal | Analytical Deep Dive | Exclusive | Hedge Funds Are Back on Top After 
+[Step 072] user:dave  loss: 1.380 grad: 4.206 pred: 1.360 reward:  7.08 eps:0.20 exploit regret:    - hn:0.556 hc:0.80 | source_business_standard | Analytical Deep Dive | Laptop Repair World - Leading the trend toward
+[Step 073] user:dave  loss: 0.955 grad: 3.995 pred: 1.358 reward:  5.16 eps:0.20 exploit regret:    - hn:0.555 hc:0.79 | source_trend_hunter | Analytical Deep Dive | Retro-Inspired Smartphone Gaming Controllers -
+[Step 074] user:dave  loss: 0.844 grad: 3.931 pred: 1.339 reward:  5.16 eps:0.19 exploit regret:    - hn:0.551 hc:0.79 | source_pr_newswire | Analytical Deep Dive | Skywork has launched "Skywork Desktop" globall
+[Step 075] user:dave  loss: 0.738 grad: 3.722 pred: 1.323 reward:  5.99 eps:0.19 explore regret:    - hn:0.547 hc:0.79 | source_paste_magazine | Analytical Deep Dive | 5 More Delicious Graphic Food Novels - Paste M
+[Step 076] user:dave  loss: 0.817 grad: 4.094 pred: 1.295 reward:  4.52 eps:0.19 exploit regret:    - hn:0.540 hc:0.78 | realtor.com | Analytical Deep Dive | Miami Overtakes New York as the Major U.S. Cit
+[Step 077] user:dave  loss: 0.577 grad: 3.357 pred: 1.264 reward:  6.63 eps:0.19 exploit regret:    - hn:0.532 hc:0.78 | source_coindesk | Analytical Deep Dive | First Mover: Bitcoin Meets 'Torrent' as Lowly 
+[Step 078] user:dave  loss: 0.596 grad: 3.354 pred: 1.229 reward:  5.49 eps:0.19 explore regret:    - hn:0.524 hc:0.77 | source_good_housekeeping | Analytical Deep Dive | This trainer trend needs to be on your fashion
+[Step 079] user:dave  loss: 0.720 grad: 3.566 pred: 1.188 reward:  4.26 eps:0.19 explore regret:    - hn:0.513 hc:0.77 | source_book_riot | Analytical Deep Dive | New Mystery, Thriller, and True Crime Out This
+[Step 080] user:dave  loss: 1.847 grad:10.891 pred: 1.149 reward:  5.42 eps:0.19 exploit regret: 4.58 hn:0.503 hc:0.76 | source_china_daily | Analytical Deep Dive | Europe lurching toward strategic autonomy? - C
+[Step 081] user:dave  loss: 0.434 grad: 2.402 pred: 1.128 reward:  6.63 eps:0.19 exploit regret:    - hn:0.498 hc:0.76 | androidauthority.com | Analytical Deep Dive | The Galaxy S26 Plus and S26 Ultra have nothing
+[Step 082] user:dave  loss:14.192 grad:41.397 pred: 1.099 reward: 10.00 eps:0.19 exploit regret:    - hn:0.490 hc:0.75 | source_yahoo | Analytical Deep Dive | Jessica Chastain's Apple TV Thriller 'The Sava
+[Step 083] user:dave  loss: 0.380 grad: 1.033 pred: 1.092 reward:  4.43 eps:0.19 exploit regret:    - hn:0.000 hc:0.00 | source_tech_wire_asia | Analytical Deep Dive | OpenAI launches GPT-5 in August, plus potentia
+[Step 084] user:dave  loss: 4.344 grad:32.517 pred: 1.090 reward:  7.14 eps:0.19 exploit regret:    - hn:0.000 hc:0.00 | source_business_today | Analytical Deep Dive | Samsung employees accidentally leaked company 
+[Step 085] user:dave  loss: 0.139 grad: 0.779 pred: 1.083 reward:  5.78 eps:0.19 exploit regret:    - hn:0.000 hc:0.00 | source_silicon_republic | Analytical Deep Dive | Can OpenAI’s Sora 2-powered social media app r
+[Step 086] user:dave  loss:18.359 grad:67.058 pred: 1.078 reward: 10.00 eps:0.19 exploit regret:    - hn:0.478 hc:0.74 | source_venturebeat | Analytical Deep Dive | Salesforce rolls out new Slackbot AI agent as 
+[Step 087] user:dave  loss: 4.132 grad:27.111 pred: 1.063 reward:  5.19 eps:0.18 exploit regret:    - hn:0.475 hc:0.74 | source_the_verge | Analytical Deep Dive | OpenAI’s new ChatGPT Agent can control an enti
+[Step 088] user:dave  loss: 4.089 grad:28.314 pred: 1.060 reward:  6.61 eps:0.18 exploit regret:    - hn:0.474 hc:0.74 | source_tech_xplore | Analytical Deep Dive | Have you given away secrets on ChatGPT? Be car
+[Step 089] user:dave  loss: 0.071 grad: 1.266 pred: 1.029 reward:  6.15 eps:0.18 explore regret:    - hn:0.000 hc:0.00 | bestmediainfo.com | Analytical Deep Dive | Why your 2026 consumer will date AI, cuddle pl
+[Step 090] user:dave  loss: 0.331 grad: 2.212 pred: 1.020 reward:  5.71 eps:0.18 exploit regret: 4.29 hn:0.465 hc:0.73 | 910news.com | Analytical Deep Dive | Deep Dive: What the future of the Traverse Cit
+[Step 091] user:dave  loss: 0.166 grad: 2.921 pred: 0.993 reward:  4.87 eps:0.18 explore regret:    - hn:0.000 hc:0.00 | source_whyy | Analytical Deep Dive | ‘Each other’s safety net’: People’s Kitchen se
+[Step 092] user:dave  loss: 2.561 grad:17.860 pred: 0.966 reward:  6.79 eps:0.18 explore regret:    - hn:0.452 hc:0.72 | source_her_world_singapore | Analytical Deep Dive | Here Is What 'Hardcore' Style Looks Like In Si
+[Step 093] user:dave  loss: 0.362 grad: 3.848 pred: 0.947 reward:  4.76 eps:0.18 exploit regret:    - hn:0.446 hc:0.72 | allianzgi.com | Analytical Deep Dive | Two ways credit can add relative value as the 
+[Step 094] user:dave  loss: 7.386 grad:22.647 pred: 0.916 reward:  7.95 eps:0.18 exploit regret:    - hn:0.441 hc:0.71 | source_pacific_legal_foundation | Analytical Deep Dive | National Review: Progressives Shouldn’t Care A
+[Step 095] user:dave  loss: 0.434 grad: 2.482 pred: 0.904 reward:  5.72 eps:0.18 exploit regret:    - hn:0.437 hc:0.71 | source_cnbc | Analytical Deep Dive | Trump's Fed pressure campaign will lead to hig
+[Step 096] user:dave  loss: 7.145 grad:22.092 pred: 0.886 reward:  7.44 eps:0.18 exploit regret:    - hn:0.432 hc:0.71 | 9to5mac.com | Analytical Deep Dive | Apple Arcade is adding Oceanhorn 3 and three m
+[Step 097] user:dave  loss: 0.566 grad: 3.505 pred: 0.889 reward:  6.69 eps:0.18 exploit regret:    - hn:0.433 hc:0.71 | source_yahoo_finance | Analytical Deep Dive | Trump tariffs live updates: Trump unveils tari
+[Step 098] user:dave  loss: 5.466 grad:16.477 pred: 0.924 reward: 10.00 eps:0.18 exploit regret:    - hn:0.443 hc:0.72 | source_digital_camera_world | Analytical Deep Dive | Is Pentax Film Project about to stage a sensat
+[Step 099] user:dave  loss:10.888 grad:29.212 pred: 0.919 reward: 10.00 eps:0.18 explore regret:    - hn:0.442 hc:0.71 | source_retro_dodo | Analytical Deep Dive | 10 Best Retro Gaming Books Of 2024 [All Review
+[Step 100] user:dave  loss: 5.264 grad:16.000 pred: 0.935 reward: 10.00 eps:0.17 explore regret: 0.00 hn:0.446 hc:0.72 | source_homeland_security_today | Analytical Deep Dive | My Profile - Homeland Security Today
+  └─ checkpoint step=100 rolling_reward_50=6.44 mean_regret_so_far=5.56
+[Step 101] user:dave  loss: 1.515 grad: 5.674 pred: 1.007 reward:  6.83 eps:0.17 exploit regret:    - hn:0.465 hc:0.73 | androidauthority.com | Analytical Deep Dive | YouTube TV’s new plans explained: Prices, chan
+[Step 102] user:dave  loss: 1.435 grad: 5.373 pred: 1.029 reward:  6.40 eps:0.17 exploit regret:    - hn:0.470 hc:0.74 | bbc.com | Analytical Deep Dive | Instagram and YouTube owners built 'addiction 
+[Step 103] user:dave  loss: 0.809 grad: 3.627 pred: 1.068 reward:  6.40 eps:0.17 exploit regret:    - hn:0.480 hc:0.74 | source_click2houston | Analytical Deep Dive | Viral social media challenges linked to severe
+[Step 104] user:dave  loss: 1.373 grad: 3.969 pred: 1.167 reward:  5.69 eps:0.17 exploit regret:    - hn:0.505 hc:0.76 | source_tom_s_hardware | Analytical Deep Dive | RTX 5090 cable melting claim debunked — Invest
+[Step 105] user:dave  loss: 0.839 grad: 3.720 pred: 1.157 reward:  4.76 eps:0.17 exploit regret:    - hn:0.502 hc:0.76 | fox2now.com | Analytical Deep Dive | Pinterest 2026 Trend Report: Nostalgic toys ar
+[Step 106] user:dave  loss: 0.820 grad: 3.659 pred: 1.166 reward:  5.11 eps:0.17 exploit regret:    - hn:0.505 hc:0.76 | source_abc_news | Analytical Deep Dive | 2026 global travel trend predictions: Farms, c
+[Step 107] user:dave  loss: 0.847 grad: 3.725 pred: 1.147 reward:  6.57 eps:0.17 exploit regret:    - hn:0.501 hc:0.76 | 9to5mac.com | Analytical Deep Dive | DOJ faces investigation over removal of ICE-tr
+[Step 108] user:dave  loss: 1.337 grad: 3.994 pred: 1.216 reward:  6.03 eps:0.17 exploit regret:    - hn:0.518 hc:0.77 | source_book_riot | Analytical Deep Dive | The Best Mystery, Thriller, and True Crime Boo
+[Step 109] user:dave  loss: 9.538 grad:24.764 pred: 1.182 reward: 10.00 eps:0.17 exploit regret:    - hn:0.510 hc:0.76 | source_movieweb | Analytical Deep Dive | Boneyard Review | A Peppy Mel Gibson Can't Sav
+[Step 110] user:dave  loss: 0.993 grad: 3.947 pred: 1.219 reward:  7.18 eps:0.17 exploit regret: 2.82 hn:0.520 hc:0.77 | source_vogue | Analytical Deep Dive | How to Master the Sneaker and Skirt Pairing - 
+[Step 111] user:dave  loss: 1.309 grad: 3.880 pred: 1.250 reward:  4.20 eps:0.17 exploit regret:    - hn:0.527 hc:0.78 | source_australian_broadcasting_corporation | Analytical Deep Dive | Whistleblower reveals 'alarming' scale of mone
+[Step 112] user:dave  loss: 0.929 grad: 3.708 pred: 1.256 reward:  6.57 eps:0.17 explore regret:    - hn:0.529 hc:0.78 | source_speciality_food_magazine | Analytical Deep Dive | A deep dive into the tinned fish trend - Speci
+[Step 113] user:dave  loss: 5.129 grad:15.389 pred: 1.245 reward: -5.05 eps:0.17 explore regret:    - hn:0.527 hc:0.78 | source_mpr_news | Analytical Deep Dive | Can a vibe be intellectual property? A Minneso
+[Step 114] user:dave  loss: 8.810 grad:22.162 pred: 1.272 reward: 10.00 eps:0.16 exploit regret:    - hn:0.533 hc:0.78 | wired.com | Analytical Deep Dive | 6 Best Gaming Laptops (2026): Tested and Revie
+[Step 115] user:dave  loss: 0.974 grad: 3.659 pred: 1.305 reward:  5.95 eps:0.16 exploit regret:    - hn:0.540 hc:0.79 | breitbart.com | Analytical Deep Dive | 'Allahu Akbar': Terrorism Police Leading Inves
+[Step 116] user:dave  loss: 1.192 grad: 4.127 pred: 1.371 reward:  6.81 eps:0.16 exploit regret:    - hn:0.558 hc:0.80 | phys.org | Analytical Deep Dive | New digital state of matter could help build s
+[Step 117] user:dave  loss:10.997 grad:25.984 pred: 1.310 reward: 10.00 eps:0.16 exploit regret:    - hn:0.543 hc:0.79 | source_enlit_world | Hype Beast | Transnet BW develops new hybrid grid booster t
+[Step 118] user:dave  loss: 1.045 grad: 3.795 pred: 1.336 reward:  4.23 eps:0.16 exploit regret:    - hn:0.549 hc:0.79 | destructoid.com | Analytical Deep Dive | The Jailbreak quest walkthrough in Disney Drea
+[Step 119] user:dave  loss: 1.072 grad: 3.774 pred: 1.361 reward:  5.12 eps:0.16 exploit regret:    - hn:0.556 hc:0.80 | eurogamer.net | Analytical Deep Dive | Subnautica and Subnautica: Below Zero are gett
+[Step 120] user:dave  loss: 0.928 grad: 3.619 pred: 1.294 reward:  4.84 eps:0.16 exploit regret: 5.16 hn:0.539 hc:0.78 | source_mamavation | Analytical Deep Dive | Sustain Natural Period Underwear PFAS "Forever
+[Step 121] user:dave  loss: 8.689 grad:21.168 pred: 1.265 reward: 10.00 eps:0.16 explore regret:    - hn:0.532 hc:0.78 | source_massdevice | Hype Beast | Paradromics raises $33M, wins FDA breakthrough
+[Step 122] user:dave  loss: 0.669 grad: 3.281 pred: 1.191 reward:  5.81 eps:0.16 exploit regret:    - hn:0.512 hc:0.77 | forbes.com | Analytical Deep Dive | Microsoft Confirms Windows Is Under Attack — U
+[Step 123] user:dave  loss: 6.627 grad:18.616 pred: 1.191 reward: 10.00 eps:0.16 exploit regret:    - hn:0.514 hc:0.77 | source_the_new_york_times | Analytical Deep Dive | We Had 44 Period and Incontinence Products Tes
+[Step 124] user:dave  loss: 1.387 grad: 4.966 pred: 1.199 reward:  6.87 eps:0.16 exploit regret:    - hn:0.515 hc:0.77 | source_devdiscourse | Hype Beast | Security Forces Achieve Major Breakthrough: To
+[Step 125] user:dave  loss: 4.367 grad:11.595 pred: 1.227 reward:  7.59 eps:0.16 explore regret:    - hn:0.522 hc:0.77 | source_australian_broadcasting_corporation | Hype Beast | Woolworths 'spying' on punters to boost profit
+[Step 126] user:dave  loss: 3.948 grad: 9.086 pred: 1.304 reward:  7.74 eps:0.16 exploit regret:    - hn:0.538 hc:0.78 | source_financial_times | Hype Beast | Record $668mn loan boosts hopes for Miami’s lu
+[Step 127] user:dave  loss: 6.982 grad:16.589 pred: 1.294 reward: 10.00 eps:0.15 exploit regret:    - hn:0.539 hc:0.78 | source_36_kr | Hype Beast | Can You Control Objects with Thoughts? New Bre
+[Step 128] user:dave  loss: 1.407 grad: 3.646 pred: 1.343 reward:  5.80 eps:0.15 exploit regret:    - hn:0.550 hc:0.79 | source_the_quantum_insider | Analytical Deep Dive | Infleqtion Finalizes $6.2M ARPA-E Contract for
+[Step 129] user:dave  loss: 4.018 grad: 9.618 pred: 1.322 reward: 10.00 eps:0.15 explore regret:    - hn:0.545 hc:0.79 | source_moment_energy | Hype Beast | Save energy, cut costs & boost grid stability 
+[Step 130] user:dave  loss: 1.504 grad: 3.870 pred: 1.399 reward:  7.06 eps:0.15 exploit regret: 2.94 hn:0.564 hc:0.80 | source_espn | Hype Beast | Win-loss record ceilings, floors for all NFL t
+[Step 131] user:dave  loss: 6.133 grad:12.654 pred: 1.436 reward: 10.00 eps:0.15 exploit regret:    - hn:0.569 hc:0.80 | source_financial_nigeria | Hype Beast | Finger millet genome breakthrough to help safe
+[Step 132] user:dave  loss: 5.886 grad:11.734 pred: 1.481 reward: 10.00 eps:0.15 exploit regret:    - hn:0.579 hc:0.81 | source_daily_maverick | Hype Beast | Easter security boost: South Africa deploys dr
+[Step 133] user:dave  loss: 8.462 grad:18.602 pred: 1.530 reward: 10.00 eps:0.15 exploit regret:    - hn:0.590 hc:0.82 | source_manufacturing_today_india | Hype Beast | Circular economy and India’s startups: Boostin
+[Step 134] user:dave  loss: 3.223 grad: 4.150 pred: 1.690 reward:  7.85 eps:0.15 exploit regret:    - hn:0.624 hc:0.84 | source_pr_newswire | Hype Beast | Blackrock Neurotech's MoveAgain Brain-Computer
+[Step 135] user:dave  loss: 3.205 grad: 4.321 pred: 1.693 reward:  7.91 eps:0.15 exploit regret:    - hn:0.629 hc:0.84 | source_yicai_global | Hype Beast | Chinese BCI Startup NeuroXess Hails Breakthrou
+[Step 136] user:dave  loss: 3.080 grad: 3.610 pred: 1.795 reward:  7.51 eps:0.15 exploit regret:    - hn:0.646 hc:0.85 | transitcenter.org | Hype Beast | All Transportation is Local: Rewrite the Rules
+[Step 137] user:dave  loss: 3.958 grad: 4.084 pred: 1.888 reward: 10.00 eps:0.15 exploit regret:    - hn:0.664 hc:0.86 | source_the_bridge_chronicle | Hype Beast | Elon Musk Claims "Full Body Functionality" Pos
+[Step 138] user:dave  loss: 4.767 grad: 5.395 pred: 1.920 reward: 10.00 eps:0.15 exploit regret:    - hn:0.668 hc:0.87 | agtechnavigator.com | Hype Beast | Dyson Farming and KWS join Wild Bio in five‑ye
+[Step 139] user:dave  loss: 3.087 grad: 3.519 pred: 1.929 reward:  7.48 eps:0.15 exploit regret:    - hn:0.675 hc:0.87 | source_protectionweb | Hype Beast | Drone technology boosts border security over f
+[Step 140] user:dave  loss: 2.364 grad: 3.801 pred: 1.983 reward:  6.79 eps:0.15 exploit regret: 3.21 hn:0.684 hc:0.88 | source_pune_mirror | Hype Beast | Pune runner Shashwat Shukla sets new world rec
+[Step 141] user:dave  loss: 3.160 grad: 2.974 pred: 2.027 reward:  7.79 eps:0.14 exploit regret:    - hn:0.687 hc:0.88 | source_forbes | Hype Beast | New Biopesticide Is A Breakthrough For Global 
+[Step 142] user:dave  loss: 3.913 grad: 3.135 pred: 2.080 reward: 10.00 eps:0.14 exploit regret:    - hn:0.696 hc:0.88 | source_nairametrics | Hype Beast | Dangote Boosts Abuja Trade Fair - Nairametrics
+[Step 143] user:dave  loss: 3.659 grad: 3.030 pred: 2.062 reward: 10.00 eps:0.14 exploit regret:    - hn:0.693 hc:0.88 | source_yahoo | Hype Beast | Researchers make major breakthrough that could
+[Step 144] user:dave  loss: 4.373 grad: 4.029 pred: 2.062 reward: 10.00 eps:0.14 exploit regret:    - hn:0.697 hc:0.88 | grist.org | Hype Beast | Food safety breakthrough: USDA declares 'Big S
+[Step 145] user:dave  loss: 4.939 grad: 4.119 pred: 2.115 reward: 10.00 eps:0.14 exploit regret:    - hn:0.707 hc:0.89 | source_the_world_economic_forum | Hype Beast | This CO2 ventilation breakthrough could help b
+[Step 146] user:dave  loss: 3.100 grad: 2.806 pred: 2.133 reward:  7.54 eps:0.14 exploit regret:    - hn:0.707 hc:0.89 | source_the_guardian | Hype Beast | First recording of computer-generated music – 
+[Step 147] user:dave  loss: 2.569 grad: 3.749 pred: 2.155 reward:  6.68 eps:0.14 exploit regret:    - hn:0.709 hc:0.89 | source_wired | Hype Beast | China is using coronavirus to boost its dystop
+[Step 148] user:dave  loss: 3.746 grad: 2.822 pred: 2.161 reward: 10.00 eps:0.14 exploit regret:    - hn:0.716 hc:0.90 | source_money_saving_expert | Hype Beast | How to boost your Nectar points - Money Saving
+[Step 149] user:dave  loss: 4.208 grad: 3.937 pred: 2.133 reward: 10.00 eps:0.14 exploit regret:    - hn:0.708 hc:0.89 | source_house_beautiful | Hype Beast | 5 Exterior Paint Colors That Can Dramatically 
+[Step 150] user:dave  loss: 2.754 grad: 3.302 pred: 2.167 reward:  2.61 eps:0.14 exploit regret: 7.39 hn:0.715 hc:0.90 | source_the_arbiter_boise_state | Sarcastic Takedown | Reading between the lines: Elitism in the read
+  └─ checkpoint step=150 rolling_reward_50=7.41 mean_regret_so_far=5.14
+[Step 151] user:dave  loss: 3.647 grad: 2.770 pred: 2.195 reward: 10.00 eps:0.14 exploit regret:    - hn:0.719 hc:0.90 | source_yahoo_finance | Hype Beast | PanBrain Tech Unveils Breakthrough Brain-Compu
+[Step 152] user:dave  loss: 2.351 grad: 4.144 pred: 2.163 reward:  7.12 eps:0.14 exploit regret:    - hn:0.714 hc:0.90 | destructoid.com | Hype Beast | Best players for FC 26 Shove Off Evolution
+[Step 153] user:dave  loss: 2.818 grad: 3.080 pred: 2.158 reward:  7.21 eps:0.14 exploit regret:    - hn:0.716 hc:0.90 | nylon.com | Clickbait Shocker | Suddenly, Everyone In Fashion Needs Prescripti
+[Step 154] user:dave  loss: 2.763 grad: 3.366 pred: 2.146 reward:  7.42 eps:0.13 explore regret:    - hn:0.716 hc:0.90 | eurogamer.net | Clickbait Shocker | You can expect to see more of Ron Perlman in F
+[Step 155] user:dave  loss: 5.173 grad: 7.431 pred: 2.178 reward: -4.58 eps:0.13 exploit regret:    - hn:0.718 hc:0.90 | source_the_courier_mail | Dystopian Warning | The perfect storm of market cycles is collidin
+[Step 156] user:dave  loss: 3.634 grad: 3.465 pred: 2.187 reward:  9.68 eps:0.13 exploit regret:    - hn:0.719 hc:0.90 | dailymail.co.uk | Angry Rant | New Archbishop of Canterbury hit with backlash
+[Step 157] user:dave  loss: 5.138 grad: 8.015 pred: 2.163 reward: -4.61 eps:0.13 exploit regret:    - hn:0.716 hc:0.90 | instyle.com | Dystopian Warning | Hot Girls Are Dressing Like Pirates I Fear - i
+[Step 158] user:dave  loss: 2.786 grad: 3.259 pred: 2.173 reward:  7.72 eps:0.13 exploit regret:    - hn:0.718 hc:0.90 | source_adda247 | Hype Beast | Microsoft’s Majorana 1: Quantum Computing Brea
+[Step 159] user:dave  loss: 4.194 grad: 5.331 pred: 2.126 reward: 10.00 eps:0.13 explore regret:    - hn:0.712 hc:0.89 | source_atlas_obscura | Angry Rant | Tragedy Lingers Inside Chornobyl’s Abandoned C
+[Step 160] user:dave  loss: 4.416 grad: 5.244 pred: 2.143 reward: 10.00 eps:0.13 exploit regret: 0.00 hn:0.714 hc:0.89 | source_homes_and_gardens | Hype Beast | Front door trends – 7 stylish ideas to boost c
+[Step 161] user:dave  loss: 5.339 grad: 6.325 pred: 2.177 reward: -4.61 eps:0.13 exploit regret:    - hn:0.719 hc:0.90 | source_travel_and_tour_world | Somber Reflection | Portugal Joins Spain, Hungary, Romania, and Mo
+[Step 162] user:dave  loss: 2.285 grad: 3.626 pred: 2.160 reward:  3.39 eps:0.13 explore regret:    - hn:0.716 hc:0.90 | source_food_dive | Angry Rant | Top 10 food and beverage industry trends — and
+[Step 163] user:dave  loss: 2.787 grad: 3.264 pred: 2.170 reward:  7.84 eps:0.13 exploit regret:    - hn:0.718 hc:0.90 | source_dualshockers | Clickbait Shocker | Sugardew Island Review - DualShockers
+[Step 164] user:dave  loss: 5.564 grad: 6.993 pred: 2.163 reward: -5.33 eps:0.13 exploit regret:    - hn:0.716 hc:0.90 | businessinsider.com | Somber Reflection | A GoFundMe was set up for James Van Der Beek's
+[Step 165] user:dave  loss: 3.970 grad: 4.323 pred: 2.154 reward: 10.00 eps:0.13 explore regret:    - hn:0.716 hc:0.90 | source_techcrunch | Sarcastic Takedown | Don’t fall into the toxic workplace trap - Tec
+[Step 166] user:dave  loss: 2.269 grad: 3.852 pred: 2.164 reward:  4.86 eps:0.13 exploit regret:    - hn:0.715 hc:0.90 | source_fortune | Angry Rant | 3 takeaways from a cardiologist and 'SuperAger
+[Step 167] user:dave  loss: 3.657 grad: 3.560 pred: 2.161 reward:  9.95 eps:0.12 explore regret:    - hn:0.719 hc:0.90 | source_visual_capitalist | Angry Rant | Charted: The Rising Average Cost of College in
+[Step 168] user:dave  loss: 2.324 grad: 3.609 pred: 2.147 reward:  4.00 eps:0.12 explore regret:    - hn:0.715 hc:0.90 | source_the_business_financial_times | Sarcastic Takedown | Stolen by a ringing phone: The hidden criminal
+[Step 169] user:dave  loss: 2.899 grad: 3.029 pred: 2.157 reward:  7.88 eps:0.12 exploit regret:    - hn:0.714 hc:0.89 | source_sciencealert | Clickbait Shocker | Mysterious 'Dark Oxygen' Discovered at Bottom 
+[Step 170] user:dave  loss: 4.434 grad: 5.123 pred: 2.083 reward: 10.00 eps:0.12 exploit regret: 0.00 hn:0.703 hc:0.89 | source_innovation_tech_today | Clickbait Shocker | National Geographic Lost Cities Revealed With 
+[Step 171] user:dave  loss: 2.905 grad: 3.093 pred: 2.165 reward:  7.65 eps:0.12 exploit regret:    - hn:0.718 hc:0.90 | source_autoevolution | Clickbait Shocker | This Architectural Tiny House Embraces the Out
+[Step 172] user:dave  loss: 2.758 grad: 2.977 pred: 2.136 reward:  7.27 eps:0.12 exploit regret:    - hn:0.712 hc:0.89 | source_china_s_state_council_information_office | Hype Beast | China enhances social credit system to boost h
+[Step 173] user:dave  loss: 2.758 grad: 3.209 pred: 2.103 reward:  7.65 eps:0.12 exploit regret:    - hn:0.705 hc:0.89 | source_cryptorank | Hype Beast | Erebor National Bank Charter: Historic Crypto 
+[Step 174] user:dave  loss: 3.728 grad: 3.940 pred: 2.083 reward: 10.00 eps:0.12 exploit regret:    - hn:0.703 hc:0.89 | source_bergen_record | Hype Beast | Regulate or be regulated: Why America must sha
+[Step 175] user:dave  loss: 2.151 grad: 3.639 pred: 2.076 reward:  4.12 eps:0.12 exploit regret:    - hn:0.702 hc:0.89 | source_mirage_news | Angry Rant | Liu: Innovation Key to Boost Food Security - M
+[Step 176] user:dave  loss: 5.657 grad: 7.595 pred: 2.079 reward: -5.56 eps:0.12 exploit regret:    - hn:0.702 hc:0.89 | transitcenter.org | Somber Reflection | Case Studies: Best Practices for Transportatio
+[Step 177] user:dave  loss: 2.322 grad: 3.807 pred: 2.029 reward:  2.31 eps:0.12 exploit regret:    - hn:0.693 hc:0.88 | yourstory.com | Angry Rant | Indian VCs call for policies to encourage deep
+[Step 178] user:dave  loss: 2.610 grad: 3.337 pred: 2.048 reward:  7.42 eps:0.12 exploit regret:    - hn:0.696 hc:0.88 | source_digitimes | Hype Beast | China eyes 2027 BCI breakthrough as it races t
+[Step 179] user:dave  loss: 1.859 grad: 3.950 pred: 1.943 reward:  3.64 eps:0.12 exploit regret:    - hn:0.680 hc:0.87 | dailymail.co.uk | Angry Rant | Squirming Ed Miliband refuses to explain why L
+[Step 180] user:dave  loss: 6.255 grad:10.823 pred: 1.909 reward: -5.20 eps:0.11 exploit regret:15.20 hn:0.673 hc:0.87 | source_mansion_global | Analytical Deep Dive | Five New Developments Entering Miami’s Hot Con
+[Step 181] user:dave  loss: 1.706 grad: 4.017 pred: 1.948 reward:  5.71 eps:0.11 exploit regret:    - hn:0.680 hc:0.87 | source_paxos | Analytical Deep Dive | Paxos + Revolut Bring Crypto to the Masses - P
+[Step 182] user:dave  loss: 1.556 grad: 4.121 pred: 1.871 reward:  7.05 eps:0.11 exploit regret:    - hn:0.664 hc:0.86 | source_nbc_news | Analytical Deep Dive | Bird flu samples show mutations that may make 
+[Step 183] user:dave  loss: 5.878 grad:10.190 pred: 1.867 reward: -4.73 eps:0.11 exploit regret:    - hn:0.663 hc:0.86 | source_strategic_energy_europe | Analytical Deep Dive | Poland advances renewable and grid stability g
+[Step 184] user:dave  loss: 1.712 grad: 4.027 pred: 1.822 reward:  3.54 eps:0.11 exploit regret:    - hn:0.656 hc:0.86 | nucamp.co | Angry Rant | The Vibe Coding Backlash: Why Many Developers 
+[Step 185] user:dave  loss: 1.531 grad: 3.582 pred: 1.791 reward:  5.53 eps:0.11 exploit regret:    - hn:0.651 hc:0.86 | source_investopedia | Analytical Deep Dive | Fidelity Will Accept Bitcoin Collateral for Ca
+[Step 186] user:dave  loss: 1.476 grad: 3.890 pred: 1.732 reward:  6.71 eps:0.11 exploit regret:    - hn:0.639 hc:0.85 | source_sky_news | Analytical Deep Dive | What you should know about bird flu in the UK 
+[Step 187] user:dave  loss: 5.412 grad:10.988 pred: 1.697 reward: 10.00 eps:0.11 exploit regret:    - hn:0.630 hc:0.84 | dazeddigital.com | Somber Reflection | ‘Hope is work’: Marc Jacobs’ SS26 show grapple
+[Step 188] user:dave  loss: 5.627 grad:16.095 pred: 1.658 reward: -5.23 eps:0.11 explore regret:    - hn:0.631 hc:0.84 | engadget.com | Somber Reflection | US judicial body removes climate research pape
+[Step 189] user:dave  loss: 5.436 grad:18.588 pred: 1.610 reward: -4.92 eps:0.11 exploit regret:    - hn:0.611 hc:0.83 | source_forbes | Somber Reflection | Fred Wilson And The Death Of Venture Capital -
+[Step 190] user:dave  loss: 5.448 grad:14.632 pred: 1.635 reward: -4.67 eps:0.11 exploit regret:14.67 hn:0.618 hc:0.84 | source_mercator_institute_for_china_studies_merics | Somber Reflection | China’s Social Credit System in 2021: From fra
+[Step 191] user:dave  loss: 6.220 grad:14.645 pred: 1.585 reward: -4.78 eps:0.11 explore regret:    - hn:0.608 hc:0.83 | source_marketing_dive | Analytical Deep Dive | Honda drives deeper into gaming, esports with 
+[Step 192] user:dave  loss: 1.396 grad: 4.255 pred: 1.680 reward:  7.00 eps:0.35 exploit regret:    - hn:0.623 hc:0.84 | source_cnbc | Analytical Deep Dive | Here's how China could retaliate against U.S. 
+[Step 193] user:dave  loss: 4.735 grad: 9.307 pred: 1.620 reward: 10.00 eps:0.35 explore regret:    - hn:0.615 hc:0.83 | source_defense_news | Analytical Deep Dive | Macron puts local defense firms on notice Fran
+[Step 194] user:dave  loss: 3.741 grad: 5.845 pred: 1.699 reward: 10.00 eps:0.10 exploit regret:    - hn:0.626 hc:0.84 | source_quantum_zeitgeist | Analytical Deep Dive | D-Wave Solves Complex Problems With Commercial
+[Step 195] user:dave  loss: 1.500 grad: 3.888 pred: 1.684 reward:  5.60 eps:0.10 exploit regret:    - hn:0.622 hc:0.84 | propublica.org | Analytical Deep Dive | The Real Story Behind the Midnight Immigration
+[Step 196] user:dave  loss: 1.671 grad: 3.573 pred: 1.671 reward:  5.91 eps:0.10 exploit regret:    - hn:0.621 hc:0.84 | source_msn | Analytical Deep Dive | CES 2026: Gaming trends to expect at the show 
+[Step 197] user:dave  loss: 1.656 grad: 3.791 pred: 1.604 reward:  6.97 eps:0.10 exploit regret:    - hn:0.607 hc:0.83 | source_mamavation | Analytical Deep Dive | Safest Bamboo Flooring Sans PFAS "Forever Chem
+[Step 198] user:dave  loss: 1.554 grad: 3.682 pred: 1.575 reward:  6.08 eps:0.10 exploit regret:    - hn:0.604 hc:0.83 | nytimes.com | Analytical Deep Dive | Lutnick, Wasserman and Others Caught Up in Eps
+[Step 199] user:dave  loss: 5.263 grad:10.575 pred: 1.512 reward: -5.14 eps:0.10 exploit regret:    - hn:0.589 hc:0.82 | source_yahoo | Analytical Deep Dive | In Miami, Mediterranean Style Still Shines—Eve
+[Step 200] user:dave  loss: 1.252 grad: 3.906 pred: 1.524 reward:  4.33 eps:0.10 exploit regret: 5.67 hn:0.593 hc:0.82 | source_techradar | Analytical Deep Dive | Prusa CEO declares "open hardware desktop 3D p
+  └─ checkpoint step=200 rolling_reward_50=4.24 mean_regret_so_far=5.63
+
+🏁 Final Reward(10): 4.60 | Mean Regret: 5.63
+🔬 User-state cluster by session phase:
+  cluster_0: {'early': 12, 'mid': 39}
+  cluster_1: {'early': 22, 'mid': 3, 'late': 67}
+  cluster_2: {'early': 32, 'mid': 25}
+💾 Warm-start checkpoint saved to: outputs/base_multi_16k.pt

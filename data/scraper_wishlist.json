@@ -1,0 +1,82 @@
+{
+  "generated_at_utc": "2026-02-11T23:32:45.509744+00:00",
+  "lookback_days": 1,
+  "interaction_rows_total": 600,
+  "interaction_rows_analyzed": 600,
+  "queries": [
+    "away google",
+    "features true",
+    "finally away",
+    "true might",
+    "galaxy features",
+    "presidents",
+    "sale",
+    "apple",
+    "africa",
+    "might finally",
+    "keeps hitting",
+    "hitting bumps",
+    "bumps",
+    "bumps overhauled",
+    "overhauled siri",
+    "factions explained",
+    "explained factions",
+    "marathon factions",
+    "rewards marathon",
+    "factions rewards",
+    "time zone",
+    "time time",
+    "honkai",
+    "star rail"
+  ],
+  "preferred_domains": [
+    "zdnet.com",
+    "destructoid.com",
+    "engadget.com",
+    "9to5mac.com",
+    "techcrunch.com",
+    "technologyreview.com",
+    "bbc.com",
+    "androidauthority.com",
+    "kotaku.com",
+    "theverge.com",
+    "wired.com",
+    "cnet.com"
+  ],
+  "extra_feed_urls": [
+    "https://www.zdnet.com/news/rss.xml",
+    "https://www.destructoid.com/feed/",
+    "https://www.engadget.com/rss.xml",
+    "https://9to5mac.com/feed/",
+    "https://techcrunch.com/feed/",
+    "https://www.technologyreview.com/feed/",
+    "https://feeds.bbci.co.uk/news/rss.xml",
+    "https://www.androidauthority.com/feed/",
+    "https://kotaku.com/rss",
+    "https://www.theverge.com/rss/index.xml",
+    "https://www.wired.com/feed/rss",
+    "https://www.cnet.com/rss/news/"
+  ],
+  "user_summary": {
+    "dave": {
+      "interactions": 167,
+      "avg_reward": 6.811219161676647,
+      "avg_regret": 3.5334
+    },
+    "gamer": {
+      "interactions": 131,
+      "avg_reward": -0.8178992366412214,
+      "avg_regret": 11.953199999999999
+    },
+    "investor": {
+      "interactions": 168,
+      "avg_reward": 5.74182380952381,
+      "avg_regret": 3.4905600000000003
+    },
+    "sarah": {
+      "interactions": 134,
+      "avg_reward": 5.313958208955223,
+      "avg_regret": 4.677333333333333
+    }
+  }
+}

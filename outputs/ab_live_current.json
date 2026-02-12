@@ -1,0 +1,81 @@
+{
+  "generated_at_utc": "2026-02-12T10:44:30.721276+00:00",
+  "steps_per_session": 100,
+  "sessions_per_persona": 3,
+  "personas": [
+    "dave",
+    "sarah",
+    "gamer",
+    "investor",
+    "low_mood_audit",
+    "ai_doom",
+    "contrarian_chaos"
+  ],
+  "conditions": {
+    "live": {
+      "name": "live",
+      "overall": {
+        "avg_reward_over_sessions": 3.97519460379292,
+        "avg_steps_over_sessions": 100.0
+      },
+      "personas": {
+        "dave": {
+          "sessions": 3.0,
+          "avg_steps": 100.0,
+          "avg_reward": 1.8903780526594296,
+          "auto_rate": 0.09000000000000001,
+          "skip_rate": 0.91,
+          "avg_watch_ratio": 0.6376516666666667
+        },
+        "sarah": {
+          "sessions": 3.0,
+          "avg_steps": 100.0,
+          "avg_reward": 7.219979338570462,
+          "auto_rate": 0.7133333333333333,
+          "skip_rate": 0.2866666666666667,
+          "avg_watch_ratio": 0.8291206666666667
+        },
+        "gamer": {
+          "sessions": 3.0,
+          "avg_steps": 100.0,
+          "avg_reward": -0.678211619921941,
+          "auto_rate": 0.12666666666666668,
+          "skip_rate": 0.8733333333333334,
+          "avg_watch_ratio": 0.29581966666666665
+        },
+        "investor": {
+          "sessions": 3.0,
+          "avg_steps": 100.0,
+          "avg_reward": 4.888702129650508,
+          "auto_rate": 0.5333333333333333,
+          "skip_rate": 0.4666666666666666,
+          "avg_watch_ratio": 0.6875923333333334
+        },
+        "low_mood_audit": {
+          "sessions": 3.0,
+          "avg_steps": 100.0,
+          "avg_reward": 6.809682845670214,
+          "auto_rate": 0.6733333333333333,
+          "skip_rate": 0.32666666666666666,
+          "avg_watch_ratio": 0.810118
+        },
+        "ai_doom": {
+          "sessions": 3.0,
+          "avg_steps": 100.0,
+          "avg_reward": 0.8281539872894093,
+          "auto_rate": 0.26666666666666666,
+          "skip_rate": 0.7333333333333334,
+          "avg_watch_ratio": 0.382012
+        },
+        "contrarian_chaos": {
+          "sessions": 3.0,
+          "avg_steps": 100.0,
+          "avg_reward": 6.867677492632356,
+          "auto_rate": 0.6666666666666666,
+          "skip_rate": 0.3333333333333333,
+          "avg_watch_ratio": 0.8198533333333334
+        }
+      }
+    }
+  }
+}

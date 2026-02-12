@@ -1,0 +1,115 @@
+🚀 Loading Fuel... (data/scraped_articles_backup.csv)
+🔎 Preflight ai_doom positive_rate=0.256 (sample=500)
+♻️ Warm-start loaded from: outputs/final_mega.pt
+
+🧠 Training on 16347 items | topics=4501 vibes=7 clusters=64 entities=19 events=14 | steps=100 | bot=ai_doom
+
+[Step 001] user:ai_doom loss: 4.600 grad: 7.310 pred: 2.091 reward: -4.51 eps:0.25 exploit regret:    - hn:0.705 hc:0.89 | source_archdaily | Hype Beast | This Public Transit Series Celebrates Moscow's
+[Step 002] user:ai_doom loss: 4.664 grad: 6.370 pred: 2.033 reward: -5.42 eps:0.25 exploit regret:    - hn:0.696 hc:0.88 | source_xinhua | Hype Beast | China's breeding breakthroughs fortify food se
+[Step 003] user:ai_doom loss: 2.925 grad: 4.835 pred: 1.864 reward:  7.98 eps:0.25 exploit regret:    - hn:0.664 hc:0.87 | source_vice | Analytical Deep Dive | OpenAI’s New Sora 2 AI Video Generator Still U
+[Step 004] user:ai_doom loss: 2.790 grad: 4.607 pred: 1.798 reward:  7.60 eps:0.24 exploit regret:    - hn:0.651 hc:0.86 | source_send2press | Analytical Deep Dive | Fineshare Launches Vora AI – Now Instantly Upg
+[Step 005] user:ai_doom loss: 5.435 grad: 9.607 pred: 1.676 reward: 10.00 eps:0.24 explore regret:    - hn:0.627 hc:0.84 | source_mashable | Analytical Deep Dive | Sora update: OpenAI expects copyright holders 
+[Step 006] user:ai_doom loss: 2.722 grad: 4.741 pred: 1.786 reward:  7.94 eps:0.24 exploit regret:    - hn:0.649 hc:0.86 | source_minnesota_women_s_press | Analytical Deep Dive | Major Public Safety and Gun Legislation Bills 
+[Step 007] user:ai_doom loss: 2.542 grad: 4.889 pred: 1.759 reward:  7.62 eps:0.24 explore regret:    - hn:0.644 hc:0.85 | source_venturebeat | Analytical Deep Dive | OpenAI launches a Codex desktop app for macOS 
+[Step 008] user:ai_doom loss: 2.412 grad: 5.455 pred: 1.687 reward:  7.45 eps:0.24 exploit regret:    - hn:0.629 hc:0.84 | dailymail.co.uk | Analytical Deep Dive | Ed Sheeran's plan to knock two Suffolk cottage
+[Step 009] user:ai_doom loss: 2.270 grad: 5.435 pred: 1.724 reward:  7.39 eps:0.24 exploit regret:    - hn:0.637 hc:0.85 | source_times_of_india | Analytical Deep Dive | OpenAI CEO Sam Altman gives ‘Sora update #1’ a
+[Step 010] user:ai_doom loss: 2.212 grad: 5.948 pred: 1.743 reward:  7.91 eps:0.23 exploit regret: 2.09 hn:0.641 hc:0.85 | source_tech_xplore | Analytical Deep Dive | Have you given away secrets on ChatGPT? Be car
+[Step 011] user:ai_doom loss: 5.959 grad:13.364 pred: 1.820 reward: 10.00 eps:0.23 exploit regret:    - hn:0.656 hc:0.86 | source_business_standard | Analytical Deep Dive | OpenAI launches Sora app comparable to Meta Vi
+[Step 012] user:ai_doom loss: 2.110 grad: 7.298 pred: 1.858 reward:  7.16 eps:0.23 explore regret:    - hn:0.664 hc:0.86 | source_phoneworld | Analytical Deep Dive | OpenAI Launches Codex Desktop App as AI Coding
+[Step 013] user:ai_doom loss: 1.851 grad: 5.751 pred: 1.902 reward:  7.64 eps:0.23 exploit regret:    - hn:0.672 hc:0.87 | source_analytics_india_magazine | Analytical Deep Dive | Is Sora falling behind in the AI video generat
+[Step 014] user:ai_doom loss: 2.033 grad: 7.896 pred: 1.968 reward:  7.09 eps:0.23 exploit regret:    - hn:0.684 hc:0.88 | source_mint | Analytical Deep Dive | OpenAI announces major Sora update: Editing, t
+[Step 015] user:ai_doom loss: 5.554 grad:15.076 pred: 2.004 reward: -5.52 eps:0.23 exploit regret:    - hn:0.691 hc:0.88 | source_electric_literature | Analytical Deep Dive | 9 Love Stories About Queer Communities - Elect
+[Step 016] user:ai_doom loss: 5.323 grad:15.271 pred: 2.034 reward: -4.67 eps:0.23 exploit regret:    - hn:0.696 hc:0.88 | source_the_hub_more_signal_less_noise | Analytical Deep Dive | Collin May: Is the cancel culture that cancell
+[Step 017] user:ai_doom loss: 5.572 grad:17.064 pred: 2.086 reward: -4.61 eps:0.22 exploit regret:    - hn:0.705 hc:0.89 | source_the_forward | Analytical Deep Dive | ‘Quiz Show’ Whistleblower Herb Stempel was a s
+[Step 018] user:ai_doom loss: 5.373 grad:15.149 pred: 2.051 reward: -4.81 eps:0.35 explore regret:    - hn:0.699 hc:0.89 | source_cnbc | Analytical Deep Dive | How to start a successful side hustle while ke
+[Step 019] user:ai_doom loss: 1.496 grad: 6.446 pred: 2.111 reward:  7.53 eps:0.35 exploit regret:    - hn:0.708 hc:0.89 | source_send2press | Analytical Deep Dive | LumeFlow AI Launches New Features to Enhance A
+[Step 020] user:ai_doom loss: 1.769 grad: 8.125 pred: 2.101 reward:  7.75 eps:0.35 exploit regret: 2.25 hn:0.707 hc:0.89 | source_opentools | Analytical Deep Dive | Elon Musk's xAI Sues Former Engineer Over Trad
+[Step 021] user:ai_doom loss: 6.555 grad:17.827 pred: 2.083 reward: 10.00 eps:0.22 exploit regret:    - hn:0.704 hc:0.89 | source_india_today | Analytical Deep Dive | OpenAI to charge for extra Sora AI videos, to 
+[Step 022] user:ai_doom loss: 5.727 grad:13.300 pred: 2.001 reward: 10.00 eps:0.22 exploit regret:    - hn:0.690 hc:0.88 | understandingai.org | Analytical Deep Dive | Sora, OpenAI’s chart-topping AI video app, exp
+[Step 023] user:ai_doom loss: 1.811 grad: 7.513 pred: 2.089 reward:  7.83 eps:0.22 exploit regret:    - hn:0.705 hc:0.89 | source_times_of_india | Analytical Deep Dive | OpenAI launches Codex desktop app to power nex
+[Step 024] user:ai_doom loss: 1.816 grad: 6.731 pred: 2.057 reward:  7.51 eps:0.21 explore regret:    - hn:0.700 hc:0.89 | source_cxo_digitalpulse | Analytical Deep Dive | OpenAI Launches Sora 2, Its Next-Generation AI
+[Step 025] user:ai_doom loss: 1.776 grad: 6.895 pred: 2.084 reward:  7.81 eps:0.21 exploit regret:    - hn:0.704 hc:0.89 | source_mashable | Analytical Deep Dive | OpenAI's Sora 2 adds tools to prevent unauthor
+[Step 026] user:ai_doom loss: 5.801 grad:13.797 pred: 2.037 reward: 10.00 eps:0.21 exploit regret:    - hn:0.696 hc:0.88 | source_analytics_india_magazine | Analytical Deep Dive | OpenAI Launches Codex Desktop App, Brings Mult
+[Step 027] user:ai_doom loss: 2.122 grad: 7.335 pred: 2.067 reward:  7.19 eps:0.21 exploit regret:    - hn:0.701 hc:0.89 | source_business_insider | Analytical Deep Dive | Don't believe those videos showing Sam Altman 
+[Step 028] user:ai_doom loss: 6.071 grad:15.427 pred: 2.089 reward: 10.00 eps:0.21 exploit regret:    - hn:0.705 hc:0.89 | source_pcmag | Analytical Deep Dive | Brace Yourself for a Flood of AI Videos: OpenA
+[Step 029] user:ai_doom loss: 5.160 grad:10.812 pred: 2.035 reward: 10.00 eps:0.21 explore regret:    - hn:0.696 hc:0.88 | source_the_globe_and_mail | Analytical Deep Dive | OpenAI launches Sora, an AI app that generates
+[Step 030] user:ai_doom loss: 2.378 grad: 5.699 pred: 2.048 reward:  7.14 eps:0.21 exploit regret: 2.86 hn:0.697 hc:0.89 | source_business_standard | Analytical Deep Dive | After Google, OpenAI is developing AI agents f
+[Step 031] user:ai_doom loss: 1.833 grad: 4.969 pred: 2.067 reward:  7.72 eps:0.20 exploit regret:    - hn:0.701 hc:0.89 | source_the_new_york_times | Analytical Deep Dive | Disney Agrees to Bring Its Characters to OpenA
+[Step 032] user:ai_doom loss: 4.975 grad: 9.324 pred: 2.064 reward: 10.00 eps:0.20 exploit regret:    - hn:0.700 hc:0.89 | source_india_today | Analytical Deep Dive | OpenAI launches new social app Sora, lets you 
+[Step 033] user:ai_doom loss: 4.509 grad: 7.683 pred: 2.077 reward: 10.00 eps:0.20 explore regret:    - hn:0.703 hc:0.89 | source_opentools | Analytical Deep Dive | Elon Musk's xAI Sues Former Engineer for Alleg
+[Step 034] user:ai_doom loss: 4.745 grad: 9.514 pred: 2.103 reward: 10.00 eps:0.20 exploit regret:    - hn:0.707 hc:0.89 | source_techcrunch | Analytical Deep Dive | OpenAI is launching the Sora app, its own TikT
+[Step 035] user:ai_doom loss: 2.632 grad: 4.706 pred: 2.123 reward:  7.06 eps:0.20 exploit regret:    - hn:0.710 hc:0.89 | source_venturebeat | Analytical Deep Dive | OpenAI launches centralized agent platform as 
+[Step 036] user:ai_doom loss: 4.611 grad: 8.810 pred: 2.132 reward: 10.00 eps:0.20 exploit regret:    - hn:0.712 hc:0.89 | source_mashable | Analytical Deep Dive | First impressions: Sora 2 is full of deepfakes
+[Step 037] user:ai_doom loss: 1.834 grad: 4.856 pred: 2.154 reward:  7.60 eps:0.19 explore regret:    - hn:0.715 hc:0.90 | source_tech_wire_asia | Analytical Deep Dive | OpenAI launches GPT-5 in August, plus potentia
+[Step 038] user:ai_doom loss: 4.019 grad: 4.479 pred: 2.198 reward: 10.00 eps:0.19 exploit regret:    - hn:0.722 hc:0.90 | source_the_guardian | Analytical Deep Dive | ‘Legacies condensed to AI slop’: OpenAI Sora v
+[Step 039] user:ai_doom loss: 2.388 grad: 4.582 pred: 2.192 reward:  7.85 eps:0.19 exploit regret:    - hn:0.721 hc:0.90 | source_abc_news | Analytical Deep Dive | What parents need to know about Sora, the gene
+[Step 040] user:ai_doom loss: 4.126 grad: 6.043 pred: 2.207 reward: 10.00 eps:0.19 exploit regret: 0.00 hn:0.724 hc:0.90 | source_the_verge | Analytical Deep Dive | OpenAI launches its Sora app on Android - The 
+[Step 041] user:ai_doom loss: 2.650 grad: 4.489 pred: 2.232 reward:  7.06 eps:0.19 exploit regret:    - hn:0.727 hc:0.90 | source_msn | Analytical Deep Dive | Chinese startup PixVerse launches real-time AI
+[Step 042] user:ai_doom loss: 4.586 grad: 7.010 pred: 2.249 reward: 10.00 eps:0.19 exploit regret:    - hn:0.730 hc:0.90 | source_marktechpost | Analytical Deep Dive | 4 Open-Source Alternatives to OpenAI’s $200/Mo
+[Step 043] user:ai_doom loss: 2.023 grad: 4.922 pred: 2.266 reward:  7.75 eps:0.19 exploit regret:    - hn:0.732 hc:0.91 | source_times_of_india | Analytical Deep Dive | OpenAI to take on TikTok with its new short-vi
+[Step 044] user:ai_doom loss: 1.748 grad: 4.886 pred: 2.314 reward:  7.56 eps:0.18 exploit regret:    - hn:0.739 hc:0.91 | source_asia_business_outlook | Analytical Deep Dive | OpenAI Expands Sora AI Video App to Asia Marke
+[Step 045] user:ai_doom loss: 1.855 grad: 4.764 pred: 2.318 reward:  7.31 eps:0.18 exploit regret:    - hn:0.740 hc:0.91 | source_macrumors | Analytical Deep Dive | OpenAI's Sora App Creates Realistic AI Videos 
+[Step 046] user:ai_doom loss: 4.465 grad: 8.739 pred: 2.350 reward: 10.00 eps:0.18 exploit regret:    - hn:0.744 hc:0.91 | source_business_insider | Analytical Deep Dive | I'm addicted to Sora 2! I can't stop making AI
+[Step 047] user:ai_doom loss: 4.078 grad: 8.385 pred: 2.385 reward: 10.00 eps:0.18 exploit regret:    - hn:0.749 hc:0.92 | source_mashable | Analytical Deep Dive | I tested OpenAI Sora 2 vs Google Veo 3 for AI 
+[Step 048] user:ai_doom loss: 1.783 grad: 4.652 pred: 2.387 reward:  7.24 eps:0.18 explore regret:    - hn:0.749 hc:0.92 | source_cbc | Analytical Deep Dive | OpenAI launches Sora social media app for AI-g
+[Step 049] user:ai_doom loss: 4.098 grad: 9.515 pred: 2.465 reward: 10.00 eps:0.18 explore regret:    - hn:0.759 hc:0.92 | source_the_guardian | Analytical Deep Dive | OpenAI launch of video app Sora plagued by vio
+[Step 050] user:ai_doom loss: 1.247 grad: 4.511 pred: 2.577 reward:  7.93 eps:0.17 exploit regret: 2.07 hn:0.773 hc:0.93 | source_adnews | Analytical Deep Dive | OpenAI launches social media app - AdNews
+  └─ checkpoint step=50 rolling_reward_50=6.88 mean_regret_so_far=1.85
+[Step 051] user:ai_doom loss: 4.930 grad:12.965 pred: 2.590 reward: 10.00 eps:0.17 exploit regret:    - hn:0.774 hc:0.93 | source_gadgets_360 | Analytical Deep Dive | OpenAI Introduces Sora 2 Video Generation AI M
+[Step 052] user:ai_doom loss: 1.743 grad: 4.632 pred: 2.497 reward:  7.76 eps:0.17 explore regret:    - hn:0.763 hc:0.92 | source_the_verge | Analytical Deep Dive | OpenAI’s new social video app will let you dee
+[Step 053] user:ai_doom loss: 2.150 grad: 4.915 pred: 2.535 reward:  7.25 eps:0.17 exploit regret:    - hn:0.767 hc:0.93 | source_the_wall_street_journal | Analytical Deep Dive | OpenAI Launches Video Generator App to Rival T
+[Step 054] user:ai_doom loss: 2.383 grad: 5.578 pred: 2.577 reward:  7.05 eps:0.17 exploit regret:    - hn:0.772 hc:0.93 | source_times_of_india | Analytical Deep Dive | OpenAI launches new open-source AI models gpt-
+[Step 055] user:ai_doom loss: 1.035 grad: 3.876 pred: 2.770 reward:  7.78 eps:0.17 exploit regret:    - hn:0.793 hc:0.94 | bgr.com | Analytical Deep Dive | OpenAI Is Reportedly Building A TikTok-Style A
+[Step 056] user:ai_doom loss: 1.973 grad: 6.436 pred: 2.738 reward:  7.94 eps:0.17 exploit regret:    - hn:0.790 hc:0.94 | source_digital_watch_observatory | Analytical Deep Dive | Sora 2.0 release reignites debate on intellect
+[Step 057] user:ai_doom loss: 9.471 grad:26.864 pred: 2.806 reward: 10.00 eps:0.16 exploit regret:    - hn:0.797 hc:0.94 | source_zdnet | Analytical Deep Dive | You can win $250K from OpenAI if you help solv
+[Step 058] user:ai_doom loss:10.062 grad:26.085 pred: 2.950 reward: -5.32 eps:0.16 exploit regret:    - hn:0.810 hc:0.95 | source_mashable | Analytical Deep Dive | Beware phony Sora apps on the Apple App Store 
+[Step 059] user:ai_doom loss: 1.937 grad: 7.731 pred: 2.855 reward:  7.30 eps:0.16 exploit regret:    - hn:0.802 hc:0.95 | fonearena.com | Analytical Deep Dive | OpenAI is preparing Sora 2 with TikTok style A
+[Step 060] user:ai_doom loss: 4.353 grad:13.562 pred: 2.827 reward: 10.00 eps:0.16 explore regret: 0.00 hn:0.799 hc:0.94 | source_the_new_york_times | Analytical Deep Dive | OpenAI’s Sora Video App Is Jaw-Dropping (for B
+[Step 061] user:ai_doom loss: 7.011 grad:24.509 pred: 3.028 reward: 10.00 eps:0.16 exploit regret:    - hn:0.816 hc:0.95 | source_the_guardian | Analytical Deep Dive | OpenAI launches Sora video generation tool in 
+[Step 062] user:ai_doom loss: 0.982 grad: 3.697 pred: 2.833 reward:  7.94 eps:0.16 exploit regret:    - hn:0.799 hc:0.94 | source_interesting_engineering | Analytical Deep Dive | OpenAI rolls out Codex app to run multiple AI 
+[Step 063] user:ai_doom loss: 0.902 grad: 3.435 pred: 2.881 reward:  7.63 eps:0.16 exploit regret:    - hn:0.804 hc:0.95 | source_the_verge | Analytical Deep Dive | OpenAI reportedly plans to launch an AI agent 
+[Step 064] user:ai_doom loss: 2.569 grad: 9.253 pred: 2.836 reward:  7.10 eps:0.15 exploit regret:    - hn:0.800 hc:0.94 | source_cnbc | Analytical Deep Dive | We tested OpenAI’s Sora 2 video generator to f
+[Step 065] user:ai_doom loss: 0.978 grad: 3.622 pred: 2.848 reward:  7.84 eps:0.15 exploit regret:    - hn:0.801 hc:0.94 | source_the_debrief | Analytical Deep Dive | Why is Everyone on Sora AI Obsessed with Star 
+[Step 066] user:ai_doom loss: 2.770 grad:12.029 pred: 2.942 reward:  7.18 eps:0.15 exploit regret:    - hn:0.809 hc:0.95 | source_times_of_india | Analytical Deep Dive | OpenAI CEO Sam Altman defends the launch of AI
+[Step 067] user:ai_doom loss: 0.967 grad: 3.497 pred: 2.863 reward:  7.22 eps:0.15 exploit regret:    - hn:0.802 hc:0.95 | source_techstock | Analytical Deep Dive | OpenAI’s Sora 2: Revolutionary AI Video App or
+[Step 068] user:ai_doom loss: 5.068 grad:14.717 pred: 2.844 reward: 10.00 eps:0.15 explore regret:    - hn:0.800 hc:0.94 | source_cbc | Analytical Deep Dive | Consumer advocacy group urges OpenAI to pull v
+[Step 069] user:ai_doom loss: 1.061 grad: 3.706 pred: 2.824 reward:  7.70 eps:0.15 exploit regret:    - hn:0.798 hc:0.94 | verdict.co.uk | Analytical Deep Dive | OpenAI backed autonomous driving startup Ghost
+[Step 070] user:ai_doom loss: 2.854 grad:13.341 pred: 3.001 reward:  7.12 eps:0.15 exploit regret: 2.88 hn:0.814 hc:0.95 | source_hotel_news_resource | Analytical Deep Dive | OpenAI’s Sora 2 Set to Revolutionize AI-genera
+[Step 071] user:ai_doom loss: 0.928 grad: 3.411 pred: 2.892 reward:  7.71 eps:0.14 exploit regret:    - hn:0.805 hc:0.95 | source_mashable | Analytical Deep Dive | OpenAI launches 'deep research' AI agent for C
+[Step 072] user:ai_doom loss: 5.199 grad:19.920 pred: 3.040 reward: 10.00 eps:0.14 exploit regret:    - hn:0.817 hc:0.95 | source_indiatimes | Analytical Deep Dive | OpenAI launches Frontier enterprise platform f
+[Step 073] user:ai_doom loss: 4.346 grad:14.489 pred: 2.929 reward: 10.00 eps:0.14 exploit regret:    - hn:0.808 hc:0.95 | source_techcrunch | Analytical Deep Dive | Ghost, now OpenAI-backed, claims LLMs will ove
+[Step 074] user:ai_doom loss: 7.150 grad:23.635 pred: 3.002 reward: 10.00 eps:0.14 exploit regret:    - hn:0.814 hc:0.95 | source_etv_bharat | Analytical Deep Dive | OpenAI Launches Frontier, A New Platform To Bu
+[Step 075] user:ai_doom loss: 0.963 grad: 3.407 pred: 2.898 reward:  7.33 eps:0.14 explore regret:    - hn:0.805 hc:0.95 | source_the_wall_street_journal | Analytical Deep Dive | Exclusive | OpenAI’s New Sora Video Generator 
+[Step 076] user:ai_doom loss: 4.049 grad:12.978 pred: 2.914 reward: 10.00 eps:0.14 exploit regret:    - hn:0.807 hc:0.95 | pymnts.com | Analytical Deep Dive | AI Models and Tools: OpenAI Launches AI Agent,
+[Step 077] user:ai_doom loss: 2.072 grad: 7.212 pred: 2.907 reward:  7.85 eps:0.13 exploit regret:    - hn:0.806 hc:0.95 | source_business_standard | Analytical Deep Dive | OpenAI launches Codex app for Desktop to gain 
+[Step 078] user:ai_doom loss: 7.437 grad:24.079 pred: 3.004 reward: 10.00 eps:0.13 exploit regret:    - hn:0.814 hc:0.95 | source_india_today | Analytical Deep Dive | OpenAI launches Sora, its own Instagram-style 
+[Step 079] user:ai_doom loss: 1.059 grad: 3.636 pred: 2.880 reward:  7.36 eps:0.13 exploit regret:    - hn:0.804 hc:0.95 | techcrunch.com | Analytical Deep Dive | OpenAI disbands mission alignment team
+[Step 080] user:ai_doom loss: 5.875 grad:17.212 pred: 2.920 reward: 10.00 eps:0.13 exploit regret: 0.00 hn:0.807 hc:0.95 | source_ndtv | Analytical Deep Dive | Explained: How To Create Your Lifelike AI Avat
+[Step 081] user:ai_doom loss: 3.818 grad:12.101 pred: 2.919 reward: 10.00 eps:0.13 exploit regret:    - hn:0.807 hc:0.95 | source_windows_central | Analytical Deep Dive | Sora 2: where your face stars in AI videos you
+[Step 082] user:ai_doom loss: 1.209 grad: 4.100 pred: 2.851 reward:  7.95 eps:0.13 exploit regret:    - hn:0.801 hc:0.94 | source_tnglobal | Analytical Deep Dive | OpenAI launches AI video creation app Sora in 
+[Step 083] user:ai_doom loss: 1.008 grad: 3.720 pred: 2.928 reward:  7.59 eps:0.13 exploit regret:    - hn:0.808 hc:0.95 | source_times_of_india | Analytical Deep Dive | ChatGPT maker OpenAI is readying an AI agent t
+[Step 084] user:ai_doom loss: 1.066 grad: 4.052 pred: 2.914 reward:  7.42 eps:0.12 exploit regret:    - hn:0.807 hc:0.95 | source_techcrunch | Analytical Deep Dive | OpenAI launches a way for enterprises to build
+[Step 085] user:ai_doom loss: 4.713 grad:14.167 pred: 2.933 reward: 10.00 eps:0.12 explore regret:    - hn:0.809 hc:0.95 | source_the_guardian | Analytical Deep Dive | Disney to invest $1bn in OpenAI, allowing char
+[Step 086] user:ai_doom loss: 0.937 grad: 3.427 pred: 2.978 reward:  7.33 eps:0.12 exploit regret:    - hn:0.812 hc:0.95 | source_the_hindu | Analytical Deep Dive | Mattel partners with OpenAI on Sora 2 AI video
+[Step 087] user:ai_doom loss: 2.108 grad: 6.907 pred: 2.954 reward:  7.28 eps:0.12 explore regret:    - hn:0.811 hc:0.95 | source_techinformed | Analytical Deep Dive | OpenAI backs Merge Labs in $250M seed round le
+[Step 088] user:ai_doom loss: 2.084 grad: 6.362 pred: 2.928 reward:  7.36 eps:0.12 exploit regret:    - hn:0.808 hc:0.95 | source_mashable | Analytical Deep Dive | Sora 2 app: 7 weird AI videos people have alre
+[Step 089] user:ai_doom loss: 4.076 grad:14.266 pred: 3.025 reward:  7.10 eps:0.12 explore regret:    - hn:0.817 hc:0.95 | source_opentools | Analytical Deep Dive | OpenAI vs. Anthropic: The AI Duel Heats Up wit
+[Step 090] user:ai_doom loss: 2.034 grad: 6.608 pred: 2.948 reward:  7.93 eps:0.11 exploit regret: 2.07 hn:0.810 hc:0.95 | source_forbes | Analytical Deep Dive | OpenAI Launches Codex Desktop App As Agentic A
+[Step 091] user:ai_doom loss: 1.983 grad: 6.569 pred: 2.942 reward:  7.60 eps:0.11 exploit regret:    - hn:0.810 hc:0.95 | source_technobezz | Analytical Deep Dive | OpenAI Launches Codex Desktop App for Mac with
+[Step 092] user:ai_doom loss: 6.946 grad:18.581 pred: 2.920 reward: 10.00 eps:0.11 exploit regret:    - hn:0.808 hc:0.95 | source_venturebeat | Analytical Deep Dive | OpenAI's new Codex app hits 1M+ downloads in f
+[Step 093] user:ai_doom loss: 3.773 grad:12.758 pred: 2.966 reward: 10.00 eps:0.11 exploit regret:    - hn:0.812 hc:0.95 | mezha.net | Analytical Deep Dive | OpenAI’s Sora AI Video Generator Launches on A
+[Step 094] user:ai_doom loss: 1.106 grad: 3.900 pred: 2.909 reward:  7.94 eps:0.11 exploit regret:    - hn:0.806 hc:0.95 | source_axios | Analytical Deep Dive | OpenAI's Sora app lets friends swap AI video c
+[Step 095] user:ai_doom loss: 6.459 grad:19.751 pred: 2.951 reward: 10.00 eps:0.11 exploit regret:    - hn:0.810 hc:0.95 | techcrunch.com | Analytical Deep Dive | Former Founders Fund VC Sam Blond launches AI 
+[Step 096] user:ai_doom loss: 1.191 grad: 3.945 pred: 2.880 reward:  7.29 eps:0.11 exploit regret:    - hn:0.804 hc:0.95 | source_annenberg_media | Analytical Deep Dive | OpenAI launches Sora 2 app, an all-AI social m
+[Step 097] user:ai_doom loss: 9.117 grad:20.223 pred: 2.927 reward: -4.90 eps:0.10 exploit regret:    - hn:0.808 hc:0.95 | source_geeky_gadgets | Analytical Deep Dive | 7 ChatGPT Hacks to Make ChatGPT Your Personal 
+[Step 098] user:ai_doom loss: 3.417 grad: 9.491 pred: 2.873 reward: 10.00 eps:0.10 explore regret:    - hn:0.803 hc:0.95 | source_information_age_acs | Analytical Deep Dive | OpenAI launches 'computer-using' AI agent Oper
+[Step 099] user:ai_doom loss: 4.172 grad:10.416 pred: 2.853 reward: 10.00 eps:0.10 exploit regret:    - hn:0.802 hc:0.95 | source_mint | Analytical Deep Dive | OpenAI launches Sora 2 model with a new Instag
+[Step 100] user:ai_doom loss: 4.761 grad:12.320 pred: 2.863 reward: 10.00 eps:0.10 exploit regret: 0.00 hn:0.802 hc:0.95 | source_times_of_india | Analytical Deep Dive | OpenAI’s Sora app now available for Android us
+  └─ checkpoint step=100 rolling_reward_50=7.95 mean_regret_so_far=1.42
+
+🏁 Final Reward(10): 7.79 | Mean Regret: 1.42
+🔬 User-state cluster by session phase:
+  cluster_0: {'mid': 16, 'late': 18}
+  cluster_1: {'early': 11, 'mid': 16, 'late': 16}
+  cluster_2: {'early': 22, 'mid': 1}
+⏭️ Skipped warm-start save (final_reward=7.79 < 999.00).
