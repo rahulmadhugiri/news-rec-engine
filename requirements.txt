@@ -8,3 +8,4 @@ aiohttp==3.10.11
 transformers==4.48.3
 fastapi==0.115.8
 uvicorn==0.34.0
+google-cloud-firestore>=2.13.0

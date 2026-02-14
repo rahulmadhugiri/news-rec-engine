@@ -10,7 +10,7 @@ import threading
 import time
 import uuid
 from collections import Counter, deque
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 import pandas as pd
@@ -33,7 +33,29 @@ from model import (
 
 app = FastAPI()
 
+try:
+    from google.cloud import firestore  # type: ignore
+    from google.api_core.exceptions import AlreadyExists  # type: ignore
+except Exception:
+    firestore = None  # type: ignore
+    AlreadyExists = None  # type: ignore
+
 ROOT = Path(__file__).resolve().parent
+
+FIRESTORE_DEDUPE_ENABLED = (
+    os.getenv("FIRESTORE_DEDUPE_ENABLED", "1").strip().lower()
+    not in {"0", "false", "no"}
+)
+DEDUP_TTL_DAYS = int(os.getenv("DEDUP_TTL_DAYS", "14"))
+
+firestore_client = None
+if FIRESTORE_DEDUPE_ENABLED and firestore is not None:
+    try:
+        firestore_client = firestore.Client()
+        print("🔥 Firestore dedupe enabled")
+    except Exception as exc:
+        print(f"⚠️ Firestore client init failed; dedupe disabled: {exc}")
+        firestore_client = None
 
 
 def _resolve_path_from_env(env_key: str, default_path: Path) -> Path:
@@ -58,6 +80,10 @@ SESSION_STATE_PATH = _resolve_path_from_env(
     "SESSION_STATE_PATH",
     ROOT / "data" / "live_session_state.json",
 )
+ACTIVE_POOL_STATE_PATH = _resolve_path_from_env(
+    "ACTIVE_POOL_STATE_PATH",
+    ROOT / "data" / "active_pool_state.json",
+)
 
 DEVICE = torch.device("cpu")
 EVENT_SEQ_LEN = 30
@@ -65,6 +91,7 @@ EVENT_VOCAB_SIZE = 4096
 LIVE_LR = 0.003
 CANDIDATE_POOL = 160
 FEED_K = 20
+FEED_MAX_K = int(os.getenv("FEED_MAX_K", "250"))
 DEDUP_CANDIDATE_LIMIT = 50
 DEDUP_SIM_THRESHOLD = 0.35
 RECENT_SEEN_WINDOW = 60
@@ -85,6 +112,10 @@ ONLINE_UPDATE_MODE = os.getenv("ONLINE_UPDATE_MODE", "private").strip().lower()
 PRIVATE_USER_LR = float(os.getenv("PRIVATE_USER_LR", "0.03"))
 PRIVATE_USER_MAX_NORM = float(os.getenv("PRIVATE_USER_MAX_NORM", "4.0"))
 PRIVATE_USER_GRAD_CLIP = float(os.getenv("PRIVATE_USER_GRAD_CLIP", "5.0"))
+
+# Rolling per-cluster "active pool" controls.
+CLUSTER_ACTIVE_POOL_SIZE = max(1, int(os.getenv("CLUSTER_ACTIVE_POOL_SIZE", "140")))
+CLUSTER_NEW_URLS_PER_DAY = max(0, int(os.getenv("CLUSTER_NEW_URLS_PER_DAY", "20")))
 
 if ONLINE_UPDATE_MODE not in {"private", "global", "none"}:
     print(
@@ -169,6 +200,56 @@ def save_persisted_session_map(path: Path, session_map: dict[str, dict]) -> None
         "version": 1,
         "updated_at_utc": datetime.now(timezone.utc).isoformat(),
         "sessions": session_map,
+    }
+    tmp_path = path.with_suffix(path.suffix + ".tmp")
+    tmp_path.write_text(json.dumps(payload, separators=(",", ":")), encoding="utf-8")
+    tmp_path.replace(path)
+
+
+def _utc_day_str(ts: datetime) -> str:
+    return ts.astimezone(timezone.utc).date().isoformat()
+
+
+def _normalize_cluster_id(value: object) -> str:
+    cluster = str(value or "").strip().lower()
+    return cluster or "unknown"
+
+
+def load_active_pool_state(path: Path) -> tuple[str, dict[str, dict[str, object]]]:
+    """
+    Rolling per-cluster active pools.
+
+    Stored as:
+      { version, updated_at_utc, day_utc, clusters: { cluster_id: { active_links: [...], new_added_today: int } } }
+    """
+    if not path.exists():
+        return "", {}
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        if not isinstance(payload, dict):
+            return "", {}
+        day_utc = str(payload.get("day_utc", "") or "").strip()
+        raw_clusters = payload.get("clusters", {})
+        if not isinstance(raw_clusters, dict):
+            raw_clusters = {}
+        clusters: dict[str, dict[str, object]] = {}
+        for cid, state in raw_clusters.items():
+            if not isinstance(cid, str) or not isinstance(state, dict):
+                continue
+            clusters[cid] = state
+        return day_utc, clusters
+    except Exception as exc:
+        print(f"⚠️ Failed to load active pool state from {path}: {exc}")
+        return "", {}
+
+
+def save_active_pool_state(path: Path, day_utc: str, clusters: dict[str, dict[str, object]]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "version": 1,
+        "updated_at_utc": datetime.now(timezone.utc).isoformat(),
+        "day_utc": day_utc,
+        "clusters": clusters,
     }
     tmp_path = path.with_suffix(path.suffix + ".tmp")
     tmp_path.write_text(json.dumps(payload, separators=(",", ":")), encoding="utf-8")
@@ -354,6 +435,134 @@ headline_col = "Headline" if "Headline" in inventory.columns else "title"
 link_col = "Link" if "Link" in inventory.columns else "link"
 summary_col = "Summary" if "Summary" in inventory.columns else "description"
 domain_col = "Topic_Name"
+
+# Precompute per-cluster candidate ordering for rolling active pools.
+# Use Recency_Bucket (lower = fresher) plus Item_ID as a stable ordering signal.
+link_to_index: dict[str, int] = {}
+_link_best_key: dict[str, tuple[int, int]] = {}
+cluster_to_link_keys: dict[str, list[tuple[tuple[int, int], str]]] = {}
+for i in range(len(inventory)):
+    row = inventory.iloc[i]
+    cluster_id = _normalize_cluster_id(row[domain_col])
+    link = str(row[link_col] or "").strip()
+    if not link:
+        continue
+    item_id = int(row["Item_ID"]) if "Item_ID" in inventory.columns else int(i)
+    recency_bucket = int(row["Recency_Bucket"]) if "Recency_Bucket" in inventory.columns else 2
+    # Larger key = fresher/more recent.
+    key = (-recency_bucket, item_id)
+
+    # Prefer the latest copy if duplicate links exist in inventory.
+    prev_key = _link_best_key.get(link)
+    if prev_key is None or key > prev_key:
+        _link_best_key[link] = key
+        link_to_index[link] = i
+
+    cluster_to_link_keys.setdefault(cluster_id, []).append((key, link))
+
+cluster_to_sorted_links: dict[str, list[str]] = {}
+for cluster_id, pairs in cluster_to_link_keys.items():
+    pairs.sort(key=lambda kv: kv[0], reverse=True)
+    seen_links: set[str] = set()
+    ordered: list[str] = []
+    for _, link in pairs:
+        if link in seen_links:
+            continue
+        seen_links.add(link)
+        ordered.append(link)
+    cluster_to_sorted_links[cluster_id] = ordered
+
+
+active_pool_day_utc, _raw_active_pool_clusters = load_active_pool_state(ACTIVE_POOL_STATE_PATH)
+active_pool_links: dict[str, deque[str]] = {}
+active_pool_new_added_today: dict[str, int] = {}
+
+for cluster_id_raw, state in _raw_active_pool_clusters.items():
+    cluster_id = _normalize_cluster_id(cluster_id_raw)
+    if not isinstance(state, dict):
+        continue
+    raw_links = state.get("active_links", [])
+    if not isinstance(raw_links, list):
+        raw_links = []
+    cleaned = [str(x).strip() for x in raw_links if isinstance(x, str) and str(x).strip()]
+    cleaned = [l for l in cleaned if l in link_to_index]
+    active_pool_links[cluster_id] = deque(cleaned)
+    raw_added = state.get("new_added_today", 0)
+    active_pool_new_added_today[cluster_id] = max(0, int(raw_added)) if isinstance(raw_added, int | float) else 0
+
+
+def persist_active_pools() -> None:
+    clusters_payload: dict[str, dict[str, object]] = {}
+    for cid, links in active_pool_links.items():
+        clusters_payload[cid] = {
+            "active_links": list(links),
+            "new_added_today": int(active_pool_new_added_today.get(cid, 0)),
+        }
+    save_active_pool_state(ACTIVE_POOL_STATE_PATH, active_pool_day_utc, clusters_payload)
+
+
+def refresh_active_pools(now_utc: datetime) -> None:
+    """
+    Enforce:
+      - pool size per cluster (CLUSTER_ACTIVE_POOL_SIZE)
+      - max new links/day per cluster (CLUSTER_NEW_URLS_PER_DAY)
+    """
+    global active_pool_day_utc
+    changed = False
+    today = _utc_day_str(now_utc)
+    if not active_pool_day_utc:
+        active_pool_day_utc = today
+        changed = True
+    if active_pool_day_utc != today:
+        active_pool_day_utc = today
+        for cid in list(active_pool_new_added_today.keys()):
+            active_pool_new_added_today[cid] = 0
+        changed = True
+    for cid, candidates in cluster_to_sorted_links.items():
+        pool = active_pool_links.setdefault(cid, deque())
+        before_len = len(pool)
+        if before_len:
+            kept = [l for l in pool if l in link_to_index]
+            if len(kept) != before_len:
+                pool.clear()
+                pool.extend(kept)
+                changed = True
+
+        new_added = int(active_pool_new_added_today.get(cid, 0))
+        remaining = max(0, CLUSTER_NEW_URLS_PER_DAY - new_added)
+        if remaining > 0 and candidates:
+            active_set = set(pool)
+            for link in candidates:
+                if link in active_set:
+                    continue
+                pool.append(link)
+                active_set.add(link)
+                new_added += 1
+                changed = True
+                if new_added >= CLUSTER_NEW_URLS_PER_DAY:
+                    break
+            active_pool_new_added_today[cid] = new_added
+
+        # Evict oldest if we exceed target pool size.
+        while CLUSTER_ACTIVE_POOL_SIZE > 0 and len(pool) > CLUSTER_ACTIVE_POOL_SIZE:
+            pool.popleft()
+            changed = True
+
+    if changed:
+        persist_active_pools()
+
+
+# Bootstrap: if no persisted pools exist, seed each cluster to the target pool size.
+if not _raw_active_pool_clusters:
+    active_pool_day_utc = _utc_day_str(datetime.now(timezone.utc))
+    for cid, candidates in cluster_to_sorted_links.items():
+        if not candidates:
+            continue
+        target = max(0, CLUSTER_ACTIVE_POOL_SIZE)
+        active_pool_links[cid] = deque(candidates[:target])
+        # Treat as "cap consumed" for the bootstrap day.
+        active_pool_new_added_today[cid] = CLUSTER_NEW_URLS_PER_DAY
+    persist_active_pools()
 
 item_features = torch.tensor(
     inventory[
@@ -581,10 +790,41 @@ def persist_session_state(session_id: str, session: SessionState) -> None:
 
 
 def get_session_id(request: Request) -> str:
+    header_sid = request.headers.get("X-Session-Id", "").strip()
+    if header_sid and 1 <= len(header_sid) <= 128:
+        return header_sid
     sid = request.cookies.get(SESSION_COOKIE)
     if sid:
         return sid
     return str(uuid.uuid4())
+
+
+def is_duplicate_event(uid: str, session_id: str, event_id: str) -> bool:
+    """
+    Sink-side idempotency (Cloud Run safe):
+    Dedup by (uid, session_id, event_id) using Firestore create().
+    """
+    if not event_id or len(event_id) > 128:
+        return False
+    if firestore_client is None or firestore is None or AlreadyExists is None:
+        return False
+    try:
+        expire_at = datetime.now(timezone.utc) + timedelta(days=max(1, DEDUP_TTL_DAYS))
+        doc_ref = (
+            firestore_client.collection("rec_dedupe")
+            .document(uid)
+            .collection("sessions")
+            .document(session_id)
+            .collection("events")
+            .document(event_id)
+        )
+        doc_ref.create({"created_at": firestore.SERVER_TIMESTAMP, "expire_at": expire_at})
+        return False
+    except AlreadyExists:
+        return True
+    except Exception as exc:
+        print(f"⚠️ Firestore dedupe failed: {exc}")
+        return False
 
 
 def get_or_create_session(session_id: str) -> SessionState:
@@ -605,14 +845,17 @@ def exploration_epsilon(step: int) -> float:
 def select_recall_candidates(
     available_indices: list[int],
     adapted_user_state: torch.Tensor,
+    *,
+    recall_size: int = RECALL_SIZE,
+    scan_limit: int = RECALL_SCAN_LIMIT,
 ) -> list[int]:
     if not available_indices:
         return []
 
     scan_indices = available_indices
-    if len(scan_indices) > RECALL_SCAN_LIMIT:
-        scan_indices = random.sample(scan_indices, RECALL_SCAN_LIMIT)
-    recall_target = min(RECALL_SIZE, len(scan_indices))
+    if len(scan_indices) > scan_limit:
+        scan_indices = random.sample(scan_indices, scan_limit)
+    recall_target = min(max(0, int(recall_size)), len(scan_indices))
     if recall_target <= 0:
         return []
 
@@ -659,6 +902,8 @@ def pre_rank_candidates(
     session: SessionState,
     recall_indices: list[int],
     adapted_user_state: torch.Tensor,
+    *,
+    pre_rank_size: int = PRE_RANK_SIZE,
 ) -> list[tuple[int, float]]:
     if not recall_indices:
         return []
@@ -698,21 +943,25 @@ def pre_rank_candidates(
         adjusted.append((idx, adjusted_score))
 
     adjusted.sort(key=lambda x: x[1], reverse=True)
-    return adjusted[: min(PRE_RANK_SIZE, len(adjusted))]
+    return adjusted[: min(max(0, int(pre_rank_size)), len(adjusted))]
 
 
 def final_rank_candidates(
     session: SessionState,
     pre_ranked: list[tuple[int, float]],
+    *,
+    feed_k: int = FEED_K,
+    rank_pool_size: int = RANK_POOL_SIZE,
 ) -> list[int]:
     if not pre_ranked:
         return []
 
-    rank_pool = pre_ranked[: min(RANK_POOL_SIZE, len(pre_ranked))]
+    feed_k = max(1, int(feed_k))
+    rank_pool = pre_ranked[: min(max(1, int(rank_pool_size)), len(pre_ranked))]
     selected: list[int] = []
     selected_fps: list[set[str]] = []
 
-    while len(selected) < min(FEED_K, len(rank_pool)):
+    while len(selected) < min(feed_k, len(rank_pool)):
         best_idx = None
         best_value = -float("inf")
         for idx, score in rank_pool:
@@ -733,7 +982,7 @@ def final_rank_candidates(
 
     eps = exploration_epsilon(session.step)
     if selected and random.random() < eps:
-        explore_candidates = [idx for idx, _ in rank_pool[: max(8, FEED_K * 2)] if idx not in selected]
+        explore_candidates = [idx for idx, _ in rank_pool[: max(8, feed_k * 2)] if idx not in selected]
         if explore_candidates:
             replace_pos = random.randrange(len(selected))
             selected[replace_pos] = random.choice(explore_candidates)
@@ -748,7 +997,7 @@ def final_rank_candidates(
         deduped.append(idx)
         deduped_fps.append(fp)
 
-    if len(deduped) < FEED_K:
+    if len(deduped) < feed_k:
         for idx, _ in rank_pool:
             if idx in deduped:
                 continue
@@ -757,9 +1006,44 @@ def final_rank_candidates(
                 continue
             deduped.append(idx)
             deduped_fps.append(fp)
-            if len(deduped) >= FEED_K:
+            if len(deduped) >= feed_k:
                 break
-    return deduped[:FEED_K]
+    return deduped[:feed_k]
+
+
+def relevance_rank_candidates(
+    *,
+    recall_indices: list[int],
+    pre_ranked: list[tuple[int, float]],
+    feed_k: int,
+) -> list[int]:
+    """
+    Ranking mode for /feed?k=...:
+      - keep ordering by model relevance (pre_ranked scores)
+      - avoid MMR/exploration so downstream can rerank cost-aware
+    """
+    feed_k = max(1, int(feed_k))
+    ordered: list[int] = [idx for idx, _ in pre_ranked]
+    seen = set(ordered)
+    for idx in recall_indices:
+        if idx in seen:
+            continue
+        ordered.append(idx)
+        seen.add(idx)
+        if len(ordered) >= max(feed_k + 60, int(feed_k * 3)):
+            break
+
+    deduped: list[int] = []
+    deduped_fps: list[set[str]] = []
+    for idx in ordered:
+        fp = item_fingerprints[idx]
+        if any(calculate_similarity(fp, seen_fp) > DEDUP_SIM_THRESHOLD for seen_fp in deduped_fps):
+            continue
+        deduped.append(idx)
+        deduped_fps.append(fp)
+        if len(deduped) >= feed_k:
+            break
+    return deduped[:feed_k]
 
 
 @app.get("/", response_class=HTMLResponse)
@@ -772,13 +1056,38 @@ async def get_index(request: Request) -> HTMLResponse:
 
 @app.get("/feed")
 async def get_feed(request: Request) -> dict[str, list[dict[str, object]]]:
+    raw_k = (request.query_params.get("k") or "").strip()
+    feed_k = FEED_K
+    relevance_only = False
+    if raw_k:
+        try:
+            feed_k = int(raw_k)
+            feed_k = max(1, min(FEED_MAX_K, feed_k))
+            relevance_only = True
+        except Exception:
+            feed_k = FEED_K
+            relevance_only = False
+
     sid = get_session_id(request)
     with state_lock:
         session = get_or_create_session(sid)
+        refresh_active_pools(datetime.now(timezone.utc))
+
+        pool_indices: list[int] = []
+        pool_seen: set[int] = set()
+        for links in active_pool_links.values():
+            for link in links:
+                idx = link_to_index.get(link)
+                if idx is None or idx in pool_seen:
+                    continue
+                pool_seen.add(idx)
+                pool_indices.append(idx)
+        candidate_universe = pool_indices if pool_indices else list(range(len(inventory)))
+
         recent_seen_set = set(session.recent_seen)
-        available = [i for i in range(len(inventory)) if i not in recent_seen_set]
-        if len(available) < FEED_K:
-            available = list(range(len(inventory)))
+        available = [i for i in candidate_universe if i not in recent_seen_set]
+        if len(available) < feed_k:
+            available = candidate_universe
         if not available:
             return {"items": []}
 
@@ -788,25 +1097,49 @@ async def get_feed(request: Request) -> dict[str, list[dict[str, object]]]:
             adapted_user_state = base_user_state + session.user_delta
 
         # Multi-stage cascade: recall -> pre-rank -> final rank.
+        recall_size = RECALL_SIZE
+        pre_rank_size = PRE_RANK_SIZE
+        if relevance_only:
+            recall_size = max(RECALL_SIZE, min(len(available), max(feed_k + 80, int(feed_k * 4))))
+            pre_rank_size = max(PRE_RANK_SIZE, min(recall_size, max(feed_k + 60, int(feed_k * 2))))
+
         recall_indices = select_recall_candidates(
             available_indices=available,
             adapted_user_state=adapted_user_state,
+            recall_size=recall_size,
+            scan_limit=RECALL_SCAN_LIMIT,
         )
         pre_ranked = pre_rank_candidates(
             session=session,
             recall_indices=recall_indices,
             adapted_user_state=adapted_user_state,
+            pre_rank_size=pre_rank_size,
         )
-        chosen = final_rank_candidates(session=session, pre_ranked=pre_ranked)
-        if len(chosen) < FEED_K:
-            fallback = [idx for idx in recall_indices if idx not in chosen]
-            chosen.extend(fallback[: FEED_K - len(chosen)])
+        if relevance_only:
+            chosen = relevance_rank_candidates(
+                recall_indices=recall_indices, pre_ranked=pre_ranked, feed_k=feed_k
+            )
+            if len(chosen) < feed_k:
+                chosen_set = set(chosen)
+                for idx in recall_indices:
+                    if idx in chosen_set:
+                        continue
+                    chosen.append(idx)
+                    chosen_set.add(idx)
+                    if len(chosen) >= feed_k:
+                        break
+        else:
+            chosen = final_rank_candidates(session=session, pre_ranked=pre_ranked, feed_k=feed_k)
+            if len(chosen) < feed_k:
+                fallback = [idx for idx in recall_indices if idx not in chosen]
+                chosen.extend(fallback[: feed_k - len(chosen)])
 
         session.last_batch = chosen
 
         items = []
         for idx in chosen:
             row = inventory.iloc[idx]
+            domain_val = str(row[domain_col])
             items.append(
                 {
                     "id": int(row["id"]),
@@ -814,17 +1147,36 @@ async def get_feed(request: Request) -> dict[str, list[dict[str, object]]]:
                     "description": (
                         str(row[summary_col]) if summary_col in inventory.columns else ""
                     ),
-                    "domain": str(row[domain_col]),
+                    "domain": domain_val,
+                    "cluster_id": domain_val,
                     "link": str(row[link_col]),
                 }
             )
         return {"items": items}
 
 
+@app.get("/warmup")
+async def warmup() -> dict[str, str]:
+    # Cold-start mitigation: keep the Torch graph + weights hot.
+    try:
+        with torch.no_grad():
+            seq = torch.zeros((1, EVENT_SEQ_LEN), dtype=torch.long, device=DEVICE)
+            user_state = model.encode_user_state(seq).squeeze(0)
+            _ = forward_heads_from_user_state(user_state, item_features[:2])
+    except Exception as exc:
+        return {"status": "error", "message": str(exc)}
+    return {"status": "ok"}
+
+
 @app.post("/interact")
 async def interact(data: Request) -> dict[str, object]:
     json_data = await data.json()
     sid = get_session_id(data)
+    uid = data.headers.get("X-Uid", "").strip() or "anon"
+    event_id = json_data.get("event_id")
+    if isinstance(event_id, str) and event_id:
+        if is_duplicate_event(uid=uid, session_id=sid, event_id=event_id):
+            return {"status": "duplicate"}
     item_id = int(json_data.get("item_id"))
     reason = str(json_data.get("reason", "auto")).lower()
     dwell = max(0.0, min(10.0, float(json_data.get("dwell_time", 0.0))))

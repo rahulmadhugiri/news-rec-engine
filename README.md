@@ -41,7 +41,8 @@ Expected item feature order:
 FastAPI endpoints:
 - `GET /` -> serves `index.html` and assigns session cookie `vibe_session_id`
 - `GET /feed` -> returns ranked feed items:
-  - `id, title, description, domain, link`
+  - `id, title, description, domain, cluster_id, link`
+  - optional: `GET /feed?k=200` returns top-K by relevance (default keeps current behavior)
 - `POST /interact` -> ingests interaction:
   - payload: `{ "item_id": int, "reason": "auto"|"skip", "dwell_time": float_seconds }`
 
