@@ -272,12 +272,69 @@ def _responses_extract_output_text(resp: Dict[str, Any]) -> str:
     return "\n".join(p.strip() for p in parts if isinstance(p, str) and p.strip()).strip()
 
 
+def _strip_json_wrapper_noise(text: str) -> str:
+    s = _norm_text(text)
+    if not s:
+        return ""
+    s = re.sub(r'^\s*\{\s*"sentences"\s*:\s*\[\s*', "", s, flags=re.IGNORECASE)
+    s = re.sub(r'\s*\]\s*\}\s*$', "", s)
+    s = s.strip().strip('"').strip()
+    return s.replace('\\"', '"')
+
+
+def _extract_sentences_from_jsonish(raw: str) -> List[str]:
+    s = (raw or "").strip()
+    if not s:
+        return []
+    marker = s.lower().find('"sentences"')
+    if marker < 0:
+        return []
+
+    # Best case: parse {"sentences":[...]} even if extra characters exist around it.
+    obj_start = s.find("{", marker - 40 if marker >= 40 else 0)
+    obj_end = s.rfind("}")
+    if obj_start >= 0 and obj_end > obj_start:
+        try:
+            obj = json.loads(s[obj_start : obj_end + 1])
+            val = obj.get("sentences") if isinstance(obj, dict) else None
+            if isinstance(val, list):
+                out = [_norm_text(str(x)) for x in val if _norm_text(str(x))]
+                if out:
+                    return out
+        except Exception:
+            pass
+
+    # Next best: parse bracket payload after the sentences key.
+    lb = s.find("[", marker)
+    rb = s.find("]", lb + 1) if lb >= 0 else -1
+    if lb >= 0 and rb > lb:
+        try:
+            arr = json.loads(s[lb : rb + 1])
+            if isinstance(arr, list):
+                out = [_norm_text(str(x)) for x in arr if _norm_text(str(x))]
+                if out:
+                    return out
+        except Exception:
+            pass
+
+    # Last resort: recover quoted strings after "sentences".
+    tail = s[marker:]
+    quoted = re.findall(r'"((?:\\.|[^"\\])*)"', tail)
+    # First match is typically "sentences" key.
+    recovered = []
+    for q in quoted:
+        qq = _norm_text(q.replace('\\"', '"'))
+        if qq and qq.lower() != "sentences":
+            recovered.append(qq)
+    return recovered
+
+
 def _normalize_to_4_sentences(text: str) -> List[str]:
     """
     Best-effort splitter for plain-text fallback.
     Returns up to 4 non-empty sentences.
     """
-    text = _norm_text(text)
+    text = _strip_json_wrapper_noise(text)
     if not text:
         return []
     parts = [p.strip() for p in SENT_SPLIT_RE.split(text) if p and p.strip()]
@@ -300,6 +357,7 @@ def openai_generate_4_sentences(
     model: str,
     temperature: float = 0.8,
     timeout_s: int = 25,
+    max_output_tokens: int = 140,
 ) -> List[str]:
     """
     Returns exactly 4 sentences (strings). Raises on failure.
@@ -318,6 +376,7 @@ def openai_generate_4_sentences(
         "instructions": instructions,
         "input": user_input,
         "temperature": float(temperature),
+        "max_output_tokens": int(max(32, max_output_tokens)),
         "text": {
             "format": {
                 "type": "json_schema",
@@ -348,6 +407,15 @@ def openai_generate_4_sentences(
     try:
         parsed = json.loads(raw)
     except Exception as e:
+        recovered = _extract_sentences_from_jsonish(raw)
+        if recovered:
+            if len(recovered) == 1:
+                fallback = _normalize_to_4_sentences(recovered[0])
+                if len(fallback) == 4:
+                    return fallback
+            fallback = _normalize_to_4_sentences(" ".join(recovered))
+            if len(fallback) == 4:
+                return fallback
         # Fallback: sometimes model returns plain text despite schema ask.
         fallback = _normalize_to_4_sentences(raw)
         if len(fallback) == 4:
@@ -356,6 +424,11 @@ def openai_generate_4_sentences(
 
     sents = parsed.get("sentences")
     if not isinstance(sents, list) or len(sents) != 4:
+        recovered = _extract_sentences_from_jsonish(raw)
+        if recovered:
+            fallback = _normalize_to_4_sentences(" ".join(recovered))
+            if len(fallback) == 4:
+                return fallback
         raise RuntimeError(f"OpenAI JSON did not include 4 sentences: {raw[:500]}")
 
     cleaned = [_norm_text(str(s)) for s in sents]
@@ -378,6 +451,7 @@ def openai_generate_4_sentences(
             ),
             "input": user_input,
             "temperature": max(0.2, min(0.6, float(temperature))),
+            "max_output_tokens": int(max(32, max_output_tokens)),
         }
         retry_out = _openai_responses_with_retry(
             api_key=api_key,

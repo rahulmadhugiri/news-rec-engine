@@ -7,6 +7,7 @@ import json
 import math
 import os
 import random
+import re
 import threading
 import time
 import uuid
@@ -57,12 +58,34 @@ FIRESTORE_DEDUPE_ENABLED = (
     not in {"0", "false", "no"}
 )
 DEDUP_TTL_DAYS = int(os.getenv("DEDUP_TTL_DAYS", "14"))
+FIREBASE_PROJECT_ID = (
+    os.getenv("FIREBASE_PROJECT_ID", "").strip()
+    or os.getenv("EXPO_PUBLIC_FIREBASE_PROJECT_ID", "").strip()
+)
+FIRESTORE_USER_COLLECTIONS = [
+    c.strip()
+    for c in os.getenv(
+        "FIRESTORE_USER_COLLECTIONS",
+        "users,user_profiles,profiles,userProfiles",
+    ).split(",")
+    if c.strip()
+]
+FIRESTORE_USER_UID_FIELD = os.getenv("FIRESTORE_USER_UID_FIELD", "uid").strip() or "uid"
+PROFILE_CACHE_TTL_S = int(os.getenv("PROFILE_CACHE_TTL_S", "300"))
+INTEREST_BONUS_WEIGHT = float(os.getenv("INTEREST_BONUS_WEIGHT", "0.30"))
+COMMUTE_BONUS_WEIGHT = float(os.getenv("COMMUTE_BONUS_WEIGHT", "0.08"))
 
 firestore_client = None
 if FIRESTORE_DEDUPE_ENABLED and firestore is not None:
     try:
-        firestore_client = firestore.Client()
-        print("🔥 Firestore dedupe enabled")
+        if FIREBASE_PROJECT_ID:
+            firestore_client = firestore.Client(project=FIREBASE_PROJECT_ID)
+        else:
+            firestore_client = firestore.Client()
+        print(
+            f"🔥 Firestore dedupe/profile enabled "
+            f"(project={FIREBASE_PROJECT_ID or 'adc-default'})"
+        )
     except Exception as exc:
         print(f"⚠️ Firestore client init failed; dedupe disabled: {exc}")
         firestore_client = None
@@ -107,9 +130,12 @@ DAILY_POOL_SIZE = int(os.getenv("DAILY_POOL_SIZE", "150"))
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "").strip()
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini").strip() or "gpt-4o-mini"
-OPENAI_TEMPERATURE = float(os.getenv("OPENAI_TEMPERATURE", "0.8"))
+OPENAI_TEMPERATURE = float(os.getenv("OPENAI_TEMPERATURE", "0.3"))
 OPENAI_TIMEOUT_S = int(os.getenv("OPENAI_TIMEOUT_S", "60"))
 OPENAI_MAX_ARTICLE_CHARS = int(os.getenv("OPENAI_MAX_ARTICLE_CHARS", "2500"))
+OPENAI_MAX_OUTPUT_TOKENS = int(os.getenv("OPENAI_MAX_OUTPUT_TOKENS", "140"))
+SCRIPT_MAX_WORDS = int(os.getenv("SCRIPT_MAX_WORDS", "65"))
+SCRIPT_MAX_CHARS = int(os.getenv("SCRIPT_MAX_CHARS", "420"))
 
 ELEVENLABS_API_KEY = os.getenv("ELEVENLABS_API_KEY", "").strip()
 ELEVENLABS_VOICE_ID = os.getenv("ELEVENLABS_VOICE_ID", "").strip()
@@ -117,6 +143,10 @@ ELEVENLABS_MODEL_ID = os.getenv("ELEVENLABS_MODEL_ID", "eleven_turbo_v2_5").stri
 ELEVENLABS_STABILITY = float(os.getenv("ELEVENLABS_STABILITY", "0.5"))
 ELEVENLABS_SIMILARITY_BOOST = float(os.getenv("ELEVENLABS_SIMILARITY_BOOST", "0.75"))
 ELEVENLABS_TIMEOUT_S = int(os.getenv("ELEVENLABS_TIMEOUT_S", "30"))
+DISABLE_TTS = (
+    os.getenv("DISABLE_TTS", "0").strip().lower()
+    in {"1", "true", "yes", "on"}
+)
 
 
 def _redact_key(s: str) -> str:
@@ -130,6 +160,287 @@ def _redact_key(s: str) -> str:
 
 print(f"🔑 OPENAI_API_KEY={_redact_key(OPENAI_API_KEY)} model={OPENAI_MODEL}")
 print(f"🔑 ELEVENLABS_API_KEY={_redact_key(ELEVENLABS_API_KEY)} voice_id={_redact_key(ELEVENLABS_VOICE_ID)}")
+print(f"🔊 DISABLE_TTS={int(DISABLE_TTS)} SCRIPT_MAX_WORDS={SCRIPT_MAX_WORDS} SCRIPT_MAX_CHARS={SCRIPT_MAX_CHARS}")
+
+WS_RE = re.compile(r"\s+")
+SENT_SPLIT_RE = re.compile(r"(?<=[.!?])\s+")
+
+
+def _norm_space(s: str) -> str:
+    return WS_RE.sub(" ", (s or "").strip())
+
+
+def _word_count(s: str) -> int:
+    return len(_norm_space(s).split()) if s and s.strip() else 0
+
+
+def _dedupe_sentences(text: str) -> str:
+    text = _norm_space(text)
+    if not text:
+        return ""
+    pieces = [p.strip() for p in SENT_SPLIT_RE.split(text) if p and p.strip()]
+    if not pieces:
+        return text
+    out: list[str] = []
+    seen: set[str] = set()
+    for p in pieces:
+        key = re.sub(r"[^a-z0-9]+", "", p.lower())
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        out.append(p)
+    return " ".join(out) if out else text
+
+
+def _clamp_script_text(text: str, *, max_words: int, max_chars: int) -> str:
+    s = _dedupe_sentences(text)
+    if max_words > 0:
+        words = _norm_space(s).split()
+        if len(words) > max_words:
+            s = " ".join(words[:max_words]).rstrip(" ,;:")
+            if s and s[-1] not in ".!?":
+                s += "."
+    if max_chars > 0 and len(s) > max_chars:
+        s = s[:max_chars].rstrip(" ,;:")
+        if s and s[-1] not in ".!?":
+            s += "."
+    return _norm_space(s)
+
+
+user_profile_cache: dict[str, tuple[float, dict[str, object]]] = {}
+TOKEN_RE = re.compile(r"[a-z0-9]+")
+_STOP_TOKENS = {
+    "a",
+    "an",
+    "and",
+    "are",
+    "at",
+    "for",
+    "from",
+    "in",
+    "is",
+    "of",
+    "on",
+    "or",
+    "the",
+    "to",
+    "with",
+}
+
+
+def _coerce_str_list(value: object) -> list[str]:
+    if isinstance(value, str):
+        parts = [p.strip() for p in value.split(",")]
+        return [p for p in parts if p]
+    if not isinstance(value, list):
+        return []
+    out: list[str] = []
+    for it in value:
+        if isinstance(it, str):
+            s = it.strip()
+            if s:
+                out.append(s)
+            continue
+        if isinstance(it, dict):
+            for k in ("name", "label", "title", "value", "topic"):
+                v = it.get(k)
+                if isinstance(v, str) and v.strip():
+                    out.append(v.strip())
+                    break
+    return out
+
+
+def _extract_signals(payload: dict[str, object]) -> tuple[list[str], str]:
+    blocks: list[dict[str, object]] = [payload]
+    for k in ("profile", "preferences", "onboarding", "news_preferences", "newsPreferences"):
+        v = payload.get(k)
+        if isinstance(v, dict):
+            blocks.append(v)
+
+    interests: list[str] = []
+    commute_bucket = ""
+    for block in blocks:
+        for key in ("interests", "news_interests", "selected_interests", "topics", "categories"):
+            interests.extend(_coerce_str_list(block.get(key)))
+        if not commute_bucket:
+            for key in ("commute_bucket", "commuteBucket", "commute", "trip_length", "commute_length"):
+                raw = block.get(key)
+                if isinstance(raw, str) and raw.strip():
+                    commute_bucket = raw.strip()
+                    break
+
+    deduped: list[str] = []
+    seen: set[str] = set()
+    for s in interests:
+        n = _norm_space(s)
+        key = n.lower()
+        if not n or key in seen:
+            continue
+        seen.add(key)
+        deduped.append(n)
+    return deduped, commute_bucket
+
+
+def _parse_warm_start_context(request: Request, json_data: dict[str, object]) -> dict[str, object]:
+    interests: list[str] = []
+    commute_bucket = ""
+
+    warm_payload = json_data.get("warm_start")
+    if isinstance(warm_payload, dict):
+        p_i, p_c = _extract_signals(warm_payload)
+        interests.extend(p_i)
+        if p_c:
+            commute_bucket = p_c
+
+    warm_header = request.headers.get("X-Warm-Start-Context", "")
+    if warm_header.strip():
+        try:
+            parsed = json.loads(warm_header)
+            if isinstance(parsed, dict):
+                h_i, h_c = _extract_signals(parsed)
+                interests.extend(h_i)
+                if not commute_bucket and h_c:
+                    commute_bucket = h_c
+        except Exception:
+            pass
+
+    deduped: list[str] = []
+    seen: set[str] = set()
+    for s in interests:
+        k = s.lower()
+        if k in seen:
+            continue
+        seen.add(k)
+        deduped.append(s)
+    return {"interests": deduped, "commute_bucket": commute_bucket}
+
+
+def _fetch_firestore_user_profile(uid: str) -> dict[str, object]:
+    if not uid or uid == "anon" or firestore_client is None:
+        return {}
+    now = time.time()
+    cached = user_profile_cache.get(uid)
+    if cached and (now - cached[0]) <= max(10, PROFILE_CACHE_TTL_S):
+        return dict(cached[1])
+
+    payload: dict[str, object] = {}
+    for coll in FIRESTORE_USER_COLLECTIONS:
+        try:
+            coll_ref = firestore_client.collection(coll)
+            snap = coll_ref.document(uid).get()
+            if snap.exists:
+                raw = snap.to_dict()
+                if isinstance(raw, dict):
+                    payload = raw
+                    break
+            # Fallback for schemas where uid is a field, not document id.
+            query = coll_ref.where(FIRESTORE_USER_UID_FIELD, "==", uid).limit(1).stream()
+            first = next(iter(query), None)
+            if first is not None and getattr(first, "exists", False):
+                raw = first.to_dict()
+                if isinstance(raw, dict):
+                    payload = raw
+                    break
+        except Exception as exc:
+            print(f"⚠️ Firestore user profile read failed for uid={uid} coll={coll}: {exc}")
+    user_profile_cache[uid] = (now, payload)
+    return dict(payload)
+
+
+def _merge_seed_context(uid: str, warm_ctx: dict[str, object]) -> dict[str, object]:
+    warm_interests = _coerce_str_list(warm_ctx.get("interests"))
+    warm_commute = str(warm_ctx.get("commute_bucket", "") or "").strip()
+
+    profile = _fetch_firestore_user_profile(uid)
+    db_interests: list[str] = []
+    db_commute = ""
+    if profile:
+        db_interests, db_commute = _extract_signals(profile)
+
+    merged_interests: list[str] = []
+    seen: set[str] = set()
+    for raw in warm_interests + db_interests:
+        s = _norm_space(raw)
+        k = s.lower()
+        if not s or k in seen:
+            continue
+        seen.add(k)
+        merged_interests.append(s)
+    return {
+        "interests": merged_interests,
+        "commute_bucket": warm_commute or db_commute,
+    }
+
+
+def _build_interest_lexicon(interests: list[str]) -> tuple[list[str], set[str]]:
+    phrases: list[str] = []
+    tokens: set[str] = set()
+    for interest in interests:
+        norm = _norm_space(interest).lower()
+        if not norm:
+            continue
+        phrases.append(norm)
+        for tok in TOKEN_RE.findall(norm):
+            if len(tok) < 3 or tok in _STOP_TOKENS:
+                continue
+            tokens.add(tok)
+    return phrases, tokens
+
+
+def _interest_bonus_for_item(idx: int, phrases: list[str], tokens: set[str]) -> float:
+    if not phrases and not tokens:
+        return 0.0
+    row = inventory.iloc[idx]
+    hay = _norm_space(
+        f"{row.get(headline_col, '')} {row.get(summary_col, '')} "
+        f"{row.get(domain_col, '')} {row.get('Vibe_Style', '')}"
+    ).lower()
+    token_hits = 0
+    if tokens:
+        token_set = set(TOKEN_RE.findall(hay))
+        token_hits = len(token_set.intersection(tokens))
+    phrase_hits = sum(1 for p in phrases if p and p in hay)
+    raw = (0.22 * token_hits) + (0.45 * min(3, phrase_hits))
+    return INTEREST_BONUS_WEIGHT * min(1.0, raw)
+
+
+def _commute_bonus_for_item(idx: int, commute_bucket: str) -> float:
+    if not commute_bucket:
+        return 0.0
+    cb = commute_bucket.lower()
+    recency_bucket = int(item_features[idx, ITEM_COL_RECENCY_BUCKET].item())
+    freshness = max(0.0, 4.0 - float(recency_bucket)) / 4.0
+    summary = _norm_space(str(inventory.iloc[idx].get(summary_col, "")))
+    depth = min(1.0, len(summary.split()) / 55.0)
+    vibe = str(inventory.iloc[idx].get("Vibe_Style", "")).lower()
+    if "analytical" in vibe or "deep" in vibe:
+        depth = max(depth, 0.8)
+    if any(k in cb for k in ("short", "quick", "brief", "under_15", "<15")):
+        return COMMUTE_BONUS_WEIGHT * freshness
+    if any(k in cb for k in ("long", "extended", "30", "over_30", "train")):
+        return COMMUTE_BONUS_WEIGHT * depth
+    return COMMUTE_BONUS_WEIGHT * (0.5 * freshness + 0.5 * depth)
+
+
+def apply_seed_rerank(
+    pre_ranked: list[tuple[int, float]],
+    *,
+    interests: list[str],
+    commute_bucket: str,
+) -> list[tuple[int, float]]:
+    if not pre_ranked:
+        return pre_ranked
+    phrases, tokens = _build_interest_lexicon(interests)
+    if not phrases and not tokens and not commute_bucket:
+        return pre_ranked
+    adjusted: list[tuple[int, float]] = []
+    for idx, score in pre_ranked:
+        total_bonus = _interest_bonus_for_item(idx, phrases, tokens) + _commute_bonus_for_item(
+            idx, commute_bucket
+        )
+        adjusted.append((idx, float(score) + total_bonus))
+    adjusted.sort(key=lambda x: x[1], reverse=True)
+    return adjusted
 
 DEVICE = torch.device("cpu")
 EVENT_SEQ_LEN = 30
@@ -1216,6 +1527,8 @@ async def get_feed(request: Request) -> dict[str, list[dict[str, object]]]:
             relevance_only = False
 
     sid = get_session_id(request)
+    uid = request.headers.get("X-Uid", "").strip() or "anon"
+    seed_ctx = _merge_seed_context(uid, _parse_warm_start_context(request, {}))
     with state_lock:
         session = get_or_create_session(sid)
         now_utc = datetime.now(timezone.utc)
@@ -1266,6 +1579,11 @@ async def get_feed(request: Request) -> dict[str, list[dict[str, object]]]:
             recall_indices=recall_indices,
             adapted_user_state=adapted_user_state,
             pre_rank_size=pre_rank_size,
+        )
+        pre_ranked = apply_seed_rerank(
+            pre_ranked,
+            interests=_coerce_str_list(seed_ctx.get("interests")),
+            commute_bucket=str(seed_ctx.get("commute_bucket", "") or ""),
         )
         if relevance_only:
             chosen = relevance_rank_candidates(
@@ -1325,7 +1643,7 @@ async def next_audio(request: Request) -> dict[str, object]:
             json_data = {}
     except Exception:
         json_data = {}
-    tts_enabled = True
+    tts_enabled = not DISABLE_TTS
     if json_data.get("tts") is False or bool(json_data.get("dry_run", False)):
         tts_enabled = False
 
@@ -1335,7 +1653,11 @@ async def next_audio(request: Request) -> dict[str, object]:
         return {"status": "error", "message": "Missing ELEVENLABS_API_KEY or ELEVENLABS_VOICE_ID"}
 
     sid = get_session_id(request)
+    uid = request.headers.get("X-Uid", "").strip() or "anon"
     now_utc = datetime.now(timezone.utc)
+    warm_ctx = _parse_warm_start_context(request, json_data)
+    seed_ctx = _merge_seed_context(uid, warm_ctx)
+    warm_interests_count = len(_coerce_str_list(seed_ctx.get("interests")))
 
     with state_lock:
         session = get_or_create_session(sid)
@@ -1366,6 +1688,11 @@ async def next_audio(request: Request) -> dict[str, object]:
             recall_indices=recall_indices,
             adapted_user_state=adapted_user_state,
             pre_rank_size=PRE_RANK_SIZE,
+        )
+        pre_ranked = apply_seed_rerank(
+            pre_ranked,
+            interests=_coerce_str_list(seed_ctx.get("interests")),
+            commute_bucket=str(seed_ctx.get("commute_bucket", "") or ""),
         )
         chosen = relevance_rank_candidates(recall_indices=recall_indices, pre_ranked=pre_ranked, feed_k=1)
         if not chosen:
@@ -1408,10 +1735,19 @@ async def next_audio(request: Request) -> dict[str, object]:
             model=OPENAI_MODEL,
             temperature=OPENAI_TEMPERATURE,
             timeout_s=OPENAI_TIMEOUT_S,
+            max_output_tokens=OPENAI_MAX_OUTPUT_TOKENS,
         )
     except Exception as exc:
         return {"status": "error", "message": f"OpenAI synthesis failed: {exc}"}
-    script_text = " ".join(sentences)
+    script_text = _clamp_script_text(
+        " ".join(sentences),
+        max_words=SCRIPT_MAX_WORDS,
+        max_chars=SCRIPT_MAX_CHARS,
+    )
+    print(
+        f"🎙️ next_audio uid={uid} sid={sid} script_words={_word_count(script_text)} "
+        f"warm_interests={warm_interests_count}"
+    )
 
     elevenlabs_payload = {
         "voice_id": ELEVENLABS_VOICE_ID,
