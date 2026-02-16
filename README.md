@@ -45,6 +45,14 @@ FastAPI endpoints:
   - optional: `GET /feed?k=200` returns top-K by relevance (default keeps current behavior)
 - `POST /interact` -> ingests interaction:
   - payload: `{ "item_id": int, "reason": "auto"|"skip", "dwell_time": float_seconds }`
+- `POST /next_audio` -> *MVP "Content Refinery"* (Stage 2-4):
+  - picks the next item using the existing rec engine but restricted to the daily flat pool (150)
+  - generates an exactly-4-sentence script with behavioral memory (last 5 positives/negatives)
+  - returns ElevenLabs MP3 as base64
+  - requires env: `OPENAI_API_KEY`, `ELEVENLABS_API_KEY`, `ELEVENLABS_VOICE_ID`
+- `POST /audio_event` -> sentence-precise feedback for the MVP audio flow:
+  - payload (recommended): `{ "content_id": str, "skip_index": int|null, "listen_ms": number, "total_ms": number }`
+  - updates both: (a) synthesis memory window, (b) rec-engine online session state
 
 Serving uses a cascade:
 - recall -> pre-rank -> final rank + MMR diversity + dedup + exploration
@@ -94,6 +102,7 @@ Data + ingestion:
 - `rss_scraper.py` - wrapper to `scraper.main`
 - `analyze_demand.py` - mines interaction logs to generate query/domain wishlist
 - `daily_refresh.py` - orchestrates demand analysis + scrape
+- `morning_harvest.py` - builds `data/daily_pool.json` (flat 150-story menu used by `/feed` + `/next_audio`)
 
 Other:
 - `index.html` - frontend shell
@@ -151,6 +160,25 @@ Send interaction:
 curl -s -X POST http://127.0.0.1:8000/interact \
   -H "Content-Type: application/json" \
   -d '{"item_id": 42, "reason": "skip", "dwell_time": 2.4}'
+```
+
+Build today's flat pool (150-story menu):
+```bash
+./venv/bin/python morning_harvest.py --k 150
+```
+
+Generate next personalized audio (rec engine -> LLM -> ElevenLabs):
+```bash
+curl -s -X POST http://127.0.0.1:8000/next_audio \
+  -H "Content-Type: application/json" \
+  -d '{}' | jq '{content_id, item, sentences}'
+```
+
+Post feedback (finish if `skip_index=null`, swipe if `skip_index` is 0-3):
+```bash
+curl -s -X POST http://127.0.0.1:8000/audio_event \
+  -H "Content-Type: application/json" \
+  -d '{"content_id":"REPLACE_ME","skip_index":1,"listen_ms":8000,"total_ms":20000}'
 ```
 
 ## Training Workflows

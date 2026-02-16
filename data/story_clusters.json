@@ -1,0 +1,2449 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-16T00:06:20.590178+00:00",
+    "input": "data/scraped_articles_backup.csv",
+    "loaded_all": 16322,
+    "portion_n": 900,
+    "overfetch": 9000,
+    "dim": 256,
+    "k": 280,
+    "min_cluster_size": 3,
+    "min_cohesion": 0.65,
+    "gated_refine": true,
+    "gate_sim": 0.58,
+    "gate_min_shared_ents": 2,
+    "gate_min_shared_ents_policy": 3,
+    "gate_min_shared_ngrams": 2,
+    "entity_max_df": 40,
+    "entity_bucket_max": 35,
+    "ngram_idf": 5.2,
+    "ngram_bucket_max": 25,
+    "clusters_pre_refine": 153,
+    "clusters_post_refine": 11,
+    "clusters_kept_high_cohesion": 54,
+    "clusters_refine_input": 99,
+    "clusters_before_title_prune": 55,
+    "min_title_avg_sim": 0.14,
+    "min_title_pair_sim": 0.0,
+    "clusters_before_merge": 11,
+    "merge_sim": 0.85,
+    "merge_min_shared_ents": 1,
+    "embed_mode": "title",
+    "entity_weight": 2.2,
+    "entity_boost": true,
+    "entity_scope": "headline",
+    "cores_total": 11,
+    "selected_total": 11,
+    "quotas": {
+      "ai": 20,
+      "markets": 8,
+      "tech_industry": 8,
+      "policy": 10,
+      "science_health": 6,
+      "entertainment": 6,
+      "sports": 4,
+      "lifestyle": 6,
+      "other": 0
+    }
+  },
+  "clusters": [
+    {
+      "story_id": "b0e472bff3907a58",
+      "cluster_id": 0,
+      "topic_category": "tech",
+      "size": 3,
+      "cohesion": 0.7611119562591625,
+      "source_diversity": 1,
+      "age_days": 3.761560072546296,
+      "entity_density": 1.6666666666666667,
+      "entities": [
+        {
+          "entity": "cnx",
+          "count": 6
+        },
+        {
+          "entity": "software",
+          "count": 6
+        },
+        {
+          "entity": "integrated logic analyzer",
+          "count": 2
+        },
+        {
+          "entity": "ila",
+          "count": 2
+        },
+        {
+          "entity": "raspberry pi zero",
+          "count": 2
+        }
+      ],
+      "neutral_core_summary": {
+        "headline": "A deep dive into Raspberry Pi Zero 2 W\u2019s power consumption - CNX Software",
+        "summary": "A deep dive into Raspberry Pi Zero 2 W\u2019s power consumption CNX Software"
+      },
+      "stakeholder_map": {
+        "people": [
+          "integrated logic analyzer",
+          "raspberry pi zero"
+        ],
+        "orgs": [],
+        "other": [
+          "cnx",
+          "software",
+          "ila"
+        ]
+      },
+      "key_facts": [
+        "A deep dive into Raspberry Pi Zero 2 W\u2019s power consumption - CNX Software",
+        "EVerest is an open-source software stack for car charging stations - CNX Software",
+        "GateMate Integrated Logic Analyzer (ILA) deep dive - CNX Software"
+      ],
+      "confidence_score": 0.6637104701723437,
+      "angles": [
+        {
+          "angle_type": "core_headline",
+          "text": "A deep dive into Raspberry Pi Zero 2 W\u2019s power consumption - CNX Software"
+        },
+        {
+          "angle_type": "why_it_matters",
+          "text": "cnx: why this matters now. Anchor fact: A deep dive into Raspberry Pi Zero 2 W\u2019s power consumption - CNX Software"
+        },
+        {
+          "angle_type": "stakeholder_impact",
+          "text": "Who is impacted (users, companies, regulators)? Entities: cnx, software, integrated logic analyzer, ila, raspberry pi zero"
+        },
+        {
+          "angle_type": "second_order_effect",
+          "text": "If cnx continues, what changes next? Use at least one fact: A deep dive into Raspberry Pi Zero 2 W\u2019s power consumption - CNX Software"
+        }
+      ],
+      "supporting_articles": [
+        {
+          "headline": "A deep dive into Raspberry Pi Zero 2 W\u2019s power consumption - CNX Software",
+          "summary": "A deep dive into Raspberry Pi Zero 2 W\u2019s power consumption CNX Software",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPNjZXTnh6VlhtOW51OE9FejNxMVN2OUM0ZExWb3VhSC1WdjN0YVFVSmpPNlM2QWJpNlhDbUl5b1hzcXNDLUVoR2kycmVZbmEyeG9Jb0ZfTDVTam9KeHpZa1VjRzZHbEFZektlRFpEM3FKRlZna1JSdk5RdnlJWkhhN1VrcjREY0nSAY8BQVVfeXFMTVBfcl9MR29nYS1ucWlfdzZFRTFyTm9YMWMtSUpmUEY3LW9kRmdvSHlnR2s0cFl0RVVzN29YczNBN2x2X2dyN3UxbTlvSjdSTFNfUmJpeXdETERJd3R4MEZFRGplRDg4M0Q2Sk5ZTl9GZnkxUThCNlhhb1hhSnlkRkRWR3lWTWg1OEdFU0daWkk",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_cnx_software"
+        },
+        {
+          "headline": "EVerest is an open-source software stack for car charging stations - CNX Software",
+          "summary": "EVerest is an open-source software stack for car charging stations CNX Software",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPTWRxSkF2Z3ZSSXAzcl81bndKcU9KS3JLRW0weXpialI1Wmc4SFpKYmVYel9MUDVneG5JUTNGcDc5NklqQ0FIYWpndVBGUnRzUl9sNTJJTWU1TEd1dno3djljTDNIRjJBMTg1MHdXN1BISVA2amJ4SWNQLVZGM2xCVzEwWVVaeV9nREdyYjJOOVUzRnFkZ2Q2R1l6cUZ6cU45dWo00gGrAUFVX3lxTE1aZUZkV2t3RzBMLURjZUpLNUw3QW9GamNQcHV6YjZra3d5ZWFJaTZtSDhtY1h2S1FfVkZDLS1hdmNfdnlCUjc4VnpWcEVrNE80dFdHRUUyWnBPaXFQRU5VeVJRR0duVTFCbm5UaWZlMzRTTHpubzhBMTRWdTBocFh4cW91MnowQjBxZ3c1a3lIU0cwa0ducnhDN2VsSnB0NnJFVzdIZHlKMmdDTQ",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_cnx_software"
+        },
+        {
+          "headline": "GateMate Integrated Logic Analyzer (ILA) deep dive - CNX Software",
+          "summary": "GateMate Integrated Logic Analyzer (ILA) deep dive CNX Software",
+          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPMDFLYXcyeG81dW1NM19peGtCU01xZFVDSV83NlhGcjlyZ181UWR4Wk5rdkRvMEQ3V2huZUhmRHIzZlZ6OFQtdkp5QnB1VHNWN3ZtdXpOY0Mwb09QMXRrT3NUdmNSa2JoUzFxSU1xVk9lU0ZvbEtkOXBCeGR5cjMwdEo3b2pGeGJEWFJMY2FGR2pwSknSAZsBQVVfeXFMT1BfbXQwQnJzN2wtaUxOSkJzQV80SEJMOWx6azdrMGxXVWdsZ0Zka3ZVaWtYNEFTUjNFWmZxRUY2aU9jellhLU9razhGaTlKXzR3X0RBb3NJdFZoaWJkcnVhOXVGWXJxZEpFN0F5MHo2OXcwN050RTRIb0JQa2RCZ1liVEJDbWotYWJ0bWM4YUQxQ3gzaUpfN25tMEk",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_cnx_software"
+        }
+      ],
+      "bucket": "tech_industry"
+    },
+    {
+      "story_id": "456d2e9490c1afb5",
+      "cluster_id": 1,
+      "topic_category": "other",
+      "size": 3,
+      "cohesion": 0.7063217303154296,
+      "source_diversity": 3,
+      "age_days": 3.761560072546296,
+      "entity_density": 0.6666666666666666,
+      "entities": [
+        {
+          "entity": "ssm",
+          "count": 2
+        },
+        {
+          "entity": "next",
+          "count": 2
+        }
+      ],
+      "neutral_core_summary": {
+        "headline": "SSM supervisory priorities for 2024-2026 - bankingsupervision.europa.eu",
+        "summary": "SSM supervisory priorities for 2024-2026 bankingsupervision.europa.eu"
+      },
+      "stakeholder_map": {
+        "people": [],
+        "orgs": [],
+        "other": [
+          "ssm",
+          "next"
+        ]
+      },
+      "key_facts": [
+        "SSM supervisory priorities for 2024-2026 - bankingsupervision.europa.eu",
+        "Next stop: a transport system accessible for all | Horizon Magazine - research-and-innovation.ec.europa.eu",
+        "Why the next generation of supercomputers will (need to) be built with open hardware and software: an introduction - Tech.eu"
+      ],
+      "confidence_score": 0.7153098247044838,
+      "angles": [
+        {
+          "angle_type": "core_headline",
+          "text": "SSM supervisory priorities for 2024-2026 - bankingsupervision.europa.eu"
+        },
+        {
+          "angle_type": "why_it_matters",
+          "text": "ssm: why this matters now. Anchor fact: SSM supervisory priorities for 2024-2026 - bankingsupervision.europa.eu"
+        },
+        {
+          "angle_type": "stakeholder_impact",
+          "text": "Who is impacted (users, companies, regulators)? Entities: ssm, next"
+        },
+        {
+          "angle_type": "second_order_effect",
+          "text": "If ssm continues, what changes next? Use at least one fact: SSM supervisory priorities for 2024-2026 - bankingsupervision.europa.eu"
+        }
+      ],
+      "supporting_articles": [
+        {
+          "headline": "SSM supervisory priorities for 2024-2026 - bankingsupervision.europa.eu",
+          "summary": "SSM supervisory priorities for 2024-2026 bankingsupervision.europa.eu",
+          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOQlFlS2lkaEhEaXZnN3YzYXk5SE9MdzN3cXVaNXdPS3J2ZDgwLTlOX2VIYnVJZy1pR2o4S3pxdHRkaTk0enR4N0FoM1lFN1hzeGd0LVZnMUhUWnBNbXRXcHZGT0JmTDdCeGpwOVY2T3hOZVFkMzhkd3JZWlMtN3JKZ3JWNGVhVTZKYmEtV3hnX1lYNEo0NVdfUnY2UENlT3JrZ0VULTdNaWVqNW16UTBYS2FLbmFIZUZ1Rnc",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "bankingsupervision.europa.eu"
+        },
+        {
+          "headline": "Next stop: a transport system accessible for all | Horizon Magazine - research-and-innovation.ec.europa.eu",
+          "summary": "Next stop: a transport system accessible for all | Horizon Magazine research-and-innovation.ec.europa.eu",
+          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOaWxiQmNFbW9kaFRIV0VERXdaV19SVndiOGZBUXc5THZVQkdZMDZ0QlRZMS1nNkVwcTZmejdKZGtRY0tTdEc0M2FfS2VZVGw4N2VsQzZSX3pSQ2xScWtTckhDc0o1dm1JZ0JoSS1oM2VaU1JRa3k2Znc5WVE2RkJoeS1fN0hxUVFkalp3aXcwS3hUUS1SNDJ6SDhaVWRlNHJPSTFVUG9UTmJEMWdidTFZZzloME4tUQ",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "research-and-innovation.ec.europa.eu"
+        },
+        {
+          "headline": "Why the next generation of supercomputers will (need to) be built with open hardware and software: an introduction - Tech.eu",
+          "summary": "Why the next generation of supercomputers will (need to) be built with open hardware and software: an introduction Tech.eu",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBzNkp2WFVsNkY2WUwtWkJyV2tyYVZZdllqaW8tN1E5Vnp3OG12VHVWVXZ6eV92ZXUxSVhFUnp4UXotTFRDYUFhdi1YeXMxbjFzRmxaLXZFcGJkRjk3OGtGNnJJTkdRZw",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "tech.eu"
+        }
+      ],
+      "bucket": "other"
+    },
+    {
+      "story_id": "d46728b0152fa064",
+      "cluster_id": 2,
+      "topic_category": "politics",
+      "size": 3,
+      "cohesion": 0.736881221043772,
+      "source_diversity": 1,
+      "age_days": 3.761560072546296,
+      "entity_density": 3.6666666666666665,
+      "entities": [
+        {
+          "entity": "the wall street",
+          "count": 6
+        },
+        {
+          "entity": "bets",
+          "count": 2
+        },
+        {
+          "entity": "source development",
+          "count": 2
+        },
+        {
+          "entity": "overtake",
+          "count": 2
+        },
+        {
+          "entity": "ceo",
+          "count": 2
+        },
+        {
+          "entity": "says",
+          "count": 2
+        },
+        {
+          "entity": "few",
+          "count": 2
+        },
+        {
+          "entity": "surveillance ambitions",
+          "count": 2
+        },
+        {
+          "entity": "mistral",
+          "count": 1
+        },
+        {
+          "entity": "in china",
+          "count": 1
+        },
+        {
+          "entity": "china",
+          "count": 1
+        }
+      ],
+      "neutral_core_summary": {
+        "headline": "China\u2019s Surveillance Ambitions - The Wall Street Journal",
+        "summary": "China\u2019s Surveillance Ambitions The Wall Street Journal"
+      },
+      "stakeholder_map": {
+        "people": [
+          "the wall street",
+          "source development",
+          "surveillance ambitions",
+          "in china"
+        ],
+        "orgs": [],
+        "other": [
+          "bets",
+          "overtake",
+          "ceo",
+          "says",
+          "few",
+          "mistral",
+          "china"
+        ]
+      },
+      "key_facts": [
+        "China\u2019s Surveillance Ambitions - The Wall Street Journal",
+        "In China, a New City Attracts Few - The Wall Street Journal",
+        "Mistral AI Bets on Open-Source Development to Overtake DeepSeek, CEO Says - The Wall Street Journal"
+      ],
+      "confidence_score": 0.6570470179881114,
+      "angles": [
+        {
+          "angle_type": "core_headline",
+          "text": "China\u2019s Surveillance Ambitions - The Wall Street Journal"
+        },
+        {
+          "angle_type": "why_it_matters",
+          "text": "the wall street: why this matters now. Anchor fact: China\u2019s Surveillance Ambitions - The Wall Street Journal"
+        },
+        {
+          "angle_type": "stakeholder_impact",
+          "text": "Who is impacted (users, companies, regulators)? Entities: the wall street, bets, source development, overtake, ceo, says"
+        },
+        {
+          "angle_type": "second_order_effect",
+          "text": "If the wall street continues, what changes next? Use at least one fact: China\u2019s Surveillance Ambitions - The Wall Street Journal"
+        }
+      ],
+      "supporting_articles": [
+        {
+          "headline": "China\u2019s Surveillance Ambitions - The Wall Street Journal",
+          "summary": "China\u2019s Surveillance Ambitions The Wall Street Journal",
+          "link": "https://news.google.com/rss/articles/CBMi_gJBVV95cUxOYk5FbVRNbnZTOFRLQUtaT0hUbFZIWWdqZ0hscy1FdzhtRTdrOEwtRlZWWE44QlBsMmp3OFJESmVuMXJmTXNucm5GUkdEdzl0MW9TVWpPYllyNkIxMUJQbEszRW1wX2czbE55Q3hUZS1rNDlob2FLeUpOTEFBNHRQMlZnQ0dPZTV2SzVwc1pVT0ZFMjRuNG1kTVYzYXZIbjEwYktrd3ZNSlBSb1c5SjVuQnI1NWVYVnUxNlNVa3otNDNyMUhhSnRZbzRNVkVDWHgtU3Z6TmNMMHhDZmJxVnFGbmRWZmpRVzkyZTdvdnhpTlZtUDdyUm00dFhFekpGNnJRdXNFWTlnNzF1dzR2Sk9XeFE0QW9FVDlnMjJpbVk2UWt1VVhkTTdHRXJhM3N6NDh1bndFLUQ5TTFzbldCVkJ5eUd2R1RSOERoSXVqYjFFN3RBZGdxLXlVWEg2WTlJRWhvOTFZandSMThMRjk1LThTbkw1S2JYekZMWXBxQWx3",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_the_wall_street_journal"
+        },
+        {
+          "headline": "In China, a New City Attracts Few - The Wall Street Journal",
+          "summary": "In China, a New City Attracts Few The Wall Street Journal",
+          "link": "https://news.google.com/rss/articles/CBMiggNBVV95cUxNbzhCV0Q2ZENzckRzamlhTVBGN3ZnYVNwODV5T0hXckxyTW1PX0xmWi1IR01SVVVxVnF2SGRlUDdOSmNRTGRTdTdHeXJLbzYwU0o4SHhrRWEwbFUyZlRCNGlFbDV4ZnVBV0pNX3F5R0ZtVHFnMUp5bC1wVlItaGhpQmp0ZHVmcEI3ZDhJN0NKbEhMUEhnbTY4OXQyUFotSzNLaXBGWWxPVWxGSW9TeDBNYzktNTVMbVJlcjNmeFlLY2tSN3c3dXVWOHpSTFJFV2dIeG5PMEpuaDhnZWR5UVlJYzlZMmZpUGJscDFXTUdSc2MzMzB5ZmZvU2NIc21CWjZXTzk5eGRFcDlVV3BDRkVUeHdkRGZoQjk0YWhkTUY3cXIyeUZLU0J2TzNZMmFtc1Zid21GSDVJeFdtbURQSlVzekJrVUF1a3NiMDg3aUZZNGlTUThHMDB0NHZfSDh2Q2tTakdTRkplSGFNR2l6OU8zR1Q2RGtqNVU5RUNTWWU2M0tVQQ",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_the_wall_street_journal"
+        },
+        {
+          "headline": "Mistral AI Bets on Open-Source Development to Overtake DeepSeek, CEO Says - The Wall Street Journal",
+          "summary": "Mistral AI Bets on Open-Source Development to Overtake DeepSeek, CEO Says The Wall Street Journal",
+          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQRGhma3JrQkxkb09qT1VrX29JN09VSWZhc3JRLVYtWGpOSk9xRzhJcDVtQm1ESnVGbUl2T1VUaDhHX0c1SXFQY1c3UWVLY0FNS0owcE05b1BRandsanV5MEpCcE5pNXk2cUo2R2lnUHROYVE3cHBGd2tzc1lXLUVFRjRhT1F1Z2tFX0RyNU03TUVORlduTlk4dFBjTjNtWkJ1c0o3aDc3MmFaREp1QUE",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_the_wall_street_journal"
+        }
+      ],
+      "bucket": "policy"
+    },
+    {
+      "story_id": "f8da319edd8d88b1",
+      "cluster_id": 3,
+      "topic_category": "sports",
+      "size": 5,
+      "cohesion": 0.792375457845363,
+      "source_diversity": 1,
+      "age_days": 3.761560072546296,
+      "entity_density": 1.4,
+      "entities": [
+        {
+          "entity": "nfl",
+          "count": 10
+        },
+        {
+          "entity": "super bowl",
+          "count": 10
+        },
+        {
+          "entity": "espn",
+          "count": 10
+        },
+        {
+          "entity": "forecasting",
+          "count": 2
+        },
+        {
+          "entity": "mvp",
+          "count": 2
+        },
+        {
+          "entity": "bad bunny",
+          "count": 2
+        },
+        {
+          "entity": "projecting",
+          "count": 2
+        }
+      ],
+      "neutral_core_summary": {
+        "headline": "2025 NFL projections, power rankings, Super Bowl predictions - ESPN",
+        "summary": "2025 NFL projections, power rankings, Super Bowl predictions ESPN"
+      },
+      "stakeholder_map": {
+        "people": [
+          "super bowl",
+          "bad bunny"
+        ],
+        "orgs": [],
+        "other": [
+          "nfl",
+          "espn",
+          "forecasting",
+          "mvp",
+          "projecting"
+        ]
+      },
+      "key_facts": [
+        "2025 NFL projections, power rankings, Super Bowl predictions - ESPN",
+        "2025 NFL predictions: Super Bowl 60 picks, MVP, breakouts - ESPN",
+        "NFL playoff predictions: Forecasting the postseason, including Super Bowl contenders, upset picks and impact players - ESPN",
+        "Why the NFL stood by Bad Bunny for the Super Bowl halftime show - ESPN",
+        "Projecting 2025 NFL standings, playoff games, Super Bowl 60 - ESPN"
+      ],
+      "confidence_score": 0.6723079331085489,
+      "angles": [
+        {
+          "angle_type": "core_headline",
+          "text": "2025 NFL projections, power rankings, Super Bowl predictions - ESPN"
+        },
+        {
+          "angle_type": "why_it_matters",
+          "text": "nfl: why this matters now. Anchor fact: 2025 NFL projections, power rankings, Super Bowl predictions - ESPN"
+        },
+        {
+          "angle_type": "stakeholder_impact",
+          "text": "Who is impacted (users, companies, regulators)? Entities: nfl, super bowl, espn, forecasting, mvp, bad bunny"
+        },
+        {
+          "angle_type": "second_order_effect",
+          "text": "If nfl continues, what changes next? Use at least one fact: 2025 NFL projections, power rankings, Super Bowl predictions - ESPN"
+        }
+      ],
+      "supporting_articles": [
+        {
+          "headline": "2025 NFL projections, power rankings, Super Bowl predictions - ESPN",
+          "summary": "2025 NFL projections, power rankings, Super Bowl predictions ESPN",
+          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPcDRzTmlZNi1aVzJ5TFZwUmlZUjI0YVcydDhfNFN2Q0VTZm5MVGpsMkNpVzBPcDY3MTllMU8tcVdMVEZOSHhNbGptYWgtc09zRnhQa1V2V00tbkxNZUpjVXZkYnhRa3VrZTdmSElWVG5PcTFhRDVrb1Q1dkZMdlFPZU0weWd2NVZZcl9WUXYxLXVoa1dDU2FERnh6TGY0Z0VqWTZrQ25n",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_espn"
+        },
+        {
+          "headline": "2025 NFL predictions: Super Bowl 60 picks, MVP, breakouts - ESPN",
+          "summary": "2025 NFL predictions: Super Bowl 60 picks, MVP, breakouts ESPN",
+          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQNmJMVkVtSHRCb0F4M1h1NmtmVzFGbDl2QUE1Ui04VmhpZV9HMVkwS28wd2M5cWUxbGdFZThKdXdnSDZybzFOelo3RHJZYzdNeFotNjVwUURVUC00dlIydDBTNXhEaXNkeDJQNEh4THpDcTRjaHQ1OG9iZ181OWRwR2paM3dkdW56ZHFtTmY0RnlMVHhVcndZTEtFMktCYVBoUkF4bVNGU19NLTZzY1Z4LV81NHVPcU0",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_espn"
+        },
+        {
+          "headline": "NFL playoff predictions: Forecasting the postseason, including Super Bowl contenders, upset picks and impact players - ESPN",
+          "summary": "NFL playoff predictions: Forecasting the postseason, including Super Bowl contenders, upset picks and impact players ESPN",
+          "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPbkpkV0NQOHpzOXMyUEJfRkRjTUx0QWVyeDNlNEVIV040WEF4engzMXRPdm4xRExkM0ctend6QXNwZWZvSmhmMDBmd0FveTdadTRJalpSQU5LaFo5OTkwVkR4UUFXaDU1d3VLSHV6VXN6M2l0VWx0elhlRjlGN2dSbTVaVHBra3VWdGREdzhITGZWejBIWFk3cE9STnMwQmIzRWcxZDl5ZDV0RnNjcmxBLXo2cnFqVFJVRmtMbjZxUlZfNlFiWTE4T0ZnaFN3Tmh5bTVkTG9QVDEyUkRadldSSV8wc3g",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_espn"
+        },
+        {
+          "headline": "Why the NFL stood by Bad Bunny for the Super Bowl halftime show - ESPN",
+          "summary": "Why the NFL stood by Bad Bunny for the Super Bowl halftime show ESPN",
+          "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOVHpkZnhFQmtoalFYRDRnUUIwTEhKZ0JQaWJIZ0NMNEdyTjIyR2JVUHlMcVVSWVF4VU50cktGZWc2bmVEMHJhTk5PLV9GejNsZXhySF9JZ2xyQTZnSzVGVG5KZlpuRDk1TkhXamZUaWVFYTBYZ3YwcXRDM0RObnhXWHB5Z081ZkdKTzZZLVFOTXROenZhS1E",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_espn"
+        },
+        {
+          "headline": "Projecting 2025 NFL standings, playoff games, Super Bowl 60 - ESPN",
+          "summary": "Projecting 2025 NFL standings, playoff games, Super Bowl 60 ESPN",
+          "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQTkI4LUYtYURkUWFiM0RNVDRFYjdOMmE3M3lUXzBfWUVBanQwVXlSUU5RNHZsMzNNdGlJMlpraXVYaXVnMWNfZ2ZoTnB4dTRod2hOMFRfMWF6TzJOZnE3YmJSUVoyU3h0dV9LT0FkQVN3MGxzcWcwZGdyVkJLdjJxcUFQb3BtdERQenZUUmlZQTA0OFdMd19pZlV4ZG0zZ2plNjRJZVgxbWxBcmNlbmxXRk9QSU4wMW1fWWljMnYxUUJENmJ3WXNHRUZWN0ZkZw",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_espn"
+        }
+      ],
+      "bucket": "sports"
+    },
+    {
+      "story_id": "438097b250374db4",
+      "cluster_id": 4,
+      "topic_category": "politics",
+      "size": 3,
+      "cohesion": 0.7810525644586414,
+      "source_diversity": 2,
+      "age_days": 3.761560072546296,
+      "entity_density": 5.0,
+      "entities": [
+        {
+          "entity": "bmc",
+          "count": 6
+        },
+        {
+          "entity": "election results",
+          "count": 6
+        },
+        {
+          "entity": "bjp",
+          "count": 6
+        },
+        {
+          "entity": "mumbai",
+          "count": 6
+        },
+        {
+          "entity": "celebrates as mahayuti",
+          "count": 2
+        },
+        {
+          "entity": "heads for",
+          "count": 2
+        },
+        {
+          "entity": "big win",
+          "count": 2
+        },
+        {
+          "entity": "thackeray brothers trail",
+          "count": 2
+        },
+        {
+          "entity": "live",
+          "count": 2
+        },
+        {
+          "entity": "early",
+          "count": 2
+        },
+        {
+          "entity": "shiv sena",
+          "count": 2
+        },
+        {
+          "entity": "thackeray",
+          "count": 2
+        },
+        {
+          "entity": "maharashtra",
+          "count": 2
+        },
+        {
+          "entity": "sena",
+          "count": 2
+        },
+        {
+          "entity": "pune",
+          "count": 2
+        }
+      ],
+      "neutral_core_summary": {
+        "headline": "Mumbai BMC Election Results 2026 Live: Early trends show BJP\u2013Shiv Sena alliance leading against Thackeray - The Economic Times",
+        "summary": "Mumbai BMC Election Results 2026 Live: Early trends show BJP\u2013Shiv Sena alliance leading against Thackeray The Economic Times"
+      },
+      "stakeholder_map": {
+        "people": [
+          "election results",
+          "celebrates as mahayuti",
+          "heads for",
+          "big win",
+          "thackeray brothers trail",
+          "shiv sena"
+        ],
+        "orgs": [],
+        "other": [
+          "bmc",
+          "bjp",
+          "mumbai",
+          "live",
+          "early",
+          "thackeray",
+          "maharashtra",
+          "sena",
+          "pune"
+        ]
+      },
+      "key_facts": [
+        "Mumbai BMC Election Results 2026 Live: Early trends show BJP\u2013Shiv Sena alliance leading against Thackeray - The Economic Times",
+        "Mumbai BMC Election Results 2026: BJP reshapes Maharashtra civic map, wrests Mumbai from Sena and Pune fr... - The Economic Times",
+        "BMC Election Results 2026: BJP Celebrates As Mahayuti Heads For A Big Win, Thackeray Brothers Trail - NewsX"
+      ],
+      "confidence_score": 0.7025274707605338,
+      "angles": [
+        {
+          "angle_type": "core_headline",
+          "text": "Mumbai BMC Election Results 2026 Live: Early trends show BJP\u2013Shiv Sena alliance leading against Thackeray - The Economic Times"
+        },
+        {
+          "angle_type": "why_it_matters",
+          "text": "bmc: why this matters now. Anchor fact: Mumbai BMC Election Results 2026 Live: Early trends show BJP\u2013Shiv Sena alliance leading against Thackeray - The Economic Times"
+        },
+        {
+          "angle_type": "stakeholder_impact",
+          "text": "Who is impacted (users, companies, regulators)? Entities: bmc, election results, bjp, mumbai, celebrates as mahayuti, heads for"
+        },
+        {
+          "angle_type": "second_order_effect",
+          "text": "If bmc continues, what changes next? Use at least one fact: Mumbai BMC Election Results 2026 Live: Early trends show BJP\u2013Shiv Sena alliance leading against Thackeray - The Economic Times"
+        }
+      ],
+      "supporting_articles": [
+        {
+          "headline": "Mumbai BMC Election Results 2026 Live: Early trends show BJP\u2013Shiv Sena alliance leading against Thackeray - The Economic Times",
+          "summary": "Mumbai BMC Election Results 2026 Live: Early trends show BJP\u2013Shiv Sena alliance leading against Thackeray The Economic Times",
+          "link": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxPeWFXZ1JORXNFU2pxTDlZMTZMQmxKclNrQmF0NkFPSWVQR0RNcFAwbmFfdGZYalUtT0RFZXpyNm9RbVQ5N2FaMVRMbEdtWmVSVVhfZVhRS01XRms3ZDFfdUdUMTV6Tk1HM2twLXpxV2pHRkdDLUVwcU9aVGNSdEVQd2NsZF80T2tDUmUzUmEzbDlNVkdNQkNObHMzTmoyM3VJcEJseHdYdnZENUhjanJqMFhxSkRlaXM4MTMyckVwWTlKc0JLRW1PdFQ3ZTI0RHhnNmZnUkQwY2xxTG9HQ0NjNEczTE9VTU9YckJpQ0l1d0Y3b1NmRnprM0w3T1JXNGRVc2RkYlBETjh5RTZnZFVXeTFDN1RaeF85Z3hVREJ1cUhycG8zNWN6TTZuVTM1c2xzdk5yUnQ1NVg5VDdhMWVWctIBxgJBVV95cUxOb0pUbmMzejZVMDI0NWJvaWM0Y3EwZkNoZlF0YmFRNHM4eFZMX09rSG1Rd0tMeWNBLVJGMWJCT1M3V210UnJLUEtMWl9EUlZKY0RsQW96MkVZb3EyX2ozaDIyUXFvTm12OWFfeC13QVhoY3pGaHpZQmVCTy1ZUEk0emlXRXJ1V3FwY092NlNnaDBiTzNyaUtvYmJYaGtxZzdXRG0yZ05vbEhKZnM4R2xqNVdtLWxjcDhaN0J2NDRXWWs4ZlhnVzF1Nk9Zd1hEcU5idzIxWEZZV0JyUEtJZDVZQ0lJUHAxWVdSbldiTG43S0VPTm43V1poN0J5MllTTlhRbXhTX2JHelc4UmNWWU1LS3pmS3gzQ21wR3hyQWt6R2ZmNzdIRmROQlUxSXMxZTNlNFdSUkd0LUgtTXFzMHdtYkgtb216UQ",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_the_economic_times"
+        },
+        {
+          "headline": "Mumbai BMC Election Results 2026: BJP reshapes Maharashtra civic map, wrests Mumbai from Sena and Pune fr... - The Economic Times",
+          "summary": "Mumbai BMC Election Results 2026: BJP reshapes Maharashtra civic map, wrests Mumbai from Sena and Pune fr... The Economic Times",
+          "link": "https://news.google.com/rss/articles/CBMi6wNBVV95cUxQd1BOT2R3TmY1bkFVOVhTQUlHb2ltNVpVMjMxZmFiVWpLNndMUXpOOXpWZDU1dndDSDNpa0ZBZUE2SXA5aE8xS2xsMml0dmFVZXJjel9vMndpd3pRSUJKZ0VQSmJBWG5sQzN5TkpWc1JpS1ZGR0pjdmZnZWlYajJ6RzZNRHk4alI1dXVaZVpLSGNfNFFmNHhmeC1aYUF1NVduNTdpbmswRjVKS3NUWlVOM3I1MkFzeW1EVmt1ZWdmcGNDakQzdkV4YlhpNWV4ZzBJMkg2QlhZUFR1SlpwVDBqZklTdGZsN3hvZUNRcDNzVG1Vd2g1YlhMQkZtTV9mSGtsNTV1eElBZS1jVlZyVlczNkM1dE9HX3lGVjdwSTBEc1pWVERPMzBKN1NGX2hfUS14MS13M29HSnFoR3hlN1A1Z0o2ZzJFWVZ2R2lXakxLZGlRZm1mX2xleUFYbGFVM3VPeXVKakdjSFYtNmllSW5XZWoyN1lMQTZjYVVsSnc2SzZhelg2VnI5MnROR2F6OFl2SE5pY1FuQ3h4UXZkSElNYjdxazktTjY1eHBDN2xsUDNQc0dmRVpNb1NnQ1lYZnJ0LUVRWVFaTWpQSE0yNXA1NnpUWFZwMHhuaUJTX004TEx0UWRfaE0tMUdJd9IB8ANBVV95cUxQaXctbURlYkc1MnVwbGRJNGQ3NTZuSHhRV3VoajBHR0xMbTlqNzRESXFVWHZIaHhJaXY4T25aamxxc1dWRmEzRTFLb3FGTE1vOURUcEZoQVR1bXZqYy1HeDc2QjJIM1lDRkJXSEJBTTlrM0xnWUhHem9PM1RpWWtDN2ZfZWc2ZG1wWTJTMzEtSlVicjJoeUNUOEdiTFk4anFFaVI3YUNJR1RxUTROZjFSMldyTlpLYTB3cFZ4TmxRRG1wUmhic2NUNkdxQnlBeTlGVGRKSHh1bEJOQVhfa2dKMS13M1dmSkFWaUZoeG92TlJkMGFfcGZzbGhtaVdYSi03cXBaWDBfV0dzWk1fTlh2VlVubkhnWmFaY21aRFUzWWdQcFlaQlgtYXBndFBDby1scW8yRU9FLWhlU3lZUnZIZjlMV0Fpa2hFb0hIRVdNNmx4bkhBQTlEbWRybjVIWnc5QTZfbXN6MXFZUHV5YWZwVlpla0wwby1mU1JxWTBJN3ZBYUNFdkhFWGdHSEJKa3RoZVNHcnYtUl9Qb0dZSUhkQ3pudThpN2tYSTBZUFBHdV9OUGFpRFZ4Wm5tWWZZU2ZYNzBGQ2xXM0ZHX2ZGczVMSnJEUWduZmV4bE45NW9HVUR6dVdVbEZYVWdMUnU3SGI5",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_the_economic_times"
+        },
+        {
+          "headline": "BMC Election Results 2026: BJP Celebrates As Mahayuti Heads For A Big Win, Thackeray Brothers Trail - NewsX",
+          "summary": "BMC Election Results 2026: BJP Celebrates As Mahayuti Heads For A Big Win, Thackeray Brothers Trail NewsX",
+          "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNQkx1U29UV3N0SjdwUUtBdk9GYUhiTnBHNDJEVDVlN2dJdmw1M0FyMV9CRDVTUXFOT3l0Mk4yZEpMaDhZR3ZaUlR3bU4wWnZ4NURNZXdYRmhUbzVMMFlGd0x2RmJrOWxLdWRMUEdTVXBsT0x0YTRHOGNWNG1PMFRJR2hWVHVLbmxMTmxyaTdCczJqa0hYbC13OW1Mb0dwSUpCOEw5QV9sZnZ5M3R0a0YxNU0xWEJSNFIyamZ4ejJqT2VfNzlsaVI0Y19BVjB1Wm9FT1FqLW1ZMGl5Zm_SAeABQVVfeXFMTjhKckVQamVPUzQ3Z2F3QS1FTmI0dmFJdmpsNDBJdmlVLUg1ejVEc0RyNDFsLTdCY0oyU1pIMy10Qk42S2plTllwWC1aTExzbi1uSG5jY29DbzktcUZrZVFQTXFyQlBFV2FHX3g1QmRiakg1Q1hYYVRPZUdOWG5xek5LZ0FOSHpaUlBYbG9mMUp4STRZYklsTk9ubDFEODUtT1BJZVN1aGUxX00zbk92UFNlVDBTS1RieTdORkFhdFlqejEzWmhSQW9TdFhkUmhrb1JxbTZhT05UbjdRWkVucWY",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_newsx"
+        }
+      ],
+      "bucket": "policy"
+    },
+    {
+      "story_id": "ad903db27e972544",
+      "cluster_id": 5,
+      "topic_category": "politics",
+      "size": 7,
+      "cohesion": 0.7334305261743786,
+      "source_diversity": 1,
+      "age_days": 3.761560072546296,
+      "entity_density": 0.7142857142857143,
+      "entities": [
+        {
+          "entity": "china",
+          "count": 4
+        },
+        {
+          "entity": "japan",
+          "count": 2
+        },
+        {
+          "entity": "chinese",
+          "count": 2
+        },
+        {
+          "entity": "would",
+          "count": 1
+        },
+        {
+          "entity": "blacklist",
+          "count": 1
+        }
+      ],
+      "neutral_core_summary": {
+        "headline": "China\u2019s \u2018social credit system\u2019 explained - South China Morning Post",
+        "summary": "China\u2019s \u2018social credit system\u2019 explained South China Morning Post"
+      },
+      "stakeholder_map": {
+        "people": [],
+        "orgs": [],
+        "other": [
+          "china",
+          "japan",
+          "chinese",
+          "would",
+          "blacklist"
+        ]
+      },
+      "key_facts": [
+        "China\u2019s \u2018social credit system\u2019 explained - South China Morning Post",
+        "What is China\u2019s social credit system and why is it controversial? - South China Morning Post",
+        "China\u2019s social credit system \u2018could be used against companies\u2019 - South China Morning Post",
+        "The latest trends in running shoes - South China Morning Post",
+        "The hidden seafood capital of Japan - South China Morning Post",
+        "Would you live in this space-age spherical tiny home? - South China Morning Post",
+        "Blacklist labels millions of Chinese citizens and businesses untrustworthy - South China Morning Post"
+      ],
+      "confidence_score": 0.6560980768990281,
+      "angles": [
+        {
+          "angle_type": "core_headline",
+          "text": "China\u2019s \u2018social credit system\u2019 explained - South China Morning Post"
+        },
+        {
+          "angle_type": "why_it_matters",
+          "text": "china: why this matters now. Anchor fact: China\u2019s \u2018social credit system\u2019 explained - South China Morning Post"
+        },
+        {
+          "angle_type": "stakeholder_impact",
+          "text": "Who is impacted (users, companies, regulators)? Entities: china, japan, chinese, would, blacklist"
+        },
+        {
+          "angle_type": "second_order_effect",
+          "text": "If china continues, what changes next? Use at least one fact: China\u2019s \u2018social credit system\u2019 explained - South China Morning Post"
+        }
+      ],
+      "supporting_articles": [
+        {
+          "headline": "China\u2019s \u2018social credit system\u2019 explained - South China Morning Post",
+          "summary": "China\u2019s \u2018social credit system\u2019 explained South China Morning Post",
+          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOOTZaczV0WXhtSmRzT1Y3SmlCdkk5aVotcXNPYjUxTWR0NlEzTU5BVmpISkxBMzVET0xoWFZQVXpiVVh6cHZVMERjNHhOdVBld2pCSUM0LVFvUkRQRVo1b1A5aGdWRE84WWxuSElfNHI1RVFmLW1GM1RsS1Q1eUMxMVJZWVQ",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_south_china_morning_post"
+        },
+        {
+          "headline": "What is China\u2019s social credit system and why is it controversial? - South China Morning Post",
+          "summary": "What is China\u2019s social credit system and why is it controversial? South China Morning Post",
+          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPWDNpbThOMzBFcF85WU1QTnIwel9KYkJiZmQ0TzVZdXJrZlNGek1xbGZhVWl4Ynh0RktYR1d2aTBpbXZDcm1qVTNGREkweHN2MVRXUFVGa3RseTluQ0FlUkRNNXlfWjhFM0ZuV3l2T0VNc2ZKX3VibGs0MjZCUGRFOVMzaDE4azNGTnd0MkIzSjF6YmZhOWRVa1o2YkxvTmVBOHJLWElxeUxRVGswbDhPbTY3R3RaYVXSAbcBQVVfeXFMT0c4ckZpTVlvSE1hYzY0Wl9TS0U4MU9SaGhhSmdBMk4ya1FWaGIzQXJXb0VLVlpLZDdiMy15aU5NTzNFOW9GRU5Fc0xCSElxN3BkWUhHbW5Vc1JLVndvcThKc3AzU0VGZks0TFowNHlZX3pmS3BQU2NTSzREMDZULXdDWFVyXzNFTm16MU91cjhBZnFJUkk5dnAyOFF5bWYzdnRQLWtXTzNhMkhpM0xGYVZTdTlnVnlF",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_south_china_morning_post"
+        },
+        {
+          "headline": "China\u2019s social credit system \u2018could be used against companies\u2019 - South China Morning Post",
+          "summary": "China\u2019s social credit system \u2018could be used against companies\u2019 South China Morning Post",
+          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQUHN0eWt5TnhId3RhVGp1NGJzcVdHRngzbUdNYkNrY0l5Ry1UbngydTNIYUJ1VEY1N18ybE41ck1qRVhzN25rWWNZdFlzMHp4YWliTUZlbHcxWV9BUnAyRFN6OHloTTlpVms4dXJldnpoVGhtRmlweWs4N0xpa2JQUTByX1czVUwzb2hKbXVFc3JFZHI0Y0JDQ2Z4YnRNY2pXYjJkVUpUMVc3b282TXZnMUZQSEo1WGPSAbcBQVVfeXFMTUgtX3MyZVVoTTRELXRTV0RrQXluVG1ENVNMdVlQUGxzbHU5YlFmN210YXlWcEF6QVBYZXdJR1ZWbkxZaWttc2tKcTRFcWxsTFZNWHhKSE84dTk5QmY5ZW9KZTNwbGVkZmhRX1QwS01oYTNXUnJJM1VsT0pXX1ROT2ZoM0ZST3ptVkUtaWlRMjE4R0NsNjRjUWRRRjFxVFpjLTV2LWc3RDlIMkNlRzJ5VlZIREZ0S0l3",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_south_china_morning_post"
+        },
+        {
+          "headline": "The latest trends in running shoes - South China Morning Post",
+          "summary": "The latest trends in running shoes South China Morning Post",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQYjlSMzk3azNOaGpCR3UzaGVBem9kaUdTX2NjMG9qTXNucEJ1cEVNNUVmUV9zUG5Fa0tVYU1wV1g0VGtfYTZMaGQ4NGprQ1gtcVRRS3hNSnp1UWJ4RDZpSU5NZTVVZzQ2RzJXXzVfNVpTcGNGS0duVDUzeDVSS21LeG53c1RERmdC0gGIAUFVX3lxTFA0bGRaQm90Y2tQRURQM1dsVFh5aXp3UGtCY1NoakRoV281NWpnMGRrVDczeHpkbHcyUW44OVVxY1BWQk16UENtbFdMTDByUkhzM0JuVUdEbi02Sl9qX3RLWTlRendob20yVndJalFTQzl1bnlJOWZQZnpjZjJ0bnZhUnVVZGZFdmw",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_south_china_morning_post"
+        },
+        {
+          "headline": "The hidden seafood capital of Japan - South China Morning Post",
+          "summary": "The hidden seafood capital of Japan South China Morning Post",
+          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPUDlWM1lKblkxeGhrTDBHVTNLcDFkTVRpLVJSUl9fMFc3djJXZ3pWaTBTV0VZNlhSRVVRUDgxSDljTmhNR2hQLUFuYnJUcm4wSkVRZXBHaEpWekZrWVN1WWxDWGRYZlI5TENKSTNoVGZmcFhuTHVEMjVwOVFxYXBpQTZITmpVYnNJS3J2Zm4zWTRnWXd5RnNkTVNhY3ZPWXI3QlhSY0JxV2JTUVFCYWEw",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_south_china_morning_post"
+        },
+        {
+          "headline": "Would you live in this space-age spherical tiny home? - South China Morning Post",
+          "summary": "Would you live in this space-age spherical tiny home? South China Morning Post",
+          "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQbThXbnJaRWpJMTJrOWpReENidnY4alF3YS1pV2hVVkZidk11ZDcwdEpXc1d3MDNwTDU1WlYyM29NbkE0dExwLUdYWDNCWnJHQThGVWxqa2VURUR4bjhBNUg0QUZXSGhJdW5zVy02Wm1Bdl9qWEloVFVLZm1kQ0F5MGNnZXVzMlcwZUh3RnF2S3ZObW8zNlhEcnFqLWZMRmhRdlVBSWNtdVVCb1YyR2R3ZERxQXB3cVFJRkYw0gG7AUFVX3lxTFBySmxvd1VHLXd3NzdqOXhDT2NmQjdOZ0NqSkNYQzNDemV6a1BuNlRZNXNNbE5pcXduVFhDSDZzWHo4QVlRY05qLUUxUVBUb1VLRGZvTklNcGpaazFGbDVobGFjNzI0ZjZhcXRmT1Y3dzdjZ1p0eUhUYm5ZRTZueW05VkhKeHdLdjBzeUJHbUZWWlV3M1dIVTF6Y19EMlNPc1d2bm8wT2pVTFNRWWdvaDlCWFZpdTkzbTdNS3M",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_south_china_morning_post"
+        },
+        {
+          "headline": "Blacklist labels millions of Chinese citizens and businesses untrustworthy - South China Morning Post",
+          "summary": "Blacklist labels millions of Chinese citizens and businesses untrustworthy South China Morning Post",
+          "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPeWVxUUNZM0duSEdHdUI5emNYb2ZVUTh0ZjdjOV9jSm02Z1VHbjlUOVh4TWRfeWtlX3BKVS1ONkdqYUlDT3FZOVFzV3BNNFRCMnhWSWZBSlBFbjZUaWlSdXFqeTZQODg5a2w5aHdXcUU2NEkxeHE3cjFnY0ZtRTBBNEZUNWsxRmdWWVc5N1d2eG1DUFVFTFpXNXctRVhISEs5OWZCX3ZnYndpMktsMmk0bVZaU0RVT1kzZTNZ0gG7AUFVX3lxTE1idlcwQ080NS1BTkNJWldFWFRISTEzNnppXzVrTVVhc1ZWSmxpX1M1WUQyMFVHX2FReW53SWxFOXNiTWFURWExdjcybUU4M0JNU3dibm1NTHk1ZWNMRE1DbkMwRzFDYmliem9FRm5SWHFqR0Y5ZGprREF2RmJPa1ZFSUcyVnVZSU5VdFRyYklRSXJmQ2hpd2NqaUVIZklrSW9naU9RV2cwTUxKSm83cUhzb2VnRXYyVlJhOW8",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_south_china_morning_post"
+        }
+      ],
+      "bucket": "policy"
+    },
+    {
+      "story_id": "28c464c4e5479b2e",
+      "cluster_id": 6,
+      "topic_category": "tech",
+      "size": 3,
+      "cohesion": 0.6729853470383312,
+      "source_diversity": 3,
+      "age_days": 3.761560072546296,
+      "entity_density": 3.3333333333333335,
+      "entities": [
+        {
+          "entity": "android",
+          "count": 2
+        },
+        {
+          "entity": "pocket",
+          "count": 2
+        },
+        {
+          "entity": "android retro handheld",
+          "count": 2
+        },
+        {
+          "entity": "retro dodo",
+          "count": 2
+        },
+        {
+          "entity": "depth android handheld",
+          "count": 2
+        },
+        {
+          "entity": "retroid",
+          "count": 1
+        },
+        {
+          "entity": "pocket tactics  retroid",
+          "count": 1
+        },
+        {
+          "entity": "pocket tactics",
+          "count": 1
+        },
+        {
+          "entity": "retro handhelds  an",
+          "count": 1
+        },
+        {
+          "entity": "retro handhelds",
+          "count": 1
+        }
+      ],
+      "neutral_core_summary": {
+        "headline": "GoRetroid Finally Reveals New Pocket 6 Android Retro Handheld - Retro Dodo",
+        "summary": "GoRetroid Finally Reveals New Pocket 6 Android Retro Handheld Retro Dodo"
+      },
+      "stakeholder_map": {
+        "people": [
+          "android retro handheld",
+          "retro dodo",
+          "depth android handheld",
+          "pocket tactics  retroid",
+          "pocket tactics",
+          "retro handhelds  an",
+          "retro handhelds"
+        ],
+        "orgs": [],
+        "other": [
+          "android",
+          "pocket",
+          "retroid"
+        ]
+      },
+      "key_facts": [
+        "GoRetroid Finally Reveals New Pocket 6 Android Retro Handheld - Retro Dodo",
+        "An In-Depth Android Handheld Setup Guide - Retro Handhelds",
+        "Retroid isn't letting dreaded tariffs ruin its Android handheld success - Pocket Tactics"
+      ],
+      "confidence_score": 0.7061423193032818,
+      "angles": [
+        {
+          "angle_type": "core_headline",
+          "text": "GoRetroid Finally Reveals New Pocket 6 Android Retro Handheld - Retro Dodo"
+        },
+        {
+          "angle_type": "why_it_matters",
+          "text": "android: why this matters now. Anchor fact: GoRetroid Finally Reveals New Pocket 6 Android Retro Handheld - Retro Dodo"
+        },
+        {
+          "angle_type": "stakeholder_impact",
+          "text": "Who is impacted (users, companies, regulators)? Entities: android, pocket, android retro handheld, retro dodo, depth android handheld, retroid"
+        },
+        {
+          "angle_type": "second_order_effect",
+          "text": "If android continues, what changes next? Use at least one fact: GoRetroid Finally Reveals New Pocket 6 Android Retro Handheld - Retro Dodo"
+        }
+      ],
+      "supporting_articles": [
+        {
+          "headline": "GoRetroid Finally Reveals New Pocket 6 Android Retro Handheld - Retro Dodo",
+          "summary": "GoRetroid Finally Reveals New Pocket 6 Android Retro Handheld Retro Dodo",
+          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPTTlpcTRoVUxXdGdQa2ZvNFdaMWxSVVBwZERzTmFvcDNJY0ZFQjZHOS1QWEhyYzM1MjZPTFRoTVpURG5tN0h5Z2c1dGRPRXJwdEdUM0hTM0ZMMVVWTlZDTUExcmNxY1oxLTQwRW5MU3FzX1BucVdEX3VaaVVHYXhKOU5Xb2pwUzN3cFcxZA",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_retro_dodo"
+        },
+        {
+          "headline": "An In-Depth Android Handheld Setup Guide - Retro Handhelds",
+          "summary": "An In-Depth Android Handheld Setup Guide Retro Handhelds",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5wUWZDd09wYlJheVpTYmJiWUNjS2ctM3NkTEkzNzhfaG9keTA0a0R3S2pMQjQydFh0NHpLR0J1YnVOXzZQbEhKaGRrRXVxa1padTVISndnTjVuUWV4UXRMMWRLZUJwQQ",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_retro_handhelds"
+        },
+        {
+          "headline": "Retroid isn't letting dreaded tariffs ruin its Android handheld success - Pocket Tactics",
+          "summary": "Retroid isn't letting dreaded tariffs ruin its Android handheld success Pocket Tactics",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE4tR0tDYWx2dnpwTE4tT3J2d21keF9yVXV3cl9ZcXZ6N0pzVXpvWG9pNzlDYUJRUnhGbkxvM1RPX1E0LXlneVZWM1NTN20zSUJ4Y241UnhOR2tDS18tZ0hFY3VTLS16QXl2bm1FazRmSQ",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_pocket_tactics"
+        }
+      ],
+      "bucket": "tech_industry"
+    },
+    {
+      "story_id": "ad0720a6dc6ff646",
+      "cluster_id": 7,
+      "topic_category": "tech",
+      "size": 3,
+      "cohesion": 0.7551147486403536,
+      "source_diversity": 1,
+      "age_days": 3.761560072546296,
+      "entity_density": 2.0,
+      "entities": [
+        {
+          "entity": "android central",
+          "count": 4
+        },
+        {
+          "entity": "turn",
+          "count": 2
+        },
+        {
+          "entity": "android",
+          "count": 2
+        },
+        {
+          "entity": "android central  have",
+          "count": 1
+        },
+        {
+          "entity": "four",
+          "count": 1
+        },
+        {
+          "entity": "android central  four",
+          "count": 1
+        }
+      ],
+      "neutral_core_summary": {
+        "headline": "Four reasons why retro gaming matters so much to me - Android Central",
+        "summary": "Four reasons why retro gaming matters so much to me Android Central"
+      },
+      "stakeholder_map": {
+        "people": [
+          "android central",
+          "android central  have",
+          "android central  four"
+        ],
+        "orgs": [],
+        "other": [
+          "turn",
+          "android",
+          "four"
+        ]
+      },
+      "key_facts": [
+        "Four reasons why retro gaming matters so much to me - Android Central",
+        "Have an old phone or tablet? Turn it into a mobile gaming station - Android Central",
+        "I never thought about using AI with Android gaming handhelds... until now - Android Central"
+      ],
+      "confidence_score": 0.6620612380771713,
+      "angles": [
+        {
+          "angle_type": "core_headline",
+          "text": "Four reasons why retro gaming matters so much to me - Android Central"
+        },
+        {
+          "angle_type": "why_it_matters",
+          "text": "android central: why this matters now. Anchor fact: Four reasons why retro gaming matters so much to me - Android Central"
+        },
+        {
+          "angle_type": "stakeholder_impact",
+          "text": "Who is impacted (users, companies, regulators)? Entities: android central, turn, android, android central  have, four, android central  four"
+        },
+        {
+          "angle_type": "second_order_effect",
+          "text": "If android central continues, what changes next? Use at least one fact: Four reasons why retro gaming matters so much to me - Android Central"
+        }
+      ],
+      "supporting_articles": [
+        {
+          "headline": "Four reasons why retro gaming matters so much to me - Android Central",
+          "summary": "Four reasons why retro gaming matters so much to me Android Central",
+          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOblYzYTFEYjYxeHNXZ3dWRVc0MncxTUp5clpBeVJuVVVONFB4NUJjS1hNVFVISDQwTlpzOUxQMkVobHB5SXRUdEV1WEI5UDJGYWlmTEs1RGpzRmtBa0tGZ0NHMm9nNkNGelVSRW5fWjItTHpsMVp1M3Rpak1ralpGSzRSVF80bHpCSTZ0eDZvUW5taEFiUW44LXNMLTRXcmczcm10Wg",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_android_central"
+        },
+        {
+          "headline": "Have an old phone or tablet? Turn it into a mobile gaming station - Android Central",
+          "summary": "Have an old phone or tablet? Turn it into a mobile gaming station Android Central",
+          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNdkd3QTFNNWg3aXU3TWdWZFd5NmpkcDJJOTk4XzNENWxuTWpPMFI2a1U0TEF2d2dqZGUtdzdLY2ZDMVltcHZVTENoNktva1JpRW1sZzZtZ0d3dUkySWdMb2M4QUdTSlBaWjZ3bXFfNHU2LW9sWjlTanN5TnZTUjBEdGpzd2RCZExfMHZfRG1sbEFMbW4xcVNlM2NjMU9pbVZNUV8yV0ljWUJyTUtmazJXbFdJVGlwTHMycTVZZ3R4UHNtdw",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_android_central"
+        },
+        {
+          "headline": "I never thought about using AI with Android gaming handhelds... until now - Android Central",
+          "summary": "I never thought about using AI with Android gaming handhelds... until now Android Central",
+          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNVm1EcDdqYV96SGtBUHo2VHdNaVh2NS1GU1FYZ1NLcVFkMkR1Ykt2d1RsTnpSam0xNmNIbjZQZ1ZXVnotdFhmTUh6OGJmUXdIWVp3dlRjY0NLVS11UE9GMmhzRnVmYW53Q0hVQ01nUGVyaGViM3pYS2JTalJmWExxa29yOA",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_android_central"
+        }
+      ],
+      "bucket": "ai"
+    },
+    {
+      "story_id": "fb0f9556a964f126",
+      "cluster_id": 8,
+      "topic_category": "tech",
+      "size": 3,
+      "cohesion": 0.7538951373958865,
+      "source_diversity": 1,
+      "age_days": 3.761560072546296,
+      "entity_density": 2.3333333333333335,
+      "entities": [
+        {
+          "entity": "startups",
+          "count": 4
+        },
+        {
+          "entity": "discover",
+          "count": 2
+        },
+        {
+          "entity": "circular economy",
+          "count": 2
+        },
+        {
+          "entity": "growing",
+          "count": 2
+        },
+        {
+          "entity": "hardware companies",
+          "count": 2
+        },
+        {
+          "entity": "growing american",
+          "count": 2
+        },
+        {
+          "entity": "companies",
+          "count": 2
+        }
+      ],
+      "neutral_core_summary": {
+        "headline": "Discover the 30 Growing AI Hardware Companies & Startups to Watch in 2026 - StartUs Insights",
+        "summary": "Discover the 30 Growing AI Hardware Companies & Startups to Watch in 2026 StartUs Insights"
+      },
+      "stakeholder_map": {
+        "people": [
+          "circular economy",
+          "hardware companies",
+          "growing american"
+        ],
+        "orgs": [],
+        "other": [
+          "startups",
+          "discover",
+          "growing",
+          "companies"
+        ]
+      },
+      "key_facts": [
+        "Discover the 30 Growing AI Hardware Companies & Startups to Watch in 2026 - StartUs Insights",
+        "30 Growing American AI Companies and Startups to Watch in 2026 - StartUs Insights",
+        "Discover 5 Top Remanufacturing Startups enabling the Circular Economy - StartUs Insights"
+      ],
+      "confidence_score": 0.6617258449849429,
+      "angles": [
+        {
+          "angle_type": "core_headline",
+          "text": "Discover the 30 Growing AI Hardware Companies & Startups to Watch in 2026 - StartUs Insights"
+        },
+        {
+          "angle_type": "why_it_matters",
+          "text": "startups: why this matters now. Anchor fact: Discover the 30 Growing AI Hardware Companies & Startups to Watch in 2026 - StartUs Insights"
+        },
+        {
+          "angle_type": "stakeholder_impact",
+          "text": "Who is impacted (users, companies, regulators)? Entities: startups, discover, circular economy, growing, hardware companies, growing american"
+        },
+        {
+          "angle_type": "second_order_effect",
+          "text": "If startups continues, what changes next? Use at least one fact: Discover the 30 Growing AI Hardware Companies & Startups to Watch in 2026 - StartUs Insights"
+        }
+      ],
+      "supporting_articles": [
+        {
+          "headline": "Discover the 30 Growing AI Hardware Companies & Startups to Watch in 2026 - StartUs Insights",
+          "summary": "Discover the 30 Growing AI Hardware Companies & Startups to Watch in 2026 StartUs Insights",
+          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE45U2d6R2xPRW5LUEJkTDJWVUhCZi13Y0tSdmpnUXF2WnhtNVBxTDExOHNHNkRaVTY1UHNCLTlTd09CbnhVVFk4aXBkYXpEajVTNHcxT1ptbWd0TEg4dHFlMnlhc011MVFuanVTNWpmeEhwc0FyMzJXSDBtS0s",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_startus_insights"
+        },
+        {
+          "headline": "30 Growing American AI Companies and Startups to Watch in 2026 - StartUs Insights",
+          "summary": "30 Growing American AI Companies and Startups to Watch in 2026 StartUs Insights",
+          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE83UnVndjRiLTJobUdlTGZjXzNjS1BYOTJXYk1FMXphTHNHSG5LQUJiQ184ZGR6M0d0Y3NxWlN3eHo1Yk9TbFFvWVhlM19EOEdKdU9QTG1HNk1EbndTUVVDZVdDbkRDTDJaS21aOEt6dmp0NWxRQmdDSl9vZkc",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_startus_insights"
+        },
+        {
+          "headline": "Discover 5 Top Remanufacturing Startups enabling the Circular Economy - StartUs Insights",
+          "summary": "Discover 5 Top Remanufacturing Startups enabling the Circular Economy StartUs Insights",
+          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPb0VzSVdfc1hCTWVaZGJHNHdsMDBIcWhMTHJVbmJhcXp3eUdGZ3RjV0pYSUNVdTJGSV9yTnN3aWlqRGVocGU4X3hPM21BVmVpWG9xZDFJaXRmdGNYcW9VajBPNzBGaGRpTDRULWUtU0V5Zjg3eWp2c3FDTTBwQmJVUEQ2UFZKS0N2dURSM2ZweVZVc21zWlV1ZDBDTTR2X1lmTHYxbGRBamR0TF93MklhWVBNT2dJN0JsbTVSeg",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_startus_insights"
+        }
+      ],
+      "bucket": "ai"
+    },
+    {
+      "story_id": "48c0f5c603f3440c",
+      "cluster_id": 9,
+      "topic_category": "business",
+      "size": 3,
+      "cohesion": 0.8633084869081672,
+      "source_diversity": 1,
+      "age_days": 3.761560072546296,
+      "entity_density": 0.6666666666666666,
+      "entities": [
+        {
+          "entity": "grand view research",
+          "count": 6
+        },
+        {
+          "entity": "middle east tower",
+          "count": 2
+        }
+      ],
+      "neutral_core_summary": {
+        "headline": "School Furniture Market Size & Share | Industry Report, 2033 - Grand View Research",
+        "summary": "School Furniture Market Size & Share | Industry Report, 2033 Grand View Research"
+      },
+      "stakeholder_map": {
+        "people": [
+          "grand view research",
+          "middle east tower"
+        ],
+        "orgs": [],
+        "other": []
+      },
+      "key_facts": [
+        "School Furniture Market Size & Share | Industry Report, 2033 - Grand View Research",
+        "3D Concrete Printing Market Size | Industry Report, 2033 - Grand View Research",
+        "Middle East Tower Cranes Market Size | Industry Report 2033 - Grand View Research"
+      ],
+      "confidence_score": 0.69181451610082,
+      "angles": [
+        {
+          "angle_type": "core_headline",
+          "text": "School Furniture Market Size & Share | Industry Report, 2033 - Grand View Research"
+        },
+        {
+          "angle_type": "why_it_matters",
+          "text": "grand view research: why this matters now. Anchor fact: School Furniture Market Size & Share | Industry Report, 2033 - Grand View Research"
+        },
+        {
+          "angle_type": "stakeholder_impact",
+          "text": "Who is impacted (users, companies, regulators)? Entities: grand view research, middle east tower"
+        },
+        {
+          "angle_type": "second_order_effect",
+          "text": "If grand view research continues, what changes next? Use at least one fact: School Furniture Market Size & Share | Industry Report, 2033 - Grand View Research"
+        }
+      ],
+      "supporting_articles": [
+        {
+          "headline": "School Furniture Market Size & Share | Industry Report, 2033 - Grand View Research",
+          "summary": "School Furniture Market Size & Share | Industry Report, 2033 Grand View Research",
+          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNYmk0aFEweWcyNW5OT0kwY2UtZGh1RGJXZUpwSEMwc0xwMnhQNzhOX3R6Uk5fMnhDOE1mWDUtcXNpUm5IdzRIa1ZhRGM1VTZteG14c3pWanRCOXA4SG4wM1VQTThvSjQxeWltN3F4QW9GOVRjR3NEM3dHYXVJN3JpMg",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_grand_view_research"
+        },
+        {
+          "headline": "3D Concrete Printing Market Size | Industry Report, 2033 - Grand View Research",
+          "summary": "3D Concrete Printing Market Size | Industry Report, 2033 Grand View Research",
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOUl95XzdHd24yQ2lLbDhpZk1fSUJiaHQ3UHlaYlgwckxNSVZadnV1d0dIV2V5V2hXdzE5VjUzTmVzNFRxbXhqak0xWTAxWmxSMFdJeXhVTTZ0SlB1UzI1aVg4TTNXbV9fSFlyc01XSWVRU3cyMW9iU2xra0JaYUtCMWJwVGxWT0owY19yeWl6WQ",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_grand_view_research"
+        },
+        {
+          "headline": "Middle East Tower Cranes Market Size | Industry Report 2033 - Grand View Research",
+          "summary": "Middle East Tower Cranes Market Size | Industry Report 2033 Grand View Research",
+          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOZk5nUm8wWDBrUjNtSnl6ZFFYSndBRWZ4S0ZWM1BLSUNUXzF1bEFVUzdlMkZSaUUxOV9hM2RteG1fUWtHMHhCVDRSRElLVUhSbDFUV3pldEJETlZyeGU4MFlVMWpxWGlxSUtHdXRVV3FEMEc2ekRQZmFUVHlaZDFBTG0zcjd1YUo2SHRFakFIVS0zMk5Z",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_grand_view_research"
+        }
+      ],
+      "bucket": "markets"
+    },
+    {
+      "story_id": "071f489fd5ca3ba8",
+      "cluster_id": 10,
+      "topic_category": "business",
+      "size": 4,
+      "cohesion": 0.865306109252214,
+      "source_diversity": 1,
+      "age_days": 3.761560072546296,
+      "entity_density": 0.75,
+      "entities": [
+        {
+          "entity": "grand view research",
+          "count": 8
+        },
+        {
+          "entity": "portable consumer electronics",
+          "count": 2
+        },
+        {
+          "entity": "intelligent transportation system",
+          "count": 2
+        }
+      ],
+      "neutral_core_summary": {
+        "headline": "Consumer Electronics Market Size | Industry Report, 2033 - Grand View Research",
+        "summary": "Consumer Electronics Market Size | Industry Report, 2033 Grand View Research"
+      },
+      "stakeholder_map": {
+        "people": [
+          "grand view research",
+          "portable consumer electronics",
+          "intelligent transportation system"
+        ],
+        "orgs": [],
+        "other": []
+      },
+      "key_facts": [
+        "Consumer Electronics Market Size | Industry Report, 2033 - Grand View Research",
+        "Food Trucks Market Size & Trends | Industry Report, 2030 - Grand View Research",
+        "U.S. Portable Consumer Electronics Market Size Report 2033 - Grand View Research",
+        "Intelligent Transportation System Market Size Report, 2033 - Grand View Research"
+      ],
+      "confidence_score": 0.6923638622454328,
+      "angles": [
+        {
+          "angle_type": "core_headline",
+          "text": "Consumer Electronics Market Size | Industry Report, 2033 - Grand View Research"
+        },
+        {
+          "angle_type": "why_it_matters",
+          "text": "grand view research: why this matters now. Anchor fact: Consumer Electronics Market Size | Industry Report, 2033 - Grand View Research"
+        },
+        {
+          "angle_type": "stakeholder_impact",
+          "text": "Who is impacted (users, companies, regulators)? Entities: grand view research, portable consumer electronics, intelligent transportation system"
+        },
+        {
+          "angle_type": "second_order_effect",
+          "text": "If grand view research continues, what changes next? Use at least one fact: Consumer Electronics Market Size | Industry Report, 2033 - Grand View Research"
+        }
+      ],
+      "supporting_articles": [
+        {
+          "headline": "Consumer Electronics Market Size | Industry Report, 2033 - Grand View Research",
+          "summary": "Consumer Electronics Market Size | Industry Report, 2033 Grand View Research",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPaWl0R1BuMnQ0WjExR3dHZ2FPeERtSE9Ld3BYMmRQenhvdmxqTTRjTHdhbG5lZEl6bzBvU2xMYVVtcHg2WDRjTWFTMERlWjBMeDJfeV90a1FTR29mLXU0bWwyQ2c2SnhENUpZcUZNejg1MDNrMHNXdjg1cWJMUGctWTR0a3RPSkJPck4wZmQybVpxUQ",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_grand_view_research"
+        },
+        {
+          "headline": "Food Trucks Market Size & Trends | Industry Report, 2030 - Grand View Research",
+          "summary": "Food Trucks Market Size & Trends | Industry Report, 2030 Grand View Research",
+          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQMGpMNkstd1daeTE3eHczTG5NckVWQldIOEkwdDBZejN6aTMzaWxkdGdKaDdNUEQ1MDV1Vy1nOS1BMEM5Wlc2bWt2SW9fQ2xyV0ttTVFHVkpreE4zVjFldlZOX09CcmRjODJCVi01TjZ3NlhFLWQwOGRaTzJjVWh4THVoOA",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_grand_view_research"
+        },
+        {
+          "headline": "U.S. Portable Consumer Electronics Market Size Report 2033 - Grand View Research",
+          "summary": "U.S. Portable Consumer Electronics Market Size Report 2033 Grand View Research",
+          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPX0pwVm55M1lWMGdBUGVSY0d5UzJrNVdrbENhaTVfeFV1U2N3U21TRlVYMTVieDJla21uMXR2VWFxdWVReE1SN25OYTJjdWo3bzd6WjVzTXdWa1NHWGg3anI3bTdxUXVsbGVUMlBXMUV1VE1NSDZxME1yQndtcE1XM09Vb0g2ck1KQndPNGdEMW0xNXo4cnh6cHBWZ19HUXc",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_grand_view_research"
+        },
+        {
+          "headline": "Intelligent Transportation System Market Size Report, 2033 - Grand View Research",
+          "summary": "Intelligent Transportation System Market Size Report, 2033 Grand View Research",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPSnVBQU93TVJMZ2NqSUhmRUl6SG1veTlhcEZaYmRkTjZJUHpOR3djX0duWmlTX0wyYWU3bTlHTDFIdndRVk04RUxiRk1nelk1RVBuRVF6RlRoSmpiOGlxQ0xnMnBib2Vzdmo4bk84VmIxbzA3NjdjVVMtVzF1MThVLTlpN01yZ2ZoaTZxaEt5WEs3aVdGS2ZPX1BCWQ",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_grand_view_research"
+        }
+      ],
+      "bucket": "markets"
+    }
+  ],
+  "selected": [
+    {
+      "story_id": "456d2e9490c1afb5",
+      "cluster_id": 1,
+      "topic_category": "other",
+      "size": 3,
+      "cohesion": 0.7063217303154296,
+      "source_diversity": 3,
+      "age_days": 3.761560072546296,
+      "entity_density": 0.6666666666666666,
+      "entities": [
+        {
+          "entity": "ssm",
+          "count": 2
+        },
+        {
+          "entity": "next",
+          "count": 2
+        }
+      ],
+      "neutral_core_summary": {
+        "headline": "SSM supervisory priorities for 2024-2026 - bankingsupervision.europa.eu",
+        "summary": "SSM supervisory priorities for 2024-2026 bankingsupervision.europa.eu"
+      },
+      "stakeholder_map": {
+        "people": [],
+        "orgs": [],
+        "other": [
+          "ssm",
+          "next"
+        ]
+      },
+      "key_facts": [
+        "SSM supervisory priorities for 2024-2026 - bankingsupervision.europa.eu",
+        "Next stop: a transport system accessible for all | Horizon Magazine - research-and-innovation.ec.europa.eu",
+        "Why the next generation of supercomputers will (need to) be built with open hardware and software: an introduction - Tech.eu"
+      ],
+      "confidence_score": 0.7153098247044838,
+      "angles": [
+        {
+          "angle_type": "core_headline",
+          "text": "SSM supervisory priorities for 2024-2026 - bankingsupervision.europa.eu"
+        },
+        {
+          "angle_type": "why_it_matters",
+          "text": "ssm: why this matters now. Anchor fact: SSM supervisory priorities for 2024-2026 - bankingsupervision.europa.eu"
+        },
+        {
+          "angle_type": "stakeholder_impact",
+          "text": "Who is impacted (users, companies, regulators)? Entities: ssm, next"
+        },
+        {
+          "angle_type": "second_order_effect",
+          "text": "If ssm continues, what changes next? Use at least one fact: SSM supervisory priorities for 2024-2026 - bankingsupervision.europa.eu"
+        }
+      ],
+      "supporting_articles": [
+        {
+          "headline": "SSM supervisory priorities for 2024-2026 - bankingsupervision.europa.eu",
+          "summary": "SSM supervisory priorities for 2024-2026 bankingsupervision.europa.eu",
+          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOQlFlS2lkaEhEaXZnN3YzYXk5SE9MdzN3cXVaNXdPS3J2ZDgwLTlOX2VIYnVJZy1pR2o4S3pxdHRkaTk0enR4N0FoM1lFN1hzeGd0LVZnMUhUWnBNbXRXcHZGT0JmTDdCeGpwOVY2T3hOZVFkMzhkd3JZWlMtN3JKZ3JWNGVhVTZKYmEtV3hnX1lYNEo0NVdfUnY2UENlT3JrZ0VULTdNaWVqNW16UTBYS2FLbmFIZUZ1Rnc",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "bankingsupervision.europa.eu"
+        },
+        {
+          "headline": "Next stop: a transport system accessible for all | Horizon Magazine - research-and-innovation.ec.europa.eu",
+          "summary": "Next stop: a transport system accessible for all | Horizon Magazine research-and-innovation.ec.europa.eu",
+          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOaWxiQmNFbW9kaFRIV0VERXdaV19SVndiOGZBUXc5THZVQkdZMDZ0QlRZMS1nNkVwcTZmejdKZGtRY0tTdEc0M2FfS2VZVGw4N2VsQzZSX3pSQ2xScWtTckhDc0o1dm1JZ0JoSS1oM2VaU1JRa3k2Znc5WVE2RkJoeS1fN0hxUVFkalp3aXcwS3hUUS1SNDJ6SDhaVWRlNHJPSTFVUG9UTmJEMWdidTFZZzloME4tUQ",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "research-and-innovation.ec.europa.eu"
+        },
+        {
+          "headline": "Why the next generation of supercomputers will (need to) be built with open hardware and software: an introduction - Tech.eu",
+          "summary": "Why the next generation of supercomputers will (need to) be built with open hardware and software: an introduction Tech.eu",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBzNkp2WFVsNkY2WUwtWkJyV2tyYVZZdllqaW8tN1E5Vnp3OG12VHVWVXZ6eV92ZXUxSVhFUnp4UXotTFRDYUFhdi1YeXMxbjFzRmxaLXZFcGJkRjk3OGtGNnJJTkdRZw",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "tech.eu"
+        }
+      ],
+      "bucket": "other"
+    },
+    {
+      "story_id": "28c464c4e5479b2e",
+      "cluster_id": 6,
+      "topic_category": "tech",
+      "size": 3,
+      "cohesion": 0.6729853470383312,
+      "source_diversity": 3,
+      "age_days": 3.761560072546296,
+      "entity_density": 3.3333333333333335,
+      "entities": [
+        {
+          "entity": "android",
+          "count": 2
+        },
+        {
+          "entity": "pocket",
+          "count": 2
+        },
+        {
+          "entity": "android retro handheld",
+          "count": 2
+        },
+        {
+          "entity": "retro dodo",
+          "count": 2
+        },
+        {
+          "entity": "depth android handheld",
+          "count": 2
+        },
+        {
+          "entity": "retroid",
+          "count": 1
+        },
+        {
+          "entity": "pocket tactics  retroid",
+          "count": 1
+        },
+        {
+          "entity": "pocket tactics",
+          "count": 1
+        },
+        {
+          "entity": "retro handhelds  an",
+          "count": 1
+        },
+        {
+          "entity": "retro handhelds",
+          "count": 1
+        }
+      ],
+      "neutral_core_summary": {
+        "headline": "GoRetroid Finally Reveals New Pocket 6 Android Retro Handheld - Retro Dodo",
+        "summary": "GoRetroid Finally Reveals New Pocket 6 Android Retro Handheld Retro Dodo"
+      },
+      "stakeholder_map": {
+        "people": [
+          "android retro handheld",
+          "retro dodo",
+          "depth android handheld",
+          "pocket tactics  retroid",
+          "pocket tactics",
+          "retro handhelds  an",
+          "retro handhelds"
+        ],
+        "orgs": [],
+        "other": [
+          "android",
+          "pocket",
+          "retroid"
+        ]
+      },
+      "key_facts": [
+        "GoRetroid Finally Reveals New Pocket 6 Android Retro Handheld - Retro Dodo",
+        "An In-Depth Android Handheld Setup Guide - Retro Handhelds",
+        "Retroid isn't letting dreaded tariffs ruin its Android handheld success - Pocket Tactics"
+      ],
+      "confidence_score": 0.7061423193032818,
+      "angles": [
+        {
+          "angle_type": "core_headline",
+          "text": "GoRetroid Finally Reveals New Pocket 6 Android Retro Handheld - Retro Dodo"
+        },
+        {
+          "angle_type": "why_it_matters",
+          "text": "android: why this matters now. Anchor fact: GoRetroid Finally Reveals New Pocket 6 Android Retro Handheld - Retro Dodo"
+        },
+        {
+          "angle_type": "stakeholder_impact",
+          "text": "Who is impacted (users, companies, regulators)? Entities: android, pocket, android retro handheld, retro dodo, depth android handheld, retroid"
+        },
+        {
+          "angle_type": "second_order_effect",
+          "text": "If android continues, what changes next? Use at least one fact: GoRetroid Finally Reveals New Pocket 6 Android Retro Handheld - Retro Dodo"
+        }
+      ],
+      "supporting_articles": [
+        {
+          "headline": "GoRetroid Finally Reveals New Pocket 6 Android Retro Handheld - Retro Dodo",
+          "summary": "GoRetroid Finally Reveals New Pocket 6 Android Retro Handheld Retro Dodo",
+          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPTTlpcTRoVUxXdGdQa2ZvNFdaMWxSVVBwZERzTmFvcDNJY0ZFQjZHOS1QWEhyYzM1MjZPTFRoTVpURG5tN0h5Z2c1dGRPRXJwdEdUM0hTM0ZMMVVWTlZDTUExcmNxY1oxLTQwRW5MU3FzX1BucVdEX3VaaVVHYXhKOU5Xb2pwUzN3cFcxZA",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_retro_dodo"
+        },
+        {
+          "headline": "An In-Depth Android Handheld Setup Guide - Retro Handhelds",
+          "summary": "An In-Depth Android Handheld Setup Guide Retro Handhelds",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5wUWZDd09wYlJheVpTYmJiWUNjS2ctM3NkTEkzNzhfaG9keTA0a0R3S2pMQjQydFh0NHpLR0J1YnVOXzZQbEhKaGRrRXVxa1padTVISndnTjVuUWV4UXRMMWRLZUJwQQ",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_retro_handhelds"
+        },
+        {
+          "headline": "Retroid isn't letting dreaded tariffs ruin its Android handheld success - Pocket Tactics",
+          "summary": "Retroid isn't letting dreaded tariffs ruin its Android handheld success Pocket Tactics",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE4tR0tDYWx2dnpwTE4tT3J2d21keF9yVXV3cl9ZcXZ6N0pzVXpvWG9pNzlDYUJRUnhGbkxvM1RPX1E0LXlneVZWM1NTN20zSUJ4Y241UnhOR2tDS18tZ0hFY3VTLS16QXl2bm1FazRmSQ",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_pocket_tactics"
+        }
+      ],
+      "bucket": "tech_industry"
+    },
+    {
+      "story_id": "438097b250374db4",
+      "cluster_id": 4,
+      "topic_category": "politics",
+      "size": 3,
+      "cohesion": 0.7810525644586414,
+      "source_diversity": 2,
+      "age_days": 3.761560072546296,
+      "entity_density": 5.0,
+      "entities": [
+        {
+          "entity": "bmc",
+          "count": 6
+        },
+        {
+          "entity": "election results",
+          "count": 6
+        },
+        {
+          "entity": "bjp",
+          "count": 6
+        },
+        {
+          "entity": "mumbai",
+          "count": 6
+        },
+        {
+          "entity": "celebrates as mahayuti",
+          "count": 2
+        },
+        {
+          "entity": "heads for",
+          "count": 2
+        },
+        {
+          "entity": "big win",
+          "count": 2
+        },
+        {
+          "entity": "thackeray brothers trail",
+          "count": 2
+        },
+        {
+          "entity": "live",
+          "count": 2
+        },
+        {
+          "entity": "early",
+          "count": 2
+        },
+        {
+          "entity": "shiv sena",
+          "count": 2
+        },
+        {
+          "entity": "thackeray",
+          "count": 2
+        },
+        {
+          "entity": "maharashtra",
+          "count": 2
+        },
+        {
+          "entity": "sena",
+          "count": 2
+        },
+        {
+          "entity": "pune",
+          "count": 2
+        }
+      ],
+      "neutral_core_summary": {
+        "headline": "Mumbai BMC Election Results 2026 Live: Early trends show BJP\u2013Shiv Sena alliance leading against Thackeray - The Economic Times",
+        "summary": "Mumbai BMC Election Results 2026 Live: Early trends show BJP\u2013Shiv Sena alliance leading against Thackeray The Economic Times"
+      },
+      "stakeholder_map": {
+        "people": [
+          "election results",
+          "celebrates as mahayuti",
+          "heads for",
+          "big win",
+          "thackeray brothers trail",
+          "shiv sena"
+        ],
+        "orgs": [],
+        "other": [
+          "bmc",
+          "bjp",
+          "mumbai",
+          "live",
+          "early",
+          "thackeray",
+          "maharashtra",
+          "sena",
+          "pune"
+        ]
+      },
+      "key_facts": [
+        "Mumbai BMC Election Results 2026 Live: Early trends show BJP\u2013Shiv Sena alliance leading against Thackeray - The Economic Times",
+        "Mumbai BMC Election Results 2026: BJP reshapes Maharashtra civic map, wrests Mumbai from Sena and Pune fr... - The Economic Times",
+        "BMC Election Results 2026: BJP Celebrates As Mahayuti Heads For A Big Win, Thackeray Brothers Trail - NewsX"
+      ],
+      "confidence_score": 0.7025274707605338,
+      "angles": [
+        {
+          "angle_type": "core_headline",
+          "text": "Mumbai BMC Election Results 2026 Live: Early trends show BJP\u2013Shiv Sena alliance leading against Thackeray - The Economic Times"
+        },
+        {
+          "angle_type": "why_it_matters",
+          "text": "bmc: why this matters now. Anchor fact: Mumbai BMC Election Results 2026 Live: Early trends show BJP\u2013Shiv Sena alliance leading against Thackeray - The Economic Times"
+        },
+        {
+          "angle_type": "stakeholder_impact",
+          "text": "Who is impacted (users, companies, regulators)? Entities: bmc, election results, bjp, mumbai, celebrates as mahayuti, heads for"
+        },
+        {
+          "angle_type": "second_order_effect",
+          "text": "If bmc continues, what changes next? Use at least one fact: Mumbai BMC Election Results 2026 Live: Early trends show BJP\u2013Shiv Sena alliance leading against Thackeray - The Economic Times"
+        }
+      ],
+      "supporting_articles": [
+        {
+          "headline": "Mumbai BMC Election Results 2026 Live: Early trends show BJP\u2013Shiv Sena alliance leading against Thackeray - The Economic Times",
+          "summary": "Mumbai BMC Election Results 2026 Live: Early trends show BJP\u2013Shiv Sena alliance leading against Thackeray The Economic Times",
+          "link": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxPeWFXZ1JORXNFU2pxTDlZMTZMQmxKclNrQmF0NkFPSWVQR0RNcFAwbmFfdGZYalUtT0RFZXpyNm9RbVQ5N2FaMVRMbEdtWmVSVVhfZVhRS01XRms3ZDFfdUdUMTV6Tk1HM2twLXpxV2pHRkdDLUVwcU9aVGNSdEVQd2NsZF80T2tDUmUzUmEzbDlNVkdNQkNObHMzTmoyM3VJcEJseHdYdnZENUhjanJqMFhxSkRlaXM4MTMyckVwWTlKc0JLRW1PdFQ3ZTI0RHhnNmZnUkQwY2xxTG9HQ0NjNEczTE9VTU9YckJpQ0l1d0Y3b1NmRnprM0w3T1JXNGRVc2RkYlBETjh5RTZnZFVXeTFDN1RaeF85Z3hVREJ1cUhycG8zNWN6TTZuVTM1c2xzdk5yUnQ1NVg5VDdhMWVWctIBxgJBVV95cUxOb0pUbmMzejZVMDI0NWJvaWM0Y3EwZkNoZlF0YmFRNHM4eFZMX09rSG1Rd0tMeWNBLVJGMWJCT1M3V210UnJLUEtMWl9EUlZKY0RsQW96MkVZb3EyX2ozaDIyUXFvTm12OWFfeC13QVhoY3pGaHpZQmVCTy1ZUEk0emlXRXJ1V3FwY092NlNnaDBiTzNyaUtvYmJYaGtxZzdXRG0yZ05vbEhKZnM4R2xqNVdtLWxjcDhaN0J2NDRXWWs4ZlhnVzF1Nk9Zd1hEcU5idzIxWEZZV0JyUEtJZDVZQ0lJUHAxWVdSbldiTG43S0VPTm43V1poN0J5MllTTlhRbXhTX2JHelc4UmNWWU1LS3pmS3gzQ21wR3hyQWt6R2ZmNzdIRmROQlUxSXMxZTNlNFdSUkd0LUgtTXFzMHdtYkgtb216UQ",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_the_economic_times"
+        },
+        {
+          "headline": "Mumbai BMC Election Results 2026: BJP reshapes Maharashtra civic map, wrests Mumbai from Sena and Pune fr... - The Economic Times",
+          "summary": "Mumbai BMC Election Results 2026: BJP reshapes Maharashtra civic map, wrests Mumbai from Sena and Pune fr... The Economic Times",
+          "link": "https://news.google.com/rss/articles/CBMi6wNBVV95cUxQd1BOT2R3TmY1bkFVOVhTQUlHb2ltNVpVMjMxZmFiVWpLNndMUXpOOXpWZDU1dndDSDNpa0ZBZUE2SXA5aE8xS2xsMml0dmFVZXJjel9vMndpd3pRSUJKZ0VQSmJBWG5sQzN5TkpWc1JpS1ZGR0pjdmZnZWlYajJ6RzZNRHk4alI1dXVaZVpLSGNfNFFmNHhmeC1aYUF1NVduNTdpbmswRjVKS3NUWlVOM3I1MkFzeW1EVmt1ZWdmcGNDakQzdkV4YlhpNWV4ZzBJMkg2QlhZUFR1SlpwVDBqZklTdGZsN3hvZUNRcDNzVG1Vd2g1YlhMQkZtTV9mSGtsNTV1eElBZS1jVlZyVlczNkM1dE9HX3lGVjdwSTBEc1pWVERPMzBKN1NGX2hfUS14MS13M29HSnFoR3hlN1A1Z0o2ZzJFWVZ2R2lXakxLZGlRZm1mX2xleUFYbGFVM3VPeXVKakdjSFYtNmllSW5XZWoyN1lMQTZjYVVsSnc2SzZhelg2VnI5MnROR2F6OFl2SE5pY1FuQ3h4UXZkSElNYjdxazktTjY1eHBDN2xsUDNQc0dmRVpNb1NnQ1lYZnJ0LUVRWVFaTWpQSE0yNXA1NnpUWFZwMHhuaUJTX004TEx0UWRfaE0tMUdJd9IB8ANBVV95cUxQaXctbURlYkc1MnVwbGRJNGQ3NTZuSHhRV3VoajBHR0xMbTlqNzRESXFVWHZIaHhJaXY4T25aamxxc1dWRmEzRTFLb3FGTE1vOURUcEZoQVR1bXZqYy1HeDc2QjJIM1lDRkJXSEJBTTlrM0xnWUhHem9PM1RpWWtDN2ZfZWc2ZG1wWTJTMzEtSlVicjJoeUNUOEdiTFk4anFFaVI3YUNJR1RxUTROZjFSMldyTlpLYTB3cFZ4TmxRRG1wUmhic2NUNkdxQnlBeTlGVGRKSHh1bEJOQVhfa2dKMS13M1dmSkFWaUZoeG92TlJkMGFfcGZzbGhtaVdYSi03cXBaWDBfV0dzWk1fTlh2VlVubkhnWmFaY21aRFUzWWdQcFlaQlgtYXBndFBDby1scW8yRU9FLWhlU3lZUnZIZjlMV0Fpa2hFb0hIRVdNNmx4bkhBQTlEbWRybjVIWnc5QTZfbXN6MXFZUHV5YWZwVlpla0wwby1mU1JxWTBJN3ZBYUNFdkhFWGdHSEJKa3RoZVNHcnYtUl9Qb0dZSUhkQ3pudThpN2tYSTBZUFBHdV9OUGFpRFZ4Wm5tWWZZU2ZYNzBGQ2xXM0ZHX2ZGczVMSnJEUWduZmV4bE45NW9HVUR6dVdVbEZYVWdMUnU3SGI5",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_the_economic_times"
+        },
+        {
+          "headline": "BMC Election Results 2026: BJP Celebrates As Mahayuti Heads For A Big Win, Thackeray Brothers Trail - NewsX",
+          "summary": "BMC Election Results 2026: BJP Celebrates As Mahayuti Heads For A Big Win, Thackeray Brothers Trail NewsX",
+          "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNQkx1U29UV3N0SjdwUUtBdk9GYUhiTnBHNDJEVDVlN2dJdmw1M0FyMV9CRDVTUXFOT3l0Mk4yZEpMaDhZR3ZaUlR3bU4wWnZ4NURNZXdYRmhUbzVMMFlGd0x2RmJrOWxLdWRMUEdTVXBsT0x0YTRHOGNWNG1PMFRJR2hWVHVLbmxMTmxyaTdCczJqa0hYbC13OW1Mb0dwSUpCOEw5QV9sZnZ5M3R0a0YxNU0xWEJSNFIyamZ4ejJqT2VfNzlsaVI0Y19BVjB1Wm9FT1FqLW1ZMGl5Zm_SAeABQVVfeXFMTjhKckVQamVPUzQ3Z2F3QS1FTmI0dmFJdmpsNDBJdmlVLUg1ejVEc0RyNDFsLTdCY0oyU1pIMy10Qk42S2plTllwWC1aTExzbi1uSG5jY29DbzktcUZrZVFQTXFyQlBFV2FHX3g1QmRiakg1Q1hYYVRPZUdOWG5xek5LZ0FOSHpaUlBYbG9mMUp4STRZYklsTk9ubDFEODUtT1BJZVN1aGUxX00zbk92UFNlVDBTS1RieTdORkFhdFlqejEzWmhSQW9TdFhkUmhrb1JxbTZhT05UbjdRWkVucWY",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_newsx"
+        }
+      ],
+      "bucket": "policy"
+    },
+    {
+      "story_id": "071f489fd5ca3ba8",
+      "cluster_id": 10,
+      "topic_category": "business",
+      "size": 4,
+      "cohesion": 0.865306109252214,
+      "source_diversity": 1,
+      "age_days": 3.761560072546296,
+      "entity_density": 0.75,
+      "entities": [
+        {
+          "entity": "grand view research",
+          "count": 8
+        },
+        {
+          "entity": "portable consumer electronics",
+          "count": 2
+        },
+        {
+          "entity": "intelligent transportation system",
+          "count": 2
+        }
+      ],
+      "neutral_core_summary": {
+        "headline": "Consumer Electronics Market Size | Industry Report, 2033 - Grand View Research",
+        "summary": "Consumer Electronics Market Size | Industry Report, 2033 Grand View Research"
+      },
+      "stakeholder_map": {
+        "people": [
+          "grand view research",
+          "portable consumer electronics",
+          "intelligent transportation system"
+        ],
+        "orgs": [],
+        "other": []
+      },
+      "key_facts": [
+        "Consumer Electronics Market Size | Industry Report, 2033 - Grand View Research",
+        "Food Trucks Market Size & Trends | Industry Report, 2030 - Grand View Research",
+        "U.S. Portable Consumer Electronics Market Size Report 2033 - Grand View Research",
+        "Intelligent Transportation System Market Size Report, 2033 - Grand View Research"
+      ],
+      "confidence_score": 0.6923638622454328,
+      "angles": [
+        {
+          "angle_type": "core_headline",
+          "text": "Consumer Electronics Market Size | Industry Report, 2033 - Grand View Research"
+        },
+        {
+          "angle_type": "why_it_matters",
+          "text": "grand view research: why this matters now. Anchor fact: Consumer Electronics Market Size | Industry Report, 2033 - Grand View Research"
+        },
+        {
+          "angle_type": "stakeholder_impact",
+          "text": "Who is impacted (users, companies, regulators)? Entities: grand view research, portable consumer electronics, intelligent transportation system"
+        },
+        {
+          "angle_type": "second_order_effect",
+          "text": "If grand view research continues, what changes next? Use at least one fact: Consumer Electronics Market Size | Industry Report, 2033 - Grand View Research"
+        }
+      ],
+      "supporting_articles": [
+        {
+          "headline": "Consumer Electronics Market Size | Industry Report, 2033 - Grand View Research",
+          "summary": "Consumer Electronics Market Size | Industry Report, 2033 Grand View Research",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPaWl0R1BuMnQ0WjExR3dHZ2FPeERtSE9Ld3BYMmRQenhvdmxqTTRjTHdhbG5lZEl6bzBvU2xMYVVtcHg2WDRjTWFTMERlWjBMeDJfeV90a1FTR29mLXU0bWwyQ2c2SnhENUpZcUZNejg1MDNrMHNXdjg1cWJMUGctWTR0a3RPSkJPck4wZmQybVpxUQ",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_grand_view_research"
+        },
+        {
+          "headline": "Food Trucks Market Size & Trends | Industry Report, 2030 - Grand View Research",
+          "summary": "Food Trucks Market Size & Trends | Industry Report, 2030 Grand View Research",
+          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQMGpMNkstd1daeTE3eHczTG5NckVWQldIOEkwdDBZejN6aTMzaWxkdGdKaDdNUEQ1MDV1Vy1nOS1BMEM5Wlc2bWt2SW9fQ2xyV0ttTVFHVkpreE4zVjFldlZOX09CcmRjODJCVi01TjZ3NlhFLWQwOGRaTzJjVWh4THVoOA",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_grand_view_research"
+        },
+        {
+          "headline": "U.S. Portable Consumer Electronics Market Size Report 2033 - Grand View Research",
+          "summary": "U.S. Portable Consumer Electronics Market Size Report 2033 Grand View Research",
+          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPX0pwVm55M1lWMGdBUGVSY0d5UzJrNVdrbENhaTVfeFV1U2N3U21TRlVYMTVieDJla21uMXR2VWFxdWVReE1SN25OYTJjdWo3bzd6WjVzTXdWa1NHWGg3anI3bTdxUXVsbGVUMlBXMUV1VE1NSDZxME1yQndtcE1XM09Vb0g2ck1KQndPNGdEMW0xNXo4cnh6cHBWZ19HUXc",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_grand_view_research"
+        },
+        {
+          "headline": "Intelligent Transportation System Market Size Report, 2033 - Grand View Research",
+          "summary": "Intelligent Transportation System Market Size Report, 2033 Grand View Research",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPSnVBQU93TVJMZ2NqSUhmRUl6SG1veTlhcEZaYmRkTjZJUHpOR3djX0duWmlTX0wyYWU3bTlHTDFIdndRVk04RUxiRk1nelk1RVBuRVF6RlRoSmpiOGlxQ0xnMnBib2Vzdmo4bk84VmIxbzA3NjdjVVMtVzF1MThVLTlpN01yZ2ZoaTZxaEt5WEs3aVdGS2ZPX1BCWQ",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_grand_view_research"
+        }
+      ],
+      "bucket": "markets"
+    },
+    {
+      "story_id": "48c0f5c603f3440c",
+      "cluster_id": 9,
+      "topic_category": "business",
+      "size": 3,
+      "cohesion": 0.8633084869081672,
+      "source_diversity": 1,
+      "age_days": 3.761560072546296,
+      "entity_density": 0.6666666666666666,
+      "entities": [
+        {
+          "entity": "grand view research",
+          "count": 6
+        },
+        {
+          "entity": "middle east tower",
+          "count": 2
+        }
+      ],
+      "neutral_core_summary": {
+        "headline": "School Furniture Market Size & Share | Industry Report, 2033 - Grand View Research",
+        "summary": "School Furniture Market Size & Share | Industry Report, 2033 Grand View Research"
+      },
+      "stakeholder_map": {
+        "people": [
+          "grand view research",
+          "middle east tower"
+        ],
+        "orgs": [],
+        "other": []
+      },
+      "key_facts": [
+        "School Furniture Market Size & Share | Industry Report, 2033 - Grand View Research",
+        "3D Concrete Printing Market Size | Industry Report, 2033 - Grand View Research",
+        "Middle East Tower Cranes Market Size | Industry Report 2033 - Grand View Research"
+      ],
+      "confidence_score": 0.69181451610082,
+      "angles": [
+        {
+          "angle_type": "core_headline",
+          "text": "School Furniture Market Size & Share | Industry Report, 2033 - Grand View Research"
+        },
+        {
+          "angle_type": "why_it_matters",
+          "text": "grand view research: why this matters now. Anchor fact: School Furniture Market Size & Share | Industry Report, 2033 - Grand View Research"
+        },
+        {
+          "angle_type": "stakeholder_impact",
+          "text": "Who is impacted (users, companies, regulators)? Entities: grand view research, middle east tower"
+        },
+        {
+          "angle_type": "second_order_effect",
+          "text": "If grand view research continues, what changes next? Use at least one fact: School Furniture Market Size & Share | Industry Report, 2033 - Grand View Research"
+        }
+      ],
+      "supporting_articles": [
+        {
+          "headline": "School Furniture Market Size & Share | Industry Report, 2033 - Grand View Research",
+          "summary": "School Furniture Market Size & Share | Industry Report, 2033 Grand View Research",
+          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNYmk0aFEweWcyNW5OT0kwY2UtZGh1RGJXZUpwSEMwc0xwMnhQNzhOX3R6Uk5fMnhDOE1mWDUtcXNpUm5IdzRIa1ZhRGM1VTZteG14c3pWanRCOXA4SG4wM1VQTThvSjQxeWltN3F4QW9GOVRjR3NEM3dHYXVJN3JpMg",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_grand_view_research"
+        },
+        {
+          "headline": "3D Concrete Printing Market Size | Industry Report, 2033 - Grand View Research",
+          "summary": "3D Concrete Printing Market Size | Industry Report, 2033 Grand View Research",
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOUl95XzdHd24yQ2lLbDhpZk1fSUJiaHQ3UHlaYlgwckxNSVZadnV1d0dIV2V5V2hXdzE5VjUzTmVzNFRxbXhqak0xWTAxWmxSMFdJeXhVTTZ0SlB1UzI1aVg4TTNXbV9fSFlyc01XSWVRU3cyMW9iU2xra0JaYUtCMWJwVGxWT0owY19yeWl6WQ",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_grand_view_research"
+        },
+        {
+          "headline": "Middle East Tower Cranes Market Size | Industry Report 2033 - Grand View Research",
+          "summary": "Middle East Tower Cranes Market Size | Industry Report 2033 Grand View Research",
+          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOZk5nUm8wWDBrUjNtSnl6ZFFYSndBRWZ4S0ZWM1BLSUNUXzF1bEFVUzdlMkZSaUUxOV9hM2RteG1fUWtHMHhCVDRSRElLVUhSbDFUV3pldEJETlZyeGU4MFlVMWpxWGlxSUtHdXRVV3FEMEc2ekRQZmFUVHlaZDFBTG0zcjd1YUo2SHRFakFIVS0zMk5Z",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_grand_view_research"
+        }
+      ],
+      "bucket": "markets"
+    },
+    {
+      "story_id": "f8da319edd8d88b1",
+      "cluster_id": 3,
+      "topic_category": "sports",
+      "size": 5,
+      "cohesion": 0.792375457845363,
+      "source_diversity": 1,
+      "age_days": 3.761560072546296,
+      "entity_density": 1.4,
+      "entities": [
+        {
+          "entity": "nfl",
+          "count": 10
+        },
+        {
+          "entity": "super bowl",
+          "count": 10
+        },
+        {
+          "entity": "espn",
+          "count": 10
+        },
+        {
+          "entity": "forecasting",
+          "count": 2
+        },
+        {
+          "entity": "mvp",
+          "count": 2
+        },
+        {
+          "entity": "bad bunny",
+          "count": 2
+        },
+        {
+          "entity": "projecting",
+          "count": 2
+        }
+      ],
+      "neutral_core_summary": {
+        "headline": "2025 NFL projections, power rankings, Super Bowl predictions - ESPN",
+        "summary": "2025 NFL projections, power rankings, Super Bowl predictions ESPN"
+      },
+      "stakeholder_map": {
+        "people": [
+          "super bowl",
+          "bad bunny"
+        ],
+        "orgs": [],
+        "other": [
+          "nfl",
+          "espn",
+          "forecasting",
+          "mvp",
+          "projecting"
+        ]
+      },
+      "key_facts": [
+        "2025 NFL projections, power rankings, Super Bowl predictions - ESPN",
+        "2025 NFL predictions: Super Bowl 60 picks, MVP, breakouts - ESPN",
+        "NFL playoff predictions: Forecasting the postseason, including Super Bowl contenders, upset picks and impact players - ESPN",
+        "Why the NFL stood by Bad Bunny for the Super Bowl halftime show - ESPN",
+        "Projecting 2025 NFL standings, playoff games, Super Bowl 60 - ESPN"
+      ],
+      "confidence_score": 0.6723079331085489,
+      "angles": [
+        {
+          "angle_type": "core_headline",
+          "text": "2025 NFL projections, power rankings, Super Bowl predictions - ESPN"
+        },
+        {
+          "angle_type": "why_it_matters",
+          "text": "nfl: why this matters now. Anchor fact: 2025 NFL projections, power rankings, Super Bowl predictions - ESPN"
+        },
+        {
+          "angle_type": "stakeholder_impact",
+          "text": "Who is impacted (users, companies, regulators)? Entities: nfl, super bowl, espn, forecasting, mvp, bad bunny"
+        },
+        {
+          "angle_type": "second_order_effect",
+          "text": "If nfl continues, what changes next? Use at least one fact: 2025 NFL projections, power rankings, Super Bowl predictions - ESPN"
+        }
+      ],
+      "supporting_articles": [
+        {
+          "headline": "2025 NFL projections, power rankings, Super Bowl predictions - ESPN",
+          "summary": "2025 NFL projections, power rankings, Super Bowl predictions ESPN",
+          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPcDRzTmlZNi1aVzJ5TFZwUmlZUjI0YVcydDhfNFN2Q0VTZm5MVGpsMkNpVzBPcDY3MTllMU8tcVdMVEZOSHhNbGptYWgtc09zRnhQa1V2V00tbkxNZUpjVXZkYnhRa3VrZTdmSElWVG5PcTFhRDVrb1Q1dkZMdlFPZU0weWd2NVZZcl9WUXYxLXVoa1dDU2FERnh6TGY0Z0VqWTZrQ25n",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_espn"
+        },
+        {
+          "headline": "2025 NFL predictions: Super Bowl 60 picks, MVP, breakouts - ESPN",
+          "summary": "2025 NFL predictions: Super Bowl 60 picks, MVP, breakouts ESPN",
+          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQNmJMVkVtSHRCb0F4M1h1NmtmVzFGbDl2QUE1Ui04VmhpZV9HMVkwS28wd2M5cWUxbGdFZThKdXdnSDZybzFOelo3RHJZYzdNeFotNjVwUURVUC00dlIydDBTNXhEaXNkeDJQNEh4THpDcTRjaHQ1OG9iZ181OWRwR2paM3dkdW56ZHFtTmY0RnlMVHhVcndZTEtFMktCYVBoUkF4bVNGU19NLTZzY1Z4LV81NHVPcU0",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_espn"
+        },
+        {
+          "headline": "NFL playoff predictions: Forecasting the postseason, including Super Bowl contenders, upset picks and impact players - ESPN",
+          "summary": "NFL playoff predictions: Forecasting the postseason, including Super Bowl contenders, upset picks and impact players ESPN",
+          "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPbkpkV0NQOHpzOXMyUEJfRkRjTUx0QWVyeDNlNEVIV040WEF4engzMXRPdm4xRExkM0ctend6QXNwZWZvSmhmMDBmd0FveTdadTRJalpSQU5LaFo5OTkwVkR4UUFXaDU1d3VLSHV6VXN6M2l0VWx0elhlRjlGN2dSbTVaVHBra3VWdGREdzhITGZWejBIWFk3cE9STnMwQmIzRWcxZDl5ZDV0RnNjcmxBLXo2cnFqVFJVRmtMbjZxUlZfNlFiWTE4T0ZnaFN3Tmh5bTVkTG9QVDEyUkRadldSSV8wc3g",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_espn"
+        },
+        {
+          "headline": "Why the NFL stood by Bad Bunny for the Super Bowl halftime show - ESPN",
+          "summary": "Why the NFL stood by Bad Bunny for the Super Bowl halftime show ESPN",
+          "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOVHpkZnhFQmtoalFYRDRnUUIwTEhKZ0JQaWJIZ0NMNEdyTjIyR2JVUHlMcVVSWVF4VU50cktGZWc2bmVEMHJhTk5PLV9GejNsZXhySF9JZ2xyQTZnSzVGVG5KZlpuRDk1TkhXamZUaWVFYTBYZ3YwcXRDM0RObnhXWHB5Z081ZkdKTzZZLVFOTXROenZhS1E",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_espn"
+        },
+        {
+          "headline": "Projecting 2025 NFL standings, playoff games, Super Bowl 60 - ESPN",
+          "summary": "Projecting 2025 NFL standings, playoff games, Super Bowl 60 ESPN",
+          "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQTkI4LUYtYURkUWFiM0RNVDRFYjdOMmE3M3lUXzBfWUVBanQwVXlSUU5RNHZsMzNNdGlJMlpraXVYaXVnMWNfZ2ZoTnB4dTRod2hOMFRfMWF6TzJOZnE3YmJSUVoyU3h0dV9LT0FkQVN3MGxzcWcwZGdyVkJLdjJxcUFQb3BtdERQenZUUmlZQTA0OFdMd19pZlV4ZG0zZ2plNjRJZVgxbWxBcmNlbmxXRk9QSU4wMW1fWWljMnYxUUJENmJ3WXNHRUZWN0ZkZw",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_espn"
+        }
+      ],
+      "bucket": "sports"
+    },
+    {
+      "story_id": "b0e472bff3907a58",
+      "cluster_id": 0,
+      "topic_category": "tech",
+      "size": 3,
+      "cohesion": 0.7611119562591625,
+      "source_diversity": 1,
+      "age_days": 3.761560072546296,
+      "entity_density": 1.6666666666666667,
+      "entities": [
+        {
+          "entity": "cnx",
+          "count": 6
+        },
+        {
+          "entity": "software",
+          "count": 6
+        },
+        {
+          "entity": "integrated logic analyzer",
+          "count": 2
+        },
+        {
+          "entity": "ila",
+          "count": 2
+        },
+        {
+          "entity": "raspberry pi zero",
+          "count": 2
+        }
+      ],
+      "neutral_core_summary": {
+        "headline": "A deep dive into Raspberry Pi Zero 2 W\u2019s power consumption - CNX Software",
+        "summary": "A deep dive into Raspberry Pi Zero 2 W\u2019s power consumption CNX Software"
+      },
+      "stakeholder_map": {
+        "people": [
+          "integrated logic analyzer",
+          "raspberry pi zero"
+        ],
+        "orgs": [],
+        "other": [
+          "cnx",
+          "software",
+          "ila"
+        ]
+      },
+      "key_facts": [
+        "A deep dive into Raspberry Pi Zero 2 W\u2019s power consumption - CNX Software",
+        "EVerest is an open-source software stack for car charging stations - CNX Software",
+        "GateMate Integrated Logic Analyzer (ILA) deep dive - CNX Software"
+      ],
+      "confidence_score": 0.6637104701723437,
+      "angles": [
+        {
+          "angle_type": "core_headline",
+          "text": "A deep dive into Raspberry Pi Zero 2 W\u2019s power consumption - CNX Software"
+        },
+        {
+          "angle_type": "why_it_matters",
+          "text": "cnx: why this matters now. Anchor fact: A deep dive into Raspberry Pi Zero 2 W\u2019s power consumption - CNX Software"
+        },
+        {
+          "angle_type": "stakeholder_impact",
+          "text": "Who is impacted (users, companies, regulators)? Entities: cnx, software, integrated logic analyzer, ila, raspberry pi zero"
+        },
+        {
+          "angle_type": "second_order_effect",
+          "text": "If cnx continues, what changes next? Use at least one fact: A deep dive into Raspberry Pi Zero 2 W\u2019s power consumption - CNX Software"
+        }
+      ],
+      "supporting_articles": [
+        {
+          "headline": "A deep dive into Raspberry Pi Zero 2 W\u2019s power consumption - CNX Software",
+          "summary": "A deep dive into Raspberry Pi Zero 2 W\u2019s power consumption CNX Software",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPNjZXTnh6VlhtOW51OE9FejNxMVN2OUM0ZExWb3VhSC1WdjN0YVFVSmpPNlM2QWJpNlhDbUl5b1hzcXNDLUVoR2kycmVZbmEyeG9Jb0ZfTDVTam9KeHpZa1VjRzZHbEFZektlRFpEM3FKRlZna1JSdk5RdnlJWkhhN1VrcjREY0nSAY8BQVVfeXFMTVBfcl9MR29nYS1ucWlfdzZFRTFyTm9YMWMtSUpmUEY3LW9kRmdvSHlnR2s0cFl0RVVzN29YczNBN2x2X2dyN3UxbTlvSjdSTFNfUmJpeXdETERJd3R4MEZFRGplRDg4M0Q2Sk5ZTl9GZnkxUThCNlhhb1hhSnlkRkRWR3lWTWg1OEdFU0daWkk",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_cnx_software"
+        },
+        {
+          "headline": "EVerest is an open-source software stack for car charging stations - CNX Software",
+          "summary": "EVerest is an open-source software stack for car charging stations CNX Software",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPTWRxSkF2Z3ZSSXAzcl81bndKcU9KS3JLRW0weXpialI1Wmc4SFpKYmVYel9MUDVneG5JUTNGcDc5NklqQ0FIYWpndVBGUnRzUl9sNTJJTWU1TEd1dno3djljTDNIRjJBMTg1MHdXN1BISVA2amJ4SWNQLVZGM2xCVzEwWVVaeV9nREdyYjJOOVUzRnFkZ2Q2R1l6cUZ6cU45dWo00gGrAUFVX3lxTE1aZUZkV2t3RzBMLURjZUpLNUw3QW9GamNQcHV6YjZra3d5ZWFJaTZtSDhtY1h2S1FfVkZDLS1hdmNfdnlCUjc4VnpWcEVrNE80dFdHRUUyWnBPaXFQRU5VeVJRR0duVTFCbm5UaWZlMzRTTHpubzhBMTRWdTBocFh4cW91MnowQjBxZ3c1a3lIU0cwa0ducnhDN2VsSnB0NnJFVzdIZHlKMmdDTQ",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_cnx_software"
+        },
+        {
+          "headline": "GateMate Integrated Logic Analyzer (ILA) deep dive - CNX Software",
+          "summary": "GateMate Integrated Logic Analyzer (ILA) deep dive CNX Software",
+          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPMDFLYXcyeG81dW1NM19peGtCU01xZFVDSV83NlhGcjlyZ181UWR4Wk5rdkRvMEQ3V2huZUhmRHIzZlZ6OFQtdkp5QnB1VHNWN3ZtdXpOY0Mwb09QMXRrT3NUdmNSa2JoUzFxSU1xVk9lU0ZvbEtkOXBCeGR5cjMwdEo3b2pGeGJEWFJMY2FGR2pwSknSAZsBQVVfeXFMT1BfbXQwQnJzN2wtaUxOSkJzQV80SEJMOWx6azdrMGxXVWdsZ0Zka3ZVaWtYNEFTUjNFWmZxRUY2aU9jellhLU9razhGaTlKXzR3X0RBb3NJdFZoaWJkcnVhOXVGWXJxZEpFN0F5MHo2OXcwN050RTRIb0JQa2RCZ1liVEJDbWotYWJ0bWM4YUQxQ3gzaUpfN25tMEk",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_cnx_software"
+        }
+      ],
+      "bucket": "tech_industry"
+    },
+    {
+      "story_id": "ad0720a6dc6ff646",
+      "cluster_id": 7,
+      "topic_category": "tech",
+      "size": 3,
+      "cohesion": 0.7551147486403536,
+      "source_diversity": 1,
+      "age_days": 3.761560072546296,
+      "entity_density": 2.0,
+      "entities": [
+        {
+          "entity": "android central",
+          "count": 4
+        },
+        {
+          "entity": "turn",
+          "count": 2
+        },
+        {
+          "entity": "android",
+          "count": 2
+        },
+        {
+          "entity": "android central  have",
+          "count": 1
+        },
+        {
+          "entity": "four",
+          "count": 1
+        },
+        {
+          "entity": "android central  four",
+          "count": 1
+        }
+      ],
+      "neutral_core_summary": {
+        "headline": "Four reasons why retro gaming matters so much to me - Android Central",
+        "summary": "Four reasons why retro gaming matters so much to me Android Central"
+      },
+      "stakeholder_map": {
+        "people": [
+          "android central",
+          "android central  have",
+          "android central  four"
+        ],
+        "orgs": [],
+        "other": [
+          "turn",
+          "android",
+          "four"
+        ]
+      },
+      "key_facts": [
+        "Four reasons why retro gaming matters so much to me - Android Central",
+        "Have an old phone or tablet? Turn it into a mobile gaming station - Android Central",
+        "I never thought about using AI with Android gaming handhelds... until now - Android Central"
+      ],
+      "confidence_score": 0.6620612380771713,
+      "angles": [
+        {
+          "angle_type": "core_headline",
+          "text": "Four reasons why retro gaming matters so much to me - Android Central"
+        },
+        {
+          "angle_type": "why_it_matters",
+          "text": "android central: why this matters now. Anchor fact: Four reasons why retro gaming matters so much to me - Android Central"
+        },
+        {
+          "angle_type": "stakeholder_impact",
+          "text": "Who is impacted (users, companies, regulators)? Entities: android central, turn, android, android central  have, four, android central  four"
+        },
+        {
+          "angle_type": "second_order_effect",
+          "text": "If android central continues, what changes next? Use at least one fact: Four reasons why retro gaming matters so much to me - Android Central"
+        }
+      ],
+      "supporting_articles": [
+        {
+          "headline": "Four reasons why retro gaming matters so much to me - Android Central",
+          "summary": "Four reasons why retro gaming matters so much to me Android Central",
+          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOblYzYTFEYjYxeHNXZ3dWRVc0MncxTUp5clpBeVJuVVVONFB4NUJjS1hNVFVISDQwTlpzOUxQMkVobHB5SXRUdEV1WEI5UDJGYWlmTEs1RGpzRmtBa0tGZ0NHMm9nNkNGelVSRW5fWjItTHpsMVp1M3Rpak1ralpGSzRSVF80bHpCSTZ0eDZvUW5taEFiUW44LXNMLTRXcmczcm10Wg",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_android_central"
+        },
+        {
+          "headline": "Have an old phone or tablet? Turn it into a mobile gaming station - Android Central",
+          "summary": "Have an old phone or tablet? Turn it into a mobile gaming station Android Central",
+          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNdkd3QTFNNWg3aXU3TWdWZFd5NmpkcDJJOTk4XzNENWxuTWpPMFI2a1U0TEF2d2dqZGUtdzdLY2ZDMVltcHZVTENoNktva1JpRW1sZzZtZ0d3dUkySWdMb2M4QUdTSlBaWjZ3bXFfNHU2LW9sWjlTanN5TnZTUjBEdGpzd2RCZExfMHZfRG1sbEFMbW4xcVNlM2NjMU9pbVZNUV8yV0ljWUJyTUtmazJXbFdJVGlwTHMycTVZZ3R4UHNtdw",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_android_central"
+        },
+        {
+          "headline": "I never thought about using AI with Android gaming handhelds... until now - Android Central",
+          "summary": "I never thought about using AI with Android gaming handhelds... until now Android Central",
+          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNVm1EcDdqYV96SGtBUHo2VHdNaVh2NS1GU1FYZ1NLcVFkMkR1Ykt2d1RsTnpSam0xNmNIbjZQZ1ZXVnotdFhmTUh6OGJmUXdIWVp3dlRjY0NLVS11UE9GMmhzRnVmYW53Q0hVQ01nUGVyaGViM3pYS2JTalJmWExxa29yOA",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_android_central"
+        }
+      ],
+      "bucket": "ai"
+    },
+    {
+      "story_id": "fb0f9556a964f126",
+      "cluster_id": 8,
+      "topic_category": "tech",
+      "size": 3,
+      "cohesion": 0.7538951373958865,
+      "source_diversity": 1,
+      "age_days": 3.761560072546296,
+      "entity_density": 2.3333333333333335,
+      "entities": [
+        {
+          "entity": "startups",
+          "count": 4
+        },
+        {
+          "entity": "discover",
+          "count": 2
+        },
+        {
+          "entity": "circular economy",
+          "count": 2
+        },
+        {
+          "entity": "growing",
+          "count": 2
+        },
+        {
+          "entity": "hardware companies",
+          "count": 2
+        },
+        {
+          "entity": "growing american",
+          "count": 2
+        },
+        {
+          "entity": "companies",
+          "count": 2
+        }
+      ],
+      "neutral_core_summary": {
+        "headline": "Discover the 30 Growing AI Hardware Companies & Startups to Watch in 2026 - StartUs Insights",
+        "summary": "Discover the 30 Growing AI Hardware Companies & Startups to Watch in 2026 StartUs Insights"
+      },
+      "stakeholder_map": {
+        "people": [
+          "circular economy",
+          "hardware companies",
+          "growing american"
+        ],
+        "orgs": [],
+        "other": [
+          "startups",
+          "discover",
+          "growing",
+          "companies"
+        ]
+      },
+      "key_facts": [
+        "Discover the 30 Growing AI Hardware Companies & Startups to Watch in 2026 - StartUs Insights",
+        "30 Growing American AI Companies and Startups to Watch in 2026 - StartUs Insights",
+        "Discover 5 Top Remanufacturing Startups enabling the Circular Economy - StartUs Insights"
+      ],
+      "confidence_score": 0.6617258449849429,
+      "angles": [
+        {
+          "angle_type": "core_headline",
+          "text": "Discover the 30 Growing AI Hardware Companies & Startups to Watch in 2026 - StartUs Insights"
+        },
+        {
+          "angle_type": "why_it_matters",
+          "text": "startups: why this matters now. Anchor fact: Discover the 30 Growing AI Hardware Companies & Startups to Watch in 2026 - StartUs Insights"
+        },
+        {
+          "angle_type": "stakeholder_impact",
+          "text": "Who is impacted (users, companies, regulators)? Entities: startups, discover, circular economy, growing, hardware companies, growing american"
+        },
+        {
+          "angle_type": "second_order_effect",
+          "text": "If startups continues, what changes next? Use at least one fact: Discover the 30 Growing AI Hardware Companies & Startups to Watch in 2026 - StartUs Insights"
+        }
+      ],
+      "supporting_articles": [
+        {
+          "headline": "Discover the 30 Growing AI Hardware Companies & Startups to Watch in 2026 - StartUs Insights",
+          "summary": "Discover the 30 Growing AI Hardware Companies & Startups to Watch in 2026 StartUs Insights",
+          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE45U2d6R2xPRW5LUEJkTDJWVUhCZi13Y0tSdmpnUXF2WnhtNVBxTDExOHNHNkRaVTY1UHNCLTlTd09CbnhVVFk4aXBkYXpEajVTNHcxT1ptbWd0TEg4dHFlMnlhc011MVFuanVTNWpmeEhwc0FyMzJXSDBtS0s",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_startus_insights"
+        },
+        {
+          "headline": "30 Growing American AI Companies and Startups to Watch in 2026 - StartUs Insights",
+          "summary": "30 Growing American AI Companies and Startups to Watch in 2026 StartUs Insights",
+          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE83UnVndjRiLTJobUdlTGZjXzNjS1BYOTJXYk1FMXphTHNHSG5LQUJiQ184ZGR6M0d0Y3NxWlN3eHo1Yk9TbFFvWVhlM19EOEdKdU9QTG1HNk1EbndTUVVDZVdDbkRDTDJaS21aOEt6dmp0NWxRQmdDSl9vZkc",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_startus_insights"
+        },
+        {
+          "headline": "Discover 5 Top Remanufacturing Startups enabling the Circular Economy - StartUs Insights",
+          "summary": "Discover 5 Top Remanufacturing Startups enabling the Circular Economy StartUs Insights",
+          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPb0VzSVdfc1hCTWVaZGJHNHdsMDBIcWhMTHJVbmJhcXp3eUdGZ3RjV0pYSUNVdTJGSV9yTnN3aWlqRGVocGU4X3hPM21BVmVpWG9xZDFJaXRmdGNYcW9VajBPNzBGaGRpTDRULWUtU0V5Zjg3eWp2c3FDTTBwQmJVUEQ2UFZKS0N2dURSM2ZweVZVc21zWlV1ZDBDTTR2X1lmTHYxbGRBamR0TF93MklhWVBNT2dJN0JsbTVSeg",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_startus_insights"
+        }
+      ],
+      "bucket": "ai"
+    },
+    {
+      "story_id": "d46728b0152fa064",
+      "cluster_id": 2,
+      "topic_category": "politics",
+      "size": 3,
+      "cohesion": 0.736881221043772,
+      "source_diversity": 1,
+      "age_days": 3.761560072546296,
+      "entity_density": 3.6666666666666665,
+      "entities": [
+        {
+          "entity": "the wall street",
+          "count": 6
+        },
+        {
+          "entity": "bets",
+          "count": 2
+        },
+        {
+          "entity": "source development",
+          "count": 2
+        },
+        {
+          "entity": "overtake",
+          "count": 2
+        },
+        {
+          "entity": "ceo",
+          "count": 2
+        },
+        {
+          "entity": "says",
+          "count": 2
+        },
+        {
+          "entity": "few",
+          "count": 2
+        },
+        {
+          "entity": "surveillance ambitions",
+          "count": 2
+        },
+        {
+          "entity": "mistral",
+          "count": 1
+        },
+        {
+          "entity": "in china",
+          "count": 1
+        },
+        {
+          "entity": "china",
+          "count": 1
+        }
+      ],
+      "neutral_core_summary": {
+        "headline": "China\u2019s Surveillance Ambitions - The Wall Street Journal",
+        "summary": "China\u2019s Surveillance Ambitions The Wall Street Journal"
+      },
+      "stakeholder_map": {
+        "people": [
+          "the wall street",
+          "source development",
+          "surveillance ambitions",
+          "in china"
+        ],
+        "orgs": [],
+        "other": [
+          "bets",
+          "overtake",
+          "ceo",
+          "says",
+          "few",
+          "mistral",
+          "china"
+        ]
+      },
+      "key_facts": [
+        "China\u2019s Surveillance Ambitions - The Wall Street Journal",
+        "In China, a New City Attracts Few - The Wall Street Journal",
+        "Mistral AI Bets on Open-Source Development to Overtake DeepSeek, CEO Says - The Wall Street Journal"
+      ],
+      "confidence_score": 0.6570470179881114,
+      "angles": [
+        {
+          "angle_type": "core_headline",
+          "text": "China\u2019s Surveillance Ambitions - The Wall Street Journal"
+        },
+        {
+          "angle_type": "why_it_matters",
+          "text": "the wall street: why this matters now. Anchor fact: China\u2019s Surveillance Ambitions - The Wall Street Journal"
+        },
+        {
+          "angle_type": "stakeholder_impact",
+          "text": "Who is impacted (users, companies, regulators)? Entities: the wall street, bets, source development, overtake, ceo, says"
+        },
+        {
+          "angle_type": "second_order_effect",
+          "text": "If the wall street continues, what changes next? Use at least one fact: China\u2019s Surveillance Ambitions - The Wall Street Journal"
+        }
+      ],
+      "supporting_articles": [
+        {
+          "headline": "China\u2019s Surveillance Ambitions - The Wall Street Journal",
+          "summary": "China\u2019s Surveillance Ambitions The Wall Street Journal",
+          "link": "https://news.google.com/rss/articles/CBMi_gJBVV95cUxOYk5FbVRNbnZTOFRLQUtaT0hUbFZIWWdqZ0hscy1FdzhtRTdrOEwtRlZWWE44QlBsMmp3OFJESmVuMXJmTXNucm5GUkdEdzl0MW9TVWpPYllyNkIxMUJQbEszRW1wX2czbE55Q3hUZS1rNDlob2FLeUpOTEFBNHRQMlZnQ0dPZTV2SzVwc1pVT0ZFMjRuNG1kTVYzYXZIbjEwYktrd3ZNSlBSb1c5SjVuQnI1NWVYVnUxNlNVa3otNDNyMUhhSnRZbzRNVkVDWHgtU3Z6TmNMMHhDZmJxVnFGbmRWZmpRVzkyZTdvdnhpTlZtUDdyUm00dFhFekpGNnJRdXNFWTlnNzF1dzR2Sk9XeFE0QW9FVDlnMjJpbVk2UWt1VVhkTTdHRXJhM3N6NDh1bndFLUQ5TTFzbldCVkJ5eUd2R1RSOERoSXVqYjFFN3RBZGdxLXlVWEg2WTlJRWhvOTFZandSMThMRjk1LThTbkw1S2JYekZMWXBxQWx3",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_the_wall_street_journal"
+        },
+        {
+          "headline": "In China, a New City Attracts Few - The Wall Street Journal",
+          "summary": "In China, a New City Attracts Few The Wall Street Journal",
+          "link": "https://news.google.com/rss/articles/CBMiggNBVV95cUxNbzhCV0Q2ZENzckRzamlhTVBGN3ZnYVNwODV5T0hXckxyTW1PX0xmWi1IR01SVVVxVnF2SGRlUDdOSmNRTGRTdTdHeXJLbzYwU0o4SHhrRWEwbFUyZlRCNGlFbDV4ZnVBV0pNX3F5R0ZtVHFnMUp5bC1wVlItaGhpQmp0ZHVmcEI3ZDhJN0NKbEhMUEhnbTY4OXQyUFotSzNLaXBGWWxPVWxGSW9TeDBNYzktNTVMbVJlcjNmeFlLY2tSN3c3dXVWOHpSTFJFV2dIeG5PMEpuaDhnZWR5UVlJYzlZMmZpUGJscDFXTUdSc2MzMzB5ZmZvU2NIc21CWjZXTzk5eGRFcDlVV3BDRkVUeHdkRGZoQjk0YWhkTUY3cXIyeUZLU0J2TzNZMmFtc1Zid21GSDVJeFdtbURQSlVzekJrVUF1a3NiMDg3aUZZNGlTUThHMDB0NHZfSDh2Q2tTakdTRkplSGFNR2l6OU8zR1Q2RGtqNVU5RUNTWWU2M0tVQQ",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_the_wall_street_journal"
+        },
+        {
+          "headline": "Mistral AI Bets on Open-Source Development to Overtake DeepSeek, CEO Says - The Wall Street Journal",
+          "summary": "Mistral AI Bets on Open-Source Development to Overtake DeepSeek, CEO Says The Wall Street Journal",
+          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQRGhma3JrQkxkb09qT1VrX29JN09VSWZhc3JRLVYtWGpOSk9xRzhJcDVtQm1ESnVGbUl2T1VUaDhHX0c1SXFQY1c3UWVLY0FNS0owcE05b1BRandsanV5MEpCcE5pNXk2cUo2R2lnUHROYVE3cHBGd2tzc1lXLUVFRjRhT1F1Z2tFX0RyNU03TUVORlduTlk4dFBjTjNtWkJ1c0o3aDc3MmFaREp1QUE",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_the_wall_street_journal"
+        }
+      ],
+      "bucket": "policy"
+    },
+    {
+      "story_id": "ad903db27e972544",
+      "cluster_id": 5,
+      "topic_category": "politics",
+      "size": 7,
+      "cohesion": 0.7334305261743786,
+      "source_diversity": 1,
+      "age_days": 3.761560072546296,
+      "entity_density": 0.7142857142857143,
+      "entities": [
+        {
+          "entity": "china",
+          "count": 4
+        },
+        {
+          "entity": "japan",
+          "count": 2
+        },
+        {
+          "entity": "chinese",
+          "count": 2
+        },
+        {
+          "entity": "would",
+          "count": 1
+        },
+        {
+          "entity": "blacklist",
+          "count": 1
+        }
+      ],
+      "neutral_core_summary": {
+        "headline": "China\u2019s \u2018social credit system\u2019 explained - South China Morning Post",
+        "summary": "China\u2019s \u2018social credit system\u2019 explained South China Morning Post"
+      },
+      "stakeholder_map": {
+        "people": [],
+        "orgs": [],
+        "other": [
+          "china",
+          "japan",
+          "chinese",
+          "would",
+          "blacklist"
+        ]
+      },
+      "key_facts": [
+        "China\u2019s \u2018social credit system\u2019 explained - South China Morning Post",
+        "What is China\u2019s social credit system and why is it controversial? - South China Morning Post",
+        "China\u2019s social credit system \u2018could be used against companies\u2019 - South China Morning Post",
+        "The latest trends in running shoes - South China Morning Post",
+        "The hidden seafood capital of Japan - South China Morning Post",
+        "Would you live in this space-age spherical tiny home? - South China Morning Post",
+        "Blacklist labels millions of Chinese citizens and businesses untrustworthy - South China Morning Post"
+      ],
+      "confidence_score": 0.6560980768990281,
+      "angles": [
+        {
+          "angle_type": "core_headline",
+          "text": "China\u2019s \u2018social credit system\u2019 explained - South China Morning Post"
+        },
+        {
+          "angle_type": "why_it_matters",
+          "text": "china: why this matters now. Anchor fact: China\u2019s \u2018social credit system\u2019 explained - South China Morning Post"
+        },
+        {
+          "angle_type": "stakeholder_impact",
+          "text": "Who is impacted (users, companies, regulators)? Entities: china, japan, chinese, would, blacklist"
+        },
+        {
+          "angle_type": "second_order_effect",
+          "text": "If china continues, what changes next? Use at least one fact: China\u2019s \u2018social credit system\u2019 explained - South China Morning Post"
+        }
+      ],
+      "supporting_articles": [
+        {
+          "headline": "China\u2019s \u2018social credit system\u2019 explained - South China Morning Post",
+          "summary": "China\u2019s \u2018social credit system\u2019 explained South China Morning Post",
+          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOOTZaczV0WXhtSmRzT1Y3SmlCdkk5aVotcXNPYjUxTWR0NlEzTU5BVmpISkxBMzVET0xoWFZQVXpiVVh6cHZVMERjNHhOdVBld2pCSUM0LVFvUkRQRVo1b1A5aGdWRE84WWxuSElfNHI1RVFmLW1GM1RsS1Q1eUMxMVJZWVQ",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_south_china_morning_post"
+        },
+        {
+          "headline": "What is China\u2019s social credit system and why is it controversial? - South China Morning Post",
+          "summary": "What is China\u2019s social credit system and why is it controversial? South China Morning Post",
+          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPWDNpbThOMzBFcF85WU1QTnIwel9KYkJiZmQ0TzVZdXJrZlNGek1xbGZhVWl4Ynh0RktYR1d2aTBpbXZDcm1qVTNGREkweHN2MVRXUFVGa3RseTluQ0FlUkRNNXlfWjhFM0ZuV3l2T0VNc2ZKX3VibGs0MjZCUGRFOVMzaDE4azNGTnd0MkIzSjF6YmZhOWRVa1o2YkxvTmVBOHJLWElxeUxRVGswbDhPbTY3R3RaYVXSAbcBQVVfeXFMT0c4ckZpTVlvSE1hYzY0Wl9TS0U4MU9SaGhhSmdBMk4ya1FWaGIzQXJXb0VLVlpLZDdiMy15aU5NTzNFOW9GRU5Fc0xCSElxN3BkWUhHbW5Vc1JLVndvcThKc3AzU0VGZks0TFowNHlZX3pmS3BQU2NTSzREMDZULXdDWFVyXzNFTm16MU91cjhBZnFJUkk5dnAyOFF5bWYzdnRQLWtXTzNhMkhpM0xGYVZTdTlnVnlF",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_south_china_morning_post"
+        },
+        {
+          "headline": "China\u2019s social credit system \u2018could be used against companies\u2019 - South China Morning Post",
+          "summary": "China\u2019s social credit system \u2018could be used against companies\u2019 South China Morning Post",
+          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQUHN0eWt5TnhId3RhVGp1NGJzcVdHRngzbUdNYkNrY0l5Ry1UbngydTNIYUJ1VEY1N18ybE41ck1qRVhzN25rWWNZdFlzMHp4YWliTUZlbHcxWV9BUnAyRFN6OHloTTlpVms4dXJldnpoVGhtRmlweWs4N0xpa2JQUTByX1czVUwzb2hKbXVFc3JFZHI0Y0JDQ2Z4YnRNY2pXYjJkVUpUMVc3b282TXZnMUZQSEo1WGPSAbcBQVVfeXFMTUgtX3MyZVVoTTRELXRTV0RrQXluVG1ENVNMdVlQUGxzbHU5YlFmN210YXlWcEF6QVBYZXdJR1ZWbkxZaWttc2tKcTRFcWxsTFZNWHhKSE84dTk5QmY5ZW9KZTNwbGVkZmhRX1QwS01oYTNXUnJJM1VsT0pXX1ROT2ZoM0ZST3ptVkUtaWlRMjE4R0NsNjRjUWRRRjFxVFpjLTV2LWc3RDlIMkNlRzJ5VlZIREZ0S0l3",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_south_china_morning_post"
+        },
+        {
+          "headline": "The latest trends in running shoes - South China Morning Post",
+          "summary": "The latest trends in running shoes South China Morning Post",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQYjlSMzk3azNOaGpCR3UzaGVBem9kaUdTX2NjMG9qTXNucEJ1cEVNNUVmUV9zUG5Fa0tVYU1wV1g0VGtfYTZMaGQ4NGprQ1gtcVRRS3hNSnp1UWJ4RDZpSU5NZTVVZzQ2RzJXXzVfNVpTcGNGS0duVDUzeDVSS21LeG53c1RERmdC0gGIAUFVX3lxTFA0bGRaQm90Y2tQRURQM1dsVFh5aXp3UGtCY1NoakRoV281NWpnMGRrVDczeHpkbHcyUW44OVVxY1BWQk16UENtbFdMTDByUkhzM0JuVUdEbi02Sl9qX3RLWTlRendob20yVndJalFTQzl1bnlJOWZQZnpjZjJ0bnZhUnVVZGZFdmw",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_south_china_morning_post"
+        },
+        {
+          "headline": "The hidden seafood capital of Japan - South China Morning Post",
+          "summary": "The hidden seafood capital of Japan South China Morning Post",
+          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPUDlWM1lKblkxeGhrTDBHVTNLcDFkTVRpLVJSUl9fMFc3djJXZ3pWaTBTV0VZNlhSRVVRUDgxSDljTmhNR2hQLUFuYnJUcm4wSkVRZXBHaEpWekZrWVN1WWxDWGRYZlI5TENKSTNoVGZmcFhuTHVEMjVwOVFxYXBpQTZITmpVYnNJS3J2Zm4zWTRnWXd5RnNkTVNhY3ZPWXI3QlhSY0JxV2JTUVFCYWEw",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_south_china_morning_post"
+        },
+        {
+          "headline": "Would you live in this space-age spherical tiny home? - South China Morning Post",
+          "summary": "Would you live in this space-age spherical tiny home? South China Morning Post",
+          "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQbThXbnJaRWpJMTJrOWpReENidnY4alF3YS1pV2hVVkZidk11ZDcwdEpXc1d3MDNwTDU1WlYyM29NbkE0dExwLUdYWDNCWnJHQThGVWxqa2VURUR4bjhBNUg0QUZXSGhJdW5zVy02Wm1Bdl9qWEloVFVLZm1kQ0F5MGNnZXVzMlcwZUh3RnF2S3ZObW8zNlhEcnFqLWZMRmhRdlVBSWNtdVVCb1YyR2R3ZERxQXB3cVFJRkYw0gG7AUFVX3lxTFBySmxvd1VHLXd3NzdqOXhDT2NmQjdOZ0NqSkNYQzNDemV6a1BuNlRZNXNNbE5pcXduVFhDSDZzWHo4QVlRY05qLUUxUVBUb1VLRGZvTklNcGpaazFGbDVobGFjNzI0ZjZhcXRmT1Y3dzdjZ1p0eUhUYm5ZRTZueW05VkhKeHdLdjBzeUJHbUZWWlV3M1dIVTF6Y19EMlNPc1d2bm8wT2pVTFNRWWdvaDlCWFZpdTkzbTdNS3M",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_south_china_morning_post"
+        },
+        {
+          "headline": "Blacklist labels millions of Chinese citizens and businesses untrustworthy - South China Morning Post",
+          "summary": "Blacklist labels millions of Chinese citizens and businesses untrustworthy South China Morning Post",
+          "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPeWVxUUNZM0duSEdHdUI5emNYb2ZVUTh0ZjdjOV9jSm02Z1VHbjlUOVh4TWRfeWtlX3BKVS1ONkdqYUlDT3FZOVFzV3BNNFRCMnhWSWZBSlBFbjZUaWlSdXFqeTZQODg5a2w5aHdXcUU2NEkxeHE3cjFnY0ZtRTBBNEZUNWsxRmdWWVc5N1d2eG1DUFVFTFpXNXctRVhISEs5OWZCX3ZnYndpMktsMmk0bVZaU0RVT1kzZTNZ0gG7AUFVX3lxTE1idlcwQ080NS1BTkNJWldFWFRISTEzNnppXzVrTVVhc1ZWSmxpX1M1WUQyMFVHX2FReW53SWxFOXNiTWFURWExdjcybUU4M0JNU3dibm1NTHk1ZWNMRE1DbkMwRzFDYmliem9FRm5SWHFqR0Y5ZGprREF2RmJPa1ZFSUcyVnVZSU5VdFRyYklRSXJmQ2hpd2NqaUVIZklrSW9naU9RV2cwTUxKSm83cUhzb2VnRXYyVlJhOW8",
+          "published_utc": "2026-02-12 05:49:41.799910+00:00",
+          "source": "source_south_china_morning_post"
+        }
+      ],
+      "bucket": "policy"
+    }
+  ]
+}

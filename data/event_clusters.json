@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-16T00:43:46.052810+00:00",
+    "method": "llm_events",
+    "model": "gpt-4o-mini",
+    "n_items": 200,
+    "n_clusters": 0,
+    "min_cluster_size": 3,
+    "batch_size": 50,
+    "cache_path": "data/event_labels_cache.jsonl",
+    "fuzzy_merge": 0.92,
+    "drop_general": true
+  },
+  "clusters": []
+}

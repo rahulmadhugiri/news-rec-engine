@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import base64
 import csv
 import hashlib
 import json
@@ -19,6 +20,13 @@ import torch.nn as nn
 import torch.optim as optim
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
+
+from neural_news_mvp import (
+    elevenlabs_tts_mp3,
+    fetch_article_text,
+    load_dotenv as _load_dotenv,
+    openai_generate_4_sentences,
+)
 
 from model import (
     ITEM_COL_ITEM_ID,
@@ -41,6 +49,8 @@ except Exception:
     AlreadyExists = None  # type: ignore
 
 ROOT = Path(__file__).resolve().parent
+
+_load_dotenv(str(ROOT / ".env"))
 
 FIRESTORE_DEDUPE_ENABLED = (
     os.getenv("FIRESTORE_DEDUPE_ENABLED", "1").strip().lower()
@@ -84,6 +94,42 @@ ACTIVE_POOL_STATE_PATH = _resolve_path_from_env(
     "ACTIVE_POOL_STATE_PATH",
     ROOT / "data" / "active_pool_state.json",
 )
+DAILY_POOL_PATH = _resolve_path_from_env(
+    "DAILY_POOL_PATH",
+    ROOT / "data" / "daily_pool.json",
+)
+
+DAILY_POOL_ENABLED = (
+    os.getenv("DAILY_POOL_ENABLED", "1").strip().lower()
+    not in {"0", "false", "no"}
+)
+DAILY_POOL_SIZE = int(os.getenv("DAILY_POOL_SIZE", "150"))
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "").strip()
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini").strip() or "gpt-4o-mini"
+OPENAI_TEMPERATURE = float(os.getenv("OPENAI_TEMPERATURE", "0.8"))
+OPENAI_TIMEOUT_S = int(os.getenv("OPENAI_TIMEOUT_S", "60"))
+OPENAI_MAX_ARTICLE_CHARS = int(os.getenv("OPENAI_MAX_ARTICLE_CHARS", "2500"))
+
+ELEVENLABS_API_KEY = os.getenv("ELEVENLABS_API_KEY", "").strip()
+ELEVENLABS_VOICE_ID = os.getenv("ELEVENLABS_VOICE_ID", "").strip()
+ELEVENLABS_MODEL_ID = os.getenv("ELEVENLABS_MODEL_ID", "eleven_turbo_v2_5").strip() or "eleven_turbo_v2_5"
+ELEVENLABS_STABILITY = float(os.getenv("ELEVENLABS_STABILITY", "0.5"))
+ELEVENLABS_SIMILARITY_BOOST = float(os.getenv("ELEVENLABS_SIMILARITY_BOOST", "0.75"))
+ELEVENLABS_TIMEOUT_S = int(os.getenv("ELEVENLABS_TIMEOUT_S", "30"))
+
+
+def _redact_key(s: str) -> str:
+    s = (s or "").strip()
+    if not s:
+        return "<empty>"
+    if len(s) <= 12:
+        return f"{s[:3]}...{s[-3:]}(len={len(s)})"
+    return f"{s[:6]}...{s[-4:]}(len={len(s)})"
+
+
+print(f"🔑 OPENAI_API_KEY={_redact_key(OPENAI_API_KEY)} model={OPENAI_MODEL}")
+print(f"🔑 ELEVENLABS_API_KEY={_redact_key(ELEVENLABS_API_KEY)} voice_id={_redact_key(ELEVENLABS_VOICE_ID)}")
 
 DEVICE = torch.device("cpu")
 EVENT_SEQ_LEN = 30
@@ -564,6 +610,67 @@ if not _raw_active_pool_clusters:
         active_pool_new_added_today[cid] = CLUSTER_NEW_URLS_PER_DAY
     persist_active_pools()
 
+
+# Flat daily pool (Stage 1 menu): shared across users.
+daily_pool_cache_mtime = 0.0
+daily_pool_cache_day_utc = ""
+daily_pool_cache_indices: list[int] = []
+
+
+def load_daily_pool_indices(now_utc: datetime) -> tuple[str, list[int]]:
+    """
+    Load `data/daily_pool.json` -> map links to inventory indices.
+
+    Returns (day_utc, indices). If disabled/missing/invalid, returns ("", []).
+    """
+    global daily_pool_cache_mtime, daily_pool_cache_day_utc, daily_pool_cache_indices
+
+    if not DAILY_POOL_ENABLED or not DAILY_POOL_PATH.exists():
+        return "", []
+    try:
+        mtime = float(DAILY_POOL_PATH.stat().st_mtime)
+    except Exception:
+        return "", []
+    if daily_pool_cache_indices and mtime == daily_pool_cache_mtime:
+        return daily_pool_cache_day_utc, daily_pool_cache_indices
+
+    try:
+        payload = json.loads(DAILY_POOL_PATH.read_text(encoding="utf-8"))
+    except Exception as exc:
+        print(f"⚠️ Failed to load daily pool from {DAILY_POOL_PATH}: {exc}")
+        return "", []
+
+    if not isinstance(payload, dict):
+        return "", []
+    day_utc = str(payload.get("day_utc", "") or "").strip() or _utc_day_str(now_utc)
+    raw_items = payload.get("items", [])
+    if not isinstance(raw_items, list):
+        raw_items = []
+
+    indices: list[int] = []
+    seen: set[int] = set()
+    for it in raw_items:
+        link = ""
+        if isinstance(it, dict):
+            link = str(it.get("link", "") or "").strip()
+        elif isinstance(it, str):
+            link = it.strip()
+        if not link:
+            continue
+        idx = link_to_index.get(link)
+        if idx is None or idx in seen:
+            continue
+        seen.add(idx)
+        indices.append(idx)
+        if DAILY_POOL_SIZE > 0 and len(indices) >= DAILY_POOL_SIZE:
+            break
+
+    daily_pool_cache_mtime = mtime
+    daily_pool_cache_day_utc = day_utc
+    daily_pool_cache_indices = indices
+    return day_utc, indices
+
+
 item_features = torch.tensor(
     inventory[
         [
@@ -702,6 +809,12 @@ class SessionState:
         self.avg_reward = 0.0
         self.last_batch: list[int] = []
         self.user_delta = torch.zeros(model.user_hidden_dim, dtype=torch.float32, device=DEVICE)
+        # Stage 3 memory window for the synthesis prompt (last 5 each).
+        self.audio_positives: list[str] = []
+        self.audio_negatives: list[str] = []
+        # In-flight content metadata so frontend can post back a swipe/finish event.
+        # Stored as: { content_id, item_id, sentences: [..4..], created_at, consumed }
+        self.pending_audio: dict[str, object] = {}
         self.updated_at = time.time()
 
     def update_reward(self, reward: float) -> None:
@@ -751,6 +864,37 @@ class SessionState:
                 delta = delta[: model.user_hidden_dim]
             state.user_delta = delta
 
+        pos = data.get("audio_positives", [])
+        if isinstance(pos, list):
+            cleaned = [str(x).strip() for x in pos if isinstance(x, str) and str(x).strip()]
+            state.audio_positives = cleaned[-5:]
+
+        neg = data.get("audio_negatives", [])
+        if isinstance(neg, list):
+            cleaned = [str(x).strip() for x in neg if isinstance(x, str) and str(x).strip()]
+            state.audio_negatives = cleaned[-5:]
+
+        pending = data.get("pending_audio", {})
+        if isinstance(pending, dict):
+            content_id = pending.get("content_id")
+            item_id = pending.get("item_id")
+            sentences = pending.get("sentences", [])
+            created_at = pending.get("created_at")
+            consumed = pending.get("consumed")
+            out_pending: dict[str, object] = {}
+            if isinstance(content_id, str) and content_id:
+                out_pending["content_id"] = content_id
+            if isinstance(item_id, int | float):
+                out_pending["item_id"] = int(item_id)
+            if isinstance(sentences, list):
+                cleaned_sents = [str(x).strip() for x in sentences if isinstance(x, str) and str(x).strip()]
+                if cleaned_sents:
+                    out_pending["sentences"] = cleaned_sents[:4]
+            if isinstance(created_at, int | float):
+                out_pending["created_at"] = float(created_at)
+            out_pending["consumed"] = bool(consumed) if isinstance(consumed, bool | int | float) else False
+            state.pending_audio = out_pending
+
         return state
 
     def to_dict(self) -> dict[str, object]:
@@ -762,6 +906,9 @@ class SessionState:
             "impressions": int(self.impressions),
             "avg_reward": float(self.avg_reward),
             "user_delta": [float(x) for x in self.user_delta.detach().cpu().tolist()],
+            "audio_positives": list(self.audio_positives)[-5:],
+            "audio_negatives": list(self.audio_negatives)[-5:],
+            "pending_audio": self.pending_audio,
             "updated_at": float(self.updated_at),
         }
 
@@ -1071,18 +1218,23 @@ async def get_feed(request: Request) -> dict[str, list[dict[str, object]]]:
     sid = get_session_id(request)
     with state_lock:
         session = get_or_create_session(sid)
-        refresh_active_pools(datetime.now(timezone.utc))
+        now_utc = datetime.now(timezone.utc)
+        refresh_active_pools(now_utc)
 
-        pool_indices: list[int] = []
-        pool_seen: set[int] = set()
-        for links in active_pool_links.values():
-            for link in links:
-                idx = link_to_index.get(link)
-                if idx is None or idx in pool_seen:
-                    continue
-                pool_seen.add(idx)
-                pool_indices.append(idx)
-        candidate_universe = pool_indices if pool_indices else list(range(len(inventory)))
+        _pool_day_utc, daily_indices = load_daily_pool_indices(now_utc)
+        if daily_indices:
+            candidate_universe = daily_indices
+        else:
+            pool_indices: list[int] = []
+            pool_seen: set[int] = set()
+            for links in active_pool_links.values():
+                for link in links:
+                    idx = link_to_index.get(link)
+                    if idx is None or idx in pool_seen:
+                        continue
+                    pool_seen.add(idx)
+                    pool_indices.append(idx)
+            candidate_universe = pool_indices if pool_indices else list(range(len(inventory)))
 
         recent_seen_set = set(session.recent_seen)
         available = [i for i in candidate_universe if i not in recent_seen_set]
@@ -1153,6 +1305,442 @@ async def get_feed(request: Request) -> dict[str, list[dict[str, object]]]:
                 }
             )
         return {"items": items}
+
+
+@app.post("/next_audio")
+async def next_audio(request: Request) -> dict[str, object]:
+    """
+    Stage 2 -> 3 -> 4 in one call:
+    - pick next item using the existing rec engine, restricted to the flat daily pool
+    - generate the 4-sentence spoken script using behavioral memory
+    - synthesize MP3 via ElevenLabs
+
+    Returns JSON with base64 audio so mobile/web clients can play immediately.
+    """
+    # Optional controls:
+    # - {"tts": false} or {"dry_run": true} to skip ElevenLabs and just return the script/payload.
+    try:
+        json_data = await request.json()
+        if not isinstance(json_data, dict):
+            json_data = {}
+    except Exception:
+        json_data = {}
+    tts_enabled = True
+    if json_data.get("tts") is False or bool(json_data.get("dry_run", False)):
+        tts_enabled = False
+
+    if not OPENAI_API_KEY:
+        return {"status": "error", "message": "Missing OPENAI_API_KEY"}
+    if tts_enabled and (not ELEVENLABS_API_KEY or not ELEVENLABS_VOICE_ID):
+        return {"status": "error", "message": "Missing ELEVENLABS_API_KEY or ELEVENLABS_VOICE_ID"}
+
+    sid = get_session_id(request)
+    now_utc = datetime.now(timezone.utc)
+
+    with state_lock:
+        session = get_or_create_session(sid)
+        refresh_active_pools(now_utc)
+        pool_day_utc, daily_indices = load_daily_pool_indices(now_utc)
+        candidate_universe = daily_indices if daily_indices else list(range(len(inventory)))
+
+        recent_seen_set = set(session.recent_seen)
+        available = [i for i in candidate_universe if i not in recent_seen_set]
+        if not available:
+            available = candidate_universe
+        if not available:
+            return {"status": "error", "message": "No candidates available"}
+
+        event_seq = torch.tensor(list(session.event_seq), dtype=torch.long, device=DEVICE)
+        with torch.no_grad():
+            base_user_state = model.encode_user_state(event_seq.unsqueeze(0)).squeeze(0)
+            adapted_user_state = base_user_state + session.user_delta
+
+        recall_indices = select_recall_candidates(
+            available_indices=available,
+            adapted_user_state=adapted_user_state,
+            recall_size=RECALL_SIZE,
+            scan_limit=RECALL_SCAN_LIMIT,
+        )
+        pre_ranked = pre_rank_candidates(
+            session=session,
+            recall_indices=recall_indices,
+            adapted_user_state=adapted_user_state,
+            pre_rank_size=PRE_RANK_SIZE,
+        )
+        chosen = relevance_rank_candidates(recall_indices=recall_indices, pre_ranked=pre_ranked, feed_k=1)
+        if not chosen:
+            return {"status": "error", "message": "Rec engine produced empty choice"}
+
+        item_id = int(chosen[0])
+        if item_id < 0 or item_id >= len(inventory):
+            return {"status": "error", "message": "Invalid chosen item_id"}
+
+        row = inventory.iloc[item_id]
+        title = str(row[headline_col])
+        summary = str(row[summary_col]) if summary_col in inventory.columns else ""
+        link = str(row[link_col])
+        domain_val = str(row[domain_col])
+        published = str(row.get("Published", "") or "")
+
+        positives = list(session.audio_positives)
+        negatives = list(session.audio_negatives)
+
+    # Outside lock: network calls (article fetch, LLM, TTS).
+    fetched = fetch_article_text(link, timeout_s=8, max_chars=max(8000, OPENAI_MAX_ARTICLE_CHARS))
+    facts = (
+        f"Headline: {title}\n"
+        f"Summary: {summary}\n"
+        f"Source: {domain_val}\n"
+        f"Published: {published}\n"
+    ).strip()
+    article_text = facts
+    if fetched:
+        article_text = (facts + "\n\nFull text:\n" + fetched).strip()
+    if OPENAI_MAX_ARTICLE_CHARS > 0 and len(article_text) > OPENAI_MAX_ARTICLE_CHARS:
+        article_text = article_text[:OPENAI_MAX_ARTICLE_CHARS]
+
+    try:
+        sentences = openai_generate_4_sentences(
+            article_text=article_text,
+            positives=positives,
+            negatives=negatives,
+            api_key=OPENAI_API_KEY,
+            model=OPENAI_MODEL,
+            temperature=OPENAI_TEMPERATURE,
+            timeout_s=OPENAI_TIMEOUT_S,
+        )
+    except Exception as exc:
+        return {"status": "error", "message": f"OpenAI synthesis failed: {exc}"}
+    script_text = " ".join(sentences)
+
+    elevenlabs_payload = {
+        "voice_id": ELEVENLABS_VOICE_ID,
+        "model_id": ELEVENLABS_MODEL_ID,
+        "voice_settings": {
+            "stability": ELEVENLABS_STABILITY,
+            "similarity_boost": ELEVENLABS_SIMILARITY_BOOST,
+        },
+        "text": script_text,
+    }
+
+    if not tts_enabled:
+        content_id = str(uuid.uuid4())
+        with state_lock:
+            session = get_or_create_session(sid)
+            # Treat delivered audio as "seen" immediately so repeated next_audio calls
+            # in the same session don't return the same top-1 item forever.
+            session.recent_seen.append(int(item_id))
+            session.pending_audio = {
+                "content_id": content_id,
+                "item_id": int(item_id),
+                "sentences": list(sentences),
+                "created_at": time.time(),
+                "consumed": False,
+            }
+            session.updated_at = time.time()
+            persist_session_state(sid, session)
+        return {
+            "status": "ok",
+            "tts_skipped": True,
+            "session_id": sid,
+            "content_id": content_id,
+            "pool_day_utc": pool_day_utc,
+            "item": {
+                "item_id": int(item_id),
+                "id": int(row["id"]),
+                "title": title,
+                "summary": summary,
+                "domain": domain_val,
+                "link": link,
+            },
+            "sentences": sentences,
+            "script_text": script_text,
+            "elevenlabs_payload": elevenlabs_payload,
+        }
+
+    try:
+        audio_bytes = elevenlabs_tts_mp3(
+            text=script_text,
+            voice_id=ELEVENLABS_VOICE_ID,
+            api_key=ELEVENLABS_API_KEY,
+            model_id=ELEVENLABS_MODEL_ID,
+            stability=ELEVENLABS_STABILITY,
+            similarity_boost=ELEVENLABS_SIMILARITY_BOOST,
+            timeout_s=ELEVENLABS_TIMEOUT_S,
+        )
+    except Exception as exc:
+        return {
+            "status": "error",
+            "message": f"ElevenLabs TTS failed: {exc}",
+            "item": {
+                "item_id": int(item_id),
+                "id": int(row["id"]),
+                "title": title,
+                "summary": summary,
+                "domain": domain_val,
+                "link": link,
+            },
+            "sentences": sentences,
+            "script_text": script_text,
+            "elevenlabs_payload": elevenlabs_payload,
+        }
+
+    audio_b64 = base64.b64encode(audio_bytes).decode("ascii")
+
+    content_id = str(uuid.uuid4())
+    with state_lock:
+        session = get_or_create_session(sid)
+        # Treat delivered audio as "seen" immediately so repeated next_audio calls
+        # in the same session don't return the same top-1 item forever.
+        session.recent_seen.append(int(item_id))
+        session.pending_audio = {
+            "content_id": content_id,
+            "item_id": int(item_id),
+            "sentences": list(sentences),
+            "created_at": time.time(),
+            "consumed": False,
+        }
+        session.updated_at = time.time()
+        persist_session_state(sid, session)
+
+    return {
+        "status": "ok",
+        "session_id": sid,
+        "content_id": content_id,
+        "pool_day_utc": pool_day_utc,
+        "item": {
+            "item_id": int(item_id),
+            "id": int(row["id"]),
+            "title": title,
+            "summary": summary,
+            "domain": domain_val,
+            "link": link,
+        },
+        "sentences": sentences,
+        "script_text": script_text,
+        "elevenlabs_payload": elevenlabs_payload,
+        "audio_b64": audio_b64,
+        "audio_mime": "audio/mpeg",
+    }
+
+
+@app.post("/audio_event")
+async def audio_event(data: Request) -> dict[str, object]:
+    """
+    Stage 4 feedback event (sentence-precise) -> updates:
+    - Stage 3 memory window (last 5 positives/negatives)
+    - rec engine session state via the existing private/global online update code
+
+    Payload (recommended):
+      {
+        "content_id": "...",
+        "skip_index": 1|null,
+        "listen_ms": 8000,
+        "total_ms": 20000,
+        "event_id": "optional_idempotency_key"
+      }
+    """
+    json_data = await data.json()
+    sid = get_session_id(data)
+    uid = data.headers.get("X-Uid", "").strip() or "anon"
+
+    event_id = json_data.get("event_id")
+    if isinstance(event_id, str) and event_id:
+        if is_duplicate_event(uid=uid, session_id=sid, event_id=event_id):
+            return {"status": "duplicate"}
+
+    content_id = str(json_data.get("content_id", "") or "").strip()
+    if not content_id:
+        return {"status": "error", "message": "Missing content_id"}
+
+    raw_skip = json_data.get("skip_index", None)
+    skip_index = None
+    if raw_skip is not None:
+        try:
+            skip_index = int(raw_skip)
+        except Exception:
+            skip_index = None
+
+    listen_ms = json_data.get("listen_ms", None)
+    total_ms = json_data.get("total_ms", None)
+    watch_ratio = None
+    if isinstance(listen_ms, int | float) and isinstance(total_ms, int | float) and float(total_ms) > 0:
+        watch_ratio = max(0.0, min(1.0, float(listen_ms) / float(total_ms)))
+
+    # If skip_index is None, treat as "finished" for both memory + rec signals.
+    reason = "auto" if skip_index is None else "skip"
+    if watch_ratio is None:
+        watch_ratio = 1.0 if reason == "auto" else 0.2
+    dwell = max(0.0, min(10.0, float(watch_ratio) * 10.0))
+
+    with state_lock:
+        session = get_or_create_session(sid)
+        pending = session.pending_audio if isinstance(session.pending_audio, dict) else {}
+        pending_id = str(pending.get("content_id", "") or "")
+        if pending_id != content_id:
+            return {"status": "error", "message": "content_id mismatch (not the current pending audio)"}
+        if bool(pending.get("consumed", False)):
+            return {"status": "duplicate"}
+
+        item_id = int(pending.get("item_id", -1))
+        if item_id < 0 or item_id >= len(inventory):
+            return {"status": "error", "message": "invalid pending item_id"}
+        sentences = pending.get("sentences", [])
+        if not isinstance(sentences, list) or not sentences:
+            return {"status": "error", "message": "missing pending sentences"}
+        clean_sents = [str(x).strip() for x in sentences if isinstance(x, str) and str(x).strip()][:4]
+        if len(clean_sents) != 4:
+            return {"status": "error", "message": "pending sentences malformed (expected 4)"}
+
+        # Stage 3 memory window update (exactly per spec).
+        if skip_index is None:
+            session.audio_positives.extend(clean_sents)
+        else:
+            si = max(0, min(3, int(skip_index)))
+            session.audio_positives.extend(clean_sents[:si])
+            session.audio_negatives.append(clean_sents[si])
+        session.audio_positives = session.audio_positives[-5:]
+        session.audio_negatives = session.audio_negatives[-5:]
+
+        # Stage 2 rec-engine interaction update (reuse the same logic as /interact).
+        feat = item_features[item_id].unsqueeze(0)
+        topic_id = int(feat[0, ITEM_COL_TOPIC_ID].item())
+        vibe_id = int(feat[0, ITEM_COL_VIBE_ID].item())
+        reward = reward_from_interaction(reason, dwell, list(session.skip_dwells))
+        reward_norm = reward_to_norm(reward)
+        watch_ratio = dwell / 10.0
+
+        event_seq = torch.tensor(list(session.event_seq), dtype=torch.long, device=DEVICE)
+        target_watch = torch.tensor([[watch_ratio]], dtype=torch.float32, device=DEVICE)
+        target_finish = torch.tensor([[1.0 if watch_ratio >= 0.95 else 0.0]], device=DEVICE)
+        target_fast_skip = torch.tensor([[1.0 if watch_ratio <= 0.20 else 0.0]], device=DEVICE)
+        target_like = torch.tensor([[1.0 if watch_ratio >= 0.85 else 0.0]], device=DEVICE)
+        target_share = torch.tensor([[1.0 if watch_ratio >= 0.95 else 0.0]], device=DEVICE)
+        target_rewatch = torch.tensor([[1.0 if watch_ratio >= 0.90 else 0.0]], device=DEVICE)
+
+        if ONLINE_UPDATE_MODE == "global":
+            base_user_state = model.encode_user_state(event_seq.unsqueeze(0)).squeeze(0)
+            adapted_user_state = base_user_state + session.user_delta
+            heads = forward_heads_from_user_state(adapted_user_state, feat)
+            pred_score = model.score_from_heads(heads, weights=SCORE_WEIGHTS)
+            loss = (
+                0.8 * bce(heads["finish_logit"], target_finish)
+                + 0.6 * bce(heads["fast_skip_logit"], target_fast_skip)
+                + 0.5 * bce(heads["like_logit"], target_like)
+                + 0.4 * bce(heads["share_logit"], target_share)
+                + 0.4 * bce(heads["rewatch_logit"], target_rewatch)
+                + 1.5 * mse(torch.sigmoid(heads["watch_time_raw"]), target_watch)
+                + 1.0 * mse(torch.sigmoid(pred_score), torch.tensor([[reward_norm]], device=DEVICE))
+            )
+            if optimizer is None:
+                raise RuntimeError("Global mode requires optimizer")
+            optimizer.zero_grad()
+            loss.backward()
+            torch.nn.utils.clip_grad_norm_(model.parameters(), 5.0)
+            optimizer.step()
+        elif ONLINE_UPDATE_MODE == "private":
+            with torch.no_grad():
+                base_user_state = model.encode_user_state(event_seq.unsqueeze(0)).squeeze(0)
+
+            session_delta = session.user_delta.detach().clone().requires_grad_(True)
+            adapted_user_state = base_user_state + session_delta
+            heads = forward_heads_from_user_state(adapted_user_state, feat)
+            pred_score = model.score_from_heads(heads, weights=SCORE_WEIGHTS)
+            loss = (
+                0.8 * bce(heads["finish_logit"], target_finish)
+                + 0.6 * bce(heads["fast_skip_logit"], target_fast_skip)
+                + 0.5 * bce(heads["like_logit"], target_like)
+                + 0.4 * bce(heads["share_logit"], target_share)
+                + 0.4 * bce(heads["rewatch_logit"], target_rewatch)
+                + 1.5 * mse(torch.sigmoid(heads["watch_time_raw"]), target_watch)
+                + 1.0 * mse(torch.sigmoid(pred_score), torch.tensor([[reward_norm]], device=DEVICE))
+            )
+            loss.backward()
+            grad = session_delta.grad
+            if grad is not None:
+                grad_norm = float(torch.linalg.vector_norm(grad).item())
+                if grad_norm > PRIVATE_USER_GRAD_CLIP:
+                    grad = grad * (PRIVATE_USER_GRAD_CLIP / (grad_norm + 1e-8))
+                updated = (session.user_delta - PRIVATE_USER_LR * grad).detach()
+                delta_norm = float(torch.linalg.vector_norm(updated).item())
+                if delta_norm > PRIVATE_USER_MAX_NORM:
+                    updated = updated * (PRIVATE_USER_MAX_NORM / (delta_norm + 1e-8))
+                session.user_delta = updated
+        else:
+            with torch.no_grad():
+                base_user_state = model.encode_user_state(event_seq.unsqueeze(0)).squeeze(0)
+                adapted_user_state = base_user_state + session.user_delta
+                heads = forward_heads_from_user_state(adapted_user_state, feat)
+                pred_score = model.score_from_heads(heads, weights=SCORE_WEIGHTS)
+
+        session.step += 1
+        session.recent_seen.append(item_id)
+        if reason == "skip":
+            session.skip_dwells.append(dwell)
+        session.update_reward(reward)
+        token = build_event_token(
+            item_id=int(feat[0, ITEM_COL_ITEM_ID].item()),
+            topic_id=topic_id,
+            vibe_id=vibe_id,
+            dwell=dwell,
+            step=session.step,
+        )
+        session.event_seq.append(token)
+
+        row = inventory.iloc[item_id]
+        append_usage_log_row(
+            USAGE_LOG_PATH,
+            {
+                "timestamp_utc": datetime.now(timezone.utc).isoformat(),
+                "source": "mvp_audio",
+                "run_id": "",
+                "session_id": sid,
+                "step": session.step,
+                "user_step": session.step,
+                "user_type": "unknown_live",
+                "item_id": int(feat[0, ITEM_COL_ITEM_ID].item()),
+                "topic_id": topic_id,
+                "topic_name": str(row[domain_col]),
+                "vibe_id": vibe_id,
+                "vibe_style": str(inventory.iloc[item_id]["Vibe_Style"])
+                if "Vibe_Style" in inventory.columns
+                else "",
+                "cluster_id": int(feat[0, ITEM_COL_TOPIC_CLUSTER_ID].item()),
+                "headline": str(row[headline_col]),
+                "reward": float(reward),
+                "regret": "",
+                "epsilon": "",
+                "decision": reason,
+                "pred_score": float(torch.sigmoid(pred_score).item()),
+                "listen_ms": float(dwell * 1000.0),
+                "total_ms": float(total_ms) if isinstance(total_ms, int | float) else 0.0,
+                "liked": bool(watch_ratio >= 0.85),
+                "shared": bool(watch_ratio >= 0.95),
+                "rewinded": bool(watch_ratio >= 0.90),
+                "fast_skip": bool(watch_ratio <= 0.20),
+                "finished": bool(watch_ratio >= 0.95),
+                "interest": float(watch_ratio),
+            },
+        )
+
+        # Mark the pending audio as consumed (idempotency).
+        session.pending_audio["consumed"] = True
+        session.updated_at = time.time()
+        persist_session_state(sid, session)
+
+        return {
+            "status": "ok",
+            "reason": reason,
+            "watch_ratio": watch_ratio,
+            "reward": reward,
+            "avg_reward": session.avg_reward,
+            "step": session.step,
+            "memory": {
+                "positives": list(session.audio_positives),
+                "negatives": list(session.audio_negatives),
+            },
+        }
+
 
 
 @app.get("/warmup")

@@ -18,6 +18,7 @@ def main() -> None:
     parser.add_argument("--max-queries", type=int, default=24)
     parser.add_argument("--max-domains", type=int, default=12)
     parser.add_argument("--min-domain-impressions", type=int, default=6)
+    parser.add_argument("--daily-pool-k", type=int, default=150)
     args = parser.parse_args()
 
     py = sys.executable
@@ -37,9 +38,9 @@ def main() -> None:
         ]
     )
     run_cmd([py, "scraper.py"])
+    run_cmd([py, "morning_harvest.py", "--k", str(args.daily_pool_k)])
     print("✅ Nightly refresh complete.")
 
 
 if __name__ == "__main__":
     main()
-
